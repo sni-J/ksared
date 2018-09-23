@@ -1,0 +1,354 @@
+@import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+body{
+    padding-top: 5rem;  /* this is for nav-bar */
+    word-break:keep-all;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 800;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.abstract{
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+    height: auto;
+    margin: .25rem!important;
+    word-break: break-all;
+}
+
+form{
+    padding: 1rem 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+form .vertShort{
+    height: calc(2.25rem + 2px);
+}
+
+form .vertLong{
+    height: calc(2.75rem + 2px);
+}
+
+.form-control{
+    margin: 0rem!important;
+}
+
+.horzExShort{
+    flex: 0.7 0 60px;
+    margin: .25rem!important;
+}
+
+.horzShort{
+    flex: 1 1 80px;
+    margin: .25rem!important;
+}
+
+.horzLong{
+    max-width: 100%;
+    max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    max-width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    max-width: fill-available;
+    flex: 1 2 45%;
+    margin: .25rem!important;
+}
+
+.horzExLong{
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+    margin: .25rem!important;
+}
+
+.exFileImage{
+    max-width: 95%;
+    max-height: 40rem;
+}
+
+form span{
+    flex: 0.1 1 10px;
+    margin: .25rem!important;
+}
+
+.cbLabel{
+    color: #000;
+    font-weight: 400!important;
+    padding-right: 1em;
+}
+
+.inputField{
+    /* display: table-column; */
+}
+
+.inputInfo{
+    font-size:0.9rem;
+    top: 0;
+    margin:.25rem!important;
+}
+
+.btnA{
+    border: 2px dashed rgba(0,0,0,0.2);
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: flex;
+    height: calc(2.25rem + 2px);
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* margin-right:.5rem; */
+    margin-bottom: .5rem;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: #dc3545 !important;
+    color: #ffffff;
+}
+.autocomplete-divline:hover {
+    background-color:#fff;
+}
+
+.searchResultUl {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+.searchResultLi {
+    padding: 1.5rem 0;
+    border-bottom : 1px solid #eee;
+}
+
+.searchResultLi h6{
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.searchResultLi::before :hover, .searchResultLi::after :hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.searchResultLi span{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #999;
+}
+
+.infoUl{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    line-height: 2.0;
+}
+
+.infoLi{
+    padding-left: 110px;
+    float: none;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label{
+    color: #999;
+    font-weight: 600;
+    padding: 0;
+    z-index: 20;
+}
+
+.infoLi .label{
+    position: absolute;
+    max-width: 100px;
+    left: 0;
+    top: 0;
+}
+
+.InputAlertDanger{
+    border-color: #f00;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, .25);
+}
+
+.InputAlertWarning{
+    border-color: #ff0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, .25);
+}
+
+.InputAlertDanger + a,
+.InputAlertWarning + a{
+	position:relative;
+}
+
+.InputAlertDanger + a::before,
+.InputAlertWarning + a::before {
+	display:none;
+	content:attr(data-tip);
+	position:absolute;
+	bottom:calc(-1.5rem + 0.2rem + 1px);
+	right:calc(0.2rem + 1px);
+	padding:0.1rem 0.5rem;
+	z-index:9;
+	font-size: 0.7em;
+	height:1.5rem;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	white-space:nowrap;
+	word-wrap:normal;
+}
+.InputAlertDanger + a::before{
+    color:#fff;
+    background:#dc3545;
+}
+.InputAlertWarning + a::before{
+    color:#000;
+    background:#ffc107;
+}
+
+.InputAlertDanger:hover + a::before,
+.InputAlertWarning:hover + a::before
+{
+	display:block;
+}
+
+a:hover::before{
+    display:block;
+}
+
+#footer{
+  clear:both;
+  width:100%;
+  display:none;
+}
+
+.fa, .far, .fas{
+    display: inline;
+}
+
+.popUpDiv{
+    display:none;
+    width:100%;
+    height:100%;
+    z-index: 100;
+    position:fixed;
+    top:0;
+    right:0;
+    padding-top:100px;
+    background-color:rgba(0,0,0,.2);
+}
+.popUpDiv >form{
+    width:90%;
+    max-width:500px;
+    margin:auto;
+}
+.popUpTitle{
+    position:relative;
+}
+.popUpTitle >a{
+    position:absolute;
+    z-index:100;
+    right:5px;
+    top:0;
+}
+
+.adminTable td{
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding:0.5em;
+}
+.adminTable td >div{
+    overflow: scroll;
+    max-height:5em;
+    min-width:5em;
+}
+
+/* w3schools */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #ccc;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+input:checked + .slider {
+    background-color: #dc3545;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #dc3545;
+}
+
+@media only screen and (max-width: 767.99px) {
+    .horzExShort, .horzShort{
+        flex: 0.7 0 60px;
+    }
+    .horzLong, .horzExLong, .fillWhenSmall{
+        width: 100%;
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: fill-available;
+        flex: unset;
+    }
+    label.fillWhenSmall{
+        padding:0;
+    }
+    .infoLi{
+        padding-left:0.5rem;
+        padding-top:30px;
+    }
+    .navbar-nav{
+        padding-top:10px;
+    }
+    .tab-content{
+        overflow-x:scroll;
+        min-height: 90vh;
+    }
+}
+
+.nomargin{
+    margin: 0!important;
+}

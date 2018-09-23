@@ -1,0 +1,3825 @@
+- 1 -
+<국문초록>q-급수와 모듈러 형식
+연구자 : 최영석(2학년, photon235@naver.com)
+박정우(2학년, pjw3141@naver.com)
+박상현(2학년, shp0728@gmail.com)
+책임지도자 : 이진희(한국과학영재학교, jhyi100@kaist.ac.kr)
+공동지도자 : 백대현(부산교육대학교, paek@bune.ac.kr)
+요약문
+정수론 분야에서 Ramanujan의 업적은 대부분은 
+
+-series와 theta 함수에서 나타났습니다.
+그러나 Ramanujan은 자신이 발견한 수학적 결과를 노트북에 증명 없이 기록하였습니다. 따
+라서 많은 정수론 학자들은 Ramanujan이 기록한 결과를 증명하는데 관심이 있었습니다. 본 
+연구에서는 Ramanujan의 노트에 기록된 
+
+개의 theta function identities와 유사한 특정 유형
+의 모듈 방정식에 대해 연구를 하였습니다. 그들 중 일부는 모듈 형태로 증명되었습니다. 
+우리는 새로운 모듈 방정식을 발견하고 발견 과정을 일반화했습니다. 간단한 대수 계산을 
+사용하여 새롭게 발견한 모듈 방정식을 증명하였습니다. 또한 투영 점으로 원뿔 곡선에서 the 
+reverse function과 the reverse invariant을 정의하고 투영 점이 있는 두 원뿔 곡선의 등가성에 
+대해 연구하였습니다.
+주제어 : 
+
+-series, modular equation, invariant, conic, projective geometry
+----------------Page (0) Break----------------
+q-급수와 모듈러 형식
+- 2 -
+I. Introduction
+Ramanujan had recorded many modular equations in his lost notebooks. In this study, 
+we use elementary algebraic formulas for the theta functions 
+
+, 
+
+ and 
+
+ and basic theta 
+functions identities to find some new modular equations.
+We begin this section by introducing the standard notation of 
+
+-series which is used 
+throughout this paper.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ for 
+
+ 
+and
+
+∞
+
+∞
+
+
+
+∞
+
+
+
+ for 
+
+.
+Note that we often omit 
+
+ from the notation if the identification of 
+
+ is clear from the 
+context.
+We now give Ramanujan’s definition of his general theta function 
+
+. It is defined 
+by, for 
+
+,
+
+
+∞
+∞
+
+
+
+
+. 
+Note that three special cases of 
+
+ are defined by, for 
+
+
+
+∞
+∞
+
+
+
+
+
+
+∞
+
+
+
+
+
+∞
+, 
+
+
+
+
+
+∞
+
+
+
+
+
+∞
+
+
+
+
+
+∞
+,
+and 
+----------------Page (1) Break----------------
+최영석, 박정우, 박상현
+- 3 -
+
+
+
+
+∞
+∞
+
+
+
+
+
+∞
+.
+Let 
+
+ and 
+
+ be arbitrary complex numbers except that 
+
+ cannot be a non-positive 
+integer. Then, for 
+
+ the Gaussian or ordinary hyper-geometric function 
+
+
+
+
+ is 
+defined by
+
+
+
+
+
+
+∞
+
+
+
+
+
+
+
+
+
+
+where 
+
+
+
+ and 
+
+
+⋯
+ for each positive integer 
+
+. Note that 
+this notation is the same as 
+
+
+
+
+
+ However, they are rarely used in the same 
+context, and so no confusion should arise.
+Now the complete elliptic integral of the first kind 
+
+ is defined by
+
+
+
+
+
+
+
+
+sin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+′
+
+,
+where 
+
+ 
+′′
+, and 
+′
+
+
+
+
+ The number 
+
+ is called the modulus of 
+
+ 
+and 
+′
+ is called the complementary modulus.
+Let 
+′
+ and 
+′
+ denote complete elliptic integrals of the first kind associated with 
+the moduli 
+′
+ and 
+′
+, respectively, where 
+
+ and 
+
+. Suppose that 
+
+′
+
+′
+ 
+holds for some positive integer 
+
+. A relation between 
+
+ and 
+
+ induced by 
+
+′
+
+′
+ is 
+called a modular equation of degree 
+
+. Following Ramanujan, set 
+
+
+ and 
+
+
+
+ We say 
+that 
+
+ has degree 
+
+ over 
+Now let 
+
+ be the modulus as mentioned before. Set 
+
+
+ and also set
+
+
+
+
+
+
+
+
+ 
+----------------Page (2) Break----------------
+q-급수와 모듈러 형식
+- 4 -
+Then we have 
+
+
+
+
+
+
+
+
+
+, 
+where 
+
+
+exp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exp
+
+
+′
+
+.
+If we set 
+exp
+
+
+′
+
+ and 
+′exp
+
+
+′
+
+, 
+then we see that 
+
+′
+
+′
+ is equivalent to the relation 
+
+
+′
+. Hence a modular equation 
+can be viewed as an identity involving theta functions at the arguments 
+
+ and 
+
+
+. Let 
+
+
+
+
+
+
+
+. Then the multiplier 
+
+ for degree 
+
+ is defined by 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+In this research, we proved existing modular equations in new way and found new 
+modular equation related to theta function.
+Sometimes modular equation can be found by using the term ‘modular form’. Modular 
+form is very important to treat some functions in number theory. This is defined with 
+upper 
+half plane
+ 
+∈
+, 
+special linear group
+ 
+SL
+
+
+
+∈
+
+det
+, 
+and 
+fractional linear transformation
+ 
+
+
+
+
+
+
+
+----------------Page (3) Break----------------
+최영석, 박정우, 박상현
+- 5 -
+where 
+∈
+. If 
+→
+ satisfies following conditions, we call the function as 
+modular 
+form of weight
+ 
+
+.
+1. 
+
+
+
+ where 
+∈SL
+
+2. 
+
+ is holomorphic on 
+∪∞
+.
+At this point, differentiablity at point of infinity 
+∞
+ is defined as differentiability of 
+
+ at 
+
+. If 
+
+ goes 
+
+ as the point goes further from the origin, the function 
+
+ is 
+called as 
+cusp form
+. Similarly, if 
+→
+ satisfies followings, then 
+
+ is called 
+modular 
+function
+. 
+1. 
+
+ where 
+∈SL
+
+2. 
+
+ is meromorphic.
+Ler 
+
+ be a (multiplicative) group and 
+
+ be a set. We call 
+
+ act on 
+
+ with binary operation 
+××→
+ which satisfies
+1. for all 
+∈
+ and 
+∈
+, 
+2. for all 
+∈
+, 
+
+.
+Then we can think fractional linear transformation as action of 
+SL
+
+
+ on 
+
+ or 
+
+.
+II. Preliminary Results and Some New Formulas for 
+Theta Functions
+In this section, we introduce some theta function identities that will play key roles in 
+the proofs of new modular equations.
+Lemma 2.1. [2, Theorem 5.4.1] 
+We have
+(i). 
+
+
+(ii).      
+
+
+
+
+(iii).   
+
+
+
+
+
+
+
+
+(iv).        
+
+
+
+
+
+
+(v).      
+
+
+
+
+
+
+
+
+
+----------------Page (4) Break----------------
+q-급수와 모듈러 형식
+- 6 -
+Lemma 2.2. [2, Theorem 5.4.3] 
+We have
+(i). 
+
+
+
+
+
+
+
+
+(ii).  
+
+
+
+
+
+
+
+
+(iii). 
+
+
+
+
+
+
+
+
+
+
+(iv).       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Lemma 2.3. [1, Chapter 17, Entry 11, 12] 
+We have
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Definition 2.4. (Elementary Algebraic Function) 
+We call 
+
+ is elementry algebraic function if 
+
+ can be represented by finite number of the four fundamental arithmetic 
+operations and 
+
+-th root.
+Theorem 2.5. 
+We have
+(i).          
+
+
+
+
+
+
+
+
+
+
+
+(ii).           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(iii). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(iv).     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+and we can represent 
+
+
+
+
+ and 
+
+
+
+
+ as 
+
+
+, where 
+
+ is an arbitrary elementry 
+algebraic function. Also every 
+
+
+
+
+ can be represented as 
+
+
+
+
+
+ where 
+
+ is 
+arbitrary elementry algebraic function. 
+Proof. For (i), It is easy to calculate by Lemma 2.3, the recurrence relation and Lemma 2.1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------Page (5) Break----------------
+최영석, 박정우, 박상현
+- 7 -
+By definition of 
+
+, it is always positive. So we can take square root in both sides and get (i).
+We used same method to prove (ii), (iii) and (iv).
+(ii) By Lemma 2.1, Lemma 2.3, and Theorem 2.5 (i),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+(iii) By Lemma 2.1, Lemma 2.3, and Theorem 2.5 (i),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+(iv) By Lemma 2.2, Lemma 2.3 and Theorem 2.5 (iii),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Lemma 2.3 guarantees that we can do this process infinitely many times. By mathematical 
+induction, it is easy to show that every 
+
+
+
+
+ and 
+
+
+
+
+ can be represented as 
+
+
+, 
+where 
+
+ is an arbitrary elementry algebraic function of 
+
+. Also every 
+
+
+
+
+ can be 
+represented as 
+
+
+
+
+
+ where 
+
+ is arbitrary elementry algebraic function of 
+
+.
+□
+----------------Page (6) Break----------------
+q-급수와 모듈러 형식
+- 8 -
+III. Some New Modular Equations
+In this section, we give some new modular equations and give proofs based on simple 
+algebraic computations.
+Theorem 3.1. 
+Let
+
+
+
+
+
+
+and
+
+
+
+
+
+
+
+
+,
+then
+
+
+
+
+
+
+
+
+
+
+.
+Proof 1. Using Lemma 2.2,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+.
+Also, we can find relation of 
+
+ and 
+
+.
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+Thus
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+,
+and this implies the theorem by multiplying 
+
+
+
+
+ both sides.
+□
+----------------Page (7) Break----------------
+최영석, 박정우, 박상현
+- 9 -
+Proof 2. Although this proof is much complicated than Proof 1, the method in this proof 
+can be applied to making modular equations for 
+
+ and 
+
+ consisted of 
+high-degree theta functions like we will do in later.
+As we did in Proof 1, 
+
+ and 
+
+ can be represented by function of 
+
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+.
+So we have
+
+
+
+
+
+
+
+×
+ and 
+
+
+
+
+
+
+
+
+×
+
+.
+Let
+
+ and 
+
+
+,
+then
+
+
+
+
+
+
+
+or
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+These polynomials have degree less than or equal than 6 but numbers of them is 7, larger 
+than 6. Thus there are 
+
+
+
+
+⋯
+
+ which is at least one of them is non-zero and satisfies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+----------------Page (8) Break----------------
+q-급수와 모듈러 형식
+- 10 -
+Having some trial, we could find that next equation holds.
+
+
+
+
+
+
+
+
+
+
+
+
+,
+therefore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+.
+Now we should check this implies 
+
+
+
+
+
+
+
+
+
+
+ by some proper factorization. Multiply 
+
+
+
+
+ on both sides and let 
+
+
+ and 
+
+
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We can factorize as
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+If 
+
+
+
+
+≧
+, then 
+
+ since each term are positive. 
+If 
+
+
+
+
+
+, we can rewrite 
+
+ as
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Thus 
+
+ for all case and 
+
+
+
+
+
+
+
+, which implies the theorem.
+□
+----------------Page (9) Break----------------
+최영석, 박정우, 박상현
+- 11 -
+Theorem 3.2. 
+Let
+
+
+
+
+
+
+and
+
+
+
+
+
+
+
+
+then
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Proof. Using Lemma 2.2,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Let 
+
+
+
+, then
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Then we can get 
+
+
+
+
+
+
+
+
+
+
+. Squaring both sides and using 
+
+
+
+
+
+
+, this 
+implies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Multiplying 
+
+
+, we can get the result.
+□
+----------------Page (10) Break----------------
+q-급수와 모듈러 형식
+- 12 -
+Theorem 3.3. 
+Let
+
+
+
+
+
+ and 
+
+
+
+
+
+
+
+,
+then
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Proof. Applying Lemma 2.1 and Theorem 2.5, We can get
+
+
+
+
+
+
+
+
+ and 
+
+
+
+
+
+
+
+
+
+
+
+
+.
+And these implies
+
+
+
+
+
+,
+
+
+
+
+
+
+
+.
+However,,
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+.
+by putting 
+
+
+
+
+
+
+
+, this gives us the formula.
+□
+----------------Page (11) Break----------------
+최영석, 박정우, 박상현
+- 13 -
+Theorem 3.4. 
+Consider the inequality 
+≤
+ where 
+∈
+ are fixed. Then the 
+number of solution pairs 
+∈
+
+ is greater than 
+
+.
+Proof. It is easy to bound the solutions as 
+≤≤
+ and 
+≤≤
+ by letting 
+
+ and 
+
+ respectively. On 
+
+ plane, 
+
+ is linear and this bisects the 
+rectangle range 
+≤≤
+, 
+≤≤
+. 
+Therefore 
+
+, the number of lattice points 
+
+ satisfying 
+≤
+ is larger than half 
+of number of total lattice points in rectangle range.
+
+
+The inequality shows that 
+
+.
+□
+Theorem 3.5.
+
+
+
+
+
+
+
+ and 
+
+
+
+
+
+
+
+
+
+,
+then
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------Page (12) Break----------------
+q-급수와 모듈러 형식
+- 14 -
+Proof. By Lemma 2.2 and Theorem 2.5,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+
+.
+Thus
+
+
+
+
+×
+
+
+
+
+
+
+
+,
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+
+.
+Substitute 
+
+
+
+ then
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+,
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+.
+Using above formulas, we can get following results
+
+
+
+
+×
+
+
+
+
+
+, 
+
+
+
+
+
+
+×
+
+
+
+
+
+
+.
+Substitute 
+
+ and focus on first and second equations. Then
+
+
+
+
+×
+
+
+
+
+, 
+
+
+
+
+
+
+×
+
+
+
+
+,
+----------------Page (13) Break----------------
+최영석, 박정우, 박상현
+- 15 -
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+
+
+
+.
+Let 
+
+
+
+
+
+ and 
+
+
+
+
+
+
+
+
+.
+Now we want to represent 
+
+ by linear combination of 
+
+ to find the modular 
+equation. For fixed 
+∈
+, there are finite solutions 
+∈
+
+ for 
+degdeg≤
+. Then 
+each 
+
+
+
+
+ is vector and these vectors form a subspace of 
+
+ dimensional vector space. 
+So we want to find 
+
+ such that 
+degdeg≤
+ and the number of solution pairs 
+
+ 
+is greater than 
+
+ and Theorem 3.4 guarantees 
+
+ always exists. Thus 
+
+
+
+
+
+
+degdeg
+≤
+
+ is linearly dependent.
+Definition. (Coefficient Matrix). Define coefficient matrix of ordered pair (
+
+
+
+
+⋯
+
+) 
+where 
+
+
+∈
+ by
+
+
+∈
+
+
+where 
+maxdeg
+
+
+ and 
+
+
+
+
+
+
+
+
+
+
+.
+We can make coefficient matrix 
+
+ from function set 
+
+. But we took 
+
+ be linearly 
+dependent, so 
+
+
+
+ has nonzero solution. Then 
+
+
+
+
+
+
+
+
+⋯
+
+
+
+
+ where 
+
+
+
+
+⋯
+
+
+ is polynomial we want. To find this, we used next code in Mathematica
+.
+A[s_]:=s (1+s)^4 (1+s^2)
+B[s_]:=(s-1)^7 (1+s)^7 (1+s^2)^3
+a:=Exponent[A[s],s]
+b:=Exponent[B[s],s]
+mat:={}
+n:=141
+Do[If[a*i+b*j<n,m:=CoefficientList[A[s]^i*B[s]^j,s];
+   Do[If[Length[m]<n,m=Append[m,0]],{k,n-Length[m]}];(*Print[Length[m]]*) ;
+mat=Append[mat,m];Print[{i,j}];(*Print[-1]*)],{i,0,IntegerPart[n/a]},{j,0,IntegerPart[n/b]}]
+mat=Transpose[mat]
+NullSpace[mat]
+Figure 3. Finding proper linear combination using Mathematica 9
+----------------Page (14) Break----------------
+q-급수와 모듈러 형식
+- 16 -
+This proves the theorem by putting
+
+
+×
+
+
+
+ and 
+
+
+×
+
+
+
+.
+□
+Theorem 3.6. 
+Let
+
+
+
+
+
+ and 
+
+
+
+
+
+
+
+,
+then
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Proof. We can know that
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+let 
+
+
+
+, then
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Now we can put 
+
+
+ on 
+
+ as following equation.
+----------------Page (15) Break----------------
+최영석, 박정우, 박상현
+- 17 -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Therefore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+And we can get the theorem by expanding above equation.
+□
+Remark 1. 
+Every expression 
+
+ and 
+
+ which represented by finite number of the four 
+fundamental arithmetic operations and 
+
+-th root can be represented by rational 
+equation at the same time by substitution.
+Remark 2. 
+Every rational equation 
+
+ and 
+
+ can be represented by polynomial at the same 
+time by substitution. Or more weakly, there exists linearly independent non 
+constant two variable polynomials 
+
+ and 
+
+ such that 
+
+ and 
+
+ are all 
+polynomials by substitution.
+Theorem 3.7. 
+It is always able to find a modular equation for every
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ and 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------Page (16) Break----------------
+q-급수와 모듈러 형식
+- 18 -
+where 
+∈
+
+.
+Proof. By Theorem 2.5, we can express each theta function 
+
+
+
+
+by 
+
+
+
+
+
+ where 
+
+ is arbitrary elementry algebraic function. Then each 
+
+ and 
+
+ is elementry 
+algebraic function of 
+
+ since 
+
+ and 
+
+ are eliminated. By Conjecture 1 and 
+Conjecture 2, there exists linearly independent non constant two variable 
+polynomials 
+
+ and 
+
+ such that 
+
+ and 
+
+ are all polynomials by proper 
+substitution of 
+
+ and let them 
+
+ and 
+
+ respectively.
+To find the modular equation of 
+
+ and 
+
+, we should represent 0 by linear combination of 
+
+. For fixed 
+∈
+, there are finite solutions 
+∈
+
+ for 
+degdeg≤
+. Then 
+each 
+
+
+
+
+ is vector and these vectors form a subspace of 
+
+ dimensional vector space. 
+So we should find 
+
+ such that 
+degdeg≤
+ and the number of solution pairs 
+
+ 
+is greater than 
+
+. Theorem 3.4 guarantees 
+
+ always exists as 
+degdeg
+. Thus 
+
+
+
+
+
+
+degdeg
+≤
+
+ is linearly dependent.
+Consider a coefficient matrix 
+
+ from function set 
+
+. But we took 
+
+ be linearly 
+dependent, so 
+
+
+
+ has nonzero solution, then 
+
+
+
+
+
+
+
+
+⋯
+
+
+
+
+ where 
+
+
+
+
+⋯
+
+
+ is polynomial we want. Thus by finding 
+
+, nullspace of 
+
+
+ and doing 
+some re-substitution task, we can get the modular equation of 
+
+ and 
+
+ we wanted.
+Theorem 3.8. 
+It is always able to find a modular equation for every
+
+
+′
+
+
+
+
+′
+
+
+
+ and 
+
+
+′
+
+
+
+
+′
+
+
+
+where 
+∈
+
+ and 
+′′′′∈
+.
+Proof of Theorem 3.8 is identical to the proof of Theorem 3.7.
+Lemma 3.9. [1, Chapter 19, Entry 19(ix)] 
+Let
+
+
+and
+
+
+
+
+----------------Page (17) Break----------------
+최영석, 박정우, 박상현
+- 19 -
+where 
+
+ has degree 7 of 
+
+, then
+
+
+
+
+
+
+
+.
+Theorem 3.10. 
+Let
+
+
+
+
+
+
+and
+
+
+
+
+
+
+
+
+,
+then
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Proof. Replace 
+
+ instead of 
+
+ then 
+
+ and 
+
+ are replaced as followings.
+′
+
+
+
+
+
+and′
+
+
+
+
+
+
+
+And this means 
+
+
+ changes to 
+′′
+
+ and 
+
+
+ changes to 
+′′
+
+. Thus we 
+want to show
+′′
+
+
+
+′′
+
+
+
+
+′
+′
+
+
+
+
+′
+′
+
+
+
+.
+Let 
+
+ has degree 7 of 
+
+. Then
+′
+
+
+
+
+
+
+
+q
+
+
+
+
+
+
+q
+
+
+
+
+
+×
+
+
+
+
+,
+′
+
+
+
+.
+Similarly,
+----------------Page (18) Break----------------
+q-급수와 모듈러 형식
+- 20 -
+′
+
+
+
+.
+Using Lemma 3.9 to each 
+′
+ and 
+′
+, we can get
+
+′
+′
+
+
+
+
+′
+′
+
+
+
+
+′′
+
+
+′′
+
+,
+and this implies the theorem.
+□
+IV. Invariant of Conic
+Classical modular form is an invariant of fractional linear transformation which is a 
+rotation, a translation, and a scaling of the Riemann sphere. More precisely, see Theorem 4.1.
+Theorem 4.1. 
+For Riemann sphere 
+
+
+, let
+’
+s say the stereographic projection on a projection 
+point 
+
+ from the Riemann sphere on 
+×
+ to complex plane as 
+
+. 
+Then for any fractional linear transformation 
+∈SL
+
+
+, 
+
+
+∘∘
+ is a 
+rotation about the imaginary axis, a translation along the real axis, and a 
+scaling of the Riemann sphere.
+Proof. Take a point pair 
+
+ on Riemann sphere. The line pass through 
+
+ and 
+
+ is 
+
+ for 
+∈
+. Thus the intersection point of the line and 
+
+ 
+plane is 
+
+
+
+.
+For 
+
+ on Riemann sphere, take 
+
+-counterclockwise rotational transform about the 
+imaginary axis. Then transformed point is 
+cossinsincos
+ and projected a 
+point on same stereographic projection to complex plane is 
+----------------Page (19) Break----------------
+최영석, 박정우, 박상현
+- 21 -
+
+sincoscossinsincos
+
+.
+What we want to show is the transformation 
+
+ which maps
+
+
+
+
+
+
+sincoscossinsincos
+
+is 
+∈SL
+
+
+. 
+Assume that 
+
+ then we get 
+
+
+
+
+
+. Let 
+
+, then 
+
+
+
+ and 
+
+
+
+. Thus
+sincoscossin
+
+
+sin
+
+cos
+cos
+
+sin
+                 
+cossin
+sincos
+sincos
+
+sincos
+cossin
+And right hand side of previous equation is a fractional linear transformation which 
+determinant of matrix is 1. Thus the statement for a rotation is proved for 
+
+.
+This holds also on general complex number by substitution, and this implies the rotation of 
+the Riemann sphere is a fractional linear transformation. But a scaling and translation along 
+the real axis of the Riemann sphere are
+
+
+
+
+
+
+ and 
+
+
+
+
+
+
+where 
+
+ is a real number. Then it is enough to prove that
+----------------Page (20) Break----------------
+q-급수와 모듈러 형식
+- 22 -
+SL
+
+
+〈
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cossin
+sincos
+〉
+.
+Let 
+
+
+
+
+
+∈SL
+
+
+ then
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+Take 
+
+
+
+
+
+
+
+ and 
+
+
+
+
+
+
+
+
+ then we can get
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+And
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+thus we can set 
+
+
+sin
+
+cos
+, and this means
+
+
+
+
+
+
+
+
+
+
+cossin
+sincos
+.
+This implies the theorem.
+□
+Thus we can think the function which is an invariant of transformation of the conic, 
+which has a projective correspond with complex plane, or more generally, complete field 
+
+ or 
+
+. In this paper, conic means the non-degenerated conic.
+----------------Page (21) Break----------------
+최영석, 박정우, 박상현
+- 23 -
+Definition 4.2. 
+For any conic 
+
+⊆
+
+ and any projection point 
+
+∈
+
+which is not on
+ 
+
+, if 
+∈
+
+ is a projection of 
+∈
+ with a projection center 
+
+ then denote this 
+as 
+
+
+
+. If there is no projection of 
+
+ then denote 
+
+
+∞
+ and 
+call this as the point at infinity (of 
+
+). Also, if there is no point 
+
+ such that 
+
+
+
+ then add 
+
+ which satisfies that and this is also called as a point 
+at infinity (of the conic 
+
+).
+This definition gives us we can do analysis on the conic. And next, we want to define 
+some transformation on the conic. But we know number of intersections between a conic 
+and line is two if they exists (include the point at infinity). Thus we define the followings.
+Definition 4.3. 
+We can define the transformation 
+×
+
+×
+
+∖
+
+→
+
+ as 
+
+ is another 
+intersection between the conic and line which through 
+
+ and 
+
+.
+Now, we can define the reverse for the field 
+
+.
+Definition 4.4. 
+For any conic 
+
+⊆
+
+, a projection point 
+
+∈
+
+, and a reverse point 
+∈
+, define the reverse function 
+
+
+→
+ as 
+
+
+
+
+
+
+
+. Let
+’
+s 
+denote this structure as 
+
+,
+
+Then we can define the following function.
+Definition 4.5. 
+For any conic with the reverse structure 
+
+,
+
+, the function 
+→
+ and 
+the function 
+→
+, if 
+
+ satisfies
+∘
+
+for some 
+∈
+
+∖
+, 
+then we call 
+
+ as 
+
+ reverse invariant with respect to 
+
+ (over 
+and 
+). If there are such 
+
+ points for the function 
+
+, then we call 
+
+ is the reverse invariant 
+degree 
+
+ 
+(over 
+and ).
+We can think an isomorphism or equivalence of the reverse structure.
+----------------Page (22) Break----------------
+q-급수와 모듈러 형식
+- 24 -
+Definition 4.6. 
+For conics 
+
+ and 
+
+ on 
+
+
+, if there is bijective differentiable function 
+→
+ and 
+
+
+∖
+
+→
+
+∖
+
+ which makes
+commutes, then we say this as 
+
+,
+
+
+ is equivalent with 
+
+,
+
+
+, and denote this as
+
+,
+
+≅
+,
+
+
+Theorem 4.7. Let 
+
+,
+
+ be a conic with projection point. Then there is a projective 
+transformation 
+
+ which preserves the x-axis line 
+
+ satisfying 
+
+
+
+,
+
+≅
+,
+
+. Specially, we can find such projective transformation 
+
+ 
+which sends to the point at infinity. 
+Proof.
+Since every conic is a section of a cone, we can think like the figure. Let the blue conic 
+be with projection point . Let 
+
+ as a projective transformation from the plane 
+----------------Page (23) Break----------------
+최영석, 박정우, 박상현
+- 25 -
+containing to the plane which contains 
+
+, which has projection center as the apex of 
+the cone. Then 
+
+ preserves the intersection line of blue plane and purple plane. Therefore 
+it is sufficient to prove 
+
+
+
+,
+
+
+≅
+,
+
+.
+Every projective transformation sends line to line. Thus the line passing is 
+transformed to the line passing 
+
+
+
+. Therefore 
+
+
+
+,
+
+
+≅
+,
+
+, ending the 
+proof.
+In addition, we can take a purple plane which is parallel with the line which passing 
+the apex of cone and . Then the projective transformation sends the point to the 
+point at infinity. Thus the projection on 
+
+) is caused through the line which is an 
+asymptote if 
+
+) is not parabola, and axis when 
+
+) is parabola.
+□
+Theorem 4.8. 
+For any two conics with projection points
+ 
+
+,
+
+
+ 
+and
+ 
+
+,
+
+
+,
+
+,
+
+≅
+,
+
+
+Theorem 4.8 implies that if we choose different conics, then it gives us the same result on 
+reverse invariant. If we chose same conics 
+
+, this gives us that we can choose any 
+projection point on the conic.
+----------------Page (24) Break----------------
+q-급수와 모듈러 형식
+- 26 -
+Proof.
+First, we will prove the case of translation and scaling of parabola and a projection 
+point on it.
+Step 1. Translation and scaling of parabola with same projection point at infinity.
+Case 1.1. x-axis translation
+For two x-axis translated parabolas , in the figure and let , as projection 
+points respectively. Think an affine transformation 
+↦
+ then we can know 
+that this preserves the 
+
+ coordinate, and sends to . This implies (,) and (,) 
+are equivalent.
+Case 1.2. y-axis translation
+It is enough to find the translation between the two lines. But affine transformation 
+which is translating to satisfies this condition, thus (,) and (,) are 
+equivalent.
+----------------Page (25) Break----------------
+최영석, 박정우, 박상현
+- 27 -
+Case 1.3. x-scaling
+It is sufficient to find the transformation between two lines, but scaling which sends 
+to satisfies this. Thus (,) and (,) are equivalent.
+Case 1.4. y-scaling
+y-scaling is also x-axis scaling and x-translation thus this case is same as the Case 3.
+Step 2. Translation and scaling of hyperbola with same projection point at infinity.
+It is easy that the image of by affine transformation which preserves lines which 
+passes is equivalent with . And it is possible to send the hyperbola to parabola by 
+using this affine transformation.
+Case 2.1. Translation of hyperbola
+This case is equivalent with the problem of translation of parabola, and it was solved.
+Case 2.2. Scaling of hyperbole
+This case is equivalent with the problem of scaling of parabola, and it was solved.
+Step 3. x-axis Translation and Scaling of Circles
+Case 3.1. x-axis Translation
+Let and be the x-axis translated two circles and 
+
+, 
+
+ be projection points 
+respectively. We can regard each circles to be on a cone respectively. Use the special 
+projective transformation of Theorem 4.7, 
+
+ for each circle. Then we can remove x-axis 
+line 
+
+ since line which passes 
+
+
+
+
+ and line which passes 
+
+
+
+
+ are parallel. Therefore 
+the scaling which focused on the line which passes 
+
+
+
+
+, of are all equivalent. But 
+----------------Page (26) Break----------------
+q-급수와 모듈러 형식
+- 28 -
+we can make the conic goes to the parabola 
+′
+ by scaling, and we can do this at 
+which goes to parabola 
+′
+. We proved the case of the translation of the parabola in Step 
+1, thus this case is true.
+Case 3.2. Scaling of the Circle
+Let 
+
+,
+
+
+ is scaling of 
+
+,
+
+
+ whose center is scaling center which is on the x-axis 
+line 
+
+. Similarly to Case 1, it is sufficient to prove the case of conic with projection through 
+the line, and two lines 
+
+
+
+
+ and 
+
+
+
+
+ are parallel since it is scaling. Thus we can 
+reduce this case into parabola, and prove is over.
+Step 4. The Case of Circles
+Let 
+
+,
+
+
+ and 
+
+,
+
+
+ are two circle with projection points.. Then by Step 1, we can 
+make two projective points 
+
+ and 
+
+ are same. Suppose 
+
+ and 
+
+ are same with .
+It the figure, it is enough to prove the line which passes 
+
+ and 
+
+ goes to line which 
+passes 
+
+ and 
+
+ by constant spiral transformation. But we know two triangles are similar, 
+and the 
+∠
+
+′
+ is constant, The spiral transformation rotates as this angles ans scales as 
+ratio between two radius. This proves the step.
+----------------Page (27) Break----------------
+최영석, 박정우, 박상현
+- 29 -
+Step 5. General Case
+Let 
+
+,
+
+
+ and 
+
+,
+
+
+ are two conics with projection points. We can send to 
+circle by using a proper projective transformation. Thus we can suppose be a circle.
+Similarly, consider a projective transformation which sends to a circle, By step 4, the 
+circle and its projection point is equivalent to the circle and arbitrary projection point on 
+the circle. Taking the inverse of projective transformation, and its projection point is 
+equivalent to and arbitrary projection point on . And we will put the projection point 
+on the symmetric axis of .
+By proper scaling, translation of and Step 4, you can take the projective point 
+same as the projecton point of . Also I\It is able to make tangent line at projection point 
+is same respect to each conics. Now, send the tangent line which passes the projection 
+point to line at infinity, then and goes to two parabolas which two are scaling. But 
+we know two are equivalent, and this proves the theorem.
+□
+Corollary 4.8.A degree of the reverse invariant is invariant on choosing the 
+conic-projective point pair 
+
+,
+
+.
+Corollary 4.9. 
+
+ is projective transformation.
+Conjecture 3. Any projective transformation on 
+
+
+ can be expressed not using higher 
+dimension, but using the lines, conics, and intersections.
+V. References
+[1] Bruce C. Berndt, Ramanujan’s Notebooks, Part III, Springer, 1991
+[2] Bruce C. Berndt, Number Theory in the Spirit of Ramanujan, AMS, 2006
+[3] Bruce C. Berndt, Ramanujan’s Notebooks, Part IV, Springer, 1994.
+[4] D. H. Paek and Ji. Yi, 
+On some modular equations and their applications II,
+ Bull. 
+Korean Math. Soc. 50(2013), no. 4, 1211-1233.
+[5] D. H. Paek and J. Yi, 
+On evaluations of the modular j-invariant by modular equations of 
+----------------Page (28) Break----------------
+q-급수와 모듈러 형식
+- 30 -
+degree 2
+, Bull. Korean Math. Soc. 52 (2015), no. 1, 263-273.
+[6] D. H. Paek and J. Yi, 
+On some modular equations of degree 5 and their applications.
+ 
+Bull. Korean Math. Soc. 50(2013), 1315-1328. 
+[7] J. Yi, 
+Modular equations for the Rogers-Ramanujan continued fraction and the Dedekind 
+eta function,
+ Ramanujan J. 5(2001), no 4, 377-384.
+[8] J. Yi, 
+Theta-function identities and the explicit formulas for theta-function and their 
+applications
+, J. Math. Anal. Appl., 292 (2004), 381-400.
+[9] J. Yi, 
+Evaluations of the Rogers-Ramanujan continued fraction R(q) by modular 
+equations,
+ Acta Arith. 97(2001), 103-127.
+[10] J. Yi and H. S. Sim, 
+Some new modular equations and their applications,
+ J. Math. 
+Anal. Appl., 319(2016), 531-546.
+[11] J. Yi, M. G. Cho, J. H. Kim, S. H. Lee, J. M. Yu, and D. H. Paek, 
+On some modular 
+equations and their applications I,
+ Bull. Korean Math. Soc. 50 (2013), 76-776. 
+[12] J. Yi, Y. Lee, D. H. Paek,
+ The explicit formulas and evaluations of Ramanujan
+’
+s theta 
+function 
+
+,
+ J. Math. Anal. Appl., 321(2006), 157-181.
+----------------Page (29) Break----------------
+최영석, 박정우, 박상현
+- 31 -
+ABSTRACTq-Series and Modular Form
+Reseacher : Youngseok Choi(sophomore, photon235@naver.com)
+Jungwoo Park(sophomore, pjw3141@naver.com)
+Sanghyun Park(sophomore, shp0728@gmail.com)
+Supervisor : Jinhee Yi(Korea Science Academy of KAIST, jhyi100@kaist.ac.kr)
+Co-Supervisor : Daehyun Paek(Busan National University of Education,
+paek@bnue.ac.kr)
+Abstract
+Most of Ramanujan’s work in number theory arose out of 
+
+-series and theta functions. 
+However, Ramanujan recorded his discoveries without proofs in notebooks. Hence there 
+has been interest by number theorists in providing the proofs of Ramanujan’s results. In 
+this paper, we focus on 23 theta function identities which are certain types of modular 
+equations in Ramanujan’s notebooks. Some of them are proved by using modular form. 
+We found new modular equations and generalized the finding process. We find not only 
+elementary proofs for them, but several new modular equations with their proofs based on 
+simple algebraic computations. In addition we give some definitions of the reverse 
+function and the reverse invariant on the conic with projection point, and then find the 
+equivalence for any two conics with projection points.
+Key Words : q-series, modular equation, invariant, conic, projective geometry
+----------------Page (30) Break----------------

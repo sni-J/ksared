@@ -1,0 +1,116 @@
+- 131 -
+<국문초록>부인가능한 영지식 증명 프로토콜에 대한 연구
+연구자 : 김기환(2학년, jerry010222@naver.com)
+박홍근(2학년, leejseo@live.co.kr)
+이종서(2학년, mathdol6716@naver.com)
+정민석(3학년, chrisgo@naver.com)
+책임지도자 : 윤상현(KAIST 부설 한국과학영재학교, slater1125@kaist.ac.kr)
+공동지도자 : 김준모(KAIST, junmo.kim@kais.ac.kr)
+요약문
+영지식 증명(zero-knowledge proof)은 명제의 증명에 대한 정보를 노출하지 않으면서 진
+위여부만을 입증할 수 있게 하는 증명자(prover)와 검증자(verifier)간의 대화형 계산 절차로 
+여러 암호 프로토콜에서 사용된다. 협박자(coercer)가 존재하는 암호학적 상황에 대처하기 위
+해 공개키 암호체계를 위한 부인가능성(deniability)이 도입되었는데, 본 연구에서는 영지식 
+증명 프로토콜을 확장하여 부인가능성을 가지도록 하는 것을 목표로 한다. 이를 위해 부인가능
+한 영지식 증명 프로토콜을 정형화하고, 이 정의를 만족하는 프로토콜을 strongly NP-hard인 
+3-분할 문제에 기반하여 구성한다. 제안하는 프로토콜의 정확성을 보이기 위해 완전성
+(completeness), 건전성(soundness), 영지식성(zero-knowledgeness), 부인가능성(deniability)
+을 엄밀하게 증명하며, 계산복잡도 분석 및 실험을 통해 실제로 사용될 수 있을 정도의 효율성
+을 가졌음을 보인다.
+주제어 : 영지식 증명(zero-knowledge proof), 부인가능성(deniability), 
+3-분할 문제(3-Partition Problem)
+----------------Page (0) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 132 -
+----------------Page (1) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 133 -
+----------------Page (2) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 134 -
+----------------Page (3) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 135 -
+----------------Page (4) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 136 -
+----------------Page (5) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 137 -
+----------------Page (6) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 138 -
+----------------Page (7) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 139 -
+----------------Page (8) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 140 -
+----------------Page (9) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 141 -
+----------------Page (10) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 142 -
+----------------Page (11) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 143 -
+----------------Page (12) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 144 -
+----------------Page (13) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 145 -
+----------------Page (14) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 146 -
+----------------Page (15) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 147 -
+----------------Page (16) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 148 -
+----------------Page (17) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 149 -
+----------------Page (18) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 150 -
+----------------Page (19) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 151 -
+----------------Page (20) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 152 -
+----------------Page (21) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 153 -
+----------------Page (22) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 154 -
+----------------Page (23) Break----------------
+김기환⋅박홍근⋅이종서⋅정민석
+- 155 -
+----------------Page (24) Break----------------
+부인가능한 영지식 증명 프로토콜에 대한 연구
+- 156 -
+ABSTRACTA Study on Deniable Zero-Knowledge Proof System
+Reseacher : Kihwan Kim(sophomore, jerry010222@naver.com)
+Jongseo Lee(sophomore, leejseo@live.co.kr)
+Honggeun Park(sophomore, mathdol6716@naver.com)
+Minseok Jung(Senior, chrisgo@naver.com)
+Supervisor : Sanghyun Yoon(Korea Science Academy of KAIST, slater1125@kaist.ac.kr)
+Co-Supervisor : Junmo Kim(KAIST, junmo.kim@kaist.ac.kr)
+Abstract
+Zero-knowledge interactive proof system is a class of protocols by which one party (the 
+prover) can prove the other party (the verifier) that a given proposition is true, without 
+revealing any information other than the fact that the proposition is indeed true. In order 
+to cope with the cryptographic situatioin where the coercer plays, the deniability has been 
+introduced in the context of public-key encryption schemes. In this paper, we consider a 
+zero-knowledge proof system with deniability. We first formalize the notion of deniability 
+for zero-knowledge proof system. Then, we propose a new zero-knowledge proof system 
+with deniability based on the 3-partition problem, which has been shown to be NP-hard in 
+the strong sense. We prove the completeness, soundness, zero-knowledgeness, and 
+deniability of the proposed protocol. The efficiency of our protocol is demonstrated by 
+asymptotic analysis and experiments. 
+----------------Page (25) Break----------------

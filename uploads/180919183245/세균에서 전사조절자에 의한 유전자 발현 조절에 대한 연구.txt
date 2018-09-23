@@ -1,0 +1,388 @@
+- 75 -
+<국문초록>
+세균에서 전사조절자에 의한 유전자 발현 조절에 
+대한 연구
+연구자 : 강지유(2학년, jeeyoolucy@naver.com)
+김용태(2학년, yt7481@naver.com)
+노유진(2학년, lime1001@naver.com)
+책임지도자 : 고인정(KAIST 부설 한국과학영재학교. koin2@kaist.ac.kr)
+공동지도자 : 오정일(부산대학교, joh@pusan.ac.kr)
+조교 : 이하나(부산대학교, sscjf@naver.com)
+요약문
+전사조절자인 Crp와 FurA는 M. smegmatis에서 ahpC 오페론의 발현을 조절한다. 본 연구
+에서는 두 reporter gene (lacZ와 gfp) 및 reverse-transcription PCR을 사용하여, ahpC의 발현
+이 FurA 및 Crp에 의해 조절되는지 조사하였다. 우리는 wild-type (WT)과 세 furA 유전자나 
+crp 유전자를 비활성화 시킨 mutant strains (Δf1f2f3와 Δcrp)의 ahpC 유전자 발현을 각각 비
+교하였다. M. smegmatis의 WT, Δf1f2f3와 ΔCrp strains를 10 mM cumene hydroperoxide 
+(CHP)에 1시간 처리하여 유전자 발현을 강하게 만들었다. 결과적으로 FurA와 Crp가 ahpC 발
+현에 각각 activator과 repressor의 역할을 한다는 것을 알아내었다. 본 연구를 통하여 원핵생
+물에서 전자조절자의 기능을 밝히기 위해 접근하는 방법을 배울 수 있었다.
+주제어  : Mycobacterium smegmatis, ahpC gene, cAMP receptor protein, ferric uptake 
+regulator, transcriptional regulator
+----------------Page (0) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 76 -
+I. 서론
+유전자란 유전 정보가 암호화된 상태의 DNA 부분이다. 인간과 같은 진핵생물과는 다르게 
+핵막이 없는 원핵생물은 몇 개의 비슷한 기능을 하는 유전자가 모여서 오페론이라는 단위를 
+이룬다. 오페론의 특징으로는 비슷한 유전자들이 같이 발현되고 억제되기 때문에 효율적으로 
+RNA나 단백질을 생산할 수 있다는 점이 있다.
+오페론이  한꺼번에  발현될  수  있는  기작의  원인은  유전자  발현의  과정인  전사
+(transcription)와 번역(translation) 중 전사에 있다. 전사란 DNA 위의 유전자를 읽어서 그 정
+보를 mRNA(messenger RNA)로 옮기는 과정이고, 번역이란 mRNA의 정보를 단백질로 옮겨서 
+최종적인 결과물을 얻어내는 과정이다. 이 중 전사 과정은 또 세부 과정인 개시(initiation)와 
+신장(elongation), 그리고 종결(termination)으로 나뉜다. 여기서 개시와 종결은 각각 RNA 중
+합효소(RNA  polymerase)가  DNA에  붙고  떨어지는  과정인데,  RNA  polymerase는  오페론의 
+윗부분(upstream)에 있는 RNA polymerase binding site에 붙고 아랫부분(downstream)에 있
+는 terminator에서 떨어진다. 이렇게 전체 전사 과정에서 한 오페론의 유전자들을 다 같이 발
+현하게 하는 것이다.
+오페론의  전사를  조절하는  기작은  주로  개시  과정에서  일어난다.  RNA  polymerase 
+binding  site  주변에는  전사조절자(transcriptional  regulator)가  있어서  전사를  촉진하거나 
+억제하는 역할을 하는데, Mycobaterium smegmatis(이하 M. smegmatis)에서 활성 산소에 
+의한 스트레스를 억제하는 alkyl hydroperoxide reductase를 만드는 유전자인 ahpC의 전사
+조절자로  추정되는  자리인  IR1과  IR2가  발견되었다.  각각은  cAMP  receptor  protein(이하 
+Crp)와 Ferric uptake regulator(이하 FurA)로 불리는 전사조절자가 붙는 자리라고 알려져 
+있다.
+본 연구에서는 Crp와 FurA의 binding site로 예상되는 IR1과 IR2에 이들이 activator이나 
+repressor 같이 유전자 ahpC에 어떤 전사조절자 작용을 하는지 조사하고자 하였다. 이를 
+위해 IR1과 IR2가 포함된 유전자 ahpC의 윗부분과 lactose 오페론(이하 lacZ), Kanamycin
+(이하 Km) 또은 Hygromycin(이하 Hyg) 저항유전자를 동시에 가지고 있는 plasmid를 만들
+었다.
+그리고 Crp와 FurA에 대한 binding site를 변형시킨 plasmid를 M. smegmatis에 ligation 
+시켜 wild type과 비교하여 β-galactosidase의 발현을 보았다. 이러한 실험으로 crp와 furA가 
+ahpC의 발현을 어떻게 조절하는지 알아보았다.
+----------------Page (1) Break----------------
+강지유⋅김용태⋅노유진
+- 77 -
+II. 이론적 배경
+1. Alkyl hydroperoxide reductase
+인체의 대식 세포는 몸 속으로 들어온 결핵균을 제거하기 위해 peroxide 분자를 생성하는 
+등 산화적 스트레스 조건을 형성한다. 결핵균은 이에 대응하여 산화적 스트레스를 제거할 수 
+있는 효소의 발현을 증가시킨다. 이 효소들 중 하나가 alkyl hydroperoxide reductase로, 이는 
+organic peroxide를 이에 상응하는 alcohol로 환원시키고, 과산화수소(hydrogen peroxide)를 
+물 분자로 환원시키며, NO로부터 유래된 peroxinitrite(ONOO-)를 환원시키는 반응을 촉매해 
+결핵균의 생존을 돕는다(Fig. 1).
+또한  alkyl  hydroperoxide  reductase는  결핵균 Mycobacterium  tuberculosis뿐만  아니라 
+M. smegmatis를 비롯한 Mycobacterium 속의 생명체들이 공통적으로 분비할 수 있는 효소로, 
+유전자 ahpC에 의해 암호화되어 있다.
+[Fig. 1] Alkyl hydroperoxide reductase의 구조와 촉매 반응에 관여하는 단백질과 
+electron carrier. (LpdC: dihydrolipoamide dehydrogenase, 
+SucB: dihydrolipoamide succinyltransferase)
+2. AhpC (MSMEG_4891) regulator
+Alkyl hydroperoxide reductase(이하 AhpC)는 기능하기 위해 AhpD를 필요로 하며, 이는 
+유전자  ahpD에  의해  암호화되어  있다.  유전자 ahpC와  유전자 ahpD가  이루는 ahpCD 
+----------------Page (2) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 78 -
+operon은 산화적 스트레스 아래 발현이 유도된다 알려져 있으며, 다른 오페론과 같이 발현을 
+조절하는 전사조절자가 있을 것으로 여겨진다. 일반적으로 전사조절자가 DNA에 결합해 유전
+자 발현을 조절하는 경우 RNA 중합 효소가 결합하는 자리인 promotor 전후에 결합위치가 존
+재한다. 전사조절자가 DNA에 결합하면 전사조절자의 종류에 따라 발현 조절이 두 가지로 나
+뉜다. 만약 결합한 전사조절자가 activator로서 작용한다면 유전자 ahpC의 발현을 촉진시켜 
+전사조절자의 생성을 억제한 mutant type의 발현이 그러지 않은 wild type의 발현보다 적을 
+것이다. 한편, 결합한 전사조절자가 repressor로서 작용한다면 반대로 발현을 억제해 전사조
+절자의 생성을 억제한 mutant type의 발현이 wild type의 발현보다 더 많이 일어날 것이다. 이
+처럼 mutant type과 wild type의 유전자 발현 정도를 비교해 전사조절자가 유전자 ahpC에 어
+영향을 미치는지를 알아낼 수 있다.
+유전자 ahpC의 promotor 전후에서는 Crp 결합위치(IR1)과 FurA 결합위치(IR2)가 발견되
+었다(Fig. 3). 그러나 M. smegmatis의 유전자 ahpC의 발현 조절 과정에 두 전사조절자가 어떠
+한 영향을 미칠지에 대해서는 알려진 바가 없다.
+[Fig. 2] 유전자 ahpC locus 주위의 genetic organization
+[Fig. 3] 유전자 ahpC앞의 조절부위 서열
+----------------Page (3) Break----------------
+강지유⋅김용태⋅노유진
+- 79 -
+III. 실험 방법
+1. 사용 균주
+본 연구에서 사용한 균주인 M. smegmatis는 Actinobacteria 문과 Mycobacterium 속의 박
+테리아다. 결핵을 일으키는 병균인 M. tuberculosis 나 나병을 일으키는 병균인 M. laprae 와 
+같은 속이나, 질병을 일으키지 않는다. 안전하다는 특성과 더불어 키우기 쉽고, 같은 속의 다
+른 박테리아와 비교했을 때 상대적으로 빠르게 생장한다는 특징으로 인해 실험용으로 많이 쓰
+인다. 또한 중요한 특징 중 하나로, 산화적 스트레스를 방어하기 위한 기작이 존재한다. 이는 
+박테리아가 인체에 침투한 뒤에 macrophage와 같은 면역 세포에게 잡아먹히면 작동되는데, 
+대식 세포가 박테리아를 소화하기 위해 내부로 과산화수소와 같은 산화력이 강한 물질을 분비
+하면 이에 대응하기 위해 superoxide radical을 소화하는 효소를 분비한다.
+사용한 또 다른 균주인 Escherichia coli(이하 E. coli)는 대장균으로 이 실험에서는 DH5α 
+strain을 competent cell로 사용하여 plasmid를 넣었다 cloning하고 다시 빼는데 사용하였다. 
+실험에 사용한 strain과 plasmid의 사용 목적과 genotype은 [Table. 1]과 같다.
+2. 세균 배양
+본 연구에서는 E. coli strain인 DH5α와 M. smegmatis 세균 두 종류를 사용하였다. M. 
+smegmatis는 37°C, 200 rpm에서 0.2% (w/v) glucose와 0.02% (v/v) Tween-80이 첨가된 7H9 
+(Difco, Sparks, MD) 액체배지에 호기적으로 배양하였고, E. coli DH5α는 Luria-Bertoni(LB) 
+배지에  호기적으로  배양하였다.  본  연구에서  사용되었던  vectors인  pMV306은  Km에  대해, 
+pNCII는 Hyg에 대해 각각 항생제 내성 유전자를 포함하고 있다. 실험에 사용한 세균의 stain
+과 plasmid의 종류는 [Table. 1]에 정리되어 있다. pMV306과 pNCII plasmid가 증식 과정에서 
+사라지지 않게 하기 위해 배지에는 selective pressure를 줄 용도로 Km과 Hyg 항생제가 각각 
+들어갔다(Table.  2).  실험  중에  PCR에서  사용했던  primer의  종류와  서열,  사용한  목적은 
+[Table. 3]과 같다.
+산화적 스트레스를 주는 조건으로 Cumene Hydroperoxide (CHP)를 사용하였다. 배양한 
+M. smegmatis는 OD600이 0.4인 조건에서 +CHP 조건 배양액에만 CHP 0.1 mM을 1시간동안 
+처리하였다. Activity staining을 위한 세균 배양에서는 M. smegmatis가 OD600이 0.4인 조건에
+서 H2O2 0.1 mM을 1시간동안 처리하였다.
+----------------Page (4) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 80 -
+StrainRelevant phenotype/genotype or purpose
+M. smegmatisWild type
+M. smegmatis ∆f1f2f3 Deletion mutant of furA1, furA2, furA3
+M. smegmatis ∆crpInsertion mutant of crp
+E. coli DH5α                   Plasmid cloning and conjugation
+Plasmid
+pMV306::M3::gfp[Not I ] - M3 - [Xba I] – gfp - [EcoR I] –Km resistant(이하 Km r)
+pMV306::ahpC::gfp[Not I ] - ahpC - [Xba I] – gfp - [EcoR I] –Km r
+pGFPuv                         [Pst I ] - green florence protein gene(이하 gfp) - [Hind III]
+pNC                             [Xba I ] - [Cla I] - lacZ - Hyg resistant
+pNCgfp                          [Xba I ] - [Pst I] - gfp - [Hind III] - [Cla I] - lacZ - Hyg resistant
+Table 1. Table of strains and plasmids 
+E. coliM. smegmatis
+Kanamycin50 ㎍/㎖30 ㎍/㎖
+Hygromycin200 ㎍/㎖                          50 ㎍/㎖
+Table 2. Table of antibiotics 
+Primer nameSequence(5’→3 ‘)Purpose
+AhpC_SalI+ATATGTCGACCATCGACGTCGCCCGCCCahpC cloning
+AhpC_XbaI-     ATATTCTAGAGTCATCGGGCTGCTTGGC
+GFP_PstI+      ATATCTGCAGCATGCATGAGTAAAGGAGAAGAACgfp cloning
+GFP_HindIII-     ATATAAGCTTGCCCTGACGGGCTTGTCTG 
+AhpC_F       CGTGTGTCGGTGGACAACGAG RT-PCR for ahpC
+AhpC_R       GGTCACCGACACGAACTGGA
+Table 3. Table of primers 
+3. pMV306::ahpC::gfp Plasmid와 pMV306::ahpC::lacZ 제작
+유전자 ahpC template DNA를 이용한 PCR(Qiazen™ 2X EF Taq PCR Pre-Mix, Taq DNA 
+polymerase,  primer  (ahpCNotI+,  ahpCXbaI-)로  유전자 ahpC의  promoter  부분이  포함된 
+0.8kb ahpC gene DNA를 증폭시켰다. 증폭된 ahpC DNA와 pMV306::M3::gfp plasmid를 Not
+I과 XbaI restriction enzyme로 double digestion을 수행한 뒤 pMV306::M3::gfp는 agarose 
+gel electrophoresis로 double digestion이 올바르게 수행되었는지 확인, 각각 DNA만을 추출
+해낸 뒤 (Gel & PCR Purification System, Solgent™) ligation해 pMV306::ahpC::gfp plasmid
+를 제작했다(Fig. 4).
+----------------Page (5) Break----------------
+강지유⋅김용태⋅노유진
+- 81 -
+[Fig. 4] pMV306::ahpC::gfp와 pMV306::ahpC::gfp plasmid의 construct. 
+Plasmid 상의 M3, gfp, ahpC gene의 길이 및 위치와 kanamycin resistant gene이 
+나타나 있다. NotI과 XbaI restriction enzyme이 plasmid에 작용하는 site 
+또한 plasmid 위에 나타나 있다.
+위와 같은 방법으로 primer (ahpCSalI+, ahpCXbaI-)를 이용해 유전자 ahpC의 promoter 
+부분이 포함된 0.8kb ahpC gene DNA를 증폭시켰다. Sal I 과 Xba I restriction enzyme으로 
+pMV306lacZ  plasmid의  double  digestion을  수행한  후  증폭시킨 ahpC  gene과  ligation해 
+pMV306lacZ::ahpC plasmid를 제작했다. 
+4. β-galactosidase assay
+pMV306lacZ::ahpC를 가지는 M. smegmatis WT. Δf1f2f3 mutant, Δcrp mutant를 각각 
+CHP를  이용한  oxidative  stress  처리  조건과  비처리  조건에서  배양하였다.  각  strain을 
+O.D.600  값이  0.45∼0.50이  될  때까지  키워  harvest하고  1.5  ml  β-glalactosidase  buffer에 
+resuspend  하였다.  Sonification(10초  on,  50초  off)을  8번  반복해  균체를  파쇄한  뒤 13000 
+rpm에서 10분 간 원심분리하였다. 얻어진 crude extract는 4배 희석하여 사용하였다.
+Assay mixture (1 ml)는 전체 농도가 20 mM이 되도록 β-mercaptoethanol을 첨가한 β
+-glalactosidase  buffer  750  ㎕,  assay  buffer에  녹인  0.2%  (w/v)  o-NPG 200 ㎕, cell crude 
+extract  50  ㎕로  구성되었다.  Assay  mixture를  3회  invert시킨  후  spectrophotometer로 
+O.D.420에서 1분간의 흡광도 변화를 측정하였다. 이후 흡광도 변화량과 단백질 정량값을 이
+용하여 specific activity를 구하였다.
+----------------Page (6) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 82 -
+5. GFP assay
+pMV306::ahpC::gfp를 가지는 M. smegmatis WT, Δf1f2f3 mutant, Δcrp mutant를 각각 
+CHP를 이용한 oxidative stress 처리 조건과 비처리 조건에서 배양하였으며, β-glalactosidase 
+assay와  같은  방식으로  총  6개  sample의  crude  extract를  얻어냈다.  Buffer로는  β
+-glalactosidase buffer가 아닌 Tris-HCL buffer (10 mM, pH 8.0)를 사용했다. 
+각 sample의 crude extract를 단백질 정량해 모든 sample의 단백질 농도가 동일하도록 희
+석시켰다. 준비된 sample은 fluorescence spectrophotometer를 이용해 395 nm의 excitation 
+wavelength와 509 nm의 emission wavelength 조건에서 GFP fluorescence intensity를 측정
+하였다. 
+6. 단백질 농도 측정
+Bovine  serum  albumin을  표준단백질로  사용하고,  Pierce™  BCA  Protein  Assay  Kit 
+(ThermoFisher)를 이용하여 단백질의 농도를 측정하였다.
+7. Polyacrylamide gel electrophoresis
+Native PAGE는 protein denaturation을 일으키지 않아 protein 3차 구조, 분자량, charge 
+등에 속도가 영향을 받으며 효소 자체의 특징과 활성 정도를 알 수 있다. Amino acid 사이의 
+bond가 유지되어 protein의 분자량을 알아낼 수는 없으나 다른 sample과 비교하여 단백질 자
+체의 양을 비교할 수 있으며 존재 여부를 알 수 있다. Native PAGE를 이루는 gel의 구성성분
+은 [Table. 4]와 같다.
+compositionstacking gel resolving gel (7.5%)
+acrylamide solution (30%)30% (w/v) acrylamide +0.8% (w/v) bisacrylamide0.5 ml 2.5 ml
+Stacking buffer             0.5 M Tris-HCl, pH 6.8            1 ml
+Resolving buffer              3 M Tris-HCl, pH 8.8                                 1.25 ml
+Ammonium persulfate    10% (w/v) Ammonium persulfate     0.03 ml            0.075 ml
+DW                                                      2.29 ml             5.65 ml
+TEMED                                                   0.005 ml           0.005 ml
+Table 4. composition of staking gel and resolving gel 
+----------------Page (7) Break----------------
+강지유⋅김용태⋅노유진
+- 83 -
+8. Activity Staining
+Activity  staining에  사용된  균주는 M.  smegmatis로  6개의 sample를  사용했다(Table  5). 
+M. smegmatis의 crude extracts 20 μg을 7.5% (wt/vol) polyacrylamide gel에서 native gel 
+electrophoresis에 적용 하였다. Electrophoresis 후, gel을 DW로 15 분 동안 3 회 세척하였다. 
+Gel을 30% (wt/vol) H2O2 10 ㎕가 들어있는 DW 100 ㎖에 담그고 10 분 간 젓는다. H2O2 용액
+을 배출시키고, gel을 DW로 헹구었다. 그 다음, 2% (wt/vol)의 potassium ferricyanide와 2% 
+(wt/vol)의 ferric chloride를 함유하는 제조된 용액 30 ml를 gel 위에 부었다. 이어서, gel이 진
+한 녹색으로 변하기 시작할 때까지 gel container를 일정하게 흔들었다. Gel을 DW로 세척하
+였다. Catalase activity를 지닌 단백질 밴드는 진한 녹색 배경에서 무채색 밴드로 검출되었다.
+sampletreatstrains
+1
+w/o H2O2
+WT
+2                                                                  Δf1f2f3
+3Δcrp
+4
+w H2O2
+WT
+5                                                                  Δf1f2f3
+6Δcrp
+Table 5. DNA of activity staining 
+9. Reverse transcription of mRNA
+Mid log phage까지 배양시킨 4개 M. smegmatis sample에서 유기용매 TRIzol을 이용해 
+total RNA만을 얻어냈다(Table 6). 이 total RNA를 template로 해 anchored primer와 reverse 
+transcriptase를 반응시켜 cDNA를 합성하였다. RNA는 20배 희석해 각 sample마다 total RNA
+의  양을  1  ug로  일치시켰고,  anchored  primer는  2  ul  사용하였다.  이후  얻어낸  cDNA를 
+template DNA로 해 template DNA 5 ul, 각 primer 1 ul, DW 13 ul로 RT-PCR를 진행한 뒤 
+electrophoresis로 그 결과를 확인했다.
+sampleTreatStrains
+1w/o H
+2O2
+WT
+2Δcrp
+3w H
+2O2
+WT
+4Δcrp
+Table 6. mRNA of RT-PCR 
+----------------Page (8) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 84 -
+IV. 연구 결과 및 고찰
+1. β-glalactosidase의 specific activity를 통한 유전자 ahpC의 발현 확인
+ahpC::lacZ transcriptional fusion (pMV306lacZ::ahpC)를 제작해 유전자 lacZ의 발현이 유
+전자 ahpC promoter의 영향을 받도록 하였다. 이를 이용해 M. smegmatis의 유전자 ahpC의 
+발현을  β-glalactosidase의  specific  activity  측정을  통해  관찰할  수  있었다.  대조군인 M. 
+smegmatis WT와 각각 유전자 furA, crp를 mutant시킨 Δf1f2f3 mutant, Δcrp mutant sample
+을 각각 CHP 처리 조건과 비처리 조건에서 배양해 6개 sample를 얻어냈다. CHP 처리 조건의 
+경우 O.D.600이 0.4일 때 0.1 mM의 CHP를 1시간 동안 처리한 뒤 0.5일 때 harvest하였다. 4배
+로 희석한 crude extract의 단백질 정량을 진행한 뒤 β-galactosidase specific activity를 측정
+한 결과는 [Table. 7]와 같다. 선행 연구에서의 결과와 같이 oxidative stress로 작용한 CHP는 3
+개 sample 모두의 유전자 ahpC의 발현을 증가시켰다. CHP 비처리 조건의 Δf1f2f3는 대조군
+에 비하여 약 6배 증가했으며 Δcrp는 1/4배 감소하였음을 확인하였다(Fig. 5). 
+[Fig. 5] Sample 별 o-NPG 효소 발현 정도 측정 결과. CHP 처리 조건과 비처리 조건에
+서 배양한 6개 sample. 왼쪽에서부터 대조군 WT와 Δf1f2f3, Δcrp이다.
+----------------Page (9) Break----------------
+강지유⋅김용태⋅노유진
+- 85 -
+2. RT-PCR를 통한 transcription 단계에서의 유전자 ahpC 발현 확인
+유전자 ahpC 의 cDNA의 양은 template로 사용되는 total mRNA중 존재하는 ahpC mRNA
+의  양에  비례한다.  그를  이용하여 ahpC mRNA를  template로  해 ahpC cDNA를  합성한  뒤, 
+cDNA를 PCR해 electrophoresis로 밴드의 intensity를 비교해 보는 것으로 ahpC mRNA의 양, 
+transcription 단계에서의 ahpC의 발현을 비교해 볼 수 있다. H2O2를 접종하여 각각 oxidative 
+stress 조건과 non-oxidative stress 조건에서 키운 2개 mutant 유전자를 RT-PCR을 진행하여 
+16S rRNA를 PCR하고 electrophoresis로 확인한 결과, 모든 sample에서 동일히 200 bp 위치에
+서 밴드가 발견되었다. 밴드의 intensity가 동일한 것을 보아 RT-PCR 시 template로 이용된 
+sample들의 total RNA양은 동일하게 맞추어졌음을 확인할 수 있었다. 그 뒤 ahpC cDNA를 
+PCR하고 electrophoresis로 확인한 결과 wild type은 oxidative stress 조건보다 non-oxidative 
+stress 조건에서 발현이 증가하는 것을 관찰할 수 있었다(Fig. 6). 또한 oxidative stress와 관계
+없이 Δcrp의 밴드는 wild type의 밴드보다 옅음을 확인하였다.
+[Fig. 6] M. Smegmatis 균주에서의 16S rRNA와 ahpC mRNA 양을 비교한 RT-PCR의 
+결과이다. 각 sample마다 동일한 양의 mRNA가 사용되었는지 알기 위해 sample의 종류에 
+영향을 받지 않는 16S rRNA의 양이 동일한지 확인하였고(RT-PCR 9 cycle 수행), 
+그 후 ahpC mRNA 양을 비교하였다(RT-PCR 20 cycle 수행).
+3. pMV306::ahpC::gfp cloning
+ahpC::gfp transcriptional fusion (pMV306::gfp::ahpC)를 제작해 유전자 gfp의 발현이 유
+전자 ahpC promoter의 영향을 받도록 하였다. 이를 이용해 M. smegmatis의 유전자 ahpC의 
+----------------Page (10) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 86 -
+발현을 GFP의 fluorescence intensity 측정을 통해 관찰할 수 있었다. β-galactosidase assay
+와 마찬가지로 대조군인 M. smegmatis WT와 Δf1f2f3, Δcrp를 각각 CHP 처리 조건과 비처
+리  조건에서  배양해  6개  sample을  얻어냈다.  모든  sample의  단백질  농도가  동일해지도록 
+crude extract를 희석한 후 fluerescence spectrophotometer를 이용해 GFP fluorescence를 관
+찰한 결과 oxidative stress 조건을 기준으로 wild type과 비교했을 때 Δf1f2f3의 유전자 ahpC 
+발현은 약 65배 증가하였으며 Δcrp의 유전자 ahpC 발현은 약 0.5배 감소하였다(Fig. 7). 
+[Fig. 7] Sample 별 green fluerescence protein 형광 측정 결과. 각각 CHP 처리 조건과 
+비처리 조건에서 에서 자란 sample 6개(wild type, Δf1f2f3, Δcrp).
+5. Activity staining을 통한 유전자 ahpC 발현 확인
+Crp가 유전자 ahpC의 발현에 어떤 영향을 주는지 알아보기 위하여 crude extract를 native 
+gel electrophoresis에 적용하여 살펴보았다. H2O2 처리 조건에서 wild type과 mutant의 유전
+자 ahpC 발현 정도를 protein level에서 측정했다. DAB 용액에 의해 염색된 세 개의 catalase 
+밴드 중 Δf1f2f3의 AhpC 밴드가 대조군에 비해 선명해졌다. 이는 FurA가 repressor임을 뜻
+한다.
+----------------Page (11) Break----------------
+강지유⋅김용태⋅노유진
+- 87 -
+[Fig. 8] Oxidation 조건에서 Activity staining을 완료한 3개의 sample이다. 나타난 3개의 
+bond는 위쪽부터 순서대로 catalase/peroxidase protein KatG2, AhpC, catalase/ 
+peroxidase protein KatG1이다. AhpC protein bond를 비교해보면 3번 레인의 21kDA의 
+AhpC protein이 가장 뚜렷하게 나타났다.
+V. 결론
+결핵균과  비슷한  성질을  지녔으나  위험성이  비교적  낮아  인체에  해를  끼치지  않는 M. 
+smegmatis는  인체에  들어와  macrophage에  의해  포식된  뒤  산화적  스트레스  조건  등에서 
+ahpCD operon의 발현 생성물로 인해 증식, 또는 잠복이 가능하다. 본 연구에서는 대식세포 
+내의 스트레스 조건 중 oxidative stress 조건을 걸었을 때 FurA와 Crp를 mutation 시킴으로서 
+나타나는 M. smegmatis의 유전자 ahpC 발현 양상의 변화를 조사하였다. 또한 wild type과 Δ
+crp는  oxidative  stress  조건에서  키운 M. smegmatis의 ahpC  activation이  non-oxidative 
+stress 조건보다 높았다. β-glalactosidase assay에서 10 mM CHP를 처리한 wild type은 ahpC 
+발현이 약 2배 증가하였으며, CHP 처리 조건에서의 Δf1f2f3는 ahpC 발현이 약 1.3배 증가하
+였다. 이는 oxidative stress 처리 조건에서 유전자 ahpC의 발현이 증가함을 의미한다. 실험 결
+과를  보면  Δf1f2f3의 ahpC 발현은  wild  type에  비해  극히  높았으며 Δcrp의 ahpC 발현은 
+wild type에 비해 낮았다. 마찬가지로 Activity staining의 결과, Δf1f2f3의 AhpC가 가장 많이 
+발현되었으며 gfp 형광 측정 결과에서도 wild type보다 약 60배 밝게 나왔다. 이는 FurA가 
+repressor임을  나타낸다.  Δcrp는  oxidative  stress  조건에서  모두  wild  type보다  미세하게 
+ahpC 발현 정도가 낮게 나왔으며, 여러 실험에서 동일한 경향을 보였기에 FurA는 repressor이
+며 Crp는 activator라는 결론을 내렸다. 또한 oxidative stress 조건을 처리하였을 때 다른 두 
+----------------Page (12) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 88 -
+strain에  비해서  crp  mutant는  대조군과  비교하였을  때  변화량이  극히  미미했다.  이는 
+oxidative stress 작용 기작이 Crp dependent함을 의미한다.
+VI. 참고문헌
+[1] Han-Seung Jeon, Ki-Hoon Yang, In-Jeong Ko, and Jeong-Il Oh, (2014). Expression of 
+Adenylyl Cyclase Genes in Mycobacterium smegmatis under Hypoxic and Nitric Oxide 
+Conditions, J. Life Sci: 1330-1338
+[2] Ha-Na Lee, Na-On Lee, Seung J. Han, In-Jeong Ko, Jeong-Il Oh, (2014). Regulation of 
+the   ahpC   Gene   Encoding   Alkyl   Hydroperoxide   Reductase   in   Mycobacterium 
+smegmatis, PLoS ONE 9(11): e111680. doi: 10.1371/ journal.pone.0111680
+[3] Master SS, Springer B, Sander P, Boettger EC, Deretic V, et al. (2002) Oxidative stress 
+response  genes  in  Mycobacterium  tuberculosis:  role  of  ahpC  in  resistance  to 
+peroxynitrite  and  stage-specific  survival  in  macrophages.  Micro-  biology  148:  3139–
+3144.
+[4]  Chen  L,  Xie  QW,  Nathan  C  (1998)  Alkyl  hydroperoxide  reductase  subunit  C  (AhpC) 
+protects bacterial and human cells against reactive nitrogen intermedi- ates. Mol Cell 1: 
+795–805.
+[5] Berg OG, von Hippel PH (1988) Selection of DNA binding sites by regulatory proteins. 
+II. The binding specificity of cyclic AMP receptor protein to recognition  sites.  J  Mol 
+Biol 200: 709–723.
+[6] Koshkin A, Knudsen GM, Ortiz De Montellano PR (2004) Intermolecular interactions in 
+the  AhpC/AhpD  antioxidant  defense  system  of  Mycobacterium  tuberculosis.  Arch 
+Biochem Biophys 427: 41–47.
+[7] Milano A, Forti F, Sala C, Riccardi G, Ghisotti D (2001) Transcriptional regulation of furA 
+and  katG  upon  oxidative  stress  in  Mycobacterium  smegmatis.  J  Bacteriol  183:  6801–
+6806.
+----------------Page (13) Break----------------
+강지유⋅김용태⋅노유진
+- 89 -
+ABSTRACT
+Regulation of gene expression by transcriptional 
+factors in bacteria
+Reseacher : Jeeyoo Kang(sophomore, jeeyoolucy@naver.com)
+Yongtae Kim(sophomore, yt7481@naver.com)
+Yujin Roh(sophomore, lime1001@naver.com)
+Supervisor : Injeong Ko(Korea Science Academy of KAIST. koin2@kaist.ac.kr)
+Co-Supervisor : Jeongil Oh(Pusan National University, joh@pusan.ac.kr)
+Assistant : Hana Lee(Pusan National University, sscjf@naver.com)
+Abstract
+Ferric  uptake  regulator  (FurA)  and  cAMP  receptor  protein  (Crp) are  the  well-known 
+transcriptional  regulators  in  mycobacteria.  The  binding  sites  for  FurA  and  Crp  were 
+identified  in  the  upstream  of  the alkyl  hydroperoxide  reductase  (ahpC) operon in 
+Mycobacterium smegmatis. In this study, we investigated whether the expression of ahpC 
+was  regulated  by  FurA  and  Crp  using  two  reporter  genes (lacZ and gfp) and  reverse 
+transcription  PCR.  We  compared  the  expression  levels  of  the ahpC gene  between  the 
+wild-type (WT) and mutant strains (Δf1f2f3 and Δcrp) in which three furA genes or crp 
+gene are inactivated, respectively. When the WT, Δf1f2f3 and Δcrp were grown without 
+treatment of cumene hydroperoxide (CHP), expression of ahpC was strongly derepressed 
+in the Δf1f2f3 relative to the WT strain. The treatment of the strain with 10 mM CHP for 1 
+h led to the induction of ahpC expression in the WT strain, while this induction effect was 
+abolished in the Δcrp. This expression pattern of ahpC was confirmed at the protein level 
+by  activity  staining  for  peroxidase.  Our  results  indicate  that FurAs  and  Crp  serve  as 
+----------------Page (14) Break----------------
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+- 90 -
+repressors and activator for ahpC expression,  respctively.  Through  this  research  and 
+education program, we learned how to approach to reveal the function of transcriptional 
+regulators in prokaryotes.
+----------------Page (15) Break----------------

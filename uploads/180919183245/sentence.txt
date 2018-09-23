@@ -1,0 +1,777 @@
+- 75 -
+
+<국문초록>
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 
+
+대한 연구
+
+연구자 : 강지유(2학년, jeeyoolucy@naver.com)
+
+김용태(2학년, yt7481@naver.com)
+
+노유진(2학년, lime1001@naver.com)
+
+책임지도자 : 고인정(KAIST 부설 한국과학영재학교. koin2@kaist.ac.kr)
+
+공동지도자 : 오정일(부산대학교, joh@pusan.ac.kr)
+
+조교 : 이하나(부산대학교, sscjf@naver.com)
+
+요약문
+
+전사조절자인 Crp와 FurA는 M. smegmatis에서 ahpC 오페론의 발현을 조절한다. 본 연구
+
+에서는 두 reporter gene (lacZ와 gfp) 및 reverse-transcription PCR을 사용하여, ahpC의 발현
+
+이 FurA 및 Crp에 의해 조절되는지 조사하였다. 우리는 wild-type (WT)과 세 furA 유전자나 
+
+crp 유전자를 비활성화 시킨 mutant strains (Δf1f2f3와 Δcrp)의 ahpC 유전자 발현을 각각 비
+
+교하였다. M. smegmatis의 WT, Δf1f2f3와 ΔCrp strains를 10 mM cumene hydroperoxide 
+
+(CHP)에 1시간 처리하여 유전자 발현을 강하게 만들었다. 결과적으로 FurA와 Crp가 ahpC 발
+
+현에 각각 activator과 repressor의 역할을 한다는 것을 알아내었다. 본 연구를 통하여 원핵생
+
+물에서 전자조절자의 기능을 밝히기 위해 접근하는 방법을 배울 수 있었다.
+
+주제어  : Mycobacterium smegmatis, ahpC gene, cAMP receptor protein, ferric uptake 
+
+regulator, transcriptional regulator
+
+----------------Page (0) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 76 -
+
+I. 서론
+
+유전자란 유전 정보가 암호화된 상태의 DNA 부분이다. 인간과 같은 진핵생물과는 다르게 
+
+핵막이 없는 원핵생물은 몇 개의 비슷한 기능을 하는 유전자가 모여서 오페론이라는 단위를 
+
+이룬다. 오페론의 특징으로는 비슷한 유전자들이 같이 발현되고 억제되기 때문에 효율적으로 
+
+RNA나 단백질을 생산할 수 있다는 점이 있다.
+
+오페론이  한꺼번에  발현될  수  있는  기작의  원인은  유전자  발현의  과정인  전사
+
+(transcription)와 번역(translation) 중 전사에 있다. 전사란 DNA 위의 유전자를 읽어서 그 정
+
+보를 mRNA(messenger RNA)로 옮기는 과정이고, 번역이란 mRNA의 정보를 단백질로 옮겨서 
+
+최종적인 결과물을 얻어내는 과정이다. 이 중 전사 과정은 또 세부 과정인 개시(initiation)와 
+
+신장(elongation), 그리고 종결(termination)으로 나뉜다. 여기서 개시와 종결은 각각 RNA 중
+
+합효소(RNA  polymerase)가  DNA에  붙고  떨어지는  과정인데,  RNA  polymerase는  오페론의 
+
+윗부분(upstream)에 있는 RNA polymerase binding site에 붙고 아랫부분(downstream)에 있
+
+는 terminator에서 떨어진다. 이렇게 전체 전사 과정에서 한 오페론의 유전자들을 다 같이 발
+
+현하게 하는 것이다.
+
+오페론의  전사를  조절하는  기작은  주로  개시  과정에서  일어난다.  RNA  polymerase 
+
+binding  site  주변에는  전사조절자(transcriptional  regulator)가  있어서  전사를  촉진하거나 
+
+억제하는 역할을 하는데, Mycobaterium smegmatis(이하 M. smegmatis)에서 활성 산소에 
+
+의한 스트레스를 억제하는 alkyl hydroperoxide reductase를 만드는 유전자인 ahpC의 전사
+
+조절자로  추정되는  자리인  IR1과  IR2가  발견되었다.  각각은  cAMP  receptor  protein(이하 
+
+Crp)와 Ferric uptake regulator(이하 FurA)로 불리는 전사조절자가 붙는 자리라고 알려져 
+
+있다.
+
+본 연구에서는 Crp와 FurA의 binding site로 예상되는 IR1과 IR2에 이들이 activator이나 
+
+repressor 같이 유전자 ahpC에 어떤 전사조절자 작용을 하는지 조사하고자 하였다. 이를 
+
+위해 IR1과 IR2가 포함된 유전자 ahpC의 윗부분과 lactose 오페론(이하 lacZ), Kanamycin
+
+(이하 Km) 또은 Hygromycin(이하 Hyg) 저항유전자를 동시에 가지고 있는 plasmid를 만들
+
+었다.
+
+그리고 Crp와 FurA에 대한 binding site를 변형시킨 plasmid를 M. smegmatis에 ligation 
+
+시켜 wild type과 비교하여 β-galactosidase의 발현을 보았다. 이러한 실험으로 crp와 furA가 
+
+ahpC의 발현을 어떻게 조절하는지 알아보았다.
+
+----------------Page (1) Break----------------
+
+강지유⋅김용태⋅노유진
+
+- 77 -
+
+II. 이론적 배경
+
+1. Alkyl hydroperoxide reductase
+
+인체의 대식 세포는 몸 속으로 들어온 결핵균을 제거하기 위해 peroxide 분자를 생성하는 
+
+등 산화적 스트레스 조건을 형성한다. 결핵균은 이에 대응하여 산화적 스트레스를 제거할 수 
+
+있는 효소의 발현을 증가시킨다. 이 효소들 중 하나가 alkyl hydroperoxide reductase로, 이는 
+
+organic peroxide를 이에 상응하는 alcohol로 환원시키고, 과산화수소(hydrogen peroxide)를 
+
+물 분자로 환원시키며, NO로부터 유래된 peroxinitrite(ONOO-)를 환원시키는 반응을 촉매해 
+
+결핵균의 생존을 돕는다(Fig. 1).
+
+또한  alkyl  hydroperoxide  reductase는  결핵균 Mycobacterium  tuberculosis뿐만  아니라 
+
+M. smegmatis를 비롯한 Mycobacterium 속의 생명체들이 공통적으로 분비할 수 있는 효소로, 
+
+유전자 ahpC에 의해 암호화되어 있다.
+
+[Fig. 1] Alkyl hydroperoxide reductase의 구조와 촉매 반응에 관여하는 단백질과 
+
+electron carrier. (LpdC: dihydrolipoamide dehydrogenase, 
+
+SucB: dihydrolipoamide succinyltransferase)
+
+2. AhpC (MSMEG_4891) regulator
+
+Alkyl hydroperoxide reductase(이하 AhpC)는 기능하기 위해 AhpD를 필요로 하며, 이는 
+
+유전자  ahpD에  의해  암호화되어  있다.  유전자 ahpC와  유전자 ahpD가  이루는 ahpCD 
+
+----------------Page (2) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 78 -
+
+operon은 산화적 스트레스 아래 발현이 유도된다 알려져 있으며, 다른 오페론과 같이 발현을 
+
+조절하는 전사조절자가 있을 것으로 여겨진다. 일반적으로 전사조절자가 DNA에 결합해 유전
+
+자 발현을 조절하는 경우 RNA 중합 효소가 결합하는 자리인 promotor 전후에 결합위치가 존
+
+재한다. 전사조절자가 DNA에 결합하면 전사조절자의 종류에 따라 발현 조절이 두 가지로 나
+
+뉜다. 만약 결합한 전사조절자가 activator로서 작용한다면 유전자 ahpC의 발현을 촉진시켜 
+
+전사조절자의 생성을 억제한 mutant type의 발현이 그러지 않은 wild type의 발현보다 적을 
+
+것이다. 한편, 결합한 전사조절자가 repressor로서 작용한다면 반대로 발현을 억제해 전사조
+
+절자의 생성을 억제한 mutant type의 발현이 wild type의 발현보다 더 많이 일어날 것이다. 이
+
+처럼 mutant type과 wild type의 유전자 발현 정도를 비교해 전사조절자가 유전자 ahpC에 어
+
+영향을 미치는지를 알아낼 수 있다.
+
+유전자 ahpC의 promotor 전후에서는 Crp 결합위치(IR1)과 FurA 결합위치(IR2)가 발견되
+
+었다(Fig. 3). 그러나 M. smegmatis의 유전자 ahpC의 발현 조절 과정에 두 전사조절자가 어떠
+
+한 영향을 미칠지에 대해서는 알려진 바가 없다.
+
+[Fig. 2] 유전자 ahpC locus 주위의 genetic organization
+
+[Fig. 3] 유전자 ahpC앞의 조절부위 서열
+
+----------------Page (3) Break----------------
+
+강지유⋅김용태⋅노유진
+
+- 79 -
+
+III. 실험 방법
+
+1. 사용 균주
+
+본 연구에서 사용한 균주인 M. smegmatis는 Actinobacteria 문과 Mycobacterium 속의 박
+
+테리아다. 결핵을 일으키는 병균인 M. tuberculosis 나 나병을 일으키는 병균인 M. laprae 와 
+
+같은 속이나, 질병을 일으키지 않는다. 안전하다는 특성과 더불어 키우기 쉽고, 같은 속의 다
+
+른 박테리아와 비교했을 때 상대적으로 빠르게 생장한다는 특징으로 인해 실험용으로 많이 쓰
+
+인다. 또한 중요한 특징 중 하나로, 산화적 스트레스를 방어하기 위한 기작이 존재한다. 이는 
+
+박테리아가 인체에 침투한 뒤에 macrophage와 같은 면역 세포에게 잡아먹히면 작동되는데, 
+
+대식 세포가 박테리아를 소화하기 위해 내부로 과산화수소와 같은 산화력이 강한 물질을 분비
+
+하면 이에 대응하기 위해 superoxide radical을 소화하는 효소를 분비한다.
+
+사용한 또 다른 균주인 Escherichia coli(이하 E. coli)는 대장균으로 이 실험에서는 DH5α 
+
+strain을 competent cell로 사용하여 plasmid를 넣었다 cloning하고 다시 빼는데 사용하였다. 
+
+실험에 사용한 strain과 plasmid의 사용 목적과 genotype은 [Table. 1]과 같다.
+
+2. 세균 배양
+
+본 연구에서는 E. coli strain인 DH5α와 M. smegmatis 세균 두 종류를 사용하였다. M. 
+
+smegmatis는 37°C, 200 rpm에서 0.2% (w/v) glucose와 0.02% (v/v) Tween-80이 첨가된 7H9 
+
+(Difco, Sparks, MD) 액체배지에 호기적으로 배양하였고, E. coli DH5α는 Luria-Bertoni(LB) 
+
+배지에  호기적으로  배양하였다.  본  연구에서  사용되었던  vectors인  pMV306은  Km에  대해, 
+
+pNCII는 Hyg에 대해 각각 항생제 내성 유전자를 포함하고 있다. 실험에 사용한 세균의 stain
+
+과 plasmid의 종류는 [Table. 1]에 정리되어 있다. pMV306과 pNCII plasmid가 증식 과정에서 
+
+사라지지 않게 하기 위해 배지에는 selective pressure를 줄 용도로 Km과 Hyg 항생제가 각각 
+
+들어갔다(Table.  2).  실험  중에  PCR에서  사용했던  primer의  종류와  서열,  사용한  목적은 
+
+[Table. 3]과 같다.
+
+산화적 스트레스를 주는 조건으로 Cumene Hydroperoxide (CHP)를 사용하였다. 배양한 
+
+M. smegmatis는 OD600이 0.4인 조건에서 +CHP 조건 배양액에만 CHP 0.1 mM을 1시간동안 
+
+처리하였다. Activity staining을 위한 세균 배양에서는 M. smegmatis가 OD600이 0.4인 조건에
+
+서 H2O2 0.1 mM을 1시간동안 처리하였다.
+
+----------------Page (4) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 80 -
+
+StrainRelevant phenotype/genotype or purpose
+
+M. smegmatisWild type
+
+M. smegmatis ∆f1f2f3 Deletion mutant of furA1, furA2, furA3
+
+M. smegmatis ∆crpInsertion mutant of crp
+
+E. coli DH5α                   Plasmid cloning and conjugation
+
+Plasmid
+
+pMV306::M3::gfp[Not I ] - M3 - [Xba I] – gfp - [EcoR I] –Km resistant(이하 Km r)
+
+pMV306::ahpC::gfp[Not I ] - ahpC - [Xba I] – gfp - [EcoR I] –Km r
+
+pGFPuv                         [Pst I ] - green florence protein gene(이하 gfp) - [Hind III]
+
+pNC                             [Xba I ] - [Cla I] - lacZ - Hyg resistant
+
+pNCgfp                          [Xba I ] - [Pst I] - gfp - [Hind III] - [Cla I] - lacZ - Hyg resistant
+
+Table 1. Table of strains and plasmids 
+
+E. coliM. smegmatis
+
+Kanamycin50 ㎍/㎖30 ㎍/㎖
+
+Hygromycin200 ㎍/㎖                          50 ㎍/㎖
+
+Table 2. Table of antibiotics 
+
+Primer nameSequence(5’→3 ‘)Purpose
+
+AhpC_SalI+ATATGTCGACCATCGACGTCGCCCGCCCahpC cloning
+
+AhpC_XbaI-     ATATTCTAGAGTCATCGGGCTGCTTGGC
+
+GFP_PstI+      ATATCTGCAGCATGCATGAGTAAAGGAGAAGAACgfp cloning
+
+GFP_HindIII-     ATATAAGCTTGCCCTGACGGGCTTGTCTG 
+
+AhpC_F       CGTGTGTCGGTGGACAACGAG RT-PCR for ahpC
+
+AhpC_R       GGTCACCGACACGAACTGGA
+
+Table 3. Table of primers 
+
+3. pMV306::ahpC::gfp Plasmid와 pMV306::ahpC::lacZ 제작
+
+유전자 ahpC template DNA를 이용한 PCR(Qiazen™ 2X EF Taq PCR Pre-Mix, Taq DNA 
+
+polymerase,  primer  (ahpCNotI+,  ahpCXbaI-)로  유전자 ahpC의  promoter  부분이  포함된 
+
+0.8kb ahpC gene DNA를 증폭시켰다. 증폭된 ahpC DNA와 pMV306::M3::gfp plasmid를 Not
+
+I과 XbaI restriction enzyme로 double digestion을 수행한 뒤 pMV306::M3::gfp는 agarose 
+
+gel electrophoresis로 double digestion이 올바르게 수행되었는지 확인, 각각 DNA만을 추출
+
+해낸 뒤 (Gel & PCR Purification System, Solgent™) ligation해 pMV306::ahpC::gfp plasmid
+
+를 제작했다(Fig. 4).
+
+----------------Page (5) Break----------------
+
+강지유⋅김용태⋅노유진
+
+- 81 -
+
+[Fig. 4] pMV306::ahpC::gfp와 pMV306::ahpC::gfp plasmid의 construct. 
+
+Plasmid 상의 M3, gfp, ahpC gene의 길이 및 위치와 kanamycin resistant gene이 
+
+나타나 있다. NotI과 XbaI restriction enzyme이 plasmid에 작용하는 site 
+
+또한 plasmid 위에 나타나 있다.
+
+위와 같은 방법으로 primer (ahpCSalI+, ahpCXbaI-)를 이용해 유전자 ahpC의 promoter 
+
+부분이 포함된 0.8kb ahpC gene DNA를 증폭시켰다. Sal I 과 Xba I restriction enzyme으로 
+
+pMV306lacZ  plasmid의  double  digestion을  수행한  후  증폭시킨 ahpC  gene과  ligation해 
+
+pMV306lacZ::ahpC plasmid를 제작했다. 
+
+4. β-galactosidase assay
+
+pMV306lacZ::ahpC를 가지는 M. smegmatis WT. Δf1f2f3 mutant, Δcrp mutant를 각각 
+
+CHP를  이용한  oxidative  stress  처리  조건과  비처리  조건에서  배양하였다.  각  strain을 
+
+O.D.600  값이  0.45∼0.50이  될  때까지  키워  harvest하고  1.5  ml  β-glalactosidase  buffer에 
+
+resuspend  하였다.  Sonification(10초  on,  50초  off)을  8번  반복해  균체를  파쇄한  뒤 13000 
+
+rpm에서 10분 간 원심분리하였다. 얻어진 crude extract는 4배 희석하여 사용하였다.
+
+Assay mixture (1 ml)는 전체 농도가 20 mM이 되도록 β-mercaptoethanol을 첨가한 β
+
+-glalactosidase  buffer  750  ㎕,  assay  buffer에  녹인  0.2%  (w/v)  o-NPG 200 ㎕, cell crude 
+
+extract  50  ㎕로  구성되었다.  Assay  mixture를  3회  invert시킨  후  spectrophotometer로 
+
+O.D.420에서 1분간의 흡광도 변화를 측정하였다. 이후 흡광도 변화량과 단백질 정량값을 이
+
+용하여 specific activity를 구하였다.
+
+----------------Page (6) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 82 -
+
+5. GFP assay
+
+pMV306::ahpC::gfp를 가지는 M. smegmatis WT, Δf1f2f3 mutant, Δcrp mutant를 각각 
+
+CHP를 이용한 oxidative stress 처리 조건과 비처리 조건에서 배양하였으며, β-glalactosidase 
+
+assay와  같은  방식으로  총  6개  sample의  crude  extract를  얻어냈다.  Buffer로는  β
+
+-glalactosidase buffer가 아닌 Tris-HCL buffer (10 mM, pH 8.0)를 사용했다. 
+
+각 sample의 crude extract를 단백질 정량해 모든 sample의 단백질 농도가 동일하도록 희
+
+석시켰다. 준비된 sample은 fluorescence spectrophotometer를 이용해 395 nm의 excitation 
+
+wavelength와 509 nm의 emission wavelength 조건에서 GFP fluorescence intensity를 측정
+
+하였다. 
+
+6. 단백질 농도 측정
+
+Bovine  serum  albumin을  표준단백질로  사용하고,  Pierce™  BCA  Protein  Assay  Kit 
+
+(ThermoFisher)를 이용하여 단백질의 농도를 측정하였다.
+
+7. Polyacrylamide gel electrophoresis
+
+Native PAGE는 protein denaturation을 일으키지 않아 protein 3차 구조, 분자량, charge 
+
+등에 속도가 영향을 받으며 효소 자체의 특징과 활성 정도를 알 수 있다. Amino acid 사이의 
+
+bond가 유지되어 protein의 분자량을 알아낼 수는 없으나 다른 sample과 비교하여 단백질 자
+
+체의 양을 비교할 수 있으며 존재 여부를 알 수 있다. Native PAGE를 이루는 gel의 구성성분
+
+은 [Table. 4]와 같다.
+
+compositionstacking gel resolving gel (7.5%)
+
+acrylamide solution (30%)30% (w/v) acrylamide +0.8% (w/v) bisacrylamide0.5 ml 2.5 ml
+
+Stacking buffer             0.5 M Tris-HCl, pH 6.8            1 ml
+
+Resolving buffer              3 M Tris-HCl, pH 8.8                                 1.25 ml
+
+Ammonium persulfate    10% (w/v) Ammonium persulfate     0.03 ml            0.075 ml
+
+DW                                                      2.29 ml             5.65 ml
+
+TEMED                                                   0.005 ml           0.005 ml
+
+Table 4. composition of staking gel and resolving gel 
+
+----------------Page (7) Break----------------
+
+강지유⋅김용태⋅노유진
+
+- 83 -
+
+8. Activity Staining
+
+Activity  staining에  사용된  균주는 M.  smegmatis로  6개의 sample를  사용했다(Table  5). 
+
+M. smegmatis의 crude extracts 20 μg을 7.5% (wt/vol) polyacrylamide gel에서 native gel 
+
+electrophoresis에 적용 하였다. Electrophoresis 후, gel을 DW로 15 분 동안 3 회 세척하였다. 
+
+Gel을 30% (wt/vol) H2O2 10 ㎕가 들어있는 DW 100 ㎖에 담그고 10 분 간 젓는다. H2O2 용액
+
+을 배출시키고, gel을 DW로 헹구었다. 그 다음, 2% (wt/vol)의 potassium ferricyanide와 2% 
+
+(wt/vol)의 ferric chloride를 함유하는 제조된 용액 30 ml를 gel 위에 부었다. 이어서, gel이 진
+
+한 녹색으로 변하기 시작할 때까지 gel container를 일정하게 흔들었다. Gel을 DW로 세척하
+
+였다. Catalase activity를 지닌 단백질 밴드는 진한 녹색 배경에서 무채색 밴드로 검출되었다.
+
+sampletreatstrains
+
+1
+
+w/o H2O2
+
+WT
+
+2                                                                  Δf1f2f3
+
+3Δcrp
+
+4
+
+w H2O2
+
+WT
+
+5                                                                  Δf1f2f3
+
+6Δcrp
+
+Table 5. DNA of activity staining 
+
+9. Reverse transcription of mRNA
+
+Mid log phage까지 배양시킨 4개 M. smegmatis sample에서 유기용매 TRIzol을 이용해 
+
+total RNA만을 얻어냈다(Table 6). 이 total RNA를 template로 해 anchored primer와 reverse 
+
+transcriptase를 반응시켜 cDNA를 합성하였다. RNA는 20배 희석해 각 sample마다 total RNA
+
+의  양을  1  ug로  일치시켰고,  anchored  primer는  2  ul  사용하였다.  이후  얻어낸  cDNA를 
+
+template DNA로 해 template DNA 5 ul, 각 primer 1 ul, DW 13 ul로 RT-PCR를 진행한 뒤 
+
+electrophoresis로 그 결과를 확인했다.
+
+sampleTreatStrains
+
+1w/o H
+
+2O2
+
+WT
+
+2Δcrp
+
+3w H
+
+2O2
+
+WT
+
+4Δcrp
+
+Table 6. mRNA of RT-PCR 
+
+----------------Page (8) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 84 -
+
+IV. 연구 결과 및 고찰
+
+1. β-glalactosidase의 specific activity를 통한 유전자 ahpC의 발현 확인
+
+ahpC::lacZ transcriptional fusion (pMV306lacZ::ahpC)를 제작해 유전자 lacZ의 발현이 유
+
+전자 ahpC promoter의 영향을 받도록 하였다. 이를 이용해 M. smegmatis의 유전자 ahpC의 
+
+발현을  β-glalactosidase의  specific  activity  측정을  통해  관찰할  수  있었다.  대조군인 M. 
+
+smegmatis WT와 각각 유전자 furA, crp를 mutant시킨 Δf1f2f3 mutant, Δcrp mutant sample
+
+을 각각 CHP 처리 조건과 비처리 조건에서 배양해 6개 sample를 얻어냈다. CHP 처리 조건의 
+
+경우 O.D.600이 0.4일 때 0.1 mM의 CHP를 1시간 동안 처리한 뒤 0.5일 때 harvest하였다. 4배
+
+로 희석한 crude extract의 단백질 정량을 진행한 뒤 β-galactosidase specific activity를 측정
+
+한 결과는 [Table. 7]와 같다. 선행 연구에서의 결과와 같이 oxidative stress로 작용한 CHP는 3
+
+개 sample 모두의 유전자 ahpC의 발현을 증가시켰다. CHP 비처리 조건의 Δf1f2f3는 대조군
+
+에 비하여 약 6배 증가했으며 Δcrp는 1/4배 감소하였음을 확인하였다(Fig. 5). 
+
+[Fig. 5] Sample 별 o-NPG 효소 발현 정도 측정 결과. CHP 처리 조건과 비처리 조건에
+
+서 배양한 6개 sample. 왼쪽에서부터 대조군 WT와 Δf1f2f3, Δcrp이다.
+
+----------------Page (9) Break----------------
+
+강지유⋅김용태⋅노유진
+
+- 85 -
+
+2. RT-PCR를 통한 transcription 단계에서의 유전자 ahpC 발현 확인
+
+유전자 ahpC 의 cDNA의 양은 template로 사용되는 total mRNA중 존재하는 ahpC mRNA
+
+의  양에  비례한다.  그를  이용하여 ahpC mRNA를  template로  해 ahpC cDNA를  합성한  뒤, 
+
+cDNA를 PCR해 electrophoresis로 밴드의 intensity를 비교해 보는 것으로 ahpC mRNA의 양, 
+
+transcription 단계에서의 ahpC의 발현을 비교해 볼 수 있다. H2O2를 접종하여 각각 oxidative 
+
+stress 조건과 non-oxidative stress 조건에서 키운 2개 mutant 유전자를 RT-PCR을 진행하여 
+
+16S rRNA를 PCR하고 electrophoresis로 확인한 결과, 모든 sample에서 동일히 200 bp 위치에
+
+서 밴드가 발견되었다. 밴드의 intensity가 동일한 것을 보아 RT-PCR 시 template로 이용된 
+
+sample들의 total RNA양은 동일하게 맞추어졌음을 확인할 수 있었다. 그 뒤 ahpC cDNA를 
+
+PCR하고 electrophoresis로 확인한 결과 wild type은 oxidative stress 조건보다 non-oxidative 
+
+stress 조건에서 발현이 증가하는 것을 관찰할 수 있었다(Fig. 6). 또한 oxidative stress와 관계
+
+없이 Δcrp의 밴드는 wild type의 밴드보다 옅음을 확인하였다.
+
+[Fig. 6] M. Smegmatis 균주에서의 16S rRNA와 ahpC mRNA 양을 비교한 RT-PCR의 
+
+결과이다. 각 sample마다 동일한 양의 mRNA가 사용되었는지 알기 위해 sample의 종류에 
+
+영향을 받지 않는 16S rRNA의 양이 동일한지 확인하였고(RT-PCR 9 cycle 수행), 
+
+그 후 ahpC mRNA 양을 비교하였다(RT-PCR 20 cycle 수행).
+
+3. pMV306::ahpC::gfp cloning
+
+ahpC::gfp transcriptional fusion (pMV306::gfp::ahpC)를 제작해 유전자 gfp의 발현이 유
+
+전자 ahpC promoter의 영향을 받도록 하였다. 이를 이용해 M. smegmatis의 유전자 ahpC의 
+
+----------------Page (10) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 86 -
+
+발현을 GFP의 fluorescence intensity 측정을 통해 관찰할 수 있었다. β-galactosidase assay
+
+와 마찬가지로 대조군인 M. smegmatis WT와 Δf1f2f3, Δcrp를 각각 CHP 처리 조건과 비처
+
+리  조건에서  배양해  6개  sample을  얻어냈다.  모든  sample의  단백질  농도가  동일해지도록 
+
+crude extract를 희석한 후 fluerescence spectrophotometer를 이용해 GFP fluorescence를 관
+
+찰한 결과 oxidative stress 조건을 기준으로 wild type과 비교했을 때 Δf1f2f3의 유전자 ahpC 
+
+발현은 약 65배 증가하였으며 Δcrp의 유전자 ahpC 발현은 약 0.5배 감소하였다(Fig. 7). 
+
+[Fig. 7] Sample 별 green fluerescence protein 형광 측정 결과. 각각 CHP 처리 조건과 
+
+비처리 조건에서 에서 자란 sample 6개(wild type, Δf1f2f3, Δcrp).
+
+5. Activity staining을 통한 유전자 ahpC 발현 확인
+
+Crp가 유전자 ahpC의 발현에 어떤 영향을 주는지 알아보기 위하여 crude extract를 native 
+
+gel electrophoresis에 적용하여 살펴보았다. H2O2 처리 조건에서 wild type과 mutant의 유전
+
+자 ahpC 발현 정도를 protein level에서 측정했다. DAB 용액에 의해 염색된 세 개의 catalase 
+
+밴드 중 Δf1f2f3의 AhpC 밴드가 대조군에 비해 선명해졌다. 이는 FurA가 repressor임을 뜻
+
+한다.
+
+----------------Page (11) Break----------------
+
+강지유⋅김용태⋅노유진
+
+- 87 -
+
+[Fig. 8] Oxidation 조건에서 Activity staining을 완료한 3개의 sample이다. 나타난 3개의 
+
+bond는 위쪽부터 순서대로 catalase/peroxidase protein KatG2, AhpC, catalase/ 
+
+peroxidase protein KatG1이다. AhpC protein bond를 비교해보면 3번 레인의 21kDA의 
+
+AhpC protein이 가장 뚜렷하게 나타났다.
+
+V. 결론
+
+결핵균과  비슷한  성질을  지녔으나  위험성이  비교적  낮아  인체에  해를  끼치지  않는 M. 
+
+smegmatis는  인체에  들어와  macrophage에  의해  포식된  뒤  산화적  스트레스  조건  등에서 
+
+ahpCD operon의 발현 생성물로 인해 증식, 또는 잠복이 가능하다. 본 연구에서는 대식세포 
+
+내의 스트레스 조건 중 oxidative stress 조건을 걸었을 때 FurA와 Crp를 mutation 시킴으로서 
+
+나타나는 M. smegmatis의 유전자 ahpC 발현 양상의 변화를 조사하였다. 또한 wild type과 Δ
+
+crp는  oxidative  stress  조건에서  키운 M. smegmatis의 ahpC  activation이  non-oxidative 
+
+stress 조건보다 높았다. β-glalactosidase assay에서 10 mM CHP를 처리한 wild type은 ahpC 
+
+발현이 약 2배 증가하였으며, CHP 처리 조건에서의 Δf1f2f3는 ahpC 발현이 약 1.3배 증가하
+
+였다. 이는 oxidative stress 처리 조건에서 유전자 ahpC의 발현이 증가함을 의미한다. 실험 결
+
+과를  보면  Δf1f2f3의 ahpC 발현은  wild  type에  비해  극히  높았으며 Δcrp의 ahpC 발현은 
+
+wild type에 비해 낮았다. 마찬가지로 Activity staining의 결과, Δf1f2f3의 AhpC가 가장 많이 
+
+발현되었으며 gfp 형광 측정 결과에서도 wild type보다 약 60배 밝게 나왔다. 이는 FurA가 
+
+repressor임을  나타낸다.  Δcrp는  oxidative  stress  조건에서  모두  wild  type보다  미세하게 
+
+ahpC 발현 정도가 낮게 나왔으며, 여러 실험에서 동일한 경향을 보였기에 FurA는 repressor이
+
+며 Crp는 activator라는 결론을 내렸다. 또한 oxidative stress 조건을 처리하였을 때 다른 두 
+
+----------------Page (12) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 88 -
+
+strain에  비해서  crp  mutant는  대조군과  비교하였을  때  변화량이  극히  미미했다.  이는 
+
+oxidative stress 작용 기작이 Crp dependent함을 의미한다.
+
+VI. 참고문헌
+
+[1] Han-Seung Jeon, Ki-Hoon Yang, In-Jeong Ko, and Jeong-Il Oh, (2014). Expression of 
+
+Adenylyl Cyclase Genes in Mycobacterium smegmatis under Hypoxic and Nitric Oxide 
+
+Conditions, J. Life Sci: 1330-1338
+
+[2] Ha-Na Lee, Na-On Lee, Seung J. Han, In-Jeong Ko, Jeong-Il Oh, (2014). Regulation of 
+
+the   ahpC   Gene   Encoding   Alkyl   Hydroperoxide   Reductase   in   Mycobacterium 
+
+smegmatis, PLoS ONE 9(11): e111680. doi: 10.1371/ journal.pone.0111680
+
+[3] Master SS, Springer B, Sander P, Boettger EC, Deretic V, et al. (2002) Oxidative stress 
+
+response  genes  in  Mycobacterium  tuberculosis:  role  of  ahpC  in  resistance  to 
+
+peroxynitrite  and  stage-specific  survival  in  macrophages.  Micro-  biology  148:  3139–
+
+3144.
+
+[4]  Chen  L,  Xie  QW,  Nathan  C  (1998)  Alkyl  hydroperoxide  reductase  subunit  C  (AhpC) 
+
+protects bacterial and human cells against reactive nitrogen intermedi- ates. Mol Cell 1: 
+
+795–805.
+
+[5] Berg OG, von Hippel PH (1988) Selection of DNA binding sites by regulatory proteins. 
+
+II. The binding specificity of cyclic AMP receptor protein to recognition  sites.  J  Mol 
+
+Biol 200: 709–723.
+
+[6] Koshkin A, Knudsen GM, Ortiz De Montellano PR (2004) Intermolecular interactions in 
+
+the  AhpC/AhpD  antioxidant  defense  system  of  Mycobacterium  tuberculosis.  Arch 
+
+Biochem Biophys 427: 41–47.
+
+[7] Milano A, Forti F, Sala C, Riccardi G, Ghisotti D (2001) Transcriptional regulation of furA 
+
+and  katG  upon  oxidative  stress  in  Mycobacterium  smegmatis.  J  Bacteriol  183:  6801–
+
+6806.
+
+----------------Page (13) Break----------------
+
+강지유⋅김용태⋅노유진
+
+- 89 -
+
+ABSTRACT
+
+Regulation of gene expression by transcriptional 
+
+factors in bacteria
+
+Reseacher : Jeeyoo Kang(sophomore, jeeyoolucy@naver.com)
+
+Yongtae Kim(sophomore, yt7481@naver.com)
+
+Yujin Roh(sophomore, lime1001@naver.com)
+
+Supervisor : Injeong Ko(Korea Science Academy of KAIST. koin2@kaist.ac.kr)
+
+Co-Supervisor : Jeongil Oh(Pusan National University, joh@pusan.ac.kr)
+
+Assistant : Hana Lee(Pusan National University, sscjf@naver.com)
+
+Abstract
+
+Ferric  uptake  regulator  (FurA)  and  cAMP  receptor  protein  (Crp) are  the  well-known 
+
+transcriptional  regulators  in  mycobacteria.  The  binding  sites  for  FurA  and  Crp  were 
+
+identified  in  the  upstream  of  the alkyl  hydroperoxide  reductase  (ahpC) operon in 
+
+Mycobacterium smegmatis. In this study, we investigated whether the expression of ahpC 
+
+was  regulated  by  FurA  and  Crp  using  two  reporter  genes (lacZ and gfp) and  reverse 
+
+transcription  PCR.  We  compared  the  expression  levels  of  the ahpC gene  between  the 
+
+wild-type (WT) and mutant strains (Δf1f2f3 and Δcrp) in which three furA genes or crp 
+
+gene are inactivated, respectively. When the WT, Δf1f2f3 and Δcrp were grown without 
+
+treatment of cumene hydroperoxide (CHP), expression of ahpC was strongly derepressed 
+
+in the Δf1f2f3 relative to the WT strain. The treatment of the strain with 10 mM CHP for 1 
+
+h led to the induction of ahpC expression in the WT strain, while this induction effect was 
+
+abolished in the Δcrp. This expression pattern of ahpC was confirmed at the protein level 
+
+by  activity  staining  for  peroxidase.  Our  results  indicate  that FurAs  and  Crp  serve  as 
+
+----------------Page (14) Break----------------
+
+세균에서 전사조절자에 의한 유전자 발현 조절에 대한 연구
+
+- 90 -
+
+repressors and activator for ahpC expression,  respctively.  Through  this  research  and 
+
+education program, we learned how to approach to reveal the function of transcriptional 
+
+regulators in prokaryotes.
+
+----------------Page (15) Break----------------
+
+[('-', 'SY'), ('75', 'SN'), ('-<', 'SY'), ('국문', 'NNG'), ('초록', 'NNG'), ('>', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('연구자', 'NNG'), (':', 'SC'), ('강', 'NNG'), ('지유', 'NNG'), ('(', 'SSO'), ('2', 'SN'), ('학년', 'NNG'), (',', 'SC'), ('jeeyoolucy', 'SL'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('김용태', 'NNP'), ('(', 'SSO'), ('2', 'SN'), ('학년', 'NNG'), (',', 'SC'), ('yt', 'SL'), ('7481', 'SN'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('노유진', 'NNP'), ('(', 'SSO'), ('2', 'SN'), ('학년', 'NNG'), (',', 'SC'), ('lime', 'SL'), ('1001', 'SN'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('책임', 'NNG'), ('지도자', 'NNG'), (':', 'SC'), ('고인정', 'NNP'), ('(', 'SSO'), ('KAIST', 'SL'), ('부설', 'NNG'), ('한국', 'NNP'), ('과학', 'NNG'), ('영재', 'NNG'), ('학교', 'NNG')][('koin', 'SL'), ('2', 'SN'), ('@', 'SY'), ('kaist', 'SL'), ('.', 'SY'), ('ac', 'SL'), ('.', 'SY'), ('kr', 'SL'), (')', 'SSC'), ('공동', 'NNG'), ('지도자', 'NNG'), (':', 'SC'), ('오정일', 'NNP'), ('(', 'SSO'), ('부산', 'NNP'), ('대학교', 'NNG'), (',', 'SC'), ('joh', 'SL'), ('@', 'SY'), ('pusan', 'SL'), ('.', 'SY'), ('ac', 'SL'), ('.', 'SY'), ('kr', 'SL'), (')', 'SSC'), ('조교', 'NNG'), (':', 'SC'), ('이하나', 'NNP'), ('(', 'SSO'), ('부산', 'NNP'), ('대학교', 'NNG'), (',', 'SC'), ('sscjf', 'SL'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('요', 'VCP+EC'), ('약문', 'NNG'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('인', 'VCP+ETM'), ('Crp', 'SL'), ('와', 'JC'), ('FurA', 'SL'), ('는', 'JX'), ('M', 'SL')][('smegmatis', 'SL'), ('에서', 'JKB'), ('ahpC', 'SL'), ('오페론', 'NNG'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('조절', 'NNG'), ('한다', 'XSV+EC')][('본', 'MM'), ('연구', 'NNG'), ('에서', 'JKB'), ('는', 'JX'), ('두', 'MM'), ('reporter', 'SL'), ('gene', 'SL'), ('(', 'SSO'), ('lacZ', 'SL'), ('와', 'JC'), ('gfp', 'SL'), (')', 'SSC'), ('및', 'MAJ'), ('reverse', 'SL'), ('-', 'SY'), ('transcription', 'SL'), ('PCR', 'SL'), ('을', 'JKO'), ('사용', 'NNG'), ('하', 'XSV'), ('여', 'EC'), (',', 'SC'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('이', 'JKS'), ('FurA', 'SL'), ('및', 'MAJ'), ('Crp', 'SL'), ('에', 'JKB'), ('의해', 'VV+EC'), ('조절', 'NNG'), ('되', 'XSV'), ('는지', 'EC'), ('조사', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('우리', 'NP'), ('는', 'JX'), ('wild', 'SL'), ('-', 'SY'), ('type', 'SL'), ('(', 'SSO'), ('WT', 'SL'), (')', 'SSC'), ('과', 'JC'), ('세', 'NNG'), ('furA', 'SL'), ('유전자', 'NNG'), ('나', 'JC'), ('crp', 'SL'), ('유전자', 'NNG'), ('를', 'JKO'), ('비', 'XPN'), ('활성', 'NNG'), ('화', 'XSN'), ('시킨', 'XSV+ETM'), ('mutant', 'SL'), ('strains', 'SL'), ('(', 'SSO'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('와', 'JC'), ('Δ', 'SL'), ('crp', 'SL'), (')', 'SSC'), ('의', 'JKG'), ('ahpC', 'SL'), ('유전자', 'NNG'), ('발현', 'NNG'), ('을', 'JKO'), ('각각', 'MAG'), ('비교', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('M', 'SL')][('smegmatis', 'SL'), ('의', 'JKG'), ('WT', 'SL'), (',', 'SC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('와', 'JC'), ('Δ', 'SL'), ('Crp', 'SL'), ('strains', 'SL'), ('를', 'JKO'), ('10', 'SN'), ('mM', 'SL'), ('cumene', 'SL'), ('hydroperoxide', 'SL'), ('(', 'SSO'), ('CHP', 'SL'), (')', 'SSC'), ('에', 'JKB'), ('1', 'SN'), ('시간', 'NNBC'), ('처리', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('유전자', 'NNG'), ('발현', 'NNG'), ('을', 'JKO'), ('강하', 'VV'), ('게', 'EC'), ('만들', 'VV'), ('었', 'EP'), ('다', 'EC')][('결과', 'NNG'), ('적', 'XSN'), ('으로', 'JKB'), ('FurA', 'SL'), ('와', 'JC'), ('Crp', 'SL'), ('가', 'JKS'), ('ahpC', 'SL'), ('발현', 'NNG'), ('에', 'JKB'), ('각각', 'MAG'), ('activator', 'SL'), ('과', 'JC'), ('repressor', 'SL'), ('의', 'JKG'), ('역할', 'NNG'), ('을', 'JKO'), ('한다는', 'VV+ETM'), ('것', 'NNB'), ('을', 'JKO'), ('알아내', 'VV'), ('었', 'EP'), ('다', 'EC')][('본', 'MM'), ('연구', 'NNG'), ('를', 'JKO'), ('통하', 'VV'), ('여', 'EC'), ('원핵생물', 'NNG'), ('에서', 'JKB'), ('전자', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('의', 'JKG'), ('기능', 'NNG'), ('을', 'JKO'), ('밝히', 'VV'), ('기', 'ETN'), ('위해', 'VV+EC'), ('접근', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('방법', 'NNG'), ('을', 'JKO'), ('배울', 'VV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('었', 'EP'), ('다', 'EF'), ('.', 'SF'), ('주제', 'NNG'), ('어', 'IC'), (':', 'SC'), ('Mycobacterium', 'SL'), ('smegmatis', 'SL'), (',', 'SC'), ('ahpC', 'SL'), ('gene', 'SL'), (',', 'SC'), ('cAMP', 'SL'), ('receptor', 'SL'), ('protein', 'SL'), (',', 'SC'), ('ferric', 'SL'), ('uptake', 'SL'), ('regulator', 'SL'), (',', 'SC'), ('transcriptional', 'SL'), ('regulator', 'SL'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('0', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('76', 'SN'), ('-', 'SY'), ('I', 'SL')][('서론', 'NNG'), ('유전자', 'NNG'), ('란', 'JX'), ('유전', 'UNT'), ('정보', 'NNG'), ('가', 'JKS'), ('암호', 'NNG'), ('화', 'XSN'), ('된', 'XSV+ETM'), ('상태', 'NNG'), ('의', 'JKG'), ('DNA', 'SL'), ('부분', 'NNG'), ('이', 'VCP'), ('다', 'EC')][('인간', 'NNG'), ('과', 'JKB'), ('같', 'VA'), ('은', 'ETM'), ('진핵생물', 'NNG'), ('과', 'JKB'), ('는', 'JX'), ('다르', 'VA'), ('게', 'EC'), ('핵막', 'NNG'), ('이', 'JKS'), ('없', 'VA'), ('는', 'ETM'), ('원핵생물', 'NNG'), ('은', 'JX'), ('몇', 'MM'), ('개', 'NNBC'), ('의', 'JKG'), ('비슷', 'XR'), ('한', 'XSA+ETM'), ('기능', 'NNG'), ('을', 'JKO'), ('하', 'VV'), ('는', 'ETM'), ('유전자', 'NNG'), ('가', 'JKS'), ('모여서', 'VV+EC'), ('오페론', 'NNG'), ('이', 'VCP'), ('라는', 'ETM'), ('단위', 'NNG'), ('를', 'JKO'), ('이룬다', 'VV+EC')][('오페론', 'NNG'), ('의', 'JKG'), ('특징', 'NNG'), ('으로', 'JKB'), ('는', 'JX'), ('비슷', 'XR'), ('한', 'XSA+ETM'), ('유전자', 'NNG'), ('들', 'XSN'), ('이', 'JKS'), ('같이', 'MAG'), ('발현', 'NNG'), ('되', 'XSV'), ('고', 'EC'), ('억제', 'NNG'), ('되', 'XSV'), ('기', 'ETN'), ('때문', 'NNB'), ('에', 'JKB'), ('효율', 'NNG'), ('적', 'XSN'), ('으로', 'JKB'), ('RNA', 'SL'), ('나', 'JC'), ('단백질', 'NNG'), ('을', 'JKO'), ('생산', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('다는', 'ETM'), ('점', 'NNG'), ('이', 'JKS'), ('있', 'VA'), ('다', 'EF'), ('.', 'SF'), ('오페론', 'NNG'), ('이', 'JKS'), ('한꺼번에', 'MAG'), ('발현', 'NNG'), ('될', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('는', 'ETM'), ('기', 'NNG'), ('작', 'NNG'), ('의', 'JKG'), ('원인', 'NNG'), ('은', 'JX'), ('유전자', 'NNG'), ('발현', 'NNG'), ('의', 'JKG'), ('과정', 'NNG'), ('인', 'VCP+ETM'), ('전사', 'NNG'), ('(', 'SSO'), ('transcription', 'SL'), (')', 'SSC'), ('와', 'JC'), ('번역', 'NNG'), ('(', 'SSO'), ('translation', 'SL'), (')', 'SSC'), ('중', 'NNB'), ('전사', 'NNG'), ('에', 'JKB'), ('있', 'VV'), ('다', 'EC')][('전사', 'NNG'), ('란', 'JX'), ('DNA', 'SL'), ('위', 'NNG'), ('의', 'JKG'), ('유전자', 'NNG'), ('를', 'JKO'), ('읽', 'VV'), ('어서', 'EC'), ('그', 'MM'), ('정보', 'NNG'), ('를', 'JKO'), ('mRNA', 'SL'), ('(', 'SSO'), ('messenger', 'SL'), ('RNA', 'SL'), (')', 'SSC'), ('로', 'JKB'), ('옮기', 'VV'), ('는', 'ETM'), ('과정', 'NNG'), ('이', 'VCP'), ('고', 'EC'), (',', 'SC'), ('번역', 'NNG'), ('이', 'VCP'), ('란', 'ETM'), ('mRNA', 'SL'), ('의', 'JKG'), ('정보', 'NNG'), ('를', 'JKO'), ('단백질', 'NNG'), ('로', 'JKB'), ('옮겨서', 'VV+EC'), ('최종', 'NNG'), ('적', 'XSN'), ('인', 'VCP+ETM'), ('결과물', 'NNG'), ('을', 'JKO'), ('얻어내', 'VV'), ('는', 'ETM'), ('과정', 'NNG'), ('이', 'VCP'), ('다', 'EC')][('이', 'MM'), ('중', 'NNB'), ('전사', 'NNG'), ('과정', 'NNG'), ('은', 'JX'), ('또', 'MAG'), ('세부', 'NNG'), ('과정', 'NNG'), ('인', 'VCP+ETM'), ('개시', 'NNG'), ('(', 'SSO'), ('initiation', 'SL'), (')', 'SSC'), ('와', 'JC'), ('신장', 'NNG'), ('(', 'SSO'), ('elongation', 'SL'), (')', 'SSC'), (',', 'SC'), ('그리고', 'MAJ'), ('종결', 'NNG'), ('(', 'SSO'), ('termination', 'SL'), (')', 'SSC'), ('으로', 'JKB'), ('나뉜다', 'VV+EC')][('여기', 'NP'), ('서', 'JKB'), ('개시', 'NNG'), ('와', 'JC'), ('종결', 'NNG'), ('은', 'JX'), ('각각', 'MAG'), ('RNA', 'SL'), ('중합효소', 'NNP'), ('(', 'SSO'), ('RNA', 'SL'), ('polymerase', 'SL'), (')', 'SSC'), ('가', 'JKS'), ('DNA', 'SL'), ('에', 'JKB'), ('붙', 'VV'), ('고', 'EC'), ('떨어지', 'VV'), ('는', 'ETM'), ('과정', 'NNG'), ('인데', 'VCP+EC'), (',', 'SC'), ('RNA', 'SL'), ('polymerase', 'SL'), ('는', 'JX'), ('오페론', 'NNG'), ('의', 'JKG'), ('윗부분', 'NNG'), ('(', 'SSO'), ('upstream', 'SL'), (')', 'SSC'), ('에', 'JKB'), ('있', 'VV'), ('는', 'ETM'), ('RNA', 'SL'), ('polymerase', 'SL'), ('binding', 'SL'), ('site', 'SL'), ('에', 'JKB'), ('붙', 'VV'), ('고', 'EC'), ('아랫부분', 'NNG'), ('(', 'SSO'), ('downstream', 'SL'), (')', 'SSC'), ('에', 'JKB'), ('있', 'VV'), ('는', 'ETM'), ('terminator', 'SL'), ('에서', 'JKB'), ('떨어진다', 'VV+EC')][('이렇게', 'MAG'), ('전체', 'NNG'), ('전사', 'NNG'), ('과정', 'NNG'), ('에서', 'JKB'), ('한', 'MM'), ('오페론', 'NNG'), ('의', 'JKG'), ('유전자', 'NNG'), ('들', 'XSN'), ('을', 'JKO'), ('다', 'MAG'), ('같이', 'MAG'), ('발현', 'NNG'), ('하', 'XSV'), ('게', 'EC'), ('하', 'VV'), ('는', 'ETM'), ('것', 'NNB'), ('이', 'VCP'), ('다', 'EF'), ('.', 'SF'), ('오페론', 'NNG'), ('의', 'JKG'), ('전사', 'NNG'), ('를', 'JKO'), ('조절', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('기', 'NNG'), ('작', 'VA'), ('은', 'ETM'), ('주로', 'MAG'), ('개시', 'NNG'), ('과정', 'NNG'), ('에서', 'JKB'), ('일어난다', 'VV+EC')][('RNA', 'SL'), ('polymerase', 'SL'), ('binding', 'SL'), ('site', 'SL'), ('주변', 'NNG'), ('에', 'JKB'), ('는', 'JX'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('(', 'SSO'), ('transcriptional', 'SL'), ('regulator', 'SL'), (')', 'SSC'), ('가', 'JKS'), ('있', 'VA'), ('어서', 'EC'), ('전사', 'NNG'), ('를', 'JKO'), ('촉진', 'NNG'), ('하', 'XSV'), ('거나', 'EC'), ('억제', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('역할', 'NNG'), ('을', 'JKO'), ('하', 'VV'), ('는데', 'EC'), (',', 'SC'), ('Mycobaterium', 'SL'), ('smegmatis', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('M', 'SL')][('smegmatis', 'SL'), (')', 'SSC'), ('에서', 'JKB'), ('활성', 'NNG'), ('산소', 'NNG'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('스트레스', 'NNG'), ('를', 'JKO'), ('억제', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('alkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('를', 'JKO'), ('만드', 'VV'), ('는', 'ETM'), ('유전자', 'NNG'), ('인', 'VCP+ETM'), ('ahpC', 'SL'), ('의', 'JKG'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('로', 'JKB'), ('추정', 'NNG'), ('되', 'XSV'), ('는', 'ETM'), ('자리', 'NNG'), ('인', 'VCP+ETM'), ('IR', 'SL'), ('1', 'SN'), ('과', 'JC'), ('IR', 'SL'), ('2', 'SN'), ('가', 'JKS'), ('발견', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('다', 'EC')][('각각', 'NNG'), ('은', 'JX'), ('cAMP', 'SL'), ('receptor', 'SL'), ('protein', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('Crp', 'SL'), (')', 'SSC'), ('와', 'JC'), ('Ferric', 'SL'), ('uptake', 'SL'), ('regulator', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('FurA', 'SL'), (')', 'SSC'), ('로', 'JKB'), ('불리', 'VV'), ('는', 'ETM'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('붙', 'VV'), ('는', 'ETM'), ('자리', 'NNG'), ('라고', 'VCP+EC'), ('알려져', 'VV+EC+VX+EC'), ('있', 'VX'), ('다', 'EF'), ('.', 'SF'), ('본', 'VV+ETM'), ('연구', 'NNG'), ('에서', 'JKB'), ('는', 'JX'), ('Crp', 'SL'), ('와', 'JC'), ('FurA', 'SL'), ('의', 'JKG'), ('binding', 'SL'), ('site', 'SL'), ('로', 'JKB'), ('예상', 'NNG'), ('되', 'XSV'), ('는', 'ETM'), ('IR', 'SL'), ('1', 'SN'), ('과', 'JC'), ('IR', 'SL'), ('2', 'SN'), ('에', 'JKB'), ('이', 'NP'), ('들', 'XSN'), ('이', 'JKS'), ('activator', 'SL'), ('이나', 'JC'), ('repressor', 'SL'), ('같이', 'MAG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('에', 'JKB'), ('어떤', 'MM'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('작용', 'NNG'), ('을', 'JKO'), ('하', 'VV'), ('는지', 'EC'), ('조사', 'NNG'), ('하', 'XSV'), ('고자', 'EC'), ('하', 'VX'), ('였', 'EP'), ('다', 'EC')][('이', 'NP'), ('를', 'JKO'), ('위해', 'VV+EC'), ('IR', 'SL'), ('1', 'SN'), ('과', 'JC'), ('IR', 'SL'), ('2', 'SN'), ('가', 'JKS'), ('포함', 'NNG'), ('된', 'XSV+ETM'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('윗부분', 'NNG'), ('과', 'JC'), ('lactose', 'SL'), ('오페론', 'NNG'), ('(', 'SSO'), ('이하', 'NNG'), ('lacZ', 'SL'), (')', 'SSC'), (',', 'SC'), ('Kanamycin', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('Km', 'SL'), (')', 'SSC'), ('또', 'MAG'), ('은', 'JX'), ('Hygromycin', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('Hyg', 'SL'), (')', 'SSC'), ('저항', 'NNG'), ('유전자', 'NNG'), ('를', 'JKO'), ('동시', 'NNG'), ('에', 'JKB'), ('가지', 'VV'), ('고', 'EC'), ('있', 'VX'), ('는', 'ETM'), ('plasmid', 'SL'), ('를', 'JKO'), ('만들', 'VV'), ('었', 'EP'), ('다', 'EF'), ('.', 'SF'), ('그리고', 'MAJ'), ('Crp', 'SL'), ('와', 'JC'), ('FurA', 'SL'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('binding', 'SL'), ('site', 'SL'), ('를', 'JKO'), ('변형', 'NNG'), ('시킨', 'XSV+ETM'), ('plasmid', 'SL'), ('를', 'JKO'), ('M', 'SL')][('smegmatis', 'SL'), ('에', 'JKB'), ('ligation', 'SL'), ('시켜', 'VV+EC'), ('wild', 'SL'), ('type', 'SL'), ('과', 'JC'), ('비교', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('β', 'SL'), ('-', 'SY'), ('galactosidase', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('보', 'VV'), ('았', 'EP'), ('다', 'EC')][('이러', 'XR'), ('한', 'XSA+ETM'), ('실험', 'NNG'), ('으로', 'JKB'), ('crp', 'SL'), ('와', 'JC'), ('furA', 'SL'), ('가', 'JKS'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('어떻게', 'MAG'), ('조절', 'NNG'), ('하', 'XSV'), ('는지', 'EC'), ('알아보', 'VV'), ('았', 'EP'), ('다', 'EF'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('1', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('강', 'NNG'), ('지유', 'NNG'), ('⋅', 'SY'), ('김용태', 'NNP'), ('⋅', 'SY'), ('노유진', 'NNP'), ('-', 'SY'), ('77', 'SN'), ('-', 'SY'), ('II', 'SL')][('이론', 'NNG'), ('적', 'XSN'), ('배경', 'NNG'), ('1', 'SN')][('Alkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('인체', 'NNG'), ('의', 'JKG'), ('대식', 'NNG'), ('세포', 'NNG'), ('는', 'JX'), ('몸', 'NNG'), ('속', 'NNG'), ('으로', 'JKB'), ('들어온', 'VV+ETM'), ('결핵균', 'NNG'), ('을', 'JKO'), ('제거', 'NNG'), ('하', 'XSV'), ('기', 'ETN'), ('위해', 'VV+EC'), ('peroxide', 'SL'), ('분자', 'NNG'), ('를', 'JKO'), ('생성', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('등', 'NNB'), ('산화', 'NNG'), ('적', 'XSN'), ('스트레스', 'NNG'), ('조건', 'NNG'), ('을', 'JKO'), ('형성', 'NNG'), ('한다', 'XSV+EC')][('결핵균', 'NNG'), ('은', 'JX'), ('이', 'NP'), ('에', 'JKB'), ('대응', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('산화', 'NNG'), ('적', 'XSN'), ('스트레스', 'NNG'), ('를', 'JKO'), ('제거', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('는', 'ETM'), ('효소', 'NNG'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('증가', 'NNG'), ('시킨다', 'XSV+EC')][('이', 'MM'), ('효소', 'NNG'), ('들', 'XSN'), ('중', 'NNB'), ('하나', 'NR'), ('가', 'JKS'), ('alkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('로', 'JKB'), (',', 'SC'), ('이', 'NP'), ('는', 'JX'), ('organic', 'SL'), ('peroxide', 'SL'), ('를', 'JKO'), ('이', 'NP'), ('에', 'JKB'), ('상응', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('alcohol', 'SL'), ('로', 'JKB'), ('환원', 'NNG'), ('시키', 'XSV'), ('고', 'EC'), (',', 'SC'), ('과산화수소', 'NNG'), ('(', 'SSO'), ('hydrogen', 'SL'), ('peroxide', 'SL'), (')', 'SSC'), ('를', 'JKO'), ('물', 'NNG'), ('분자', 'NNG'), ('로', 'JKB'), ('환원', 'NNG'), ('시키', 'XSV'), ('며', 'EC'), (',', 'SC'), ('NO', 'SL'), ('로부터', 'JKB'), ('유래', 'NNG'), ('된', 'XSV+ETM'), ('peroxinitrite', 'SL'), ('(', 'SSO'), ('ONOO', 'SL'), ('-)', 'SY'), ('를', 'JKO'), ('환원', 'NNG'), ('시키', 'XSV'), ('는', 'ETM'), ('반응', 'NNG'), ('을', 'JKO'), ('촉매', 'NNG'), ('해', 'XSV+EC'), ('결핵균', 'NNG'), ('의', 'JKG'), ('생존', 'NNG'), ('을', 'JKO'), ('돕', 'VV'), ('는다', 'EC'), ('(', 'SSO'), ('Fig', 'SL')][('1', 'SN'), (')', 'SSC'), ('.', 'SF'), ('또한', 'MAJ'), ('alkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('는', 'JX'), ('결핵균', 'NNG'), ('Mycobacterium', 'SL'), ('tuberculosis', 'SL'), ('뿐', 'JX'), ('만', 'JX'), ('아니', 'VCN'), ('라', 'EC'), ('M', 'SL')][('smegmatis', 'SL'), ('를', 'JKO'), ('비롯', 'XR'), ('한', 'XSA+ETM'), ('Mycobacterium', 'SL'), ('속', 'NNG'), ('의', 'JKG'), ('생명체', 'NNG'), ('들', 'XSN'), ('이', 'JKS'), ('공통', 'NNG'), ('적', 'XSN'), ('으로', 'JKB'), ('분비', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('는', 'ETM'), ('효소', 'NNG'), ('로', 'JKB'), (',', 'SC'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('에', 'JKB'), ('의해', 'VV+EC'), ('암호', 'NNG'), ('화', 'XSN'), ('되', 'XSV'), ('어', 'EC'), ('있', 'VX'), ('다', 'EF'), ('.', 'SF'), ('[', 'SSO'), ('Fig', 'SL')][('1', 'SN'), (']', 'SSC'), ('Alkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('의', 'JKG'), ('구조', 'NNG'), ('와', 'JC'), ('촉매', 'NNG'), ('반응', 'NNG'), ('에', 'JKB'), ('관여', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('단백질', 'NNG'), ('과', 'JC'), ('electron', 'SL'), ('carrier', 'SL')][('(', 'SSO'), ('LpdC', 'SL'), (':', 'SC'), ('dihydrolipoamide', 'SL'), ('dehydrogenase', 'SL'), (',', 'SC'), ('SucB', 'SL'), (':', 'SC'), ('dihydrolipoamide', 'SL'), ('succinyltransferase', 'SL'), (')', 'SSC'), ('2', 'SN')][('AhpC', 'SL'), ('(', 'SSO'), ('MSMEG', 'SL'), ('_', 'SY'), ('4891', 'SN'), (')', 'SSC'), ('regulatorAlkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('AhpC', 'SL'), (')', 'SSC'), ('는', 'JX'), ('기능', 'NNG'), ('하', 'XSV'), ('기', 'ETN'), ('위해', 'VV+EC'), ('AhpD', 'SL'), ('를', 'JKO'), ('필요', 'NNG'), ('로', 'JKB'), ('하', 'VV'), ('며', 'EC'), (',', 'SC'), ('이', 'NP'), ('는', 'JX'), ('유전자', 'NNG'), ('ahpD', 'SL'), ('에', 'JKB'), ('의해', 'VV+EC'), ('암호', 'NNG'), ('화', 'XSN'), ('되', 'XSV'), ('어', 'EC'), ('있', 'VX'), ('다', 'EC')][('유전자', 'NNG'), ('ahpC', 'SL'), ('와', 'JC'), ('유전자', 'NNG'), ('ahpD', 'SL'), ('가', 'JKS'), ('이루', 'VV'), ('는', 'ETM'), ('ahpCD', 'SL'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('2', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('78', 'SN'), ('-', 'SY'), ('operon', 'SL'), ('은', 'JX'), ('산화', 'NNG'), ('적', 'XSN'), ('스트레스', 'NNG'), ('아래', 'NNG'), ('발현', 'NNG'), ('이', 'JKS'), ('유도', 'NNG'), ('된다', 'XSV+EC'), ('알려져', 'VV+EC+VX+EC'), ('있', 'VX'), ('으며', 'EC'), (',', 'SC'), ('다른', 'MM'), ('오페론', 'NNG'), ('과', 'JKB'), ('같이', 'MAG'), ('발현', 'NNG'), ('을', 'JKO'), ('조절', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('있', 'VV'), ('을', 'ETM'), ('것', 'NNB'), ('으로', 'JKB'), ('여겨진다', 'VV+EC+VX+EC')][('일반', 'NNG'), ('적', 'XSN'), ('으로', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('DNA', 'SL'), ('에', 'JKB'), ('결합', 'NNG'), ('해', 'XSV+EC'), ('유전자', 'NNG'), ('발현', 'NNG'), ('을', 'JKO'), ('조절', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('경우', 'NNG'), ('RNA', 'SL'), ('중합', 'NNG'), ('효소', 'NNG'), ('가', 'JKS'), ('결합', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('자리', 'NNG'), ('인', 'VCP+ETM'), ('promotor', 'SL'), ('전후', 'NNG'), ('에', 'JKB'), ('결합', 'NNG'), ('위치', 'NNG'), ('가', 'JKS'), ('존재', 'NNG'), ('한다', 'XSV+EC')][('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('DNA', 'SL'), ('에', 'JKB'), ('결합', 'NNG'), ('하', 'XSV'), ('면', 'EC'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('의', 'JKG'), ('종류', 'NNG'), ('에', 'JKB'), ('따라', 'VV+EC'), ('발현', 'NNG'), ('조절', 'NNG'), ('이', 'JKS'), ('두', 'MM'), ('가지', 'NNBC'), ('로', 'JKB'), ('나뉜다', 'VV+EC')][('만약', 'NNG'), ('결합', 'NNG'), ('한', 'XSA+ETM'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('activator', 'SL'), ('로서', 'JKB'), ('작용', 'NNG'), ('한다면', 'XSV+EC'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('촉진', 'NNG'), ('시켜', 'XSV+EC'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('의', 'JKG'), ('생성', 'NNG'), ('을', 'JKO'), ('억제', 'NNG'), ('한', 'XSA+ETM'), ('mutant', 'SL'), ('type', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('이', 'JKS'), ('그러', 'VV'), ('지', 'EC'), ('않', 'VX'), ('은', 'ETM'), ('wild', 'SL'), ('type', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('보다', 'JKB'), ('적', 'VA'), ('을', 'ETM'), ('것', 'NNB'), ('이', 'VCP'), ('다', 'EC')][('한편', 'NNG'), (',', 'SC'), ('결합', 'NNG'), ('한', 'XSA+ETM'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('repressor', 'SL'), ('로서', 'JKB'), ('작용', 'NNG'), ('한다면', 'XSV+EC'), ('반대', 'NNG'), ('로', 'JKB'), ('발현', 'NNG'), ('을', 'JKO'), ('억제', 'NNG'), ('해', 'XSV+EC'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('의', 'JKG'), ('생성', 'NNG'), ('을', 'JKO'), ('억제', 'NNG'), ('한', 'XSA+ETM'), ('mutant', 'SL'), ('type', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('이', 'JKS'), ('wild', 'SL'), ('type', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('보다', 'JKB'), ('더', 'MAG'), ('많이', 'MAG'), ('일어날', 'VV+ETM'), ('것', 'NNB'), ('이', 'VCP'), ('다', 'EC')][('이', 'NP'), ('처럼', 'JKB'), ('mutant', 'SL'), ('type', 'SL'), ('과', 'JC'), ('wild', 'SL'), ('type', 'SL'), ('의', 'JKG'), ('유전자', 'NNG'), ('발현', 'NNG'), ('정도', 'NNG'), ('를', 'JKO'), ('비교', 'NNG'), ('해', 'XSV+EC'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('에', 'JKB'), ('어', 'IC'), ('\uee27\uf7ec', 'SY'), ('영향', 'NNG'), ('을', 'JKO'), ('미치', 'VV'), ('는지', 'EC'), ('를', 'JKO'), ('알아낼', 'VV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('다', 'EF'), ('.', 'SF'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('promotor', 'SL'), ('전후', 'NNG'), ('에서', 'JKB'), ('는', 'JX'), ('Crp', 'SL'), ('결합', 'NNG'), ('위치', 'NNG'), ('(', 'SSO'), ('IR', 'SL'), ('1', 'SN'), (')', 'SSC'), ('과', 'JC'), ('FurA', 'SL'), ('결합', 'NNG'), ('위치', 'NNG'), ('(', 'SSO'), ('IR', 'SL'), ('2', 'SN'), (')', 'SSC'), ('가', 'JKS'), ('발견', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('다', 'EC'), ('(', 'SSO'), ('Fig', 'SL')][('3', 'SN'), (')', 'SSC')][('그러나', 'MAJ'), ('M', 'SL')][('smegmatis', 'SL'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('조절', 'NNG'), ('과정', 'NNG'), ('에', 'JKB'), ('두', 'MM'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('가', 'JKS'), ('어떠', 'XR'), ('한', 'XSA+ETM'), ('영향', 'NNG'), ('을', 'JKO'), ('미칠지', 'VV+EC'), ('에', 'JKB'), ('대해서', 'VV+EC'), ('는', 'JX'), ('알려진', 'VV+EC+VX+ETM'), ('바', 'NNB'), ('가', 'JKS'), ('없', 'VA'), ('다', 'EF'), ('.', 'SF'), ('[', 'SSO'), ('Fig', 'SL')][('2', 'SN'), (']', 'SSC'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('locus', 'SL'), ('주위', 'NNG'), ('의', 'JKG'), ('genetic', 'SL'), ('organization', 'SL'), ('[', 'SSO'), ('Fig', 'SL')][('3', 'SN'), (']', 'SSC'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('앞', 'NNG'), ('의', 'JKG'), ('조절', 'NNG'), ('부위', 'NNG'), ('서열', 'NNG'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('3', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('강', 'NNG'), ('지유', 'NNG'), ('⋅', 'SY'), ('김용태', 'NNP'), ('⋅', 'SY'), ('노유진', 'NNP'), ('-', 'SY'), ('79', 'SN'), ('-', 'SY'), ('III', 'SL')][('실험', 'NNG'), ('방법', 'NNG'), ('1', 'SN')][('사용', 'NNG'), ('균주', 'NNG'), ('본', 'VV+ETM'), ('연구', 'NNG'), ('에서', 'JKB'), ('사용', 'NNG'), ('한', 'XSA+ETM'), ('균주', 'NNG'), ('인', 'VCP+ETM'), ('M', 'SL')][('smegmatis', 'SL'), ('는', 'JX'), ('Actinobacteria', 'SL'), ('문과', 'NNG'), ('Mycobacterium', 'SL'), ('속', 'NNG'), ('의', 'JKG'), ('박테리아', 'NNG'), ('다', 'VCP+EC')][('결핵', 'NNG'), ('을', 'JKO'), ('일으키', 'VV'), ('는', 'ETM'), ('병균', 'NNG'), ('인', 'VCP+ETM'), ('M', 'SL')][('tuberculosis', 'SL'), ('나', 'NP'), ('나병', 'NNG'), ('을', 'JKO'), ('일으키', 'VV'), ('는', 'ETM'), ('병균', 'NNG'), ('인', 'VCP+ETM'), ('M', 'SL')][('laprae', 'SL'), ('와', 'VV+EC'), ('같', 'VA'), ('은', 'ETM'), ('속', 'NNG'), ('이나', 'JC'), (',', 'SC'), ('질병', 'NNG'), ('을', 'JKO'), ('일으키', 'VV'), ('지', 'EC'), ('않', 'VX'), ('는다', 'EC')][('안전', 'NNG'), ('하', 'XSA'), ('다는', 'ETM'), ('특성', 'NNG'), ('과', 'JKB'), ('더불', 'VV'), ('어', 'EC'), ('키우', 'VV'), ('기', 'ETN'), ('쉽', 'VA'), ('고', 'EC'), (',', 'SC'), ('같', 'VA'), ('은', 'ETM'), ('속', 'NNG'), ('의', 'JKG'), ('다른', 'MM'), ('박테리아', 'NNG'), ('와', 'JC'), ('비교', 'NNG'), ('했', 'XSV+EP'), ('을', 'ETM'), ('때', 'NNG'), ('상대', 'NNG'), ('적', 'XSN'), ('으로', 'JKB'), ('빠르', 'VA'), ('게', 'EC'), ('생장', 'NNG'), ('한다는', 'XSV+ETM'), ('특징', 'NNG'), ('으로', 'JKB'), ('인해', 'VV+EC'), ('실험', 'NNG'), ('용', 'XSN'), ('으로', 'JKB'), ('많이', 'MAG'), ('쓰인다', 'VV+EC')][('또한', 'MAJ'), ('중요', 'NNG'), ('한', 'XSA+ETM'), ('특징', 'NNG'), ('중', 'NNB'), ('하나', 'NR'), ('로', 'JKB'), (',', 'SC'), ('산화', 'NNG'), ('적', 'XSN'), ('스트레스', 'NNG'), ('를', 'JKO'), ('방어', 'NNG'), ('하', 'XSV'), ('기', 'ETN'), ('위한', 'VV+ETM'), ('기', 'NNG'), ('작', 'NNG'), ('이', 'JKS'), ('존재', 'NNG'), ('한다', 'XSV+EC')][('이', 'NP'), ('는', 'JX'), ('박테리아', 'NNG'), ('가', 'JKS'), ('인체', 'NNG'), ('에', 'JKB'), ('침투', 'NNG'), ('한', 'XSA+ETM'), ('뒤', 'NNG'), ('에', 'JKB'), ('macrophage', 'SL'), ('와', 'JKB'), ('같', 'VA'), ('은', 'ETM'), ('면역', 'NNG'), ('세포', 'NNG'), ('에게', 'JKB'), ('잡아먹히', 'VV'), ('면', 'EC'), ('작동', 'NNG'), ('되', 'XSV'), ('는데', 'EC'), (',', 'SC'), ('대식', 'NNG'), ('세포', 'NNG'), ('가', 'JKS'), ('박테리아', 'NNG'), ('를', 'JKO'), ('소화', 'NNG'), ('하', 'XSV'), ('기', 'ETN'), ('위해', 'VV+EC'), ('내부', 'NNG'), ('로', 'JKB'), ('과산화수소', 'NNG'), ('와', 'JKB'), ('같', 'VA'), ('은', 'ETM'), ('산화력', 'NNG'), ('이', 'JKS'), ('강한', 'VA+ETM'), ('물질', 'NNG'), ('을', 'JKO'), ('분비', 'NNG'), ('하', 'XSV'), ('면', 'EC'), ('이', 'NP'), ('에', 'JKB'), ('대응', 'NNG'), ('하', 'XSV'), ('기', 'ETN'), ('위해', 'VV+EC'), ('superoxide', 'SL'), ('radical', 'SL'), ('을', 'JKO'), ('소화', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('효소', 'NNG'), ('를', 'JKO'), ('분비', 'NNG'), ('한다', 'XSV+EF'), ('.', 'SF'), ('사용', 'NNG'), ('한', 'XSA+ETM'), ('또', 'MAG'), ('다른', 'MM'), ('균주', 'NNG'), ('인', 'VCP+ETM'), ('Escherichia', 'SL'), ('coli', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('E', 'SL')][('coli', 'SL'), (')', 'SSC'), ('는', 'JX'), ('대장균', 'NNG'), ('으로', 'JKB'), ('이', 'MM'), ('실험', 'NNG'), ('에서', 'JKB'), ('는', 'JX'), ('DH', 'SL'), ('5', 'SN'), ('α', 'SL'), ('strain', 'SL'), ('을', 'JKO'), ('competent', 'SL'), ('cell', 'SL'), ('로', 'JKB'), ('사용', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('plasmid', 'SL'), ('를', 'JKO'), ('넣', 'VV'), ('었', 'EP'), ('다', 'EF'), ('cloning', 'SL'), ('하', 'XSV'), ('고', 'EC'), ('다시', 'MAG'), ('빼', 'VV'), ('는데', 'EC'), ('사용', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('실험', 'NNG'), ('에', 'JKB'), ('사용', 'NNG'), ('한', 'XSA+ETM'), ('strain', 'SL'), ('과', 'JC'), ('plasmid', 'SL'), ('의', 'JKG'), ('사용', 'NNG'), ('목적', 'NNG'), ('과', 'JC'), ('genotype', 'SL'), ('은', 'JX'), ('[', 'SSO'), ('Table', 'SL')][('1', 'SN'), (']', 'SSC'), ('과', 'JKB'), ('같', 'VA'), ('다', 'EC'), ('.', 'SY'), ('2', 'SN')][('세균', 'NNG'), ('배양', 'NNG'), ('본', 'VV+ETM'), ('연구', 'NNG'), ('에서', 'JKB'), ('는', 'JX'), ('E', 'SL')][('coli', 'SL'), ('strain', 'SL'), ('인', 'VCP+ETM'), ('DH', 'SL'), ('5', 'SN'), ('α', 'SL'), ('와', 'JC'), ('M', 'SL')][('smegmatis', 'SL'), ('세균', 'NNG'), ('두', 'MM'), ('종류', 'NNG'), ('를', 'JKO'), ('사용', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('M', 'SL')][('smegmatis', 'SL'), ('는', 'JX'), ('37', 'SN'), ('°', 'SY'), ('C', 'SL'), (',', 'SC'), ('200', 'SN'), ('rpm', 'SL'), ('에서', 'JKB'), ('0', 'SN'), ('.', 'SY'), ('2', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('w', 'SL'), ('/', 'SC'), ('v', 'SL'), (')', 'SSC'), ('glucose', 'SL'), ('와', 'JC'), ('0', 'SN'), ('.', 'SY'), ('02', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('v', 'SL'), ('/', 'SC'), ('v', 'SL'), (')', 'SSC'), ('Tween', 'SL'), ('-', 'SY'), ('80', 'SN'), ('이', 'NR'), ('첨가', 'NNG'), ('된', 'XSV+ETM'), ('7', 'SN'), ('H', 'SL'), ('9', 'SN'), ('(', 'SSO'), ('Difco', 'SL'), (',', 'SC'), ('Sparks', 'SL'), (',', 'SC'), ('MD', 'SL'), (')', 'SSC'), ('액체', 'NNG'), ('배지', 'NNG'), ('에', 'JKB'), ('호기', 'NNG'), ('적', 'XSN'), ('으로', 'JKB'), ('배양', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('고', 'EC'), (',', 'SC'), ('E', 'SL')][('coli', 'SL'), ('DH', 'SL'), ('5', 'SN'), ('α', 'SL'), ('는', 'JX'), ('Luria', 'SL'), ('-', 'SY'), ('Bertoni', 'SL'), ('(', 'SSO'), ('LB', 'SL'), (')', 'SSC'), ('배지', 'NNG'), ('에', 'JKB'), ('호기', 'NNG'), ('적', 'XSN'), ('으로', 'JKB'), ('배양', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('본', 'MM'), ('연구', 'NNG'), ('에서', 'JKB'), ('사용', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('던', 'ETM'), ('vectors', 'SL'), ('인', 'VCP+ETM'), ('pMV', 'SL'), ('306', 'SN'), ('은', 'JX'), ('Km', 'SL'), ('에', 'JKB'), ('대해', 'VV+EC'), (',', 'SC'), ('pNCII', 'SL'), ('는', 'JX'), ('Hyg', 'SL'), ('에', 'JKB'), ('대해', 'VV+EC'), ('각각', 'MAG'), ('항생제', 'NNG'), ('내성', 'NNP'), ('유전자', 'NNG'), ('를', 'JKO'), ('포함', 'NNG'), ('하', 'XSV'), ('고', 'EC'), ('있', 'VX'), ('다', 'EC')][('실험', 'NNG'), ('에', 'JKB'), ('사용', 'NNG'), ('한', 'XSA+ETM'), ('세균', 'NNG'), ('의', 'JKG'), ('stain', 'SL'), ('과', 'JC'), ('plasmid', 'SL'), ('의', 'JKG'), ('종류', 'NNG'), ('는', 'JX'), ('[', 'SSO'), ('Table', 'SL')][('1', 'SN'), (']', 'SSC'), ('에', 'JKB'), ('정리', 'NNG'), ('되', 'XSV'), ('어', 'EC'), ('있', 'VX'), ('다', 'EC')][('pMV', 'SL'), ('306', 'SN'), ('과', 'JC'), ('pNCII', 'SL'), ('plasmid', 'SL'), ('가', 'JKS'), ('증식', 'NNG'), ('과정', 'NNG'), ('에서', 'JKB'), ('사라지', 'VV'), ('지', 'EC'), ('않', 'VX'), ('게', 'EC'), ('하', 'VV'), ('기', 'ETN'), ('위해', 'VV+EC'), ('배지', 'NNG'), ('에', 'JKB'), ('는', 'JX'), ('selective', 'SL'), ('pressure', 'SL'), ('를', 'JKO'), ('줄', 'VV+ETM'), ('용도', 'NNG'), ('로', 'JKB'), ('Km', 'SL'), ('과', 'JC'), ('Hyg', 'SL'), ('항생제', 'NNG'), ('가', 'JKS'), ('각각', 'MAG'), ('들어갔', 'VV+EP'), ('다', 'EC'), ('(', 'SSO'), ('Table', 'SL')][('2', 'SN'), (')', 'SSC')][('실험', 'NNG'), ('중', 'NNB'), ('에', 'JKB'), ('PCR', 'SL'), ('에서', 'JKB'), ('사용', 'NNG'), ('했', 'XSV+EP'), ('던', 'ETM'), ('primer', 'SL'), ('의', 'JKG'), ('종류', 'NNG'), ('와', 'JC'), ('서열', 'NNG'), (',', 'SC'), ('사용', 'NNG'), ('한', 'XSA+ETM'), ('목적', 'NNG'), ('은', 'JX'), ('[', 'SSO'), ('Table', 'SL')][('3', 'SN'), (']', 'SSC'), ('과', 'JKB'), ('같', 'VA'), ('다', 'EF'), ('.', 'SF'), ('산화', 'NNG'), ('적', 'XSN'), ('스트레스', 'NNG'), ('를', 'JKO'), ('주', 'VV'), ('는', 'ETM'), ('조건', 'NNG'), ('으로', 'JKB'), ('Cumene', 'SL'), ('Hydroperoxide', 'SL'), ('(', 'SSO'), ('CHP', 'SL'), (')', 'SSC'), ('를', 'JKO'), ('사용', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('배양', 'NNG'), ('한', 'XSA+ETM'), ('M', 'SL')][('smegmatis', 'SL'), ('는', 'JX'), ('OD', 'SL'), ('600', 'SN'), ('이', 'NR'), ('0', 'SN'), ('.', 'SY'), ('4', 'SN'), ('인', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('+', 'SY'), ('CHP', 'SL'), ('조건', 'NNG'), ('배양액', 'NNG'), ('에', 'JKB'), ('만', 'JX'), ('CHP', 'SL'), ('0', 'SN'), ('.', 'SY'), ('1', 'SN'), ('mM', 'SL'), ('을', 'JKO'), ('1', 'SN'), ('시간', 'NNBC'), ('동안', 'NNG'), ('처리', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('Activity', 'SL'), ('staining', 'SL'), ('을', 'JKO'), ('위한', 'VV+ETM'), ('세균', 'NNG'), ('배양', 'NNG'), ('에서', 'JKB'), ('는', 'JX'), ('M', 'SL')][('smegmatis', 'SL'), ('가', 'JKS'), ('OD', 'SL'), ('600', 'SN'), ('이', 'NR'), ('0', 'SN'), ('.', 'SY'), ('4', 'SN'), ('인', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('0', 'SN'), ('.', 'SY'), ('1', 'SN'), ('mM', 'SL'), ('을', 'JKO'), ('1', 'SN'), ('시간', 'NNBC'), ('동안', 'NNG'), ('처리', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EF'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('4', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('80', 'SN'), ('-', 'SY'), ('StrainRelevant', 'SL'), ('phenotype', 'SL'), ('/', 'SC'), ('genotype', 'SL'), ('or', 'SL'), ('purposeM', 'SL')][('smegmatisWild', 'SL'), ('typeM', 'SL')][('smegmatis', 'SL'), ('∆', 'SY'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('Deletion', 'SL'), ('mutant', 'SL'), ('of', 'SL'), ('furA', 'SL'), ('1', 'SN'), (',', 'SC'), ('furA', 'SL'), ('2', 'SN'), (',', 'SC'), ('furA', 'SL'), ('3', 'SN'), ('M', 'SL')][('smegmatis', 'SL'), ('∆', 'SY'), ('crpInsertion', 'SL'), ('mutant', 'SL'), ('of', 'SL'), ('crpE', 'SL')][('coli', 'SL'), ('DH', 'SL'), ('5', 'SN'), ('α', 'SL'), ('Plasmid', 'SL'), ('cloning', 'SL'), ('and', 'SL'), ('conjugationPlasmidpMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('M', 'SL'), ('3', 'SN'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('[', 'SSO'), ('Not', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('M', 'SL'), ('3', 'SN'), ('-', 'SY'), ('[', 'SSO'), ('Xba', 'SL'), ('I', 'SL'), (']', 'SSC'), ('–', 'SY'), ('gfp', 'SL'), ('-', 'SY'), ('[', 'SSO'), ('EcoR', 'SL'), ('I', 'SL'), (']', 'SSC'), ('–', 'SY'), ('Km', 'SL'), ('resistant', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('Km', 'SL'), ('r', 'SL'), (')', 'SSC'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('[', 'SSO'), ('Not', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('ahpC', 'SL'), ('-', 'SY'), ('[', 'SSO'), ('Xba', 'SL'), ('I', 'SL'), (']', 'SSC'), ('–', 'SY'), ('gfp', 'SL'), ('-', 'SY'), ('[', 'SSO'), ('EcoR', 'SL'), ('I', 'SL'), (']', 'SSC'), ('–', 'SY'), ('Km', 'SL'), ('rpGFPuv', 'SL'), ('[', 'SSO'), ('Pst', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('green', 'SL'), ('florence', 'SL'), ('protein', 'SL'), ('gene', 'SL'), ('(', 'SSO'), ('이하', 'NNG'), ('gfp', 'SL'), (')', 'SSC'), ('-', 'SY'), ('[', 'SSO'), ('Hind', 'SL'), ('III', 'SL'), (']', 'SSC'), ('pNC', 'SL'), ('[', 'SSO'), ('Xba', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('[', 'SSO'), ('Cla', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('lacZ', 'SL'), ('-', 'SY'), ('Hyg', 'SL'), ('resistantpNCgfp', 'SL'), ('[', 'SSO'), ('Xba', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('[', 'SSO'), ('Pst', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('gfp', 'SL'), ('-', 'SY'), ('[', 'SSO'), ('Hind', 'SL'), ('III', 'SL'), (']', 'SSC'), ('-', 'SY'), ('[', 'SSO'), ('Cla', 'SL'), ('I', 'SL'), (']', 'SSC'), ('-', 'SY'), ('lacZ', 'SL'), ('-', 'SY'), ('Hyg', 'SL'), ('resistantTable', 'SL'), ('1', 'SN')][('Table', 'SL'), ('of', 'SL'), ('strains', 'SL'), ('and', 'SL'), ('plasmids', 'SL'), ('E', 'SL')][('coliM', 'SL')][('smegmatisKanamycin', 'SL'), ('50', 'SN'), ('㎍/㎖', 'SY'), ('30', 'SN'), ('㎍/㎖', 'SY'), ('Hygromycin', 'SL'), ('200', 'SN'), ('㎍/㎖', 'SY'), ('50', 'SN'), ('㎍/㎖', 'SY'), ('Table', 'SL'), ('2', 'SN')][('Table', 'SL'), ('of', 'SL'), ('antibiotics', 'SL'), ('Primer', 'SL'), ('nameSequence', 'SL'), ('(', 'SSO'), ('5', 'SN'), ('’→', 'SY'), ('3', 'SN'), ('‘)', 'SY'), ('PurposeAhpC', 'SL'), ('_', 'SY'), ('SalI', 'SL'), ('+', 'SY'), ('A', 'SL'), ('T', 'SL'), ('A', 'SL'), ('T', 'SL'), ('G', 'SL'), ('T', 'SL'), ('C', 'SL'), ('GACCATCGACGTCGCCCGCCCahpC', 'SL'), ('cloningAhpC', 'SL'), ('_', 'SY'), ('XbaI', 'SL'), ('-', 'SY'), ('A', 'SL'), ('T', 'SL'), ('A', 'SL'), ('T', 'SL'), ('T', 'SL'), ('C', 'SL'), ('TAGAGTCATCGGGCTGCTTGGCGFP', 'SL'), ('_', 'SY'), ('PstI', 'SL'), ('+', 'SY'), ('A', 'SL'), ('T', 'SL'), ('A', 'SL'), ('T', 'SL'), ('C', 'SL'), ('T', 'SL'), ('G', 'SL'), ('C', 'SL'), ('A', 'SL'), ('G', 'SL'), ('C', 'SL'), ('A', 'SL'), ('TGCATGAGTAAAGGAGAAGAACgfp', 'SL'), ('cloningGFP', 'SL'), ('_', 'SY'), ('HindIII', 'SL'), ('-', 'SY'), ('A', 'SL'), ('T', 'SL'), ('A', 'SL'), ('T', 'SL'), ('AAGCTTGCCCTGACGGGCTTGTCTG', 'SL'), ('AhpC', 'SL'), ('_', 'SY'), ('F', 'SL'), ('CGTGTGTCGGTGGACAACGAG', 'SL'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('for', 'SL'), ('ahpCAhpC', 'SL'), ('_', 'SY'), ('R', 'SL'), ('GGTCACCGACACGAACTGGATable', 'SL'), ('3', 'SN')][('Table', 'SL'), ('of', 'SL'), ('primers', 'SL'), ('3', 'SN')][('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('Plasmid', 'SL'), ('와', 'JC'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('lacZ', 'SL'), ('제작', 'NNG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('template', 'SL'), ('DNA', 'SL'), ('를', 'JKO'), ('이용', 'NNG'), ('한', 'XSA+ETM'), ('PCR', 'SL'), ('(', 'SSO'), ('Qiazen', 'SL'), ('™', 'SY'), ('2', 'SN'), ('X', 'SL'), ('EF', 'SL'), ('Taq', 'SL'), ('PCR', 'SL'), ('Pre', 'SL'), ('-', 'SY'), ('Mix', 'SL'), (',', 'SC'), ('Taq', 'SL'), ('DNA', 'SL'), ('polymerase', 'SL'), (',', 'SC'), ('primer', 'SL'), ('(', 'SSO'), ('ahpCNotI', 'SL'), ('+,', 'SY'), ('ahpCXbaI', 'SL'), ('-)', 'SY'), ('로', 'JKB'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('promoter', 'SL'), ('부분', 'NNG'), ('이', 'JKS'), ('포함', 'NNG'), ('된', 'XSV+ETM'), ('0', 'SN'), ('.', 'SY'), ('8', 'SN'), ('kb', 'SL'), ('ahpC', 'SL'), ('gene', 'SL'), ('DNA', 'SL'), ('를', 'JKO'), ('증폭', 'NNG'), ('시켰', 'XSV+EP'), ('다', 'EC')][('증폭', 'NNG'), ('된', 'XSV+ETM'), ('ahpC', 'SL'), ('DNA', 'SL'), ('와', 'JC'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('M', 'SL'), ('3', 'SN'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('plasmid', 'SL'), ('를', 'JKO'), ('NotI', 'SL'), ('과', 'JC'), ('XbaI', 'SL'), ('restriction', 'SL'), ('enzyme', 'SL'), ('로', 'JKB'), ('double', 'SL'), ('digestion', 'SL'), ('을', 'JKO'), ('수행', 'NNG'), ('한', 'XSA+ETM'), ('뒤', 'NNG'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('M', 'SL'), ('3', 'SN'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('는', 'JX'), ('agarose', 'SL'), ('gel', 'SL'), ('electrophoresis', 'SL'), ('로', 'JKB'), ('double', 'SL'), ('digestion', 'SL'), ('이', 'JKS'), ('올바르', 'VA'), ('게', 'EC'), ('수행', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('는지', 'EC'), ('확인', 'NNG'), (',', 'SC'), ('각각', 'MAG'), ('DNA', 'SL'), ('만', 'JX'), ('을', 'JKO'), ('추출', 'NNG'), ('해', 'XSV+EC'), ('낸', 'VX+ETM'), ('뒤', 'NNG'), ('(', 'SSO'), ('Gel', 'SL'), ('&', 'SY'), ('PCR', 'SL'), ('Purification', 'SL'), ('System', 'SL'), (',', 'SC'), ('Solgent', 'SL'), ('™)', 'SY'), ('ligation', 'SL'), ('해', 'XSV+EC'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('plasmid', 'SL'), ('를', 'JKO'), ('제작', 'NNG'), ('했', 'XSV+EP'), ('다', 'EC'), ('(', 'SSO'), ('Fig', 'SL')][('4', 'SN'), (')', 'SSC'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('5', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('강', 'NNG'), ('지유', 'NNG'), ('⋅', 'SY'), ('김용태', 'NNP'), ('⋅', 'SY'), ('노유진', 'NNP'), ('-', 'SY'), ('81', 'SN'), ('-[', 'SY'), ('Fig', 'SL')][('4', 'SN'), (']', 'SSC'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('와', 'JC'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('plasmid', 'SL'), ('의', 'JKG'), ('construct', 'SL')][('Plasmid', 'SL'), ('상의', 'NNG'), ('M', 'SL'), ('3', 'SN'), (',', 'SC'), ('gfp', 'SL'), (',', 'SC'), ('ahpC', 'SL'), ('gene', 'SL'), ('의', 'JKG'), ('길', 'NNG'), ('이', 'JKS'), ('및', 'MAJ'), ('위치', 'NNG'), ('와', 'JC'), ('kanamycin', 'SL'), ('resistant', 'SL'), ('gene', 'SL'), ('이', 'JKS'), ('나타나', 'VV+EC'), ('있', 'VX'), ('다', 'EC')][('NotI', 'SL'), ('과', 'JC'), ('XbaI', 'SL'), ('restriction', 'SL'), ('enzyme', 'SL'), ('이', 'JKS'), ('plasmid', 'SL'), ('에', 'JKB'), ('작용', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('site', 'SL'), ('또한', 'MAJ'), ('plasmid', 'SL'), ('위', 'NNG'), ('에', 'JKB'), ('나타나', 'VV+EC'), ('있', 'VX'), ('다', 'EF'), ('.', 'SF'), ('위', 'NNG'), ('와', 'JKB'), ('같', 'VA'), ('은', 'ETM'), ('방법', 'NNG'), ('으로', 'JKB'), ('primer', 'SL'), ('(', 'SSO'), ('ahpCSalI', 'SL'), ('+,', 'SY'), ('ahpCXbaI', 'SL'), ('-)', 'SY'), ('를', 'JKO'), ('이용', 'NNG'), ('해', 'XSV+EC'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('promoter', 'SL'), ('부분', 'NNG'), ('이', 'JKS'), ('포함', 'NNG'), ('된', 'XSV+ETM'), ('0', 'SN'), ('.', 'SY'), ('8', 'SN'), ('kb', 'SL'), ('ahpC', 'SL'), ('gene', 'SL'), ('DNA', 'SL'), ('를', 'JKO'), ('증폭', 'NNG'), ('시켰', 'XSV+EP'), ('다', 'EC')][('Sal', 'SL'), ('I', 'SL'), ('과', 'NNG'), ('Xba', 'SL'), ('I', 'SL'), ('restriction', 'SL'), ('enzyme', 'SL'), ('으로', 'JKB'), ('pMV', 'SL'), ('306', 'SN'), ('lacZ', 'SL'), ('plasmid', 'SL'), ('의', 'JKG'), ('double', 'SL'), ('digestion', 'SL'), ('을', 'JKO'), ('수행', 'NNG'), ('한', 'XSA+ETM'), ('후', 'NNG'), ('증폭', 'NNG'), ('시킨', 'XSV+ETM'), ('ahpC', 'SL'), ('gene', 'SL'), ('과', 'JC'), ('ligation', 'SL'), ('해', 'XSV+EC'), ('pMV', 'SL'), ('306', 'SN'), ('lacZ', 'SL'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), ('plasmid', 'SL'), ('를', 'JKO'), ('제작', 'NNG'), ('했', 'XSV+EP'), ('다', 'EC')][('4', 'SN')][('β', 'SL'), ('-', 'SY'), ('galactosidase', 'SL'), ('assaypMV', 'SL'), ('306', 'SN'), ('lacZ', 'SL'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), ('를', 'JKO'), ('가지', 'VV'), ('는', 'ETM'), ('M', 'SL')][('smegmatis', 'SL'), ('WT', 'SL')][('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('mutant', 'SL'), (',', 'SC'), ('Δ', 'SL'), ('crp', 'SL'), ('mutant', 'SL'), ('를', 'JKO'), ('각각', 'MAG'), ('CHP', 'SL'), ('를', 'JKO'), ('이용', 'NNG'), ('한', 'XSA+ETM'), ('oxidative', 'SL'), ('stress', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('과', 'JC'), ('비', 'XPN'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('배양', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('각', 'MM'), ('strain', 'SL'), ('을', 'JKO'), ('O', 'SL'), ('.', 'SY'), ('D', 'SL'), ('.', 'SY'), ('600', 'SN'), ('값', 'NNG'), ('이', 'JKS'), ('0', 'SN'), ('.', 'SY'), ('45', 'SN'), ('∼', 'SY'), ('0', 'SN'), ('.', 'SY'), ('50', 'SN'), ('이', 'NR'), ('될', 'VV+ETM'), ('때', 'NNG'), ('까지', 'JX'), ('키워', 'VV+EC'), ('harvest', 'SL'), ('하', 'XSV'), ('고', 'EC'), ('1', 'SN'), ('.', 'SY'), ('5', 'SN'), ('ml', 'SL'), ('β', 'SL'), ('-', 'SY'), ('glalactosidase', 'SL'), ('buffer', 'SL'), ('에', 'JKB'), ('resuspend', 'SL'), ('하', 'VV'), ('였', 'EP'), ('다', 'EC')][('Sonification', 'SL'), ('(', 'SSO'), ('10', 'SN'), ('초', 'NNBC'), ('on', 'SL'), (',', 'SC'), ('50', 'SN'), ('초', 'NNBC'), ('off', 'SL'), (')', 'SSC'), ('을', 'JKO'), ('8', 'SN'), ('번', 'NNBC'), ('반복', 'NNG'), ('해', 'XSV+EC'), ('균체', 'NNG'), ('를', 'JKO'), ('파쇄', 'NNG'), ('한', 'XSA+ETM'), ('뒤', 'NNG'), ('13000', 'SN'), ('rpm', 'SL'), ('에서', 'JKB'), ('10', 'SN'), ('분', 'NNBC'), ('간', 'NNG'), ('원심', 'NNG'), ('분리', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('얻', 'VV'), ('어', 'EC'), ('진', 'VX+ETM'), ('crude', 'SL'), ('extract', 'SL'), ('는', 'JX'), ('4', 'SN'), ('배', 'NNG'), ('희석', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('사용', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EF'), ('.', 'SF'), ('Assay', 'SL'), ('mixture', 'SL'), ('(', 'SSO'), ('1', 'SN'), ('ml', 'SL'), (')', 'SSC'), ('는', 'JX'), ('전체', 'NNG'), ('농도', 'NNG'), ('가', 'JKS'), ('20', 'SN'), ('mM', 'SL'), ('이', 'JKS'), ('되', 'VV'), ('도록', 'EC'), ('β', 'SL'), ('-', 'SY'), ('mercaptoethanol', 'SL'), ('을', 'JKO'), ('첨가', 'NNG'), ('한', 'XSA+ETM'), ('β', 'SL'), ('-', 'SY'), ('glalactosidase', 'SL'), ('buffer', 'SL'), ('750', 'SN'), ('㎕,', 'SY'), ('assay', 'SL'), ('buffer', 'SL'), ('에', 'JKB'), ('녹인', 'VV+ETM'), ('0', 'SN'), ('.', 'SY'), ('2', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('w', 'SL'), ('/', 'SC'), ('v', 'SL'), (')', 'SSC'), ('o', 'SL'), ('-', 'SY'), ('NPG', 'SL'), ('200', 'SN'), ('㎕,', 'SY'), ('cell', 'SL'), ('crude', 'SL'), ('extract', 'SL'), ('50', 'SN'), ('㎕', 'SY'), ('로', 'JKB'), ('구성', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('다', 'EC')][('Assay', 'SL'), ('mixture', 'SL'), ('를', 'JKO'), ('3', 'SN'), ('회', 'NNBC'), ('invert', 'SL'), ('시킨', 'XSV+ETM'), ('후', 'NNG'), ('spectrophotometer', 'SL'), ('로', 'JKB'), ('O', 'SL'), ('.', 'SY'), ('D', 'SL'), ('.', 'SY'), ('420', 'SN'), ('에서', 'JKB'), ('1', 'SN'), ('분', 'NNBC'), ('간', 'NNB'), ('의', 'JKG'), ('흡광', 'NNG'), ('도', 'JX'), ('변화', 'NNG'), ('를', 'JKO'), ('측정', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('이후', 'NNG'), ('흡광', 'NNG'), ('도', 'JX'), ('변화', 'NNG'), ('량', 'NNG'), ('과', 'JC'), ('단백질', 'NNG'), ('정량', 'NNG'), ('값', 'NNG'), ('을', 'JKO'), ('이용', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('specific', 'SL'), ('activity', 'SL'), ('를', 'JKO'), ('구하', 'VV'), ('였', 'EP'), ('다', 'EF'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('6', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('82', 'SN'), ('-', 'SY'), ('5', 'SN')][('GFP', 'SL'), ('assaypMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('를', 'JKO'), ('가지', 'VV'), ('는', 'ETM'), ('M', 'SL')][('smegmatis', 'SL'), ('WT', 'SL'), (',', 'SC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('mutant', 'SL'), (',', 'SC'), ('Δ', 'SL'), ('crp', 'SL'), ('mutant', 'SL'), ('를', 'JKO'), ('각각', 'MAG'), ('CHP', 'SL'), ('를', 'JKO'), ('이용', 'NNG'), ('한', 'XSA+ETM'), ('oxidative', 'SL'), ('stress', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('과', 'JC'), ('비', 'XPN'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('배양', 'NNG'), ('하', 'XSV'), ('였으며', 'EP+EC'), (',', 'SC'), ('β', 'SL'), ('-', 'SY'), ('glalactosidase', 'SL'), ('assay', 'SL'), ('와', 'JKB'), ('같', 'VA'), ('은', 'ETM'), ('방식', 'NNG'), ('으로', 'JKB'), ('총', 'MM'), ('6', 'SN'), ('개', 'NNBC'), ('sample', 'SL'), ('의', 'JKG'), ('crude', 'SL'), ('extract', 'SL'), ('를', 'JKO'), ('얻', 'VV'), ('어', 'EC'), ('냈', 'VX+EP'), ('다', 'EC')][('Buffer', 'SL'), ('로', 'JKB'), ('는', 'JX'), ('β', 'SL'), ('-', 'SY'), ('glalactosidase', 'SL'), ('buffer', 'SL'), ('가', 'JKC'), ('아닌', 'VCN+ETM'), ('Tris', 'SL'), ('-', 'SY'), ('HCL', 'SL'), ('buffer', 'SL'), ('(', 'SSO'), ('10', 'SN'), ('mM', 'SL'), (',', 'SC'), ('pH', 'SL'), ('8', 'SN'), ('.', 'SY'), ('0', 'SN'), (')', 'SSC'), ('를', 'JKO'), ('사용', 'NNG'), ('했', 'XSV+EP'), ('다', 'EC')][('각', 'MM'), ('sample', 'SL'), ('의', 'JKG'), ('crude', 'SL'), ('extract', 'SL'), ('를', 'JKO'), ('단백질', 'NNG'), ('정량', 'NNG'), ('해', 'XSV+EC'), ('모든', 'MM'), ('sample', 'SL'), ('의', 'JKG'), ('단백질', 'NNG'), ('농도', 'NNG'), ('가', 'JKS'), ('동일', 'NNG'), ('하', 'XSV'), ('도록', 'EC'), ('희석', 'NNG'), ('시켰', 'XSV+EP'), ('다', 'EC')][('준비', 'NNG'), ('된', 'XSV+ETM'), ('sample', 'SL'), ('은', 'JX'), ('fluorescence', 'SL'), ('spectrophotometer', 'SL'), ('를', 'JKO'), ('이용', 'NNG'), ('해', 'XSV+EC'), ('395', 'SN'), ('nm', 'SL'), ('의', 'JKG'), ('excitation', 'SL'), ('wavelength', 'SL'), ('와', 'JC'), ('509', 'SN'), ('nm', 'SL'), ('의', 'JKG'), ('emission', 'SL'), ('wavelength', 'SL'), ('조건', 'NNG'), ('에서', 'JKB'), ('GFP', 'SL'), ('fluorescence', 'SL'), ('intensity', 'SL'), ('를', 'JKO'), ('측정', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('6', 'SN')][('단백질', 'NNG'), ('농도', 'NNG'), ('측정', 'NNG'), ('Bovine', 'SL'), ('serum', 'SL'), ('albumin', 'SL'), ('을', 'JKO'), ('표준', 'NNG'), ('단백질', 'NNG'), ('로', 'JKB'), ('사용', 'NNG'), ('하', 'XSV'), ('고', 'EC'), (',', 'SC'), ('Pierce', 'SL'), ('™', 'SY'), ('BCA', 'SL'), ('Protein', 'SL'), ('Assay', 'SL'), ('Kit', 'SL'), ('(', 'SSO'), ('ThermoFisher', 'SL'), (')', 'SSC'), ('를', 'JKO'), ('이용', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('단백질', 'NNG'), ('의', 'JKG'), ('농도', 'NNG'), ('를', 'JKO'), ('측정', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EF'), ('.', 'SF'), ('7', 'SN')][('Polyacrylamide', 'SL'), ('gel', 'SL'), ('electrophoresisNative', 'SL'), ('PAGE', 'SL'), ('는', 'JX'), ('protein', 'SL'), ('denaturation', 'SL'), ('을', 'JKO'), ('일으키', 'VV'), ('지', 'EC'), ('않', 'VX'), ('아', 'EC'), ('protein', 'SL'), ('3', 'SN'), ('차', 'NNBC'), ('구조', 'NNG'), (',', 'SC'), ('분자량', 'NNG'), (',', 'SC'), ('charge', 'SL'), ('등', 'NNB'), ('에', 'JKB'), ('속도', 'NNG'), ('가', 'JKS'), ('영향', 'NNG'), ('을', 'JKO'), ('받', 'VV'), ('으며', 'EC'), ('효소', 'NNG'), ('자체', 'NNG'), ('의', 'JKG'), ('특징', 'NNG'), ('과', 'JC'), ('활성', 'NNG'), ('정도', 'NNG'), ('를', 'JKO'), ('알', 'VV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('다', 'EC')][('Amino', 'SL'), ('acid', 'SL'), ('사이', 'NNG'), ('의', 'JKG'), ('bond', 'SL'), ('가', 'JKS'), ('유지', 'NNG'), ('되', 'XSV'), ('어', 'EC'), ('protein', 'SL'), ('의', 'JKG'), ('분자량', 'NNG'), ('을', 'JKO'), ('알아낼', 'VV+ETM'), ('수', 'NNB'), ('는', 'JX'), ('없', 'VA'), ('으나', 'EC'), ('다른', 'MM'), ('sample', 'SL'), ('과', 'JC'), ('비교', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('단백질', 'NNG'), ('자체', 'NNG'), ('의', 'JKG'), ('양', 'NNG'), ('을', 'JKO'), ('비교', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('으며', 'EC'), ('존재', 'NNG'), ('여부', 'NNG'), ('를', 'JKO'), ('알', 'VV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('다', 'EC')][('Native', 'SL'), ('PAGE', 'SL'), ('를', 'JKO'), ('이루', 'VV'), ('는', 'ETM'), ('gel', 'SL'), ('의', 'JKG'), ('구성', 'NNG'), ('성분', 'NNG'), ('은', 'JX'), ('[', 'SSO'), ('Table', 'SL')][('4', 'SN'), (']', 'SSC'), ('와', 'JKB'), ('같', 'VA'), ('다', 'EF'), ('.', 'SF'), ('compositionstacking', 'SL'), ('gel', 'SL'), ('resolving', 'SL'), ('gel', 'SL'), ('(', 'SSO'), ('7', 'SN'), ('.', 'SY'), ('5', 'SN'), ('%)', 'SY'), ('acrylamide', 'SL'), ('solution', 'SL'), ('(', 'SSO'), ('30', 'SN'), ('%)', 'SY'), ('30', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('w', 'SL'), ('/', 'SC'), ('v', 'SL'), (')', 'SSC'), ('acrylamide', 'SL'), ('+', 'SY'), ('0', 'SN'), ('.', 'SY'), ('8', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('w', 'SL'), ('/', 'SC'), ('v', 'SL'), (')', 'SSC'), ('bisacrylamide', 'SL'), ('0', 'SN'), ('.', 'SY'), ('5', 'SN'), ('ml', 'SL'), ('2', 'SN'), ('.', 'SY'), ('5', 'SN'), ('mlStacking', 'SL'), ('buffer', 'SL'), ('0', 'SN'), ('.', 'SY'), ('5', 'SN'), ('M', 'SL'), ('Tris', 'SL'), ('-', 'SY'), ('HCl', 'SL'), (',', 'SC'), ('pH', 'SL'), ('6', 'SN'), ('.', 'SY'), ('8', 'SN'), ('1', 'SN'), ('mlResolving', 'SL'), ('buffer', 'SL'), ('3', 'SN'), ('M', 'SL'), ('Tris', 'SL'), ('-', 'SY'), ('HCl', 'SL'), (',', 'SC'), ('pH', 'SL'), ('8', 'SN'), ('.', 'SY'), ('8', 'SN'), ('1', 'SN'), ('.', 'SY'), ('25', 'SN'), ('mlAmmonium', 'SL'), ('persulfate', 'SL'), ('10', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('w', 'SL'), ('/', 'SC'), ('v', 'SL'), (')', 'SSC'), ('Ammonium', 'SL'), ('persulfate', 'SL'), ('0', 'SN'), ('.', 'SY'), ('03', 'SN'), ('ml', 'SL'), ('0', 'SN'), ('.', 'SY'), ('075', 'SN'), ('mlDW', 'SL'), ('2', 'SN'), ('.', 'SY'), ('29', 'SN'), ('ml', 'SL'), ('5', 'SN'), ('.', 'SY'), ('65', 'SN'), ('mlTEMED', 'SL'), ('0', 'SN'), ('.', 'SY'), ('005', 'SN'), ('ml', 'SL'), ('0', 'SN'), ('.', 'SY'), ('005', 'SN'), ('mlTable', 'SL'), ('4', 'SN')][('composition', 'SL'), ('of', 'SL'), ('staking', 'SL'), ('gel', 'SL'), ('and', 'SL'), ('resolving', 'SL'), ('gel', 'SL'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('7', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('강', 'NNG'), ('지유', 'NNG'), ('⋅', 'SY'), ('김용태', 'NNP'), ('⋅', 'SY'), ('노유진', 'NNP'), ('-', 'SY'), ('83', 'SN'), ('-', 'SY'), ('8', 'SN')][('Activity', 'SL'), ('StainingActivity', 'SL'), ('staining', 'SL'), ('에', 'JKB'), ('사용', 'NNG'), ('된', 'XSV+ETM'), ('균주', 'NNG'), ('는', 'JX'), ('M', 'SL')][('smegmatis', 'SL'), ('로', 'JKB'), ('6', 'SN'), ('개', 'NNBC'), ('의', 'JKG'), ('sample', 'SL'), ('를', 'JKO'), ('사용', 'NNG'), ('했', 'XSV+EP'), ('다', 'EC'), ('(', 'SSO'), ('Table', 'SL'), ('5', 'SN'), (')', 'SSC')][('M', 'SL')][('smegmatis', 'SL'), ('의', 'JKG'), ('crude', 'SL'), ('extracts', 'SL'), ('20', 'SN'), ('μ', 'SL'), ('g', 'SL'), ('을', 'JKO'), ('7', 'SN'), ('.', 'SY'), ('5', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('wt', 'SL'), ('/', 'SC'), ('vol', 'SL'), (')', 'SSC'), ('polyacrylamide', 'SL'), ('gel', 'SL'), ('에서', 'JKB'), ('native', 'SL'), ('gel', 'SL'), ('electrophoresis', 'SL'), ('에', 'JKB'), ('적용', 'NNG'), ('하', 'VV'), ('였', 'EP'), ('다', 'EC')][('Electrophoresis', 'SL'), ('후', 'NNG'), (',', 'SC'), ('gel', 'SL'), ('을', 'JKO'), ('DW', 'SL'), ('로', 'JKB'), ('15', 'SN'), ('분', 'NNBC'), ('동안', 'NNG'), ('3', 'SN'), ('회', 'NNBC'), ('세척', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('Gel', 'SL'), ('을', 'JKO'), ('30', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('wt', 'SL'), ('/', 'SC'), ('vol', 'SL'), (')', 'SSC'), ('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('10', 'SN'), ('㎕', 'SY'), ('가', 'JKS'), ('들', 'VV'), ('어', 'EC'), ('있', 'VX'), ('는', 'ETM'), ('DW', 'SL'), ('100', 'SN'), ('㎖', 'SY'), ('에', 'JKB'), ('담그', 'VV'), ('고', 'EC'), ('10', 'SN'), ('분', 'NNBC'), ('간', 'NNG'), ('젓', 'VV'), ('는다', 'EC')][('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('용액', 'NNG'), ('을', 'JKO'), ('배출', 'NNG'), ('시키', 'XSV'), ('고', 'EC'), (',', 'SC'), ('gel', 'SL'), ('을', 'JKO'), ('DW', 'SL'), ('로', 'JKB'), ('헹구', 'VV'), ('었', 'EP'), ('다', 'EC')][('그', 'MM'), ('다음', 'NNG'), (',', 'SC'), ('2', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('wt', 'SL'), ('/', 'SC'), ('vol', 'SL'), (')', 'SSC'), ('의', 'JKG'), ('potassium', 'SL'), ('ferricyanide', 'SL'), ('와', 'JC'), ('2', 'SN'), ('%', 'SY'), ('(', 'SSO'), ('wt', 'SL'), ('/', 'SC'), ('vol', 'SL'), (')', 'SSC'), ('의', 'JKG'), ('ferric', 'SL'), ('chloride', 'SL'), ('를', 'JKO'), ('함유', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('제조', 'NNG'), ('된', 'XSV+ETM'), ('용액', 'NNG'), ('30', 'SN'), ('ml', 'SL'), ('를', 'JKO'), ('gel', 'SL'), ('위', 'NNG'), ('에', 'JKB'), ('부', 'VV'), ('었', 'EP'), ('다', 'EC')][('이어서', 'MAG'), (',', 'SC'), ('gel', 'SL'), ('이', 'JKS'), ('진한', 'VA+ETM'), ('녹색', 'NNG'), ('으로', 'JKB'), ('변하', 'VV'), ('기', 'ETN'), ('시작', 'NNG'), ('할', 'XSV+ETM'), ('때', 'NNG'), ('까지', 'JX'), ('gel', 'SL'), ('container', 'SL'), ('를', 'JKO'), ('일정', 'NNG'), ('하', 'XSV'), ('게', 'EC'), ('흔들', 'VV'), ('었', 'EP'), ('다', 'EC')][('Gel', 'SL'), ('을', 'JKO'), ('DW', 'SL'), ('로', 'JKB'), ('세척', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('Catalase', 'SL'), ('activity', 'SL'), ('를', 'JKO'), ('지닌', 'VV+ETM'), ('단백질', 'NNG'), ('밴드', 'NNG'), ('는', 'JX'), ('진한', 'VA+ETM'), ('녹색', 'NNG'), ('배경', 'NNG'), ('에서', 'JKB'), ('무채색', 'NNG'), ('밴드', 'NNG'), ('로', 'JKB'), ('검출', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('다', 'EF'), ('.', 'SF'), ('sampletreatstrains', 'SL'), ('1', 'SN'), ('w', 'SL'), ('/', 'SC'), ('o', 'SL'), ('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('WT', 'SL'), ('2', 'SN'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('33', 'SN'), ('Δ', 'SL'), ('crp', 'SL'), ('4', 'SN'), ('w', 'SL'), ('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('WT', 'SL'), ('5', 'SN'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('36', 'SN'), ('Δ', 'SL'), ('crpTable', 'SL'), ('5', 'SN')][('DNA', 'SL'), ('of', 'SL'), ('activity', 'SL'), ('staining', 'SL'), ('9', 'SN')][('Reverse', 'SL'), ('transcription', 'SL'), ('of', 'SL'), ('mRNAMid', 'SL'), ('log', 'SL'), ('phage', 'SL'), ('까지', 'JX'), ('배양', 'NNG'), ('시킨', 'XSV+ETM'), ('4', 'SN'), ('개', 'NNBC'), ('M', 'SL')][('smegmatis', 'SL'), ('sample', 'SL'), ('에서', 'JKB'), ('유기', 'NNG'), ('용매', 'NNG'), ('TRIzol', 'SL'), ('을', 'JKO'), ('이용', 'NNG'), ('해', 'XSV+EC'), ('total', 'SL'), ('RNA', 'SL'), ('만', 'JX'), ('을', 'JKO'), ('얻', 'VV'), ('어', 'EC'), ('냈', 'VX+EP'), ('다', 'EC'), ('(', 'SSO'), ('Table', 'SL'), ('6', 'SN'), (')', 'SSC')][('이', 'MM'), ('total', 'SL'), ('RNA', 'SL'), ('를', 'JKO'), ('template', 'SL'), ('로', 'JKB'), ('해', 'VV+EC'), ('anchored', 'SL'), ('primer', 'SL'), ('와', 'JC'), ('reverse', 'SL'), ('transcriptase', 'SL'), ('를', 'JKO'), ('반응', 'NNG'), ('시켜', 'XSV+EC'), ('cDNA', 'SL'), ('를', 'JKO'), ('합성', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('RNA', 'SL'), ('는', 'JX'), ('20', 'SN'), ('배', 'NNG'), ('희석', 'NNG'), ('해', 'XSV+EC'), ('각', 'MM'), ('sample', 'SL'), ('마다', 'JX'), ('total', 'SL'), ('RNA', 'SL'), ('의', 'JKG'), ('양', 'NNG'), ('을', 'JKO'), ('1', 'SN'), ('ug', 'SL'), ('로', 'JKB'), ('일치', 'NNG'), ('시켰', 'XSV+EP'), ('고', 'EC'), (',', 'SC'), ('anchored', 'SL'), ('primer', 'SL'), ('는', 'JX'), ('2', 'SN'), ('ul', 'SL'), ('사용', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('이후', 'NNG'), ('얻', 'VV'), ('어', 'EC'), ('낸', 'VX+ETM'), ('cDNA', 'SL'), ('를', 'JKO'), ('template', 'SL'), ('DNA', 'SL'), ('로', 'JKB'), ('해', 'VV+EC'), ('template', 'SL'), ('DNA', 'SL'), ('5', 'SN'), ('ul', 'SL'), (',', 'SC'), ('각', 'MM'), ('primer', 'SL'), ('1', 'SN'), ('ul', 'SL'), (',', 'SC'), ('DW', 'SL'), ('13', 'SN'), ('ul', 'SL'), ('로', 'JKB'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('를', 'JKO'), ('진행', 'NNG'), ('한', 'XSA+ETM'), ('뒤', 'NNG'), ('electrophoresis', 'SL'), ('로', 'JKB'), ('그', 'MM'), ('결과', 'NNG'), ('를', 'JKO'), ('확인', 'NNG'), ('했', 'XSV+EP'), ('다', 'EF'), ('.', 'SF'), ('sampleTreatStrains', 'SL'), ('1', 'SN'), ('w', 'SL'), ('/', 'SC'), ('o', 'SL'), ('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('WT', 'SL'), ('2', 'SN'), ('Δ', 'SL'), ('crp', 'SL'), ('3', 'SN'), ('w', 'SL'), ('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('WT', 'SL'), ('4', 'SN'), ('Δ', 'SL'), ('crpTable', 'SL'), ('6', 'SN')][('mRNA', 'SL'), ('of', 'SL'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('8', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('84', 'SN'), ('-', 'SY'), ('IV', 'SL')][('연구', 'NNG'), ('결과', 'NNG'), ('및', 'MAJ'), ('고찰', 'NNG'), ('1', 'SN')][('β', 'SL'), ('-', 'SY'), ('glalactosidase', 'SL'), ('의', 'JKG'), ('specific', 'SL'), ('activity', 'SL'), ('를', 'JKO'), ('통한', 'VV+ETM'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('확인', 'NNG'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('lacZ', 'SL'), ('transcriptional', 'SL'), ('fusion', 'SL'), ('(', 'SSO'), ('pMV', 'SL'), ('306', 'SN'), ('lacZ', 'SL'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (')', 'SSC'), ('를', 'JKO'), ('제작', 'NNG'), ('해', 'XSV+EC'), ('유전자', 'NNG'), ('lacZ', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('이', 'JKS'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('promoter', 'SL'), ('의', 'JKG'), ('영향', 'NNG'), ('을', 'JKO'), ('받', 'VV'), ('도록', 'EC'), ('하', 'VX'), ('였', 'EP'), ('다', 'EC')][('이', 'NP'), ('를', 'JKO'), ('이용', 'NNG'), ('해', 'XSV+EC'), ('M', 'SL')][('smegmatis', 'SL'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('β', 'SL'), ('-', 'SY'), ('glalactosidase', 'SL'), ('의', 'JKG'), ('specific', 'SL'), ('activity', 'SL'), ('측정', 'NNG'), ('을', 'JKO'), ('통해', 'VV+EC'), ('관찰', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('었', 'EP'), ('다', 'EC')][('대조', 'NNG'), ('군인', 'NNG'), ('M', 'SL')][('smegmatis', 'SL'), ('WT', 'SL'), ('와', 'JKB'), ('각각', 'MAG'), ('유전자', 'NNG'), ('furA', 'SL'), (',', 'SC'), ('crp', 'SL'), ('를', 'JKO'), ('mutant', 'SL'), ('시킨', 'XSV+ETM'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('mutant', 'SL'), (',', 'SC'), ('Δ', 'SL'), ('crp', 'SL'), ('mutant', 'SL'), ('sample', 'SL'), ('을', 'JKO'), ('각각', 'MAG'), ('CHP', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('과', 'JC'), ('비', 'XPN'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('배양', 'NNG'), ('해', 'XSV+EC'), ('6', 'SN'), ('개', 'NNBC'), ('sample', 'SL'), ('를', 'JKO'), ('얻', 'VV'), ('어', 'EC'), ('냈', 'VX+EP'), ('다', 'EC')][('CHP', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('의', 'JKG'), ('경우', 'NNG'), ('O', 'SL'), ('.', 'SY'), ('D', 'SL'), ('.', 'SY'), ('600', 'SN'), ('이', 'NR'), ('0', 'SN'), ('.', 'SY'), ('4', 'SN'), ('일', 'NNBC'), ('때', 'NNG'), ('0', 'SN'), ('.', 'SY'), ('1', 'SN'), ('mM', 'SL'), ('의', 'JKG'), ('CHP', 'SL'), ('를', 'JKO'), ('1', 'SN'), ('시간', 'NNBC'), ('동안', 'NNG'), ('처리', 'NNG'), ('한', 'XSA+ETM'), ('뒤', 'NNG'), ('0', 'SN'), ('.', 'SY'), ('5', 'SN'), ('일', 'NNBC'), ('때', 'NNG'), ('harvest', 'SL'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('4', 'SN'), ('배', 'NNG'), ('로', 'JKB'), ('희석', 'NNG'), ('한', 'XSA+ETM'), ('crude', 'SL'), ('extract', 'SL'), ('의', 'JKG'), ('단백질', 'NNG'), ('정량', 'NNG'), ('을', 'JKO'), ('진행', 'NNG'), ('한', 'XSA+ETM'), ('뒤', 'NNG'), ('β', 'SL'), ('-', 'SY'), ('galactosidase', 'SL'), ('specific', 'SL'), ('activity', 'SL'), ('를', 'JKO'), ('측정', 'NNG'), ('한', 'XSA+ETM'), ('결과', 'NNG'), ('는', 'JX'), ('[', 'SSO'), ('Table', 'SL')][('7', 'SN'), (']', 'SSC'), ('와', 'JKB'), ('같', 'VA'), ('다', 'EC')][('선행', 'NNG'), ('연구', 'NNG'), ('에서', 'JKB'), ('의', 'JKG'), ('결과', 'NNG'), ('와', 'JKB'), ('같이', 'MAG'), ('oxidative', 'SL'), ('stress', 'SL'), ('로', 'JKB'), ('작용', 'NNG'), ('한', 'XSA+ETM'), ('CHP', 'SL'), ('는', 'JX'), ('3', 'SN'), ('개', 'NNBC'), ('sample', 'SL'), ('모두', 'NNG'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('증가', 'NNG'), ('시켰', 'XSV+EP'), ('다', 'EC')][('CHP', 'SL'), ('비', 'XPN'), ('처리', 'NNG'), ('조건', 'NNG'), ('의', 'JKG'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('는', 'JX'), ('대', 'XPN'), ('조군', 'NNG'), ('에', 'JKB'), ('비하', 'VV'), ('여', 'EC'), ('약', 'MM'), ('6', 'SN'), ('배', 'NNG'), ('증가', 'NNG'), ('했으며', 'XSV+EP+EC'), ('Δ', 'SL'), ('crp', 'SL'), ('는', 'JX'), ('1', 'SN'), ('/', 'SC'), ('4', 'SN'), ('배', 'NNG'), ('감소', 'NNG'), ('하', 'XSV'), ('였음을', 'EP+ETN+JKO'), ('확인', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC'), ('(', 'SSO'), ('Fig', 'SL')][('5', 'SN'), (')', 'SSC')][('[', 'SSO'), ('Fig', 'SL')][('5', 'SN'), (']', 'SSC'), ('Sample', 'SL'), ('별', 'NNG'), ('o', 'SL'), ('-', 'SY'), ('NPG', 'SL'), ('효소', 'NNG'), ('발현', 'NNG'), ('정도', 'NNG'), ('측정', 'NNG'), ('결과', 'NNG')][('CHP', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('과', 'JC'), ('비', 'XPN'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('배양', 'NNG'), ('한', 'XSA+ETM'), ('6', 'SN'), ('개', 'NNBC'), ('sample', 'SL')][('왼쪽', 'NNG'), ('에서부터', 'JKB'), ('대', 'XPN'), ('조군', 'NNG'), ('WT', 'SL'), ('와', 'JC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), (',', 'SC'), ('Δ', 'SL'), ('crp', 'SL'), ('이', 'VCP'), ('다', 'EF'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('9', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('강', 'NNG'), ('지유', 'NNG'), ('⋅', 'SY'), ('김용태', 'NNP'), ('⋅', 'SY'), ('노유진', 'NNP'), ('-', 'SY'), ('85', 'SN'), ('-', 'SY'), ('2', 'SN')][('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('를', 'JKO'), ('통한', 'VV+ETM'), ('transcription', 'SL'), ('단계', 'NNG'), ('에서', 'JKB'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('확인', 'NNG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('cDNA', 'SL'), ('의', 'JKG'), ('양', 'NNG'), ('은', 'JX'), ('template', 'SL'), ('로', 'JKB'), ('사용', 'NNG'), ('되', 'XSV'), ('는', 'ETM'), ('total', 'SL'), ('mRNA', 'SL'), ('중', 'NNB'), ('존재', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('ahpC', 'SL'), ('mRNA', 'SL'), ('의', 'JKG'), ('양', 'NNG'), ('에', 'JKB'), ('비례', 'NNG'), ('한다', 'XSV+EC')][('그', 'NP'), ('를', 'JKO'), ('이용', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('ahpC', 'SL'), ('mRNA', 'SL'), ('를', 'JKO'), ('template', 'SL'), ('로', 'JKB'), ('해', 'VV+EC'), ('ahpC', 'SL'), ('cDNA', 'SL'), ('를', 'JKO'), ('합성', 'NNG'), ('한', 'XSA+ETM'), ('뒤', 'NNG'), (',', 'SC'), ('cDNA', 'SL'), ('를', 'JKO'), ('PCR', 'SL'), ('해', 'XSV+EC'), ('electrophoresis', 'SL'), ('로', 'JKB'), ('밴드', 'NNG'), ('의', 'JKG'), ('intensity', 'SL'), ('를', 'JKO'), ('비교', 'NNG'), ('해', 'XSV+EC'), ('보', 'VX'), ('는', 'ETM'), ('것', 'NNB'), ('으로', 'JKB'), ('ahpC', 'SL'), ('mRNA', 'SL'), ('의', 'JKG'), ('양', 'NNG'), (',', 'SC'), ('transcription', 'SL'), ('단계', 'NNG'), ('에서', 'JKB'), ('의', 'JKG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('을', 'JKO'), ('비교', 'NNG'), ('해', 'XSV+EC'), ('볼', 'VX+ETM'), ('수', 'NNB'), ('있', 'VV'), ('다', 'EC')][('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('를', 'JKO'), ('접종', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('각각', 'MAG'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('과', 'JC'), ('non', 'SL'), ('-', 'SY'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('에서', 'JKB'), ('키운', 'VV+ETM'), ('2', 'SN'), ('개', 'NNBC'), ('mutant', 'SL'), ('유전자', 'NNG'), ('를', 'JKO'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('을', 'JKO'), ('진행', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('16', 'SN'), ('S', 'SL'), ('rRNA', 'SL'), ('를', 'JKO'), ('PCR', 'SL'), ('하', 'XSV'), ('고', 'EC'), ('electrophoresis', 'SL'), ('로', 'JKB'), ('확인', 'NNG'), ('한', 'XSA+ETM'), ('결과', 'NNG'), (',', 'SC'), ('모든', 'MM'), ('sample', 'SL'), ('에서', 'JKB'), ('동일', 'NNG'), ('히', 'NNG'), ('200', 'SN'), ('bp', 'SL'), ('위치', 'NNG'), ('에서', 'JKB'), ('밴드', 'NNG'), ('가', 'JKS'), ('발견', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('다', 'EC')][('밴드', 'NNG'), ('의', 'JKG'), ('intensity', 'SL'), ('가', 'JKS'), ('동일', 'XR'), ('한', 'XSA+ETM'), ('것', 'NNB'), ('을', 'JKO'), ('보', 'VV'), ('아', 'EC'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('시', 'NNG'), ('template', 'SL'), ('로', 'JKB'), ('이용', 'NNG'), ('된', 'XSV+ETM'), ('sample', 'SL'), ('들', 'XSN'), ('의', 'JKG'), ('total', 'SL'), ('RNA', 'SL'), ('양', 'NNG'), ('은', 'JX'), ('동일', 'NNG'), ('하', 'XSV'), ('게', 'EC'), ('맞추', 'VV'), ('어', 'EC'), ('졌', 'VX+EP'), ('음', 'ETN'), ('을', 'JKO'), ('확인', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('었', 'EP'), ('다', 'EC')][('그', 'MM'), ('뒤', 'NNG'), ('ahpC', 'SL'), ('cDNA', 'SL'), ('를', 'JKO'), ('PCR', 'SL'), ('하', 'XSV'), ('고', 'EC'), ('electrophoresis', 'SL'), ('로', 'JKB'), ('확인', 'NNG'), ('한', 'XSA+ETM'), ('결과', 'NNG'), ('wild', 'SL'), ('type', 'SL'), ('은', 'JX'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('보다', 'JKB'), ('non', 'SL'), ('-', 'SY'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('에서', 'JKB'), ('발현', 'NNG'), ('이', 'JKS'), ('증가', 'NNG'), ('하', 'XSV'), ('는', 'ETM'), ('것', 'NNB'), ('을', 'JKO'), ('관찰', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('었', 'EP'), ('다', 'EC'), ('(', 'SSO'), ('Fig', 'SL')][('6', 'SN'), (')', 'SSC')][('또한', 'MAJ'), ('oxidative', 'SL'), ('stress', 'SL'), ('와', 'JKB'), ('관계없이', 'MAG'), ('Δ', 'SL'), ('crp', 'SL'), ('의', 'JKG'), ('밴드', 'NNG'), ('는', 'JX'), ('wild', 'SL'), ('type', 'SL'), ('의', 'JKG'), ('밴드', 'NNG'), ('보다', 'JKB'), ('옅', 'VA'), ('음', 'ETN'), ('을', 'JKO'), ('확인', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EF'), ('.', 'SF'), ('[', 'SSO'), ('Fig', 'SL')][('6', 'SN'), (']', 'SSC'), ('M', 'SL')][('Smegmatis', 'SL'), ('균주', 'NNG'), ('에서', 'JKB'), ('의', 'JKG'), ('16', 'SN'), ('S', 'SL'), ('rRNA', 'SL'), ('와', 'JC'), ('ahpC', 'SL'), ('mRNA', 'SL'), ('양', 'NNG'), ('을', 'JKO'), ('비교', 'NNG'), ('한', 'XSA+ETM'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('의', 'JKG'), ('결과', 'NNG'), ('이', 'VCP'), ('다', 'EC')][('각', 'MM'), ('sample', 'SL'), ('마다', 'JX'), ('동일', 'XR'), ('한', 'XSA+ETM'), ('양', 'NNG'), ('의', 'JKG'), ('mRNA', 'SL'), ('가', 'JKS'), ('사용', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('는지', 'EC'), ('알', 'VV'), ('기', 'ETN'), ('위해', 'VV+EC'), ('sample', 'SL'), ('의', 'JKG'), ('종류', 'NNG'), ('에', 'JKB'), ('영향', 'NNG'), ('을', 'JKO'), ('받', 'VV'), ('지', 'EC'), ('않', 'VX'), ('는', 'ETM'), ('16', 'SN'), ('S', 'SL'), ('rRNA', 'SL'), ('의', 'JKG'), ('양', 'NNG'), ('이', 'JKS'), ('동일', 'XR'), ('한지', 'XSA+EC'), ('확인', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('고', 'EC'), ('(', 'SSO'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('9', 'SN'), ('cycle', 'SL'), ('수행', 'NNG'), (')', 'SSC'), (',', 'SC'), ('그', 'MM'), ('후', 'NNG'), ('ahpC', 'SL'), ('mRNA', 'SL'), ('양', 'NNG'), ('을', 'JKO'), ('비교', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC'), ('(', 'SSO'), ('RT', 'SL'), ('-', 'SY'), ('PCR', 'SL'), ('20', 'SN'), ('cycle', 'SL'), ('수행', 'NNG'), (')', 'SSC'), ('.', 'SY'), ('3', 'SN')][('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('cloningahpC', 'SL'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), ('transcriptional', 'SL'), ('fusion', 'SL'), ('(', 'SSO'), ('pMV', 'SL'), ('306', 'SN'), (':', 'SC'), (':', 'SC'), ('gfp', 'SL'), (':', 'SC'), (':', 'SC'), ('ahpC', 'SL'), (')', 'SSC'), ('를', 'JKO'), ('제작', 'NNG'), ('해', 'XSV+EC'), ('유전자', 'NNG'), ('gfp', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('이', 'JKS'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('promoter', 'SL'), ('의', 'JKG'), ('영향', 'NNG'), ('을', 'JKO'), ('받', 'VV'), ('도록', 'EC'), ('하', 'VX'), ('였', 'EP'), ('다', 'EC')][('이', 'NP'), ('를', 'JKO'), ('이용', 'NNG'), ('해', 'XSV+EC'), ('M', 'SL')][('smegmatis', 'SL'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('10', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('86', 'SN'), ('-', 'SY'), ('발현', 'NNG'), ('을', 'JKO'), ('GFP', 'SL'), ('의', 'JKG'), ('fluorescence', 'SL'), ('intensity', 'SL'), ('측정', 'NNG'), ('을', 'JKO'), ('통해', 'VV+EC'), ('관찰', 'NNG'), ('할', 'XSV+ETM'), ('수', 'NNB'), ('있', 'VV'), ('었', 'EP'), ('다', 'EC')][('β', 'SL'), ('-', 'SY'), ('galactosidase', 'SL'), ('assay', 'SL'), ('와', 'JC'), ('마찬가지', 'NNG'), ('로', 'JKB'), ('대조', 'NNG'), ('군인', 'NNG'), ('M', 'SL')][('smegmatis', 'SL'), ('WT', 'SL'), ('와', 'JC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), (',', 'SC'), ('Δ', 'SL'), ('crp', 'SL'), ('를', 'JKO'), ('각각', 'MAG'), ('CHP', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('과', 'JC'), ('비', 'XPN'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('배양', 'NNG'), ('해', 'XSV+EC'), ('6', 'SN'), ('개', 'NNBC'), ('sample', 'SL'), ('을', 'JKO'), ('얻', 'VV'), ('어', 'EC'), ('냈', 'VX+EP'), ('다', 'EC')][('모든', 'MM'), ('sample', 'SL'), ('의', 'JKG'), ('단백질', 'NNG'), ('농도', 'NNG'), ('가', 'JKS'), ('동일', 'NNG'), ('해', 'XSV+EC'), ('지', 'VX'), ('도록', 'EC'), ('crude', 'SL'), ('extract', 'SL'), ('를', 'JKO'), ('희석', 'NNG'), ('한', 'XSA+ETM'), ('후', 'NNG'), ('fluerescence', 'SL'), ('spectrophotometer', 'SL'), ('를', 'JKO'), ('이용', 'NNG'), ('해', 'XSV+EC'), ('GFP', 'SL'), ('fluorescence', 'SL'), ('를', 'JKO'), ('관찰', 'NNG'), ('한', 'XSA+ETM'), ('결과', 'NNG'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('을', 'JKO'), ('기준', 'NNG'), ('으로', 'JKB'), ('wild', 'SL'), ('type', 'SL'), ('과', 'JC'), ('비교', 'NNG'), ('했', 'XSV+EP'), ('을', 'ETM'), ('때', 'NNG'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('은', 'JX'), ('약', 'MM'), ('65', 'SN'), ('배', 'NNG'), ('증가', 'NNG'), ('하', 'XSV'), ('였으며', 'EP+EC'), ('Δ', 'SL'), ('crp', 'SL'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('은', 'JX'), ('약', 'MM'), ('0', 'SN'), ('.', 'SY'), ('5', 'SN'), ('배', 'NNG'), ('감소', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC'), ('(', 'SSO'), ('Fig', 'SL')][('7', 'SN'), (')', 'SSC')][('[', 'SSO'), ('Fig', 'SL')][('7', 'SN'), (']', 'SSC'), ('Sample', 'SL'), ('별', 'NNG'), ('green', 'SL'), ('fluerescence', 'SL'), ('protein', 'SL'), ('형광', 'NNG'), ('측정', 'NNG'), ('결과', 'NNG')][('각각', 'MAG'), ('CHP', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('과', 'JC'), ('비', 'XPN'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('에서', 'MAG'), ('자란', 'VV+ETM'), ('sample', 'SL'), ('6', 'SN'), ('개', 'NNBC'), ('(', 'SSO'), ('wild', 'SL'), ('type', 'SL'), (',', 'SC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), (',', 'SC'), ('Δ', 'SL'), ('crp', 'SL'), (')', 'SSC'), ('.', 'SY'), ('5', 'SN')][('Activity', 'SL'), ('staining', 'SL'), ('을', 'JKO'), ('통한', 'VV+ETM'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('확인', 'NNG'), ('Crp', 'SL'), ('가', 'JKS'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('에', 'JKB'), ('어떤', 'MM'), ('영향', 'NNG'), ('을', 'JKO'), ('주', 'VV'), ('는지', 'EC'), ('알아보', 'VV'), ('기', 'ETN'), ('위하', 'VV'), ('여', 'EC'), ('crude', 'SL'), ('extract', 'SL'), ('를', 'JKO'), ('native', 'SL'), ('gel', 'SL'), ('electrophoresis', 'SL'), ('에', 'JKB'), ('적용', 'NNG'), ('하', 'XSV'), ('여', 'EC'), ('살펴보', 'VV'), ('았', 'EP'), ('다', 'EC')][('H', 'SL'), ('2', 'SN'), ('O', 'SL'), ('2', 'SN'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('wild', 'SL'), ('type', 'SL'), ('과', 'JC'), ('mutant', 'SL'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('정도', 'NNG'), ('를', 'JKO'), ('protein', 'SL'), ('level', 'SL'), ('에서', 'JKB'), ('측정', 'NNG'), ('했', 'XSV+EP'), ('다', 'EC')][('DAB', 'SL'), ('용액', 'NNG'), ('에', 'JKB'), ('의해', 'VV+EC'), ('염색', 'NNG'), ('된', 'XSV+ETM'), ('세', 'MM'), ('개', 'NNBC'), ('의', 'JKG'), ('catalase', 'SL'), ('밴드', 'NNG'), ('중', 'NNB'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('의', 'JKG'), ('AhpC', 'SL'), ('밴드', 'NNG'), ('가', 'JKS'), ('대', 'XPN'), ('조군', 'NNG'), ('에', 'JKB'), ('비해', 'VV+EC'), ('선명', 'NNG'), ('해졌', 'XSA+EC+VX+EP'), ('다', 'EC')][('이', 'NP'), ('는', 'JX'), ('FurA', 'SL'), ('가', 'JKS'), ('repressor', 'SL'), ('임', 'VCP+ETN'), ('을', 'JKO'), ('뜻한다', 'VV+EF'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('11', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('강', 'NNG'), ('지유', 'NNG'), ('⋅', 'SY'), ('김용태', 'NNP'), ('⋅', 'SY'), ('노유진', 'NNP'), ('-', 'SY'), ('87', 'SN'), ('-[', 'SY'), ('Fig', 'SL')][('8', 'SN'), (']', 'SSC'), ('Oxidation', 'SL'), ('조건', 'NNG'), ('에서', 'JKB'), ('Activity', 'SL'), ('staining', 'SL'), ('을', 'JKO'), ('완료', 'NNG'), ('한', 'XSA+ETM'), ('3', 'SN'), ('개', 'NNBC'), ('의', 'JKG'), ('sample', 'SL'), ('이', 'VCP'), ('다', 'EC')][('나타난', 'VV+ETM'), ('3', 'SN'), ('개', 'NNBC'), ('의', 'JKG'), ('bond', 'SL'), ('는', 'JX'), ('위쪽', 'NNG'), ('부터', 'JX'), ('순서', 'NNG'), ('대로', 'JX'), ('catalase', 'SL'), ('/', 'SC'), ('peroxidase', 'SL'), ('protein', 'SL'), ('KatG', 'SL'), ('2', 'SN'), (',', 'SC'), ('AhpC', 'SL'), (',', 'SC'), ('catalase', 'SL'), ('/', 'SC'), ('peroxidase', 'SL'), ('protein', 'SL'), ('KatG', 'SL'), ('1', 'SN'), ('이', 'VCP'), ('다', 'EC')][('AhpC', 'SL'), ('protein', 'SL'), ('bond', 'SL'), ('를', 'JKO'), ('비교', 'NNG'), ('해', 'XSV+EC'), ('보', 'VX'), ('면', 'EC'), ('3', 'SN'), ('번', 'NNBC'), ('레인', 'NNG'), ('의', 'JKG'), ('21', 'SN'), ('kDA', 'SL'), ('의', 'JKG'), ('AhpC', 'SL'), ('protein', 'SL'), ('이', 'JKS'), ('가장', 'MAG'), ('뚜렷', 'XR'), ('하', 'XSA'), ('게', 'EC'), ('나타났', 'VV+EP'), ('다', 'EF'), ('.', 'SF'), ('V', 'SL')][('결론', 'NNG'), ('결핵균', 'NNG'), ('과', 'JC'), ('비슷', 'XR'), ('한', 'XSA+ETM'), ('성질', 'NNG'), ('을', 'JKO'), ('지녔', 'VV+EP'), ('으나', 'EC'), ('위험', 'NNG'), ('성', 'XSN'), ('이', 'JKS'), ('비교', 'NNG'), ('적', 'XSN'), ('낮', 'VA'), ('아', 'EC'), ('인체', 'NNG'), ('에', 'JKB'), ('해', 'NNG'), ('를', 'JKO'), ('끼치', 'VV'), ('지', 'EC'), ('않', 'VX'), ('는', 'ETM'), ('M', 'SL')][('smegmatis', 'SL'), ('는', 'JX'), ('인체', 'NNG'), ('에', 'JKB'), ('들어와', 'VV+EC'), ('macrophage', 'SL'), ('에', 'JKB'), ('의해', 'VV+EC'), ('포식', 'NNG'), ('된', 'XSV+ETM'), ('뒤', 'NNG'), ('산화', 'NNG'), ('적', 'XSN'), ('스트레스', 'NNG'), ('조건', 'NNG'), ('등', 'NNB'), ('에서', 'JKB'), ('ahpCD', 'SL'), ('operon', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('생성물', 'NNG'), ('로', 'JKB'), ('인해', 'VV+EC'), ('증식', 'NNG'), (',', 'SC'), ('또는', 'MAJ'), ('잠복', 'NNG'), ('이', 'JKS'), ('가능', 'NNG'), ('하', 'XSV'), ('다', 'EC')][('본', 'MM'), ('연구', 'NNG'), ('에서', 'JKB'), ('는', 'JX'), ('대식세포', 'NNP'), ('내', 'NNB'), ('의', 'JKG'), ('스트레스', 'NNG'), ('조건', 'NNG'), ('중', 'NNB'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('을', 'JKO'), ('걸', 'VV'), ('었', 'EP'), ('을', 'ETM'), ('때', 'NNG'), ('FurA', 'SL'), ('와', 'JC'), ('Crp', 'SL'), ('를', 'JKO'), ('mutation', 'SL'), ('시킴', 'XSV+ETN'), ('으로서', 'JKB'), ('나타나', 'VV'), ('는', 'ETM'), ('M', 'SL')][('smegmatis', 'SL'), ('의', 'JKG'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('양상', 'NNG'), ('의', 'JKG'), ('변화', 'NNG'), ('를', 'JKO'), ('조사', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('또한', 'MAJ'), ('wild', 'SL'), ('type', 'SL'), ('과', 'JC'), ('Δ', 'SL'), ('crp', 'SL'), ('는', 'JX'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('에서', 'JKB'), ('키운', 'VV+ETM'), ('M', 'SL')][('smegmatis', 'SL'), ('의', 'JKG'), ('ahpC', 'SL'), ('activation', 'SL'), ('이', 'JKS'), ('non', 'SL'), ('-', 'SY'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('보다', 'JKB'), ('높', 'VA'), ('았', 'EP'), ('다', 'EC')][('β', 'SL'), ('-', 'SY'), ('glalactosidase', 'SL'), ('assay', 'SL'), ('에서', 'JKB'), ('10', 'SN'), ('mM', 'SL'), ('CHP', 'SL'), ('를', 'JKO'), ('처리', 'NNG'), ('한', 'XSA+ETM'), ('wild', 'SL'), ('type', 'SL'), ('은', 'JX'), ('ahpC', 'SL'), ('발현', 'NNG'), ('이', 'JKS'), ('약', 'MM'), ('2', 'SN'), ('배', 'NNG'), ('증가', 'NNG'), ('하', 'XSV'), ('였으며', 'EP+EC'), (',', 'SC'), ('CHP', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('의', 'JKG'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('는', 'JX'), ('ahpC', 'SL'), ('발현', 'NNG'), ('이', 'JKS'), ('약', 'MM'), ('1', 'SN'), ('.', 'SY'), ('3', 'SN'), ('배', 'NNG'), ('증가', 'NNG'), ('하', 'XSV'), ('였', 'EP'), ('다', 'EC')][('이', 'NP'), ('는', 'JX'), ('oxidative', 'SL'), ('stress', 'SL'), ('처리', 'NNG'), ('조건', 'NNG'), ('에서', 'JKB'), ('유전자', 'NNG'), ('ahpC', 'SL'), ('의', 'JKG'), ('발현', 'NNG'), ('이', 'JKS'), ('증가', 'NNG'), ('함', 'XSV+ETN'), ('을', 'JKO'), ('의미', 'NNG'), ('한다', 'XSV+EC')][('실험', 'NNG'), ('결과', 'NNG'), ('를', 'JKO'), ('보', 'VV'), ('면', 'EC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('의', 'JKG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('은', 'JX'), ('wild', 'SL'), ('type', 'SL'), ('에', 'JKB'), ('비해', 'VV+EC'), ('극히', 'MAG'), ('높', 'VA'), ('았', 'EP'), ('으며', 'EC'), ('Δ', 'SL'), ('crp', 'SL'), ('의', 'JKG'), ('ahpC', 'SL'), ('발현', 'NNG'), ('은', 'JX'), ('wild', 'SL'), ('type', 'SL'), ('에', 'JKB'), ('비해', 'VV+EC'), ('낮', 'VA'), ('았', 'EP'), ('다', 'EC')][('마찬가지', 'NNG'), ('로', 'JKB'), ('Activity', 'SL'), ('staining', 'SL'), ('의', 'JKG'), ('결과', 'NNG'), (',', 'SC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('의', 'JKG'), ('AhpC', 'SL'), ('가', 'JKS'), ('가장', 'MAG'), ('많이', 'MAG'), ('발현', 'NNG'), ('되', 'XSV'), ('었', 'EP'), ('으며', 'EC'), ('gfp', 'SL'), ('형광', 'NNG'), ('측정', 'NNG'), ('결과', 'NNG'), ('에서', 'JKB'), ('도', 'JX'), ('wild', 'SL'), ('type', 'SL'), ('보다', 'JKB'), ('약', 'MM'), ('60', 'SN'), ('배', 'NNG'), ('밝', 'VA'), ('게', 'EC'), ('나왔', 'VV+EP'), ('다', 'EC')][('이', 'NP'), ('는', 'JX'), ('FurA', 'SL'), ('가', 'JKS'), ('repressor', 'SL'), ('임', 'VCP+ETN'), ('을', 'JKO'), ('나타낸다', 'VV+EC')][('Δ', 'SL'), ('crp', 'SL'), ('는', 'JX'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('에서', 'JKB'), ('모두', 'MAG'), ('wild', 'SL'), ('type', 'SL'), ('보다', 'JKB'), ('미세', 'NNG'), ('하', 'XSV'), ('게', 'EC'), ('ahpC', 'SL'), ('발현', 'NNG'), ('정도', 'NNG'), ('가', 'JKS'), ('낮', 'VA'), ('게', 'EC'), ('나왔으며', 'VV+EP+EC'), (',', 'SC'), ('여러', 'MM'), ('실험', 'NNG'), ('에서', 'JKB'), ('동일', 'XR'), ('한', 'XSA+ETM'), ('경향', 'NNG'), ('을', 'JKO'), ('보였', 'VV+EP'), ('기에', 'EC'), ('FurA', 'SL'), ('는', 'JX'), ('repressor', 'SL'), ('이', 'VCP'), ('며', 'EC'), ('Crp', 'SL'), ('는', 'JX'), ('activator', 'SL'), ('라는', 'VCP+ETM'), ('결론', 'NNG'), ('을', 'JKO'), ('내렸', 'VV+EP'), ('다', 'EC')][('또한', 'MAJ'), ('oxidative', 'SL'), ('stress', 'SL'), ('조건', 'NNG'), ('을', 'JKO'), ('처리', 'NNG'), ('하', 'XSV'), ('였을', 'EP+ETM'), ('때', 'NNG'), ('다른', 'MM'), ('두', 'MM'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('12', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('88', 'SN'), ('-', 'SY'), ('strain', 'SL'), ('에', 'JKB'), ('비해서', 'VV+EC'), ('crp', 'SL'), ('mutant', 'SL'), ('는', 'JX'), ('대', 'XPN'), ('조군', 'NNG'), ('과', 'JC'), ('비교', 'NNG'), ('하', 'XSV'), ('였을', 'EP+ETM'), ('때', 'NNG'), ('변화', 'NNG'), ('량', 'NNG'), ('이', 'JKS'), ('극히', 'MAG'), ('미미', 'XR'), ('했', 'XSA+EP'), ('다', 'EC')][('이', 'NP'), ('는', 'JX'), ('oxidative', 'SL'), ('stress', 'SL'), ('작용', 'NNG'), ('기', 'NNG'), ('작', 'NNG'), ('이', 'JKS'), ('Crp', 'SL'), ('dependent', 'SL'), ('함', 'XSV+ETN'), ('을', 'JKO'), ('의미', 'NNG'), ('한다', 'XSV+EF'), ('.', 'SF'), ('VI', 'SL')][('참고', 'NNG'), ('문헌', 'NNG'), ('[', 'SSO'), ('1', 'SN'), (']', 'SSC'), ('Han', 'SL'), ('-', 'SY'), ('Seung', 'SL'), ('Jeon', 'SL'), (',', 'SC'), ('Ki', 'SL'), ('-', 'SY'), ('Hoon', 'SL'), ('Yang', 'SL'), (',', 'SC'), ('In', 'SL'), ('-', 'SY'), ('Jeong', 'SL'), ('Ko', 'SL'), (',', 'SC'), ('and', 'SL'), ('Jeong', 'SL'), ('-', 'SY'), ('Il', 'SL'), ('Oh', 'SL'), (',', 'SC'), ('(', 'SSO'), ('2014', 'SN'), (')', 'SSC')][('Expression', 'SL'), ('of', 'SL'), ('Adenylyl', 'SL'), ('Cyclase', 'SL'), ('Genes', 'SL'), ('in', 'SL'), ('Mycobacterium', 'SL'), ('smegmatis', 'SL'), ('under', 'SL'), ('Hypoxic', 'SL'), ('and', 'SL'), ('Nitric', 'SL'), ('Oxide', 'SL'), ('Conditions', 'SL'), (',', 'SC'), ('J', 'SL')][('Life', 'SL'), ('Sci', 'SL'), (':', 'SC'), ('1330', 'SN'), ('-', 'SY'), ('1338', 'SN'), ('[', 'SSO'), ('2', 'SN'), (']', 'SSC'), ('Ha', 'SL'), ('-', 'SY'), ('Na', 'SL'), ('Lee', 'SL'), (',', 'SC'), ('Na', 'SL'), ('-', 'SY'), ('On', 'SL'), ('Lee', 'SL'), (',', 'SC'), ('Seung', 'SL'), ('J', 'SL')][('Han', 'SL'), (',', 'SC'), ('In', 'SL'), ('-', 'SY'), ('Jeong', 'SL'), ('Ko', 'SL'), (',', 'SC'), ('Jeong', 'SL'), ('-', 'SY'), ('Il', 'SL'), ('Oh', 'SL'), (',', 'SC'), ('(', 'SSO'), ('2014', 'SN'), (')', 'SSC')][('Regulation', 'SL'), ('of', 'SL'), ('the', 'SL'), ('ahpC', 'SL'), ('Gene', 'SL'), ('Encoding', 'SL'), ('Alkyl', 'SL'), ('Hydroperoxide', 'SL'), ('Reductase', 'SL'), ('in', 'SL'), ('Mycobacterium', 'SL'), ('smegmatis', 'SL'), (',', 'SC'), ('PLoS', 'SL'), ('ONE', 'SL'), ('9', 'SN'), ('(', 'SSO'), ('11', 'SN'), (')', 'SSC'), (':', 'SC'), ('e', 'SL'), ('111680', 'SN')][('doi', 'SL'), (':', 'SC'), ('10', 'SN'), ('.', 'SY'), ('1371', 'SN'), ('/', 'SC'), ('journal', 'SL'), ('.', 'SY'), ('pone', 'SL'), ('.', 'SY'), ('0111680', 'SN'), ('[', 'SSO'), ('3', 'SN'), (']', 'SSC'), ('Master', 'SL'), ('SS', 'SL'), (',', 'SC'), ('Springer', 'SL'), ('B', 'SL'), (',', 'SC'), ('Sander', 'SL'), ('P', 'SL'), (',', 'SC'), ('Boettger', 'SL'), ('EC', 'SL'), (',', 'SC'), ('Deretic', 'SL'), ('V', 'SL'), (',', 'SC'), ('et', 'SL'), ('al', 'SL')][('(', 'SSO'), ('2002', 'SN'), (')', 'SSC'), ('Oxidative', 'SL'), ('stress', 'SL'), ('response', 'SL'), ('genes', 'SL'), ('in', 'SL'), ('Mycobacterium', 'SL'), ('tuberculosis', 'SL'), (':', 'SC'), ('role', 'SL'), ('of', 'SL'), ('ahpC', 'SL'), ('in', 'SL'), ('resistance', 'SL'), ('to', 'SL'), ('peroxynitrite', 'SL'), ('and', 'SL'), ('stage', 'SL'), ('-', 'SY'), ('specific', 'SL'), ('survival', 'SL'), ('in', 'SL'), ('macrophages', 'SL')][('Micro', 'SL'), ('-', 'SY'), ('biology', 'SL'), ('148', 'SN'), (':', 'SC'), ('3139', 'SN'), ('–', 'SY'), ('3144', 'SN'), ('.', 'SF'), ('[', 'SSO'), ('4', 'SN'), (']', 'SSC'), ('Chen', 'SL'), ('L', 'SL'), (',', 'SC'), ('Xie', 'SL'), ('QW', 'SL'), (',', 'SC'), ('Nathan', 'SL'), ('C', 'SL'), ('(', 'SSO'), ('1998', 'SN'), (')', 'SSC'), ('Alkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('subunit', 'SL'), ('C', 'SL'), ('(', 'SSO'), ('AhpC', 'SL'), (')', 'SSC'), ('protects', 'SL'), ('bacterial', 'SL'), ('and', 'SL'), ('human', 'SL'), ('cells', 'SL'), ('against', 'SL'), ('reactive', 'SL'), ('nitrogen', 'SL'), ('intermedi', 'SL'), ('-', 'SY'), ('ates', 'SL')][('Mol', 'SL'), ('Cell', 'SL'), ('1', 'SN'), (':', 'SC'), ('795', 'SN'), ('–', 'SY'), ('805', 'SN'), ('.', 'SF'), ('[', 'SSO'), ('5', 'SN'), (']', 'SSC'), ('Berg', 'SL'), ('OG', 'SL'), (',', 'SC'), ('von', 'SL'), ('Hippel', 'SL'), ('PH', 'SL'), ('(', 'SSO'), ('1988', 'SN'), (')', 'SSC'), ('Selection', 'SL'), ('of', 'SL'), ('DNA', 'SL'), ('binding', 'SL'), ('sites', 'SL'), ('by', 'SL'), ('regulatory', 'SL'), ('proteins', 'SL')][('II', 'SL')][('The', 'SL'), ('binding', 'SL'), ('specificity', 'SL'), ('of', 'SL'), ('cyclic', 'SL'), ('AMP', 'SL'), ('receptor', 'SL'), ('protein', 'SL'), ('to', 'SL'), ('recognition', 'SL'), ('sites', 'SL')][('J', 'SL'), ('Mol', 'SL'), ('Biol', 'SL'), ('200', 'SN'), (':', 'SC'), ('709', 'SN'), ('–', 'SY'), ('723', 'SN'), ('.', 'SF'), ('[', 'SSO'), ('6', 'SN'), (']', 'SSC'), ('Koshkin', 'SL'), ('A', 'SL'), (',', 'SC'), ('Knudsen', 'SL'), ('GM', 'SL'), (',', 'SC'), ('Ortiz', 'SL'), ('De', 'SL'), ('Montellano', 'SL'), ('PR', 'SL'), ('(', 'SSO'), ('2004', 'SN'), (')', 'SSC'), ('Intermolecular', 'SL'), ('interactions', 'SL'), ('in', 'SL'), ('the', 'SL'), ('AhpC', 'SL'), ('/', 'SC'), ('AhpD', 'SL'), ('antioxidant', 'SL'), ('defense', 'SL'), ('system', 'SL'), ('of', 'SL'), ('Mycobacterium', 'SL'), ('tuberculosis', 'SL')][('Arch', 'SL'), ('Biochem', 'SL'), ('Biophys', 'SL'), ('427', 'SN'), (':', 'SC'), ('41', 'SN'), ('–', 'SY'), ('47', 'SN'), ('.', 'SF'), ('[', 'SSO'), ('7', 'SN'), (']', 'SSC'), ('Milano', 'SL'), ('A', 'SL'), (',', 'SC'), ('Forti', 'SL'), ('F', 'SL'), (',', 'SC'), ('Sala', 'SL'), ('C', 'SL'), (',', 'SC'), ('Riccardi', 'SL'), ('G', 'SL'), (',', 'SC'), ('Ghisotti', 'SL'), ('D', 'SL'), ('(', 'SSO'), ('2001', 'SN'), (')', 'SSC'), ('Transcriptional', 'SL'), ('regulation', 'SL'), ('of', 'SL'), ('furA', 'SL'), ('and', 'SL'), ('katG', 'SL'), ('upon', 'SL'), ('oxidative', 'SL'), ('stress', 'SL'), ('in', 'SL'), ('Mycobacterium', 'SL'), ('smegmatis', 'SL')][('J', 'SL'), ('Bacteriol', 'SL'), ('183', 'SN'), (':', 'SC'), ('6801', 'SN'), ('–', 'SY'), ('6806', 'SN'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('13', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('강', 'NNG'), ('지유', 'NNG'), ('⋅', 'SY'), ('김용태', 'NNP'), ('⋅', 'SY'), ('노유진', 'NNP'), ('-', 'SY'), ('89', 'SN'), ('-', 'SY'), ('ABSTRACTRegulation', 'SL'), ('of', 'SL'), ('gene', 'SL'), ('expression', 'SL'), ('by', 'SL'), ('transcriptional', 'SL'), ('factors', 'SL'), ('in', 'SL'), ('bacteriaReseacher', 'SL'), (':', 'SC'), ('Jeeyoo', 'SL'), ('Kang', 'SL'), ('(', 'SSO'), ('sophomore', 'SL'), (',', 'SC'), ('jeeyoolucy', 'SL'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('Yongtae', 'SL'), ('Kim', 'SL'), ('(', 'SSO'), ('sophomore', 'SL'), (',', 'SC'), ('yt', 'SL'), ('7481', 'SN'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('Yujin', 'SL'), ('Roh', 'SL'), ('(', 'SSO'), ('sophomore', 'SL'), (',', 'SC'), ('lime', 'SL'), ('1001', 'SN'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('Supervisor', 'SL'), (':', 'SC'), ('Injeong', 'SL'), ('Ko', 'SL'), ('(', 'SSO'), ('Korea', 'SL'), ('Science', 'SL'), ('Academy', 'SL'), ('of', 'SL'), ('KAIST', 'SL')][('koin', 'SL'), ('2', 'SN'), ('@', 'SY'), ('kaist', 'SL'), ('.', 'SY'), ('ac', 'SL'), ('.', 'SY'), ('kr', 'SL'), (')', 'SSC'), ('Co', 'SL'), ('-', 'SY'), ('Supervisor', 'SL'), (':', 'SC'), ('Jeongil', 'SL'), ('Oh', 'SL'), ('(', 'SSO'), ('Pusan', 'SL'), ('National', 'SL'), ('University', 'SL'), (',', 'SC'), ('joh', 'SL'), ('@', 'SY'), ('pusan', 'SL'), ('.', 'SY'), ('ac', 'SL'), ('.', 'SY'), ('kr', 'SL'), (')', 'SSC'), ('Assistant', 'SL'), (':', 'SC'), ('Hana', 'SL'), ('Lee', 'SL'), ('(', 'SSO'), ('Pusan', 'SL'), ('National', 'SL'), ('University', 'SL'), (',', 'SC'), ('sscjf', 'SL'), ('@', 'SY'), ('naver', 'SL'), ('.', 'SY'), ('com', 'SL'), (')', 'SSC'), ('AbstractFerric', 'SL'), ('uptake', 'SL'), ('regulator', 'SL'), ('(', 'SSO'), ('FurA', 'SL'), (')', 'SSC'), ('and', 'SL'), ('cAMP', 'SL'), ('receptor', 'SL'), ('protein', 'SL'), ('(', 'SSO'), ('Crp', 'SL'), (')', 'SSC'), ('are', 'SL'), ('the', 'SL'), ('well', 'SL'), ('-', 'SY'), ('known', 'SL'), ('transcriptional', 'SL'), ('regulators', 'SL'), ('in', 'SL'), ('mycobacteria', 'SL')][('The', 'SL'), ('binding', 'SL'), ('sites', 'SL'), ('for', 'SL'), ('FurA', 'SL'), ('and', 'SL'), ('Crp', 'SL'), ('were', 'SL'), ('identified', 'SL'), ('in', 'SL'), ('the', 'SL'), ('upstream', 'SL'), ('of', 'SL'), ('the', 'SL'), ('alkyl', 'SL'), ('hydroperoxide', 'SL'), ('reductase', 'SL'), ('(', 'SSO'), ('ahpC', 'SL'), (')', 'SSC'), ('operon', 'SL'), ('in', 'SL'), ('Mycobacterium', 'SL'), ('smegmatis', 'SL')][('In', 'SL'), ('this', 'SL'), ('study', 'SL'), (',', 'SC'), ('we', 'SL'), ('investigated', 'SL'), ('whether', 'SL'), ('the', 'SL'), ('expression', 'SL'), ('of', 'SL'), ('ahpC', 'SL'), ('was', 'SL'), ('regulated', 'SL'), ('by', 'SL'), ('FurA', 'SL'), ('and', 'SL'), ('Crp', 'SL'), ('using', 'SL'), ('two', 'SL'), ('reporter', 'SL'), ('genes', 'SL'), ('(', 'SSO'), ('lacZ', 'SL'), ('and', 'SL'), ('gfp', 'SL'), (')', 'SSC'), ('and', 'SL'), ('reverse', 'SL'), ('transcription', 'SL'), ('PCR', 'SL')][('We', 'SL'), ('compared', 'SL'), ('the', 'SL'), ('expression', 'SL'), ('levels', 'SL'), ('of', 'SL'), ('the', 'SL'), ('ahpC', 'SL'), ('gene', 'SL'), ('between', 'SL'), ('the', 'SL'), ('wild', 'SL'), ('-', 'SY'), ('type', 'SL'), ('(', 'SSO'), ('WT', 'SL'), (')', 'SSC'), ('and', 'SL'), ('mutant', 'SL'), ('strains', 'SL'), ('(', 'SSO'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('and', 'SL'), ('Δ', 'SL'), ('crp', 'SL'), (')', 'SSC'), ('in', 'SL'), ('which', 'SL'), ('three', 'SL'), ('furA', 'SL'), ('genes', 'SL'), ('or', 'SL'), ('crp', 'SL'), ('gene', 'SL'), ('are', 'SL'), ('inactivated', 'SL'), (',', 'SC'), ('respectively', 'SL')][('When', 'SL'), ('the', 'SL'), ('WT', 'SL'), (',', 'SC'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('and', 'SL'), ('Δ', 'SL'), ('crp', 'SL'), ('were', 'SL'), ('grown', 'SL'), ('without', 'SL'), ('treatment', 'SL'), ('of', 'SL'), ('cumene', 'SL'), ('hydroperoxide', 'SL'), ('(', 'SSO'), ('CHP', 'SL'), (')', 'SSC'), (',', 'SC'), ('expression', 'SL'), ('of', 'SL'), ('ahpC', 'SL'), ('was', 'SL'), ('strongly', 'SL'), ('derepressed', 'SL'), ('in', 'SL'), ('the', 'SL'), ('Δ', 'SL'), ('f', 'SL'), ('1', 'SN'), ('f', 'SL'), ('2', 'SN'), ('f', 'SL'), ('3', 'SN'), ('relative', 'SL'), ('to', 'SL'), ('the', 'SL'), ('WT', 'SL'), ('strain', 'SL')][('The', 'SL'), ('treatment', 'SL'), ('of', 'SL'), ('the', 'SL'), ('strain', 'SL'), ('with', 'SL'), ('10', 'SN'), ('mM', 'SL'), ('CHP', 'SL'), ('for', 'SL'), ('1', 'SN'), ('h', 'SL'), ('led', 'SL'), ('to', 'SL'), ('the', 'SL'), ('induction', 'SL'), ('of', 'SL'), ('ahpC', 'SL'), ('expression', 'SL'), ('in', 'SL'), ('the', 'SL'), ('WT', 'SL'), ('strain', 'SL'), (',', 'SC'), ('while', 'SL'), ('this', 'SL'), ('induction', 'SL'), ('effect', 'SL'), ('was', 'SL'), ('abolished', 'SL'), ('in', 'SL'), ('the', 'SL'), ('Δ', 'SL'), ('crp', 'SL')][('This', 'SL'), ('expression', 'SL'), ('pattern', 'SL'), ('of', 'SL'), ('ahpC', 'SL'), ('was', 'SL'), ('confirmed', 'SL'), ('at', 'SL'), ('the', 'SL'), ('protein', 'SL'), ('level', 'SL'), ('by', 'SL'), ('activity', 'SL'), ('staining', 'SL'), ('for', 'SL'), ('peroxidase', 'SL')][('Our', 'SL'), ('results', 'SL'), ('indicate', 'SL'), ('that', 'SL'), ('FurAs', 'SL'), ('and', 'SL'), ('Crp', 'SL'), ('serve', 'SL'), ('as', 'SL'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('14', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY'), ('세균', 'NNG'), ('에서', 'JKB'), ('전사', 'NNG'), ('조절', 'NNG'), ('자', 'XSN'), ('에', 'JKB'), ('의한', 'VV+ETM'), ('유전자', 'NNG'), ('발현', 'NNG'), ('조절', 'NNG'), ('에', 'JKB'), ('대한', 'VV+ETM'), ('연구', 'NNG'), ('-', 'SY'), ('90', 'SN'), ('-', 'SY'), ('repressors', 'SL'), ('and', 'SL'), ('activator', 'SL'), ('for', 'SL'), ('ahpC', 'SL'), ('expression', 'SL'), (',', 'SC'), ('respctively', 'SL')][('Through', 'SL'), ('this', 'SL'), ('research', 'SL'), ('and', 'SL'), ('education', 'SL'), ('program', 'SL'), (',', 'SC'), ('we', 'SL'), ('learned', 'SL'), ('how', 'SL'), ('to', 'SL'), ('approach', 'SL'), ('to', 'SL'), ('reveal', 'SL'), ('the', 'SL'), ('function', 'SL'), ('of', 'SL'), ('transcriptional', 'SL'), ('regulators', 'SL'), ('in', 'SL'), ('prokaryotes', 'SL'), ('.', 'SF'), ('----------------', 'SY'), ('Page', 'SL'), ('(', 'SSO'), ('15', 'SN'), (')', 'SSC'), ('Break', 'SL'), ('----------------', 'SY')]

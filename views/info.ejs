@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KSAReD | KSA Research Database</title>
+  <meta name = "viewport" content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href = "assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href = "assets/css/main.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/1.9.0/i18next.min.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script>
+      function imageStateChange(idx){
+          var img = document.getElementById("img"+idx);
+          var imgStChA = document.getElementById("imgStChA"+idx);
+          if(img.hasAttribute("hidden")){
+              img.removeAttribute("hidden");
+              imgStChA.innerHTML="[<%= i18n.__('Hide Image') %>]";
+              img.parentNode.className = "horzExLong nomargin";
+          }else{
+              img.setAttribute("hidden","true");
+              imgStChA.innerHTML="[<%= i18n.__('View Image') %>]";
+              img.parentNode.className = "horzLong nomargin";
+          }
+      }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="javascript:location.replace('/main#landing');" style="color:#dc3535">
+        <img src="img/KSAReD.png" style="height:1.5rem;"/>
+        KSAReD
+      </a>
+      <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarContents">
+        <ul class="navbar-nav mr-auto nav nav-pills nav-justified" id="pills-tab" role="tablist">
+          <li>
+            <a class="nav-item nav-link active" id="nav_info" data-toggle="pill" href="#info">
+              <%= i18n.__('Research')%> <%= i18n.__('Info') %>
+            </a>
+          </li>
+        </ul>
+        <div>
+            <div class="navbar-nav nav nav-pills nav-justified">
+                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlLoginForm('show')">
+                    <%= i18n.__('Log-In'); %>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id = "loginFormDiv" class = "popUpDiv" style="display:none;">
+    <form id = 'loginForm' action='account/login' method = 'post'>
+        <ul class="infoUl">
+            <li class="popUpTitle">
+                <h4><%= i18n.__('Log-In'); %></h4>
+                <a href="javascript:controlLoginForm('hide')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+            </li>
+            <hr/>
+            <li class="infoLi">
+                <label class="label horzShort"><%= i18n.__('ID'); %></label>
+                <input name="ID" id="ID" class="form-control mr-sm-2 horzLong vertShort" type="text"/>
+            </li>
+            <li class="infoLi">
+                <label class="label horzShort"><%= i18n.__('Password'); %></label>
+                <input name="PW" id="PW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
+            </li>
+            <hr>
+            <li>
+                <button class="btn btn-primary my-2 my-sm-0 horzLong vertShort float-right" type='submit'><%= i18n.__('Log-In'); %></button>
+            </li>
+        </ul>
+    </form>
+  </div>
+  <div class="container nav-item tab-content" id="pills-tabContent">
+    <div id = "info" class="jumbotron tab-pane fade active show">
+      <div class="container">
+        <h2 id = "research_title" class = "titleH2"></h2>
+        <ul class = "infoUl">
+            <li class = "infoLi">
+                <label class = "label"><%= i18n.__('Researcher'); %></label>
+                <div id = "researcher_info" class="flex horzExLong nomargin"></div>
+            </li>
+            <li class = "infoLi">
+                <label class = "label"> <%= i18n.__('Advisor'); %> </label>
+                <span id = "advisor_info"></span>
+            </li>
+            <li class = "infoLi">
+                <label class = "label"> <%= i18n.__('Type'); %> </label>
+                <span id = "else_info"></span>
+            </li>
+            <li class = "infoLi">
+                <label class = "label"> <%= i18n.__('Content'); %> </label>
+                <span id = "abstract"></span>
+            </li>
+            <li class = "infoLi">
+                <label class = "label"> <%= i18n.__('Attachments'); %> </label>
+                <div class="flex horzExLong nomargin" id ="fileDiv">
+                </div>
+            </li>
+        </ul>
+        <hr>
+        <div class="flex horzExLong">
+            <a id = "editBtn" class = "btn btn-danger my-2 my-sm-0 horzLong" href="javascript:window.location='/edit'+document.location.search" hidden><%= i18n.__('Edit'); %></a>
+            <a id = "delBtn" class = "btn btn-danger my-2 my-sm-0 horzLong" href="javascript:$.get('/info/delete'+document.location.search,(res)=>{alert(res);location.reload();});" hidden><%= i18n.__('Delete'); %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container bg-light">
+      <p>Server running Port 3000</p>
+    </div>
+  </div>
+</body>
+
+<script src="assets/js/info.js"></script>
+<script src="assets/js/commonGUI.js"></script>
+
+</html>

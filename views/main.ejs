@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KSAReD | KSA Research Database</title>
+  <meta name = "viewport" content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href = "assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href = "assets/css/main.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/common.js"></script>
+</head>
+<body>
+  <nav class="nav navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="" style="color:#dc3535">
+        <img src="img/KSAReD.png" style="height:1.5rem;"/>
+        KSAReD
+      </a>
+      <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarContents">
+        <ul class="navbar-nav mr-auto nav nav-pills nav-justified" id="pills-tab" role="tablist">
+          <li>
+            <a class="nav-item nav-link active" id="nav_landing" data-toggle="pill" href="#landing">
+              <%= i18n.__('What is KSAReD?'); %>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" id="nav_browse" data-toggle="pill" href="#browse">
+              <%= i18n.__('Browse'); %>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" id="nav_upload" data-toggle="pill" href="#upload" hidden>
+              <%= i18n.__('Upload'); %>
+            </a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" id="nav_manage" data-toggle="pill" href="#manage" hidden>
+              <%= i18n.__('Account'); %> <%= i18n.__('Manage'); %>
+            </a>
+          </li>
+        </ul>
+        <div>
+            <div class="navbar-nav nav nav-pills nav-justified">
+                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlLoginForm('show')">
+                    <%= i18n.__('Log-In'); %>
+                </a>
+            </div>
+        </div>
+    </div>
+  </nav>
+  <div id = "loginFormDiv" class = "popUpDiv" style="display:none;">
+    <form id = 'loginForm' action='account/login' method = 'post'>
+        <ul class="infoUl">
+            <li class="popUpTitle">
+                <h4><%= i18n.__('Log-In'); %></h4>
+                <a href="javascript:controlLoginForm('hide')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+            </li>
+            <hr/>
+            <li class="infoLi">
+                <label class="label horzShort"><%= i18n.__('ID'); %></label>
+                <input name="ID" id="ID" class="form-control mr-sm-2 horzLong vertShort" type="text"/>
+            </li>
+            <li class="infoLi">
+                <label class="label horzShort"><%= i18n.__('Password'); %></label>
+                <input name="PW" id="PW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
+            </li>
+            <hr>
+            <li>
+                <button class="btn btn-primary my-2 my-sm-0 horzLong vertShort float-right" type='submit'><%= i18n.__('Log-In'); %></button>
+            </li>
+        </ul>
+    </form>
+  </div>
+  <div class="container nav-item tab-content" id="pills-tabContent">
+    <div id = "landing" class="jumbotron tab-pane fade active show">
+      <div class="container">
+        <h3 class="display-4">KSAReD</h3>
+        <h3>Korea Science Academy Research Database</h3>
+        <hr/>
+        <p>
+            <%= i18n.__('KSAReD_info'); %>
+        </p>
+      </div>
+    </div>
+    <div id = "browse" class="tab-pane fade show">
+      <form ref='searchForm' id='searchForm' action='search' method='post' class="flex" autocomplete="off">
+        <select class="form-control mr-sm-2 horzShort vertShort" name="subject">
+          <option value="" selected hidden><%= i18n.__('Subject'); %></option>
+          <option value=""><%= i18n.__('All'); %></option>
+          <option value="Math"><%= i18n.__('Math'); %></option>
+          <option value="Information Science"><%= i18n.__('Information'); %> <%= i18n.__('Science'); %></option>
+          <option value="Physics"><%= i18n.__('Physics'); %></option>
+          <option value="Chemistry"><%= i18n.__('Chemistry'); %></option>
+          <option value="Biology"><%= i18n.__('Biology'); %></option>
+          <option value="Earth Science"><%= i18n.__('Earth'); %> <%= i18n.__('Science'); %></option>
+          <option value="Astronomy"><%= i18n.__('Astronomy'); %></option>
+          <option value="Engineering"><%= i18n.__('Engineering'); %></option>
+          <option value="Literature"><%= i18n.__('Literature'); %></option>
+        </select>
+        <select class="form-control mr-sm-2 horzShort vertShort" name="type">
+          <option value="" selected hidden><%= i18n.__('Type'); %></option>
+          <option value=""><%= i18n.__('All'); %></option>
+          <option value="RnE">R&amp;E</option>
+          <option value="Graduation Research"><%= i18n.__('Graduation'); %> <%= i18n.__('Research'); %></option>
+          <option value="Else"><%= i18n.__('Else'); %></option>
+        </select>
+        <select class="form-control mr-sm-2 horzShort vertShort" id="sYear" name="sYear">
+        </select>
+        <span style="line-height:2.5">~</span>
+        <select class="form-control mr-sm-2 horzShort vertShort" id="eYear" name="eYear">
+        </select>
+        <div class="autocomplete horzLong vertExShort">
+          <input id="searchWord" class="form-control mr-sm-2 " type="text" name="searchWord" placeholder="<%= i18n.__('Separate input with commas'); %>"></input>
+        </div>
+        <!-- <button class="btn btn-primary my-2 my-sm-0 horzExShort vertShort fillWhenSmall" type="submit"><%= i18n.__('Search'); %></button> -->
+      </form>
+      <div id="searchResult"></div>
+    </div>
+    <div id = "upload" class="tab-pane fade show">
+        <form id='uploadForm' action='upload' method='post' autocomplete="off">
+            <div class="container">
+                <ul class="infoUl">
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('Research'); %> <%= i18n.__('Info'); %></label>
+                        <div class="flex horzLong nomargin">
+                            <div class="flex horzExLong nomargin">
+                                <input class="form-control mr-sm-2 horzLong vertShort" name="title" placeholder="<%= i18n.__('Title'); %>"></input>
+                            </div>
+                            <div class="flex horzExLong nomargin">
+                                <select class="form-control mr-sm-2 horzShort vertShort" name="subject">
+                                    <option value="" selected hidden><%= i18n.__('Subject'); %></option>
+                                    <option value="Math"><%= i18n.__('Math'); %></option>
+                                    <option value="Information Science"><%= i18n.__('Information'); %> <%= i18n.__('Science'); %></option>
+                                    <option value="Physics"><%= i18n.__('Physics'); %></option>
+                                    <option value="Chemistry"><%= i18n.__('Chemistry'); %></option>
+                                    <option value="Biology"><%= i18n.__('Biology'); %></option>
+                                    <option value="Earth Science"><%= i18n.__('Earth'); %> <%= i18n.__('Science'); %></option>
+                                    <option value="Astronomy"><%= i18n.__('Astronomy'); %></option>
+                                    <option value="Engineering"><%= i18n.__('Engineering'); %></option>
+                                    <option value="Literature"><%= i18n.__('Literature'); %></option>
+                                </select>
+                                <select class="form-control mr-sm-2 horzShort vertShort" name="type">
+                                    <option value="" selected hidden><%= i18n.__('Type'); %></option>
+                                    <option value="RnE">R&amp;E</option>
+                                    <option value="Graduation Research"><%= i18n.__('Graduation'); %> <%= i18n.__('Research'); %></option>
+                                    <option value="Else"><%= i18n.__('Else'); %></option>
+                                </select>
+                                <input class="form-control mr-sm-2 horzShort vertShort" name="year" placeholder="<%= i18n.__('Year'); %> : 2XXX"></input>
+                            </div>
+                        </div>
+                    </li>
+                    <hr/>
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('Researcher'); %> <%= i18n.__('Info'); %></label>
+                        <div class="flex horzLong nomargin">
+                          <div id="researcherFields" class="flex horzExLong nomargin">
+                            <div id="researcherField_0" class="flex horzExLong nomargin">
+                              <input class="form-control mr-sm-2 horzLong vertShort" name="researcher_name[0]" placeholder="<%= i18n.__("Student ID"); %> & <%= i18n.__("Name"); %> : XX-XXX ZZZ"></input>
+                              <input class="form-control mr-sm-2 horzLong vertShort" name="researcher_email[0]" placeholder="<%= i18n.__('Email'); %> : zzz@yyy.com"></input>
+                            </div>
+                          </div>
+                          <div class="flex horzExLong nomargin">
+                            <a class="btn btnA horzLong vertShort" onClick="addResearcherField()">+ <%= i18n.__('Add Field'); %></a>
+                            <a class="btn btnA horzLong vertShort" onClick="remResearcherField()">- <%= i18n.__('Remove Field'); %></a>
+                          </div>
+                        </div>
+                    </li>
+                    <hr/>
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('Supervisor'); %></label>
+                        <div class="flex horzLong nomargin">
+                            <input class="form-control mr-sm-2 horzShort vertShort" name="advisor1[name]" placeholder="<%= i18n.__('Name'); %> : AAA"></input>
+                            <input class="form-control mr-sm-2 horzShort vertShort" name="advisor1[institute]" placeholder="<%= i18n.__('Institute'); %> : BAIST"></input>
+                            <input class="form-control mr-sm-2 horzLong vertShort" name="advisor1[email]" placeholder="<%= i18n.__('Email'); %> : aaa@baist.ac.kr"></input>
+                        </div>
+                    </li>
+                    <hr/>
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('Co-Supervisor'); %></label>
+                        <div class="flex horzLong nomargin">
+                          <input class="form-control mr-sm-2 horzShort vertShort" name="advisor2[name]" placeholder="<%= i18n.__('Name'); %> : CCC"></input>
+                          <input class="form-control mr-sm-2 horzShort vertShort" name="advisor2[institute]" placeholder="<%= i18n.__('Institute'); %> : DAIST"></input>
+                          <input class="form-control mr-sm-2 horzLong vertShort" name="advisor2[email]" placeholder="<%= i18n.__('Email'); %> : ccc@daist.ac.kr"></input>
+                        </div>
+                    </li>
+                    <hr/>
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('Content'); %></label>
+                        <div class="flex horzLong nomargin">
+                            <textarea name="abstract" class="form-control mr-sm-2 abstract" rows="10" placeholder="<%= i18n.__('Content-PH'); %>"></textarea>
+                        </div>
+                    </li>
+                    <hr/>
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('Attachments'); %></label>
+                        <div class="flex horzLong nomargin" id="FileAttachDiv">
+                            <a class="inputInfo"><%= i18n.__('PaperUploadAlert'); %></a>
+                            <input class="form-control mr-sm-2 horzExLong" type="file" name="uploadFile" accept=".pdf">
+                            <a class="inputInfo"><%= i18n.__('ExFileUploadAlert'); %></a>
+                            <input class="form-control mr-sm-2 horzExLong" type="file" name="extraFiles" multiple>
+                        </div>
+                    </li>
+                    <li>
+                        <input class="form-control mr-sm-2" name="research_id" hidden>
+                        <button class="btn btn-primary my-2 my-sm-0 horzExLong vertLong" type='submit'><%= i18n.__('Save'); %></button>
+                    </li>
+                </ul>
+            </div>
+        </form>
+      <div>
+        <p id="fileUploadResult"></p>
+      </div>
+    </div>
+    <div id = "manage" class="tab-pane fade show">
+        <form id="updateAccount" action="account/update" method="post" autocomplete="off">
+            <div class="container">
+                <h4><%= i18n.__('Account'); %> <%= i18n.__('Info'); %></h4>
+                <hr/>
+                <ul class="infoUl">
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('ID'); %></label>
+                        <input name="ID" id="accUpdateID" class="form-control mr-sm-2 horzLong vertShort" type="text"/>
+                    </li>
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('Old'); %> <%= i18n.__('Password'); %></label>
+                        <input name="oldPW" id="oldPW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
+                    </li>
+                    <li class="infoLi">
+                        <label class="label horzShort"><%= i18n.__('New'); %> <%= i18n.__('Password'); %></label>
+                        <input name="newPW" id="newPW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary my-2 my-sm-0 horzShort vertShort float-right" type='submit'><%= i18n.__('Save'); %></button>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container bg-light">
+      <p>Server running Port 3000</p>
+    </div>
+  </div>
+</body>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/commonGUI.js"></script>
+
+</html>
