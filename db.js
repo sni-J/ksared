@@ -7,10 +7,10 @@ const {PythonShell} = require('python-shell');
 
 let mysql = require('mysql');
 var db_config = {
-  host     : 'localhost',
-  user     : 'KSAReDServer',
-  password : 'jolnon2018',
-  database : 'KSAReDDB'
+  host     : 'us-cdbr-iron-east-01.cleardb.net',//'localhost',
+  user     : 'b73595b82c308a',//'KSAReDServer',
+  password : '85de58c5',//'jolnon2018',
+  database : 'heroku_024d91f149fe852'//'KSAReDDB'
 };
 
 var pyOptions = {
