@@ -1,15 +1,19 @@
 var loginBtn = document.getElementById("accountNav");
 function accStatusUpdate(){
+    var logined = false;
     $.get("/account/info",(data)=>{
-        $.get("/i18n/words?words=Log-Out|Log-In",(wordRes)=>{
-            if(data['login']){
-                loginBtn.innerHTML = data['stu_id'] +" ("+wordRes['Log-Out']+")";
-                loginBtn.setAttribute("href","account/logout?redirect="+encodeURIComponent(location));
-            }else{
-                loginBtn.innerHTML = wordRes['Log-In'];
-                loginBtn.setAttribute("href","javascript:controlLoginForm('show')");
-            }
-        })
+        if(data['login']!=logined){
+            $.get("/i18n/words?words=Log-Out|Log-In",(wordRes)=>{
+                if(data['login']){
+                    loginBtn.innerHTML = data['stu_id'] +" ("+wordRes['Log-Out']+")";
+                    loginBtn.setAttribute("href","account/logout?redirect="+encodeURIComponent(location));
+                }else{
+                    loginBtn.innerHTML = wordRes['Log-In'];
+                    loginBtn.setAttribute("href","javascript:controlLoginForm('show')");
+                }
+            })
+            logined = data['login'];
+        }
     });
 }
 
