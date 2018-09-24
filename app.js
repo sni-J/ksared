@@ -43,32 +43,32 @@ app.listen(port, function(){
     console.log(`Server running on port ${port}`)
 })
 
-// process.on('uncaughtException', (err) => {
-//     console.log((new Date()).toString() + err);
-//     var nodemailer = require('nodemailer');
-//     var transporter = nodemailer.createTransport({
-//         service: 'gmail',
-//         auth: {
-//             user: 'wonjoonlee200316@gmail.com',
-//             pass: 'madebigbang'
-//         }
-//     });
-//
-//     var mailOptions = {
-//         from: 'wonjoonlee200316@gmail.com',
-//         to: 'wjl0316@naver.com',
-//         subject: 'KSAReD Error Notice Email',
-//         text: (new Date()).toString() + err
-//     };
-//
-//     transporter.sendMail(mailOptions, function(error, info){
-//         if (error) {
-//             console.log("Email Error : "+error);
-//         } else {
-//             console.log('Email sent: ' + info.response);
-//         }
-//     });
-// });
+process.on('uncaughtException', (err) => {
+    console.log((new Date()).toString() + err);
+    // var nodemailer = require('nodemailer');
+    // var transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //         user: 'wonjoonlee200316@gmail.com',
+    //         pass: 'madebigbang'
+    //     }
+    // });
+    //
+    // var mailOptions = {
+    //     from: 'wonjoonlee200316@gmail.com',
+    //     to: 'wjl0316@naver.com',
+    //     subject: 'KSAReD Error Notice Email',
+    //     text: (new Date()).toString() + err
+    // };
+    //
+    // transporter.sendMail(mailOptions, function(error, info){
+    //     if (error) {
+    //         console.log("Email Error : "+error);
+    //     } else {
+    //         console.log('Email sent: ' + info.response);
+    //     }
+    // });
+});
 
 process.on('exit',(code)=>{
     console.log("Exited With " +code);
