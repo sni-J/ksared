@@ -6,11 +6,12 @@ const db = this;
 const {PythonShell} = require('python-shell');
 
 let mysql = require('mysql');
+//mysql://bb1e0926c6edce:bbd599dd@us-cdbr-iron-east-01.cleardb.net/heroku_1d50852f61f6e15?reconnect=true
 var db_config = {
   host     : 'us-cdbr-iron-east-01.cleardb.net',//'localhost',
-  user     : 'b73595b82c308a',//'KSAReDServer',
-  password : '85de58c5',//'jolnon2018',
-  database : 'heroku_024d91f149fe852'//'KSAReDDB'
+  user     : 'bb1e0926c6edce',//'KSAReDServer',
+  password : 'bbd599dd',//'jolnon2018',
+  database : 'heroku_1d50852f61f6e15'//'KSAReDDB'
 };
 
 var pyOptions = {
