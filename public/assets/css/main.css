@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 
 body{
-    padding-top: 5rem;  /* this is for nav-bar */
+    margin-top: 5rem;  /* this is for nav-bar */
     word-break:keep-all;
     font-family: 'Nanum Gothic', sans-serif;
 }
