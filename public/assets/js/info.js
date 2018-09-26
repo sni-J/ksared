@@ -99,6 +99,13 @@
         }
     }
 
+    document.getElementById('delBtn').addEventListener('click',function(e){
+        e.preventDefault();
+        $.get('/info/delete'+document.location.search,(res)=>{
+            alert(res);
+            window.location='/main#landing';
+        });
+    });
 
     function checkImage(exFP, cb){
         cb(['jpg', 'gif', 'png'].includes(exFP.split(".").pop()));

@@ -347,8 +347,9 @@ def ExtractTitle(title):
     for i in a:
         type=i[1].split('+')
         for k in type:
-            if k in ['NNG','NNP','NNB','NR','NP','VV','VA','SW','SL','SN','XSN','MM','EC','NNBC','XPN'] and analyze_res[i][j][0].lower() not in ['있','사용','실험','때','연구','우리','이용','이용한','확인','결과','번째','번','년','문제','정의','므로','그림','사진','동안','처리','방법','각자','자신','여','같','통해','한다','하나','of','and','for','was','is','the','to','than','in','fig','sel        f','then','by','this','as','let','we','which','wiki','kr','with','that','on','org','https','has','it']:
+            if k in ['NNG','NNP','NNB','NR','NP','VV','VA','SW','SL','SN','XSN','MM','EC','NNBC','XPN'] and i[0].lower() not in ['있','사용','실험','때','연구','우리','이용','이용한','확인','결과','번째','번','년','문제','정의','므로','그림','사진','동안','처리','방법','각자','자신','여','같','통해','한다','하나','of','and','for','was','is','the','to','than','in','fig','sel        f','then','by','this','as','let','we','which','wiki','kr','with','that','on','org','https','has','it']:
                 temp.append(i)
+                break
     return temp
 
 def SimilarKeyword(keyword):
