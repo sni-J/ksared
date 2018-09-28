@@ -16,7 +16,7 @@ var db_config = {
 
 var pyOptions = {
     mode: 'text',
-    pythonPath: process.env.PYTHONPATH,
+    pythonPath: '/usr/bin/env python3',
     pythonOptions: ['-u'],
     scriptPath: './python',
     args: ['title', 'researcher', 'path_of_txt']
