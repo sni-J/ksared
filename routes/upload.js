@@ -51,8 +51,6 @@ function extractText(filepath, callback){
     });
     pdfParser.on("pdfParser_dataReady", pdfData => {
         var txt=pdfParser.getRawTextContent();
-        // var txt = JSON.stringify(pdfData);
-        // console.log(txt);
         fs.writeFile(filepath.slice(0,-4)+".txt", txt);
         console.log("Extracting complete");
         callback(true);
