@@ -1,2 +1,1 @@
-web:bash <(curl -s mecab-python.sh)
-    node app.js
+web: bash <(curl -s mecab-python.sh) node app.js
