@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 
 body{
-    margin-top: 5rem;  /* this is for nav-bar */
     word-break:keep-all;
     font-family: 'Nanum Gothic', sans-serif;
+}
+
+.tab-pane{
+    margin-top: 5rem;  /* this is for nav-bar */
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -83,10 +86,6 @@ form span{
     color: #000;
     font-weight: 400!important;
     padding-right: 1em;
-}
-
-.inputField{
-    /* display: table-column; */
 }
 
 .inputInfo{
