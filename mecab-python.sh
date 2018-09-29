@@ -1,4 +1,4 @@
-sudo sh -c 'echo "dicdir=/app/.linuxbrew/lib/mecab/dic/mecab-ko-dic" > /app/.linuxbrew/etc/mecabrc'
+echo "dicdir=/app/.linuxbrew/lib/mecab/dic/mecab-ko-dic" > /app/.linuxbrew/etc/mecabrc
 
 # install mecab-python
 cd /tmp
