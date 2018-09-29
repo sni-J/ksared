@@ -1,3 +1,5 @@
+sudo sh -c 'echo "dicdir=/app/.linuxbrew/lib/mecab/dic/mecab-ko-dic" > /app/.linuxbrew/etc/mecabrc'
+
 # install mecab-python
 cd /tmp
 git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
