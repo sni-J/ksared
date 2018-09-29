@@ -20,7 +20,7 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
         var date = new Date();
-        extractText('/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
+        extractText('/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
             if (!result){
                 res.send("Extracting Text Failed");
                 fileProcess.deleteFile(req.files['uploadFile'][0].path);
