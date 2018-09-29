@@ -1,2 +1,4 @@
 automake
 gcc
+mecab-ko
+mecab-ko-dic
