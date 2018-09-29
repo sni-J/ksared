@@ -70,7 +70,7 @@
         document.getElementById("file").setAttribute("href",
         "../uploadFiles"+research.filePath.split("uploads")[1]);
         document.getElementById("file").innerHTML = research.filePath.split("/").pop();
-        var exFiles = research.extraFiles.split(",");
+        var exFiles = research.extraFiles.split("|");
         var imgIdx = 0;
         if(exFiles.join("")!=""){
             fileDiv.innerHTML+= '<hr class="horzExLong">';
