@@ -30,4 +30,5 @@ $(lF).submit(function(event){
 $('a[href="' + location.hash + '"]').click(function(e){
     e.preventDefault();
     $(this).tab('show');
+    document.body.scrollTop = 0;
 })
