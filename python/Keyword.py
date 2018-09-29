@@ -5,7 +5,8 @@ import operator
 import math
 import sys
 
-mecab=Mecab()
+# mecab=Mecab()
+mecab = Mecab("/app/.linuxbrew/lib/mecab/dic/mecab-ko-dic")
 
 def AnalyzeText(loc,title):
     f=open(loc,"r",encoding='utf-8')
