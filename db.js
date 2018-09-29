@@ -394,7 +394,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
                                         +(email==""? "":" ("+email+")"));
                     }
                     var researchAttr = ['title', 'subject', 'year', 'type', 'abstract', 'researcher', 'advisor1_id', 'advisor2_id', 'filePath', 'extraFiles', 'hidden'];
-                    var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths.join("|"), req.hidden||'yes'];
+                    var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths, req.hidden||'yes'];
                     connection.query(
                             `insert into research_table(title, subject, year, type, abstract, researcher,
                                  advisor1_id, advisor2_id, filePath, extraFiles, hidden) values('`+researchVal.join("','")+"');"
@@ -576,7 +576,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         });
     }
     console.log("Hi editSearch!");
-    if(req.extraFilesCB){var keepedExtraFiles = ","+req.extraFilesCB;}
+    if(req.extraFilesCB){var keepedExtraFiles = "|"+req.extraFilesCB.join("|");}
     else{var keepedExtraFiles = ""}
     connection.query("select filePath from research_table where research_id = "+ req.research_id+";", (e, r, f)=>{
         if (e) throw e;
@@ -584,7 +584,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         db.addResearch(req, (fP == "" ? oldfP : fP), extraFilePaths+keepedExtraFiles, (res)=>{
             console.log("Trying to add...");
             if(res.Msg!="Success"){console.log("failed"); callback({"rId" : -1, "Msg" : "Failed"}); return;}
-            change_id({"id":res.rId}, req.research_id,  fP=="" || fP==oldfP ? extraFilePaths+keepedExtraFiles+","+oldfP : extraFilePaths+keepedExtraFiles);
+            change_id({"id":res.rId}, req.research_id,  fP=="" || fP==oldfP ? extraFilePaths+keepedExtraFiles+"|"+oldfP : extraFilePaths+keepedExtraFiles);
         })
     })
 }

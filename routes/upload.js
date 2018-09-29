@@ -20,19 +20,19 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
         var date = new Date();
-        extractText(req.files['uploadFile'][0].path, (result)=>{
+        extractText('/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
             if (!result){
                 res.send("Extracting Text Failed");
                 fileProcess.deleteFile(req.files['uploadFile'][0].path);
-                console.log("Failed, so removed file "+req.files['uploadFile'][0].path);
+                console.log("Failed, so removed file "+'./uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
             }
             else{
                 if(req.files["extraFiles"]==undefined){
-                    db.addResearch(req.body, req.files['uploadFile'][0].path, "", (result)=>{
+                    db.addResearch(req.body, './uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], "", (result)=>{
                         res.send(result);
                     });
                 }else{
-                    db.addResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path), (result)=>{
+                    db.addResearch(req.body, './uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], req.files["extraFiles"].map(a=>"./uploads/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
                         res.send(result);
                     });
                 }
@@ -97,7 +97,7 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
                                 res.send(result);
                             });
                         }else{
-                            db.editResearch(req.body, './uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], req.files["extraFiles"].map(a=>"./uploads/"+a.path.split("/uploads/")[1]), (result)=>{
+                            db.editResearch(req.body, './uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], req.files["extraFiles"].map(a=>"./uploads/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
                                 res.send(result);
                             });
                         }

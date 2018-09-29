@@ -146,7 +146,7 @@
 
         inputs[4+2*rN+9].value = location.search.split("=")[1];
 
-        var extrafiles = research.extraFiles.split(',');
+        var extrafiles = research.extraFiles.split('|');
         console.log(extrafiles);
         var FAD = document.getElementById("FileAttachDiv");
         var fadData =
