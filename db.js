@@ -576,7 +576,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         });
     }
     console.log("Hi editSearch!");
-    if(req.extraFilesCB){console.log(req.extraFilesCB);var keepedExtraFiles = "|"+req.extraFilesCB.split(",/").join("|/");}
+    if(req.extraFilesCB){console.log(typeof(req.extraFilesCB));var keepedExtraFiles = "|"+req.extraFilesCB.join("|");}
     else{var keepedExtraFiles = ""}
     connection.query("select filePath from research_table where research_id = "+ req.research_id+";", (e, r, f)=>{
         if (e) throw e;
