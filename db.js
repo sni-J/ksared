@@ -378,7 +378,7 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
 }
 module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필드 값이 sql문이 아닌지 체크해볼 필요가 있을 것 같 + R&E와 졸업 연구 이외의 항목에 대해 학회명 기재가 필요해보임 Else(한국데이터처리학회) 등으로 적으면 되지 않을까 싶은데
     try{
-        var txtP = fP.substr(0,fP.length - fP.split(".").pop().length-1)+".txt";
+        var txtP = fP.split(".pdf")[0]+".txt";
         pyOptions.args = [req.researcher_name, req.title, txtP];
         getKeyword((keywords)=>{
             getIdFromTable(keywords, 0, [], "keyword_table", ["keyword"], "keyword_id", (IdList)=>{
@@ -517,7 +517,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
                 return;
             }
             var paths = [result[0].filePath, result[0].filePath.slice(0,-3)+"txt"].concat(result[0].extraFiles.split('|'));
-            if((""+ignoreFile).includes(result[0].filePath)){ignoreFile+=","+result[0].filePath.slice(0,-3)+"txt"};
+            if((""+ignoreFile).includes(result[0].filePath)){ignoreFile+="|"+result[0].filePath.slice(0,-3)+"txt"};
             console.log("Paths : "+ paths);
             console.log("IgnoreFile : "+ignoreFile);
             paths.forEach((res)=>{
@@ -576,7 +576,14 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         });
     }
     console.log("Hi editSearch!");
-    if(req.extraFilesCB){console.log(typeof(req.extraFilesCB));var keepedExtraFiles = "|"+req.extraFilesCB.join("|");}
+    if(req.extraFilesCB){
+        if(typeof(req.extraFilesCB)=='string'){
+            var keepedExtraFiles = "|"+req.extraFilesCB;
+        }
+        else{
+            var keepedExtraFiles = "|"+req.extraFilesCB.join("|");
+        }
+    }
     else{var keepedExtraFiles = ""}
     connection.query("select filePath from research_table where research_id = "+ req.research_id+";", (e, r, f)=>{
         if (e) throw e;
