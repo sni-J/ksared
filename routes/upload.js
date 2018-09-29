@@ -81,23 +81,23 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
             });
         }else{
             if(req.files["uploadFile"]==undefined){
-                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>a.path), (result)=>{
+                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>"./uploads/"+a.path.split("/uploads/")[1]), (result)=>{
                     res.send(result);
                 });
             }else{
-                extractText(req.files['uploadFile'][0].path, (result)=>{
+                extractText('./uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], (result)=>{
                     if (!result){
                         res.send("Extracting Text Failed");
-                        fileProcess.deleteFile(req.files['uploadFile'][0].path);
-                        console.log("Failed, so removed folder "+req.files['uploadFile'][0].path);
+                        fileProcess.deleteFile('./uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
+                        console.log("Failed, so removed folder "+'./uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
                     }
                     else{
                         if(req.files["extraFiles"]==undefined){
-                            db.editResearch(req.body, req.files['uploadFile'][0].path, "", (result)=>{
+                            db.editResearch(req.body, './uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], "", (result)=>{
                                 res.send(result);
                             });
                         }else{
-                            db.editResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path), (result)=>{
+                            db.editResearch(req.body, './uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], req.files["extraFiles"].map(a=>"./uploads/"+a.path.split("/uploads/")[1]), (result)=>{
                                 res.send(result);
                             });
                         }

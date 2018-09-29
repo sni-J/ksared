@@ -394,7 +394,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
                                         +(email==""? "":" ("+email+")"));
                     }
                     var researchAttr = ['title', 'subject', 'year', 'type', 'abstract', 'researcher', 'advisor1_id', 'advisor2_id', 'filePath', 'extraFiles', 'hidden'];
-                    var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths, req.hidden||'yes'];
+                    var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths.join("|"), req.hidden||'yes'];
                     connection.query(
                             `insert into research_table(title, subject, year, type, abstract, researcher,
                                  advisor1_id, advisor2_id, filePath, extraFiles, hidden) values('`+researchVal.join("','")+"');"
@@ -516,7 +516,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
                 cb(status+st);
                 return;
             }
-            var paths = [result[0].filePath, result[0].filePath.slice(0,-3)+"txt"].concat(result[0].extraFiles.split(','));
+            var paths = [result[0].filePath, result[0].filePath.slice(0,-3)+"txt"].concat(result[0].extraFiles.split('|'));
             if((""+ignoreFile).includes(result[0].filePath)){ignoreFile+=","+result[0].filePath.slice(0,-3)+"txt"};
             console.log("Paths : "+ paths);
             console.log("IgnoreFile : "+ignoreFile);
