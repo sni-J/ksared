@@ -27,7 +27,7 @@ $(lF).submit(function(event){
     lF.submit();
 });
 
-$('.nav-tabs li a').click(function(e){
+$('.nav-link').click(function(e){
     e.preventDefault();
     e.stopImmediatePropagation();
     $(this).tab('show');
