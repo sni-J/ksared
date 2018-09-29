@@ -379,6 +379,7 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
 module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필드 값이 sql문이 아닌지 체크해볼 필요가 있을 것 같 + R&E와 졸업 연구 이외의 항목에 대해 학회명 기재가 필요해보임 Else(한국데이터처리학회) 등으로 적으면 되지 않을까 싶은데
     try{
         var txtP = fP.split(".pdf")[0]+".txt";
+        console.log(txtP);
         pyOptions.args = [req.researcher_name, req.title, txtP];
         getKeyword((keywords)=>{
             getIdFromTable(keywords, 0, [], "keyword_table", ["keyword"], "keyword_id", (IdList)=>{
