@@ -10,7 +10,6 @@ sudo make install
 
 # install mecab-ko-dic
 ## install requirement automake1.11
-# TODO: if not [automake --version]
 cd /tmp
 curl -LO http://ftpmirror.gnu.org/automake/automake-1.11.tar.gz
 tar -zxvf automake-1.11.tar.gz
