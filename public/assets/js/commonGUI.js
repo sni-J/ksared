@@ -26,9 +26,3 @@ $(lF).submit(function(event){
     lF.setAttribute("action","account/login?redirect="+encodeURIComponent(location));
     lF.submit();
 });
-
-$('.nav-link').click(function(e){
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    $(this).tab('show');
-});
