@@ -6,8 +6,8 @@ body{
     font-family: 'Nanum Gothic', sans-serif;
 }
 
-#pills-tabContent{
-    padding-top: 5rem;  /* this is for nav-bar */
+.tab-pane{
+    margin-top: 5rem;  /* this is for nav-bar */
 }
 
 h1,h2,h3,h4,h5,h6{
