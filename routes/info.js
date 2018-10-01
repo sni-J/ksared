@@ -15,6 +15,7 @@ router.get('/getInfo', (req, res) => {
     db.getInfo(req, req.query.id, (research)=>{
         if(research!=""){
             research['perm'] = db.checkPermission(req.session, (research.researcher||"").match(/(\d{2}-\d{3})/g));
+            research['admin'] = db.checkPermission(req.session, "");
         }
         res.send(research);
     });
@@ -43,7 +44,7 @@ router.get('/delete',(req, res)=>{
         del(research||{researcher:""},"research_table");
     })
     function del(research,table){
-        if(!db.checkPermission(req.session, (research.researcher||"").match(/(\d{2}-\d{3})/g))){
+        if(!db.checkPermission(req.session, "")){
             res.send("Permission Denied");
         }else{
             db.deleteById(req.query, "", (status)=>{

@@ -410,7 +410,6 @@
         if(location.hash == "#landing" && cnt==0){
             location.hash = e.target.hash;
         }
-        else{location.replace(e.target.hash);}
     });
 
 })(jQuery);

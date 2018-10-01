@@ -95,6 +95,8 @@
         }
         if(research.perm){
             document.getElementById("editBtn").removeAttribute("hidden");
+        }
+        if(research.admin){
             document.getElementById("delBtn").removeAttribute("hidden");
         }
     }
