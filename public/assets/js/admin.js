@@ -71,8 +71,7 @@
             `
         })
         document.getElementById("admin_main").innerHTML += start+mid+end;
-        for(var i=0;i<researches.length;i++){
-            var research = researches[i];
+        researches.forEach((research)=>{
             var checkbox = document.getElementById(`sw_${research.research_id}`);
             if(research.hidden=="no"){checkbox.setAttribute('checked','true');}
             console.log("sw");
@@ -83,6 +82,6 @@
                     $.post("/info/changeState",{id:research.research_id, hidden: "yes"}, (res)=>{alert(res);});
                 }
             });
-        }
+        });
     }
 })(jQuery);
