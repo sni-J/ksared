@@ -10,7 +10,7 @@ var db_config = {
     host     : 'us-cdbr-iron-east-01.cleardb.net',
     user     : process.env.DB_user,
     password : process.env.DB_pw,
-    database : process.env.DB_databse
+    database : process.env.DB_database
 };
 
 var pyOptions = {
