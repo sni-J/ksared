@@ -25,17 +25,17 @@ var connection;
 
 function handleDisconnect() {
     connection = mysql.createConnection(db_config); // Recreate the connection, since
-                                                  // the old one cannot be reused.
+                                                    // the old one cannot be reused.
 
     connection.connect(function(err) {              // The server is either down
-        if(err) {                                     // or restarting (takes a while sometimes).
+        if(err) {                                   // or restarting (takes a while sometimes).
             console.log('error when connecting to db:', err);
             setTimeout(handleDisconnect, 2000); // We introduce a delay before attempting to reconnect,
         }else{                                  // to avoid a hot loop, and to allow our node script to
             console.log("DB connected");
         }
     });                                     // process asynchronous requests in the meantime.
-                                          // If you're also serving http, display a 503 error.
+    // If you're also serving http, display a 503 error.
     connection.on('error', function(err) {
         console.log('db error '+(new Date()).toString() , err);
         if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
@@ -48,6 +48,10 @@ function handleDisconnect() {
 }
 
 handleDisconnect();
+
+function escapeRS(string) {
+  return string.replace(/[;'".*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
 
 function pstringify(data, type, callback){
     switch(type){
@@ -120,7 +124,6 @@ function createAdvList(data, idx, adv, emailB, formed, cb){
 }
 
 module.exports.searchWithInput = function(req, callback){
-    var regexBanList = ['\\', '|'];
     var query = req.query;
     var sess = req.session;
     function searchWordAnalysis(searchWord, cb){
@@ -135,8 +138,8 @@ module.exports.searchWithInput = function(req, callback){
                 var ana = wL[i].split(" : ");
                 if(ana.length==1){
                     if(ana[0].trim()!=""){
-                        if(!keywordList.includes(ana[0].trim()) && !regexBanList.includes(ana[0].trim())){
-                            keyword += "|"+ana[0].trim().split('').map((a)=>{return (a.toLowerCase()!=a.toUpperCase()?a:(regexBanList.includes(a)?"":'\\\\'+a));}).join('');
+                        if(!keywordList.includes(ana[0].trim())){
+                            keyword += "|"+ana[0].trim().split('').map((a)=>{return (a.toLowerCase()!=a.toUpperCase()?a:'\\'+a);}).join('');
                             keywordList[keywordList.length]=ana[0].trim();
                         }
                     }
@@ -155,14 +158,14 @@ module.exports.searchWithInput = function(req, callback){
                         (select research_id from research_keyword_table where keyword_id in
                             (select keyword_id from keyword_table`
                                 + (keyword.substr(1)==""?
-                                "":" where keyword_table.keyword regexp '" + keyword.substr(1) + "'") +
+                                "":" where keyword_table.keyword regexp '" + escapeRS(keyword.substr(1)) + "'") +
                             `)
                         )`+
                     (keyword.substr(1)==""?
                     "":`
                         or
                         (
-                            (research_table.title like '%`+keyword.substr(1).split("|").join("%') or (research_table.title like '%")+"%')"+
+                            (research_table.title like '%`+escapeRS(keyword.substr(1)).split("|").join("%') or (research_table.title like '%")+"%')"+
                         ")"
                     )+
                     ")"
@@ -173,14 +176,14 @@ module.exports.searchWithInput = function(req, callback){
                 (research_table.advisor1_id in
                     (select advisor_id from advisor_table
                         where (name,institute) in (`
-                            +advisor.substr(1)
+                            +escapeRS(advisor.substr(1))
                         +")"
                     +")"
                 +` or
                 research_table.advisor2_id in
                     (select advisor_id from advisor_table
                         where (name,institute) in (`
-                            +advisor.substr(1)
+                            +escapeRS(advisor.substr(1))
                         +")"
                     +")"
                 +")"
@@ -423,7 +426,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
 }
 
 module.exports.getInfo = function(req, id, cb){
-    connection.query(`select * from research_table where research_id='`+id+"';",(err, rres, fields)=>{
+    connection.query(`select * from research_table where research_id='`+escapeRS(id)+"';",(err, rres, fields)=>{
         if(err){console.log(err); cb(""); return;}
         if(rres.length==0){cb(""); return;}
         var r = rres[0];
@@ -474,7 +477,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
     if(typeof(q.id)=="string" && q.id.includes("1=1")){callback("ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 어딜 넘보냐 가서 발닦고 잠이나 자"); return;}
     if(!(""+Number.parseInt(q.id)===q.id)){callback("Uh-Oh You Should not do this"); return;}
     function deleteInResearchTable(q, status, cb){
-        connection.query("delete from research_table where research_id="+q.id+";", (err, res, fi)=>{
+        connection.query("delete from research_table where research_id="+escapeRS(q.id)+";", (err, res, fi)=>{
             var st = "| research_table : Success |";
             if(err){
                 st += "| research_table : Failed |";
@@ -508,7 +511,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
         });
     }
     function deleteFiles(q, status, cb){
-        connection.query("select filePath, extraFiles from research_table where research_id="+q.id+";",(err, result, fi)=>{
+        connection.query("select filePath, extraFiles from research_table where research_id="+escapeRS(q.id)+";",(err, result, fi)=>{
             var st="| getting filePath, extraFiles : Success |"
             if(err){
                 st="| getting filePath, extraFiles : Failed |"
@@ -528,7 +531,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
         });
     }
     function deleteInResearchKeywordTable(q, status, cb){
-        connection.query("delete from research_keyword_table where research_id="+q.id+";",(err, res, fi)=>{
+        connection.query("delete from research_keyword_table where research_id="+escapeRS(q.id)+";",(err, res, fi)=>{
             var st = "| research_keyword_table : Success |"
             if(err){
                 st = "| research_keyword_table : Failed |"
@@ -539,7 +542,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
             deleteFiles(q, status+st, (status)=>{cb(status);});
         });
     }
-    connection.query("select research_id from research_table where research_id = "+q.id, (e, r, f)=>{
+    connection.query("select research_id from research_table where research_id = "+escapeRS(q.id), (e, r, f)=>{
         if(r.length==0){
             callback("Success");
             console.log("Research "+q.id+" has already been deleted");
@@ -567,8 +570,8 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         db.deleteById({"id" : research_id, "pw": "jolnon2018"}, ignoreFile, (status)=>{
             console.log("Delete by id done anyway");
             if(status.includes("Failed")){console.log(status);callback({"rId" : -1, "Msg" : "Fail to delete by id"}); return;}
-            connection.query("update research_table set research_id = "+research_id+" where research_id="+q.id+";",(err, res, fi)=>{
-                connection.query("update research_keyword_table set research_id = "+research_id+" where research_id="+q.id+";",(err, res, fi)=>{
+            connection.query("update research_table set research_id = "+escapeRS(research_id)+" where research_id="+escapeRS(q.id)+";",(err, res, fi)=>{
+                connection.query("update research_keyword_table set research_id = "+escapeRS(research_id)+" where research_id="+escapeRS(q.id)+";",(err, res, fi)=>{
                     if(err){console.log(err); callback({"rId" : -1, "Msg" : status+"| dump Research made |"}); return;}
                     callback({"rId" : research_id, "Msg" : "Success"});
                 });
@@ -585,7 +588,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         }
     }
     else{var keepedExtraFiles = ""}
-    connection.query("select filePath from research_table where research_id = "+ req.research_id+";", (e, r, f)=>{
+    connection.query("select filePath from research_table where research_id = "+ escapeRS(req.research_id)+";", (e, r, f)=>{
         if (e) throw e;
         var oldfP = r[0].filePath;
         db.addResearch(req, (fP == "" ? oldfP : fP), extraFilePaths+keepedExtraFiles, (res)=>{
@@ -597,7 +600,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
 }
 
 module.exports.changeResearchState = function(sess, id, hidden, cb){
-    connection.query(`update research_table set hidden='${hidden}' where research_id=${id}`,(e,r,f)=>{
+    connection.query(`update research_table set hidden='${escapeRS(hidden)}' where research_id=${escapeRS(id)}`,(e,r,f)=>{
         if(e){cb(e); console.log(e); return;}
         cb("Success");
     })
@@ -615,7 +618,7 @@ module.exports.checkPermission = function(sess, permList){
 
 module.exports.login = function(req, cb){
     var body = req.body;
-    connection.query("select * from account_table where stu_id='"+body.ID+"' and password='"+body.PW+"'",(e,r,f)=>{
+    connection.query("select * from account_table where stu_id='"+escapeRS(body.ID)+"' and password='"+escapeRS(body.PW)+"'",(e,r,f)=>{
         if(r.length==0){
             cb("failed");
         }else{
@@ -626,11 +629,11 @@ module.exports.login = function(req, cb){
 
 module.exports.updateAccount = function(req, cb){
     var body = req.body;
-    connection.query("select * from account_table where stu_id='"+body.ID+"' and password='"+body.oldPW+"'",(e,r,f)=>{
+    connection.query("select * from account_table where stu_id='"+escapeRS(body.ID)+"' and password='"+escapeRS(body.oldPW)+"'",(e,r,f)=>{
         if(r.length==0){
             cb("Failed");
         }else{
-            connection.query("update account_table set password='"+body.newPW+"' where stu_id='"+body.ID+"'",(e,r,f)=>{
+            connection.query("update account_table set password='"+escapeRS(body.newPW)+"' where stu_id='"+escapeRS(body.ID)+"'",(e,r,f)=>{
                 if(e){
                     cb(e);
                 }else{
@@ -642,13 +645,14 @@ module.exports.updateAccount = function(req, cb){
 }
 
 module.exports.resetPassword = function(q, cb){
-    connection.query(`select * from account_table where stu_id='${q.stu_id}';`, (e, r, f)=>{
+    var stu_id = escapeRS(q.stu_id)
+    connection.query(`select * from account_table where stu_id='${stu_id}';`, (e, r, f)=>{
         if(e){ cb(e); }
-        else if(r.length==0){console.log(`Tried to reset password of ${q.stu_id} but cannot find it`); cb("Wrong ID!");}
+        else if(r.length==0){console.log(`Tried to reset password of ${stu_id} but cannot find it`); cb("Wrong ID!");}
         else{
-            connection.query(`update account_table set password='${q.stu_id}' where stu_id='${q.stu_id}';`, (e, r, f)=>{
+            connection.query(`update account_table set password='${stu_id}' where stu_id='${stu_id}';`, (e, r, f)=>{
                 if(e){ cb(e); }
-                else{ console.log(`Reset Password of ${q.stu_id}`); cb("Done"); }
+                else{ console.log(`Reset Password of ${stu_id}`); cb("Done"); }
             })
         }
     })
@@ -666,12 +670,5 @@ module.exports.restoreAccounts = function(cb){
             })
             cb("Done");
         }
-    })
-}
-
-module.exports.accountTableByAdmin = function(cb){
-    connection.query(`select * from account_table where stu_id!='admin'`,(e,r,f)=>{
-        if(e){ cb(e); }
-        else{ cb(r); }
     })
 }
