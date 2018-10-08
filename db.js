@@ -6,12 +6,11 @@ const db = this;
 const {PythonShell} = require('python-shell');
 
 let mysql = require('mysql');
-//mysql://bb1e0926c6edce:bbd599dd@us-cdbr-iron-east-01.cleardb.net/heroku_1d50852f61f6e15?reconnect=true
 var db_config = {
-  host     : 'us-cdbr-iron-east-01.cleardb.net',//'localhost',
-  user     : 'bb1e0926c6edce',//'KSAReDServer',
-  password : 'bbd599dd',//'jolnon2018',
-  database : 'heroku_1d50852f61f6e15'//'KSAReDDB'
+    host     : 'us-cdbr-iron-east-01.cleardb.net',
+    user     : process.env.DB_user,
+    password : process.env.DB_pw,
+    database : process.env.DB_databse
 };
 
 var pyOptions = {
@@ -356,7 +355,7 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
             var qs = "insert into "+ table+ "(";
             attL.forEach((att)=>{qs+=att+","});
             var qm = ") values('";
-            attL.forEach((att)=>{qm+=pp[att]+"','"});
+            attL.forEach((att)=>{qm+=connection.escape(pp[att])+"','"});
             var qe = "');";
             connection.query(qs.substr(0, qs.length-1)+qm.substr(0, qm.length-("','").length)+qe, (err, res, fields)=>{
                                     if (err) throw err;
@@ -398,7 +397,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
                     var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths, req.hidden||'yes'];
                     connection.query(
                             `insert into research_table(title, subject, year, type, abstract, researcher,
-                                 advisor1_id, advisor2_id, filePath, extraFiles, hidden) values('`+researchVal.join("','")+"');"
+                                 advisor1_id, advisor2_id, filePath, extraFiles, hidden) values('`+researchVal.map((a)=>{connection.escape(a)})join("','")+"');"
                                  ,(err, results, fields)=>{
                         var research = {};
                         for(var i=0;i<researchAttr.length;i++){
@@ -408,7 +407,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
                         getIdFromTable([research], 0, [], "research_table", researchAttr, "research_id", (IdList)=>{
                             for(var i=0;i<keywordIdList.length;i++){
                                 var keywordId = keywordIdList[i];
-                                connection.query("insert into research_keyword_table (research_id, keyword_id, keyword_weight) values("+IdList[0]+","+keywordId+","+1*keywords[i].keyword_weight+");",
+                                connection.query("insert into research_keyword_table (research_id, keyword_id, keyword_weight) values("+[IdList[0],keywordId,1*keywords[i].keyword_weight].map((a)=>{connection.escape(a)}).join(',')+");",
                                                 (err,result, fields)=>{if(err) return err;});
                             }
                             callback({"rId" : IdList[IdList.length-1], "Msg" : "Success"});
