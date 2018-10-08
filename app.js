@@ -31,6 +31,7 @@ app.use('/edit', require('./routes/edit'))
 app.use('/search', require('./routes/search'))
 app.use('/upload', require('./routes/upload'))
 app.use('/uploadFiles', express.static('uploads'),serveIndex('./uploads'))
+// app.use('/favicon.ico', require('./favicon.ico'))
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');

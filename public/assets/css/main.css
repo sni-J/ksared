@@ -6,6 +6,14 @@ body{
     font-family: 'Nanum Gothic', sans-serif;
 }
 
+.navbar-brand{
+    color: #dc3535!important;
+}
+
+.navbar-brand img{
+    height: 1.5rem;
+}
+
 .tab-pane{
     margin-top:5rem;
 }
