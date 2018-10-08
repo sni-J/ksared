@@ -397,7 +397,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
                     var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths, req.hidden||'yes'];
                     connection.query(
                             `insert into research_table(title, subject, year, type, abstract, researcher,
-                                 advisor1_id, advisor2_id, filePath, extraFiles, hidden) values('`+researchVal.map((a)=>{connection.escape(a)})join("','")+"');"
+                                 advisor1_id, advisor2_id, filePath, extraFiles, hidden) values('`+researchVal.map((a)=>{connection.escape(a)}).join("','")+"');"
                                  ,(err, results, fields)=>{
                         var research = {};
                         for(var i=0;i<researchAttr.length;i++){
