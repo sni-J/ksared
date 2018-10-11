@@ -358,13 +358,31 @@
 
     var logined = false;
     function accStatusUpdateMain(){
-        if(logined){return;}
         $.get("/account/info",(data)=>{
+            if(logined==data['login']){return;}
             if(data['login']==true){
                 document.getElementById('nav_manage').removeAttribute("hidden");
                 document.getElementById('nav_upload').removeAttribute("hidden");
                 document.getElementById('accUpdateID').value = data['stu_id'];
                 logined = true;
+            }else{
+                document.getElementById('nav_manage').setAttribute("hidden", "true");
+                document.getElementById('nav_upload').setAttribute("hidden", "true");
+                document.getElementById('accUpdateID').value = data['stu_id'];
+                logined = false;
+            }
+            if(location.hash == "#manage" || location.hash == "#upload"){
+                if(!data['login']){
+                    $('a[href="' + "#landing" + '"]').click();
+                }
+                else{
+                    $('a[href="' + location.hash + '"]').click();
+                }
+            }
+            else if(location.hash != "") {
+                $('a[href="' + location.hash + '"]').click();
+            }else{
+                location.hash = "#landing";
             }
         })
     }
@@ -372,19 +390,6 @@
     window.onload = function(e){
         accStatusUpdateMain();
         setInterval(accStatusUpdateMain,3000);
-        if(location.hash == "#manage" || location.hash == "#upload"){
-            if(!data['login']){
-                $('a[href="' + "#landing" + '"]').click();
-            }
-            else{
-                $('a[href="' + location.hash + '"]').click();
-            }
-        }
-        else if(location.hash != "") {
-            $('a[href="' + location.hash + '"]').click();
-        }else{
-            location.hash = "#landing";
-        }
     }
 
     window.onhashchange = function(e){

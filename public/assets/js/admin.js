@@ -19,7 +19,6 @@
             }
             else{
                 $.post("/info/getAll", {}, fillResearchInfo);
-                // $.post("/account/admin", {}, fillAccountInfo);
             }
         })
     }
