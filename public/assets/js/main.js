@@ -372,7 +372,15 @@
     window.onload = function(e){
         accStatusUpdateMain();
         setInterval(accStatusUpdateMain,3000);
-        if(location.hash != "") {
+        if(location.hash == "#manage" || location.hash == "#upload"){
+            if(!data['login']){
+                $('a[href="' + "#landing" + '"]').click();
+            }
+            else{
+                $('a[href="' + location.hash + '"]').click();
+            }
+        }
+        else if(location.hash != "") {
             $('a[href="' + location.hash + '"]').click();
         }else{
             location.hash = "#landing";
