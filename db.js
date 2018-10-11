@@ -355,12 +355,8 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
     var pp = ppL[idx];
     queryId(pp, table, attL, (result, pp)=>{
         if(result.length==0){
-            var qs = "insert into "+ table+ "('";
-            attL.forEach((att)=>{qs+=att+"','"});
-            var qm = "') values('";
-            attL.forEach((att)=>{qm+=connection.escape(pp[att])+"','"});
-            var qe = "');";
-            connection.query(qs.substr(0, qs.length-1)+qm.substr(0, qm.length-("','").length)+qe, (err, res, fields)=>{
+            var q = `insert into ${table}(${attL.join(",")}) values(${attL.map((att)=>{pp[att]}).join(",")});`
+            connection.query(q, (err, res, fields)=>{
                                     if (err) throw err;
                                     queryId(pp, table, attL, (result, ppv)=>{
                                         idL[idL.length] = result[result.length-1][objId];
