@@ -50,7 +50,7 @@ function handleDisconnect() {
 handleDisconnect();
 
 function escapeRS(string) {
-  return string.replace(/[;'"&^!@#%+-.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+  return string.replace(/[;'"&^!@#%+-.*+?^${}()|\[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
 function pstringify(data, type, callback){
