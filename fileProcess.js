@@ -6,7 +6,7 @@ var multer = require('multer'); // express에 multer모듈 적용 (for 파일업
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 const aws = require('aws-sdk');
-const s3 = new aws.s3();
+const s3 = new aws.S3();
 const S3_BUCKET = process.env.S3_BUCKET_NAME;
 aws.config.region = 'ap-northeast-2';
 
