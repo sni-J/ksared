@@ -66,7 +66,7 @@ module.exports.uploadFile = function(req, res, next){
                     multerS3({
                         s3: s3,
                         bucket: S3_BUCKET,
-                        acl: 'public_read',
+                        acl: 'private',
                         serverSideEncryption: 'AES256',
                         key: function (req, file, cb) {
                             cb(null, timestamp+"/"+file.originalname)
