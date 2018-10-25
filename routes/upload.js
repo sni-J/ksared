@@ -81,23 +81,23 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
             });
         }else{
             if(req.files["uploadFile"]==undefined){
-                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>"https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/"+a.path.split("/uploads/")[1]), (result)=>{
+                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>a.path), (result)=>{
                     res.send(result);
                 });
             }else{
-                extractText('https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1], (result)=>{
+                extractText(req.files['uploadFile'][0].path, (result)=>{
                     if (!result){
                         res.send("Extracting Text Failed");
-                        fileProcess.deleteFile('https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
-                        console.log("Failed, so removed folder "+'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
+                        fileProcess.deleteFile(req.files['uploadFile'][0].path);
+                        console.log("Failed, so removed folder "+req.files['uploadFile'][0].path);
                     }
                     else{
                         if(req.files["extraFiles"]==undefined){
-                            db.editResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1], "", (result)=>{
+                            db.editResearch(req.body, req.files['uploadFile'][0].path, "", (result)=>{
                                 res.send(result);
                             });
                         }else{
-                            db.editResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1], req.files["extraFiles"].map(a=>"https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
+                            db.editResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path).join("|"), (result)=>{
                                 res.send(result);
                             });
                         }
