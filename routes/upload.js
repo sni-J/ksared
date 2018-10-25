@@ -32,7 +32,7 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
                         res.send(result);
                     });
                 }else{
-                    db.addResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path.join("|"), (result)=>{
+                    db.addResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path).join("|"), (result)=>{
                         res.send(result);
                     });
                 }
@@ -56,7 +56,7 @@ function extractText(filepath, callback){
         callback(true);
     });
 
-    // console.log(`Extracting Text from ${filepath.split('/').pop()}...`);
+    console.log(`Extracting Text from ${filepath.split('/').pop()}...`);
     pdfParser.loadPDF(filepath);
 }
 
