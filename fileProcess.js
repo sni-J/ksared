@@ -57,7 +57,6 @@ module.exports.deleteFolderIfSpecificOneLeft = function(path, fName){
 }
 
 module.exports.uploadFile = function(req, res, next){
-    console.log(S3_BUCKET);
     if(req.session.login){
         req.AccPermission = true;
         fileProcess.timestamp((timestamp)=>{
@@ -71,9 +70,9 @@ module.exports.uploadFile = function(req, res, next){
                         key: function (req, file, cb) {
                             cb(null, timestamp+"/"+file.originalname)
                         }
-                  })
-              }
-          ).fields([{name:'uploadFile', maxCount: 1}, {name:'extraFiles'}])(req, res, next)
+                    })
+                }
+            ).fields([{name:'uploadFile', maxCount: 1}, {name:'extraFiles'}])(req, res, next)
         })
     }else{
         req.AccPermission = false;

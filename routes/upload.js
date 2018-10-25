@@ -73,6 +73,7 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
         })
     }
     function edit(research, table){
+        console.log(req.files['uploadFile']);
         req.body.hidden = research.hidden;
         if(req.files["uploadFile"]==undefined && req.files["extraFiles"]==undefined){
             db.editResearch(req.body, "", "", (result)=>{
