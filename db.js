@@ -522,7 +522,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
             paths.forEach((res)=>{
                 if(!(""+ignoreFile).includes(res)){ fileProcess.deleteFile(res);}
             });
-            fileProcess.deleteEmptyFolderRecursive('./uploads');
+            // fileProcess.deleteEmptyFolderRecursive('./uploads');
             deleteInResearchTable(q, status+st,(status)=>{cb(status);});
         });
     }

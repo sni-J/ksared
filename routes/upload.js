@@ -20,19 +20,19 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
         var date = new Date();
-        extractText('https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
+        extractText(req.files['uploadFile'][0].path, (result)=>{
             if (!result){
                 res.send("Extracting Text Failed");
                 fileProcess.deleteFile(req.files['uploadFile'][0].path);
-                console.log("Failed, so removed file "+'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
+                console.log("Failed, so removed file "+req.files['uploadFile'][0].path);
             }
             else{
                 if(req.files["extraFiles"]==undefined){
-                    db.addResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1], "", (result)=>{
+                    db.addResearch(req.body, req.files['uploadFile'][0].path, "", (result)=>{
                         res.send(result);
                     });
                 }else{
-                    db.addResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1], req.files["extraFiles"].map(a=>"https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
+                    db.addResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path.join("|"), (result)=>{
                         res.send(result);
                     });
                 }
@@ -56,7 +56,7 @@ function extractText(filepath, callback){
         callback(true);
     });
 
-    console.log(`Extracting Text from ${filepath.split('/').pop()}...`);
+    // console.log(`Extracting Text from ${filepath.split('/').pop()}...`);
     pdfParser.loadPDF(filepath);
 }
 
