@@ -67,8 +67,7 @@
                 `   <span class="horzLong nomargin">
                         <a id = "file" href=""></a>
                     </span>`;
-        document.getElementById("file").setAttribute("href",
-        "../uploadFiles"+research.filePath.split("uploads")[1]);
+        document.getElementById("file").setAttribute("href", research.filePath);
         document.getElementById("file").innerHTML = research.filePath.split("/").pop();
         var exFiles = research.extraFiles.split("|");
         var imgIdx = 0;
@@ -80,11 +79,11 @@
                 checkImage(exFiles[i],(isImage)=>{
                     fileDiv.innerHTML+=
                     `<span class="horzLong nomargin">
-                        <a id = "file" href="`+"../uploadFiles"+exFiles[i].split("uploads")[1]+`">`+exFiles[i].split("/").pop()+`</a>`
+                        <a id = "file" href="`+exFiles[i].split("uploads")[1]+`">`+exFiles[i].split("/").pop()+`</a>`
                         +(isImage ?
                         `   <a id='imgStChA`+imgIdx+`' onClick="imageStateChange(`+imgIdx+`);">[`+TDWords["View Image"]+`]</a>
-                            <a id='img`+imgIdx+`' href="`+"../uploadFiles"+exFiles[i].split("uploads")[1]+`" hidden>`
-                                +"<img class='exFileImage' src='"+"../uploadFiles"+exFiles[i].split("uploads")[1]+"'>"
+                            <a id='img`+imgIdx+`' href="`+exFiles[i].split("uploads")[1]+`" hidden>`
+                                +"<img class='exFileImage' src='"+exFiles[i].split("uploads")[1]+"'>"
                             +"</a>"
                             +"<br/>"
                         :"")

@@ -20,19 +20,19 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
         var date = new Date();
-        extractText('/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
+        extractText('https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
             if (!result){
                 res.send("Extracting Text Failed");
                 fileProcess.deleteFile(req.files['uploadFile'][0].path);
-                console.log("Failed, so removed file "+'/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
+                console.log("Failed, so removed file "+'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
             }
             else{
                 if(req.files["extraFiles"]==undefined){
-                    db.addResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], "", (result)=>{
+                    db.addResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1], "", (result)=>{
                         res.send(result);
                     });
                 }else{
-                    db.addResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
+                    db.addResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split('/uploads/')[1], req.files["extraFiles"].map(a=>"https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
                         res.send(result);
                     });
                 }
@@ -81,23 +81,23 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
             });
         }else{
             if(req.files["uploadFile"]==undefined){
-                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]), (result)=>{
+                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>"https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/"+a.path.split("/uploads/")[1]), (result)=>{
                     res.send(result);
                 });
             }else{
-                extractText('/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], (result)=>{
+                extractText('https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1], (result)=>{
                     if (!result){
                         res.send("Extracting Text Failed");
-                        fileProcess.deleteFile('/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
-                        console.log("Failed, so removed folder "+'/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
+                        fileProcess.deleteFile('https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
+                        console.log("Failed, so removed folder "+'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
                     }
                     else{
                         if(req.files["extraFiles"]==undefined){
-                            db.editResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], "", (result)=>{
+                            db.editResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1], "", (result)=>{
                                 res.send(result);
                             });
                         }else{
-                            db.editResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
+                            db.editResearch(req.body, 'https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/'+req.files['uploadFile'][0].path.split("/uploads/")[1], req.files["extraFiles"].map(a=>"https://s3.ap-northeast-2.amazonaws.com/ksared-uploadfiles/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
                                 res.send(result);
                             });
                         }

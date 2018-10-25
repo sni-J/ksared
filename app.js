@@ -30,7 +30,6 @@ app.use('/i18n', require('./routes/i18n'))
 app.use('/edit', require('./routes/edit'))
 app.use('/search', require('./routes/search'))
 app.use('/upload', require('./routes/upload'))
-app.use('/uploadFiles', express.static('uploads'),serveIndex('./uploads'))
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
