@@ -20,19 +20,19 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
         var date = new Date();
-        extractText(req.files['uploadFile'][0].path, (result)=>{
+        extractText(req.files['uploadFile'][0].location, (result)=>{
             if (!result){
                 res.send("Extracting Text Failed");
-                fileProcess.deleteFile(req.files['uploadFile'][0].path);
-                console.log("Failed, so removed file "+req.files['uploadFile'][0].path);
+                fileProcess.deleteFile(req.files['uploadFile'][0].location);
+                console.log("Failed, so removed file "+req.files['uploadFile'][0].location);
             }
             else{
                 if(req.files["extraFiles"]==undefined){
-                    db.addResearch(req.body, req.files['uploadFile'][0].path, "", (result)=>{
+                    db.addResearch(req.body, req.files['uploadFile'][0].location, "", (result)=>{
                         res.send(result);
                     });
                 }else{
-                    db.addResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path).join("|"), (result)=>{
+                    db.addResearch(req.body, req.files['uploadFile'][0].location, req.files["extraFiles"].map(a=>a.location).join("|"), (result)=>{
                         res.send(result);
                     });
                 }
@@ -51,7 +51,7 @@ function extractText(filepath, callback){
     });
     pdfParser.on("pdfParser_dataReady", pdfData => {
         var txt=pdfParser.getRawTextContent();
-        fs.writeFile(filepath.slice(0,-4)+".txt", txt);
+        fs.writeFile("/app/uploads/"+filepath.split("/")[-2]+"/"+filepath.split("/")[-1].slice(0,-4)+".txt", txt);
         console.log("Extracting complete");
         callback(true);
     });
@@ -73,7 +73,6 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
         })
     }
     function edit(research, table){
-        console.log(req.files['uploadFile']);
         req.body.hidden = research.hidden;
         if(req.files["uploadFile"]==undefined && req.files["extraFiles"]==undefined){
             db.editResearch(req.body, "", "", (result)=>{
@@ -82,23 +81,23 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
             });
         }else{
             if(req.files["uploadFile"]==undefined){
-                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>a.path), (result)=>{
+                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>a.location), (result)=>{
                     res.send(result);
                 });
             }else{
-                extractText(req.files['uploadFile'][0].path, (result)=>{
+                extractText(req.files['uploadFile'][0].location, (result)=>{
                     if (!result){
                         res.send("Extracting Text Failed");
-                        fileProcess.deleteFile(req.files['uploadFile'][0].path);
-                        console.log("Failed, so removed folder "+req.files['uploadFile'][0].path);
+                        fileProcess.deleteFile(req.files['uploadFile'][0].location);
+                        console.log("Failed, so removed folder "+req.files['uploadFile'][0].location);
                     }
                     else{
                         if(req.files["extraFiles"]==undefined){
-                            db.editResearch(req.body, req.files['uploadFile'][0].path, "", (result)=>{
+                            db.editResearch(req.body, req.files['uploadFile'][0].location, "", (result)=>{
                                 res.send(result);
                             });
                         }else{
-                            db.editResearch(req.body, req.files['uploadFile'][0].path, req.files["extraFiles"].map(a=>a.path).join("|"), (result)=>{
+                            db.editResearch(req.body, req.files['uploadFile'][0].location, req.files["extraFiles"].map(a=>a.location).join("|"), (result)=>{
                                 res.send(result);
                             });
                         }
