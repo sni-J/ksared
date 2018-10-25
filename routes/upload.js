@@ -63,21 +63,26 @@ function extractText(filepath, callback){
 }
 
 function AWSUploader(req, cb){
-    var uplFilePath= "";
-    if(!req.files["uploadFile"]==undefined){
-        fileProcess.AWSUpload(req.files["uploadFile"].path.split("/uploads/")[1],(location)=>{
-            uplFilePath = location;
-        });
+    function uplUploader(callback){
+        if(!req.files["uploadFile"]==undefined){
+            fileProcess.AWSUpload(req.files["uploadFile"].path.split("/uploads/")[1],callback);
+        }
+        else{ callback(""); }
     }
-    var extFilePaths= [];
-    if(!req.files["extraFiles"]==undefined){
-        req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).forEach(
-            (filePath)=>{fileProcess.AWSUpload(filePath,(location)=>{
-                extFilePaths[extFilePaths.length] = location;
-            });}
-        );
+    function extUploader(callback){
+        var extFilePaths= [];
+        if(!req.files["extraFiles"]==undefined){
+            req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).forEach(
+                (filePath)=>{fileProcess.AWSUpload(filePath,(location)=>{
+                    extFilePaths[extFilePaths.length] = location;
+                });}
+            );
+            callback(extFilePaths);
+        }else{
+            callback([]);
+        }
     }
-    cb(uplFilePath, extFilePaths);
+    uplUploader((upl)=>{extUploader((ext)=>{cb(upl, ext)})});
 }
 
 router.post('/edit', fileProcess.uploadFile, (req, res) => {
