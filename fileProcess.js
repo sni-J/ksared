@@ -3,11 +3,9 @@
 const db = require("./db");
 
 var multer = require('multer'); // express에 multer모듈 적용 (for 파일업로드)
-const multerS3 = require('multer-s3')
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 const aws = require('aws-sdk');
-const s3 = new aws.S3();
 const S3_BUCKET = process.env.S3_BUCKET_NAME;
 aws.config.region = 'ap-northeast-2';
 
@@ -19,6 +17,32 @@ function timestamp(callback){
         +("0"+(date.getDate())).slice(-2)+("0"+(date.getHours())).slice(-2)
         +("0"+(date.getMinutes())).slice(-2)+("0"+date.getSeconds()).slice(-2));
 }
+
+// AWS
+module.exports.AWSUpload = function(filePath, cb){
+    var params = {
+        Bucket: S3_BUCKET,
+        Body : fs.createReadStream(filePath),
+        Key : filePath.split("/")[-2]+"/"+filePath.split("/")[-1],
+        acl: 'private',
+        serverSideEncryption: 'AES256'
+    };
+
+    s3.upload(params, function (err, data) {
+        //handle error
+        if (err) {
+            console.log("Error", err);
+            cb("");
+        }
+
+        //success
+        if (data) {
+            console.log("Uploaded in:", data.Location);
+            cb(data.Location);
+        }
+    });
+}
+//
 
 module.exports.timestamp = timestamp;
 
@@ -60,19 +84,18 @@ module.exports.uploadFile = function(req, res, next){
     if(req.session.login){
         req.AccPermission = true;
         fileProcess.timestamp((timestamp)=>{
-            multer(
-                { storage:
-                    multerS3({
-                        s3: s3,
-                        bucket: S3_BUCKET,
-                        acl: 'public-read',
-                        serverSideEncryption: 'AES256',
-                        key: function (req, file, cb) {
-                            cb(null, timestamp+"/"+file.originalname)
-                        }
-                    })
-                }
-            ).fields([{name:'uploadFile', maxCount: 1}, {name:'extraFiles'}])(req, res, next)
+            var strg =
+                multer.diskStorage({
+                    destination: function (req, file, cb) {
+                        mkdirp( '/app/uploads/'+timestamp);
+                        console.log("FPUF : "+'/app/uploads/'+timestamp+"/"+file.originalname);
+                        cb(null, '/app/uploads/'+timestamp+'/');
+                    },
+                    filename: function (req, file, cb) {
+                        cb(null, file.originalname)
+                    }
+                });
+            multer({storage:strg}).fields([{name:'uploadFile', maxCount: 1}, {name:'extraFiles'}])(req, res, next)
         })
     }else{
         req.AccPermission = false;

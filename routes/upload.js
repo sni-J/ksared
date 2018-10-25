@@ -11,31 +11,33 @@ var extractedText="";
 const multer = require('multer');
 const mkdirp = require('mkdirp');
 
-var date = new Date();
-
 router.post('/', fileProcess.uploadFile, (req, res) => {
     if(!req.AccPermission){
         res.send({Msg:"Permission Denied"});
         return;
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
-        var date = new Date();
-        extractText(req.files['uploadFile'][0].location, (result)=>{
+        extractText('/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
             if (!result){
                 res.send("Extracting Text Failed");
-                fileProcess.deleteFile(req.files['uploadFile'][0].location);
-                console.log("Failed, so removed file "+req.files['uploadFile'][0].location);
+                fileProcess.deleteFile(req.files['uploadFile'][0].path);
+                console.log("Failed, so removed file "+'/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
             }
             else{
-                if(req.files["extraFiles"]==undefined){
-                    db.addResearch(req.body, req.files['uploadFile'][0].location, "", (result)=>{
+                AWSUploader(req, (upl,ext)=>{
+                    db.addResearch(req.body, upl, ext.join("|"), (result)=>{
                         res.send(result);
                     });
-                }else{
-                    db.addResearch(req.body, req.files['uploadFile'][0].location, req.files["extraFiles"].map(a=>a.location).join("|"), (result)=>{
-                        res.send(result);
-                    });
-                }
+                })
+                // if(req.files["extraFiles"]==undefined){
+                //     db.addResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], "", (result)=>{
+                //         res.send(result);
+                //     });
+                // }else{
+                //     db.addResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
+                //         res.send(result);
+                //     });
+                // }
             }
         });
     }
@@ -51,13 +53,31 @@ function extractText(filepath, callback){
     });
     pdfParser.on("pdfParser_dataReady", pdfData => {
         var txt=pdfParser.getRawTextContent();
-        fs.writeFile("/app/uploads/"+filepath.split("/")[-2]+"/"+filepath.split("/")[-1].slice(0,-4)+".txt", txt);
+        fs.writeFile(filepath.slice(0,-4)+".txt", txt);
         console.log("Extracting complete");
         callback(true);
     });
 
     console.log(`Extracting Text from ${filepath.split('/').pop()}...`);
     pdfParser.loadPDF(filepath);
+}
+
+function AWSUploader(req, cb){
+    var uplFilePath= "";
+    if(!req.files["uploadFile"]==undefined){
+        fileProcess.AWSUpload(req.files["uploadFile"].path.split("/uploads/")[1],(location)=>{
+            uplFilePath = location;
+        });
+    }
+    var extFilePaths= [];
+    if(!req.files["extraFiles"]==undefined){
+        req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).forEach(
+            (filePath)=>{fileProcess.AWSUpload(filePath,(location)=>{
+                extFilePaths[extFilePaths.length] = location;
+            });}
+        );
+    }
+    cb(uplFilePath, extFilePaths);
 }
 
 router.post('/edit', fileProcess.uploadFile, (req, res) => {
@@ -74,37 +94,43 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
     }
     function edit(research, table){
         req.body.hidden = research.hidden;
-        if(req.files["uploadFile"]==undefined && req.files["extraFiles"]==undefined){
-            db.editResearch(req.body, "", "", (result)=>{
+        AWSUploader(req, (upl, ext)=>{
+            db.editResearch(req.body, upl, ext.join("|"), (result)=>{
                 res.send(result);
                 return;
             });
-        }else{
-            if(req.files["uploadFile"]==undefined){
-                db.editResearch(req.body, "", req.files["extraFiles"].map(a=>a.location), (result)=>{
-                    res.send(result);
-                });
-            }else{
-                extractText(req.files['uploadFile'][0].location, (result)=>{
-                    if (!result){
-                        res.send("Extracting Text Failed");
-                        fileProcess.deleteFile(req.files['uploadFile'][0].location);
-                        console.log("Failed, so removed folder "+req.files['uploadFile'][0].location);
-                    }
-                    else{
-                        if(req.files["extraFiles"]==undefined){
-                            db.editResearch(req.body, req.files['uploadFile'][0].location, "", (result)=>{
-                                res.send(result);
-                            });
-                        }else{
-                            db.editResearch(req.body, req.files['uploadFile'][0].location, req.files["extraFiles"].map(a=>a.location).join("|"), (result)=>{
-                                res.send(result);
-                            });
-                        }
-                    }
-                })
-            }
-        }
+        })
+        // if(req.files["uploadFile"]==undefined && req.files["extraFiles"]==undefined){
+        //     db.editResearch(req.body, "", "", (result)=>{
+        //         res.send(result);
+        //         return;
+        //     });
+        // }else{
+        //     if(req.files["uploadFile"]==undefined){
+        //         db.editResearch(req.body, "", , (result)=>{
+        //             res.send(result);
+        //         });
+        //     }else{
+        //         extractText('/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], (result)=>{
+        //             if (!result){
+        //                 res.send("Extracting Text Failed");
+        //                 fileProcess.deleteFile('/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
+        //                 console.log("Failed, so removed folder "+'/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1]);
+        //             }
+        //             else{
+        //                 if(req.files["extraFiles"]==undefined){
+        //                     db.editResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], "", (result)=>{
+        //                         res.send(result);
+        //                     });
+        //                 }else{
+        //                     db.editResearch(req.body, '/app/uploads/'+req.files['uploadFile'][0].path.split("/uploads/")[1], req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).join("|"), (result)=>{
+        //                         res.send(result);
+        //                     });
+        //                 }
+        //             }
+        //         })
+        //     }
+        // }
     }
 });
 
