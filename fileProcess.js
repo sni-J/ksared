@@ -3,8 +3,13 @@
 const db = require("./db");
 
 var multer = require('multer'); // express에 multer모듈 적용 (for 파일업로드)
+const multerS3 = require('multer-s3')
 var fs = require('fs');
 var mkdirp = require('mkdirp');
+const aws = require('aws-sdk');
+const s3 = new aws.S3();
+const S3_BUCKET = process.env.S3_BUCKET;
+aws.config.region = 'ap-northeast-2';
 
 var fileProcess = this;
 
@@ -52,21 +57,23 @@ module.exports.deleteFolderIfSpecificOneLeft = function(path, fName){
 }
 
 module.exports.uploadFile = function(req, res, next){
+    console.log(S3_BUCKET);
     if(req.session.login){
         req.AccPermission = true;
         fileProcess.timestamp((timestamp)=>{
-            var strg =
-                multer.diskStorage({
-                    destination: function (req, file, cb) {
-                        mkdirp( '/app/uploads/'+timestamp);
-                        console.log("FPUF : "+'/app/uploads/'+timestamp+"/"+file.originalname);
-                        cb(null, '/app/uploads/'+timestamp+'/');
-                    },
-                    filename: function (req, file, cb) {
-                        cb(null, file.originalname)
-                    }
-                });
-                multer({storage:strg}).fields([{name:'uploadFile', maxCount: 1}, {name:'extraFiles'}])(req, res, next)
+            multer(
+                { storage:
+                    multerS3({
+                        s3: s3,
+                        bucket: S3_BUCKET,
+                        acl: 'private',
+                        serverSideEncryption: 'AES256',
+                        key: function (req, file, cb) {
+                            cb(null, timestamp+"/"+file.originalname)
+                        }
+                  })
+              }
+          ).fields([{name:'uploadFile', maxCount: 1}, {name:'extraFiles'}])(req, res, next)
         })
     }else{
         req.AccPermission = false;
