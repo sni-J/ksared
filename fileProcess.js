@@ -19,7 +19,7 @@ function timestamp(callback){
 }
 
 // AWS
-module.exports.AWSUpload = function(filePath, cb){
+module.exports.AWSUpload = function(rId, filePath, cb){
     var params = {
         Bucket: S3_BUCKET,
         Body : fs.createReadStream(filePath),
