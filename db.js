@@ -562,6 +562,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
 }
 
 module.exports.editResearch = function(req, fP, extraFilePaths, callback){
+    console.log(req);
     function change_id(q, research_id, ignoreFile){
         console.log("Trying to change id from "+q.id+" to "+research_id);
         if(q.id == research_id){callback({"rId":q.id, "Msg":"Success"}); console.log("Something Strange..."); return;}

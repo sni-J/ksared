@@ -43,9 +43,9 @@ app.listen(port, function(){
     console.log(`Server running on port ${port}`)
 })
 
-// process.on('uncaughtException', (err) => {
-//     console.log((new Date()).toString() + err);
-// });
+process.on('uncaughtException', (err) => {
+    console.log((new Date()).toString() + err);
+});
 
 process.on('exit',(code)=>{
     console.log("Exited With " +code);
