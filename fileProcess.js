@@ -90,6 +90,7 @@ module.exports.uploadFile = function(req, res, next){
             var strg =
                 multer.diskStorage({
                     destination: function (req, file, cb) {
+                        mkdirp( '/app/uploads');
                         mkdirp( '/app/uploads/'+timestamp);
                         console.log("FPUF : "+'/app/uploads/'+timestamp+"/"+file.originalname);
                         cb(null, '/app/uploads/'+timestamp+'/');
