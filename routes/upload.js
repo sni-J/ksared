@@ -84,7 +84,20 @@ function AWSUploader(req, cb){
         }
     }
     req.setTimeout(0);
-    uplUploader((upl)=>{extUploader((ext)=>{console.log([upl, ext]); cb(upl, ext)})});
+    uplUploader((upl)=>{
+        if(upl!=""){
+            extractText('/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
+                if (!result){
+                    res.send("Extracting Text Failed");
+                    fileProcess.deleteFile(req.files['uploadFile'][0].path);
+                    console.log("Failed, so removed file "+'/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
+                }else{
+                    extUploader((ext)=>{console.log([upl, ext]); cb(upl, ext)});
+                }
+            });
+        }else{
+            extUploader((ext)=>{console.log([upl, ext]); cb(upl, ext)});
+        }
 }
 
 router.post('/edit', fileProcess.uploadFile, (req, res) => {
