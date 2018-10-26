@@ -66,8 +66,9 @@ function AWSUploader(req, cb){
     function uplUploader(callback){
         if(!req.files["uploadFile"]==undefined){
             fileProcess.AWSUpload(req.files["uploadFile"].path.split("/uploads/")[1],callback);
+        }else{
+            console.log("No uploadFile"); callback("");
         }
-        else{ callback(""); }
     }
     function extUploader(callback){
         var extFilePaths= [];
@@ -79,11 +80,11 @@ function AWSUploader(req, cb){
             );
             callback(extFilePaths);
         }else{
-            callback([]);
+            console.log("No extraFiles"); callback([]);
         }
     }
     req.setTimeout(0);
-    uplUploader((upl)=>{extUploader((ext)=>{console.log(upl, ext); cb(upl, ext)})});
+    uplUploader((upl)=>{extUploader((ext)=>{console.log([upl, ext]); cb(upl, ext)})});
 }
 
 router.post('/edit', fileProcess.uploadFile, (req, res) => {
