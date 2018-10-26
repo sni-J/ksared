@@ -83,7 +83,7 @@ function AWSUploader(req, cb){
         }
     }
     req.setTimeout(0);
-    uplUploader((upl)=>{extUploader((ext)=>{cb(upl, ext)})});
+    uplUploader((upl)=>{extUploader((ext)=>{console.log(upl, ext); cb(upl, ext)})});
 }
 
 router.post('/edit', fileProcess.uploadFile, (req, res) => {
