@@ -63,12 +63,11 @@ function extractText(filepath, callback){
 }
 
 function AWSUploader(req, cb){
-    console.log(req.files["uploadFile"],req.files["uploadFile"].path,req.files["uploadFile"]["path"]);
     function uplUploader(callback){
         if(req.files["uploadFile"]==undefined){
             console.log("No uploadFile"); callback("");
         }else{
-            fileProcess.AWSUpload(req.files["uploadFile"].path.split("/uploads/")[1],callback);
+            fileProcess.AWSUpload(req.files["uploadFile"][0].path.split("/uploads/")[1],callback);
         }
     }
     function extUploader(callback){
