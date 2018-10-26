@@ -355,7 +355,7 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
     var pp = ppL[idx];
     queryId(pp, table, attL, (result, pp)=>{
         if(result.length==0){
-            var q = `insert into ${table}(${attL.join(",")}) values(${attL.map((att)=>{pp[att]}).join(",")});`;
+            var q = `insert into ${table}(${attL.join(",")}) values(${attL.map((att)=>{return pp[att]}).join(",")});`;
             console.log(q);
             connection.query(q, (err, res, fields)=>{
                                     if (err) throw err;
@@ -414,7 +414,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
                         getIdFromTable([research], 0, [], "research_table", researchAttr, "research_id", (IdList)=>{
                             for(var i=0;i<keywordIdList.length;i++){
                                 var keywordId = keywordIdList[i];
-                                connection.query("insert into research_keyword_table (research_id, keyword_id, keyword_weight) values("+[IdList[0],keywordId,1*keywords[i].keyword_weight].map((a)=>{connection.escape(a)}).join(',')+");",
+                                connection.query("insert into research_keyword_table (research_id, keyword_id, keyword_weight) values("+[IdList[0],keywordId,1*keywords[i].keyword_weight].map((a)=>{return connection.escape(a)}).join(',')+");",
                                                 (err,result, fields)=>{if(err) return err;});
                             }
                             callback({"rId" : IdList[IdList.length-1], "Msg" : "Success"});
