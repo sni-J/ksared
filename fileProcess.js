@@ -50,7 +50,7 @@ module.exports.AWSUpload = function(filePath, cb){
 
 module.exports.timestamp = timestamp;
 
-module.exports.deleteFile = function(path){
+module.exports.deleteFile = function(path){ //AWS needed
     try{
         fs.unlinkSync(path);
     }catch(e){

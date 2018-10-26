@@ -43,7 +43,7 @@ function AWSUploader(req, cb){
         if(req.files["extraFiles"]==undefined){
             console.log("No extraFiles"); callback([]);
         }else{
-            req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).forEach(
+            req.files["extraFiles"].map((a)=>{return "/app/uploads/"+a.path.split("/uploads/")[1]}).forEach(
                 (filePath)=>{fileProcess.AWSUpload(filePath,(location)=>{
                     extFilePaths[extFilePaths.length] = location;
                 });}
