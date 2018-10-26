@@ -21,12 +21,12 @@ function timestamp(callback){
 
 // AWS
 module.exports.AWSUpload = function(filePath, cb){
-    console.log(filePath, filePath.split("/"), filePath.split("/")[-2]+"/"+filePath.split("/")[-1]);
+    var filePathSplited = filePath.split("/");
     var params = {
         Bucket: S3_BUCKET,
         Body : fs.createReadStream(filePath),
-        Key : filePath.split("/")[-2]+"/"+filePath.split("/")[-1],
-        acl: 'public_read',
+        Key : filePathSplited[filePathSplited.length-2]+"/"+filePathSplited[filePathSplited.length-1],
+        acl: 'public-read',
         serverSideEncryption: 'AES256'
     };
 
