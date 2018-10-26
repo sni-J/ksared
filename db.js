@@ -575,6 +575,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         });
     }
     console.log("Hi editSearch!");
+    console.log(fP);
     if(req.extraFilesCB){
         if(typeof(req.extraFilesCB)=='string'){
             var keepedExtraFiles = "|"+req.extraFilesCB;
