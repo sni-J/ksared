@@ -63,7 +63,7 @@ function extractText(filepath, callback){
 }
 
 function AWSUploader(req, cb){
-    console.log(req.files["uploadFile"].path);
+    console.log(req.files["uploadFile"],req.files["uploadFile"].path,req.files["uploadFile"]["path"]);
     function uplUploader(callback){
         if(req.files["uploadFile"]==undefined){
             console.log("No uploadFile"); callback("");
