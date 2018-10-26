@@ -92,12 +92,17 @@ function AWSUploader(req, cb){
                     fileProcess.deleteFile(req.files['uploadFile'][0].path);
                     console.log("Failed, so removed file "+'/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
                 }else{
-                    extUploader((ext)=>{console.log([upl, ext]); cb(upl, ext)});
+                    extUploader((ext)=>{
+                        console.log([upl, ext]); cb(upl, ext);
+                    });
                 }
             });
         }else{
-            extUploader((ext)=>{console.log([upl, ext]); cb(upl, ext)});
+            extUploader((ext)=>{
+                console.log([upl, ext]); cb(upl, ext);
+            });
         }
+    });
 }
 
 router.post('/edit', fileProcess.uploadFile, (req, res) => {
