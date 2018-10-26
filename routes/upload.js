@@ -67,7 +67,7 @@ function AWSUploader(req, cb){
         if(req.files["uploadFile"]==undefined){
             console.log("No uploadFile"); callback("");
         }else{
-            fileProcess.AWSUpload(req.files["uploadFile"][0].path.split("/uploads/")[1],callback);
+            fileProcess.AWSUpload("/app/uploads/"+req.files["uploadFile"][0].path.split("/uploads/")[1],callback);
         }
     }
     function extUploader(callback){
