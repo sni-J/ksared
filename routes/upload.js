@@ -64,23 +64,23 @@ function extractText(filepath, callback){
 
 function AWSUploader(req, cb){
     function uplUploader(callback){
-        if(!req.files["uploadFile"]==undefined){
-            fileProcess.AWSUpload(req.files["uploadFile"].path.split("/uploads/")[1],callback);
-        }else{
+        if(req.files["uploadFile"]==undefined){
             console.log("No uploadFile"); callback("");
+        }else{
+            fileProcess.AWSUpload(req.files["uploadFile"].path.split("/uploads/")[1],callback);
         }
     }
     function extUploader(callback){
         var extFilePaths= [];
-        if(!req.files["extraFiles"]==undefined){
+        if(req.files["extraFiles"]==undefined){
+            console.log("No extraFiles"); callback([]);
+        }else{
             req.files["extraFiles"].map(a=>"/app/uploads/"+a.path.split("/uploads/")[1]).forEach(
                 (filePath)=>{fileProcess.AWSUpload(filePath,(location)=>{
                     extFilePaths[extFilePaths.length] = location;
                 });}
             );
             callback(extFilePaths);
-        }else{
-            console.log("No extraFiles"); callback([]);
         }
     }
     req.setTimeout(0);
