@@ -379,7 +379,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
     try{
         console.log(fP);
         var fPsplited=fP.split("/");
-        var txtP = decodeURI("/app/uploads/"+fPsplited[fPsplited.length-2]+"/"+fPsplited[fPsplited.length-1].slice(0,-4)+".txt");
+        var txtP = "/app/uploads/"+fPsplited[fPsplited.length-2]+"/"+fPsplited[fPsplited.length-1].slice(0,-4)+".txt";
         console.log(txtP);
         pyOptions.args = [req.researcher_name, req.title, txtP];
         getKeyword((keywords)=>{

@@ -42,7 +42,7 @@ module.exports.AWSUpload = function(filePath, cb){
         //success
         if (data) {
             console.log("Uploaded in:", data.Location);
-            cb(data.Location);
+            cb(decodeURI(data.Location));
         }
     });
 }
