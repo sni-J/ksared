@@ -355,7 +355,8 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
     var pp = ppL[idx];
     queryId(pp, table, attL, (result, pp)=>{
         if(result.length==0){
-            var q = `insert into ${table}(${attL.join(",")}) values(${attL.map((att)=>{pp[att]}).join(",")});`
+            var q = `insert into ${table}(${attL.join(",")}) values(${attL.map((att)=>{pp[att]}).join(",")});`;
+            console.log(q);
             connection.query(q, (err, res, fields)=>{
                                     if (err) throw err;
                                     queryId(pp, table, attL, (result, ppv)=>{
@@ -400,7 +401,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
                     console.log(
                         `insert into research_table(title, subject, year, type, abstract, researcher,
                             advisor1_id, advisor2_id, filePath, extraFiles, hidden) values(`+researchVal.map((a)=>{return connection.escape(a)}).join(",")+");"
-                    ); 
+                    );
                     connection.query(
                             `insert into research_table(title, subject, year, type, abstract, researcher,
                                  advisor1_id, advisor2_id, filePath, extraFiles, hidden) values(`+researchVal.map((a)=>{return connection.escape(a)}).join(",")+");"
