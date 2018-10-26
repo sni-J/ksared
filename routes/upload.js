@@ -82,6 +82,7 @@ function AWSUploader(req, cb){
             callback([]);
         }
     }
+    req.setTimeout(0);
     uplUploader((upl)=>{extUploader((ext)=>{cb(upl, ext)})});
 }
 

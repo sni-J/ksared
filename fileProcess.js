@@ -29,6 +29,8 @@ module.exports.AWSUpload = function(rId, filePath, cb){
         serverSideEncryption: 'AES256'
     };
 
+    // callback check
+
     s3.upload(params, function (err, data) {
         //handle error
         if (err) {
