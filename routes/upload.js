@@ -39,20 +39,34 @@ function AWSUploader(req, cb){
         }
     }
     function extUploader(callback){
+<<<<<<< HEAD
         function uploadEachFiles(files, extFilePaths, cb){
             if(files.length == 0){
                 cb(extFilePaths)
+=======
+        function uploadEachFiles(files, extFilePaths){
+            if(files.length == 0){
+                return extFilePaths
+>>>>>>> b0d9456e64f79cac8391af63e9cc02d7cc51ef56
             }
             var filePath = files.pop();
             fileProcess.AWSUpload(filePath,(location)=>{
                 extFilePaths[extFilePaths.length] = location;
+<<<<<<< HEAD
                 uploadEachFiles(files, extFilePaths, cb);
+=======
+                return uploadEachFiles(files, extFilePaths);
+>>>>>>> b0d9456e64f79cac8391af63e9cc02d7cc51ef56
             });
         }
         if(req.files["extraFiles"]==undefined){
             console.log("No extraFiles"); callback([]);
         }else{
+<<<<<<< HEAD
             uploadEachFiles(req.files["extraFiles"].map((a)=>{return "/app/uploads/"+a.path.split("/uploads/")[1]}), [], callback);
+=======
+            callback(uploadEachFiles(req.files["extraFiles"].map((a)=>{return "/app/uploads/"+a.path.split("/uploads/")[1]}), []));
+>>>>>>> b0d9456e64f79cac8391af63e9cc02d7cc51ef56
         }
     }
     req.setTimeout(0);
