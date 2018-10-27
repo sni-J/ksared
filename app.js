@@ -44,7 +44,7 @@ app.listen(port, function(){
 })
 
 process.on('uncaughtException', (err) => {
-    console.log((new Date()).toString() + err);
+    console.log((new Date()).toString() + err.stack);
 });
 
 process.on('exit',(code)=>{
