@@ -44,6 +44,7 @@ function AWSUploader(req, cb){
                 cb(extFilePaths)
             }
             var filePath = files.pop();
+            console.log(filePath);
             fileProcess.AWSUpload(filePath,(location)=>{
                 extFilePaths[extFilePaths.length] = location;
                 uploadEachFiles(files, extFilePaths, cb);
