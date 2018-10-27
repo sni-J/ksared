@@ -382,7 +382,7 @@ module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필
         var fPsplited=fP.split("/");
         var txtP = "/app/uploads/"+fPsplited[fPsplited.length-2]+"/"+fPsplited[fPsplited.length-1].slice(0,-4)+".txt";
         console.log(txtP);
-        pyOptions.args = [req.researcher_name, req.title, txtP];
+        pyOptions.args = [req.researcher_name, req.title, txtP]; // if fP => AWS then Pass
         getKeyword((keywords)=>{
             getIdFromTable(keywords, 0, [], "keyword_table", ["keyword"], "keyword_id", (IdList)=>{
                 var keywordIdList = IdList;
@@ -530,7 +530,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
             paths.forEach((res)=>{
                 if(!(""+ignoreFile).includes(res)){ fileProcess.deleteFile(res);}
             });
-            // fileProcess.deleteEmptyFolderRecursive('./uploads');
+            fileProcess.clearUploads();
             deleteInResearchTable(q, status+st,(status)=>{cb(status);});
         });
     }

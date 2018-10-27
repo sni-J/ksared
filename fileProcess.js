@@ -30,8 +30,6 @@ module.exports.AWSUpload = function(filePath, cb){
         serverSideEncryption: 'AES256'
     };
 
-    // callback check
-
     s3.upload(params, function (err, data) {
         //handle error
         if (err) {
@@ -50,39 +48,47 @@ module.exports.AWSUpload = function(filePath, cb){
 
 module.exports.timestamp = timestamp;
 
-module.exports.deleteFile = function(path){ //AWS needed
+module.exports.deleteFile = function(filePath){ //AWS needed
     try{
-        fs.unlinkSync(path);
+        var filePathSplited = filePath.split("/");
+        var params = {
+            Bucket: S3_BUCKET,
+            Key : filePathSplited[filePathSplited.length-2]+"/"+filePathSplited[filePathSplited.length-1],
+            acl: 'public-read',
+            serverSideEncryption: 'AES256'
+        };
+
+        s3.deleteObject(params, function (err, data) {
+            //handle error
+            if (err) {
+                console.log("Error", err.stack);
+            }
+
+            //success
+            if (data) {
+                console.log("Deleted :", data);
+            }
+        });
     }catch(e){
         console.log(e);
     }
 }
 
-module.exports.deleteEmptyFolderRecursive = function(path) {
+module.exports.clearUploads = function() {
+    var path='./uploads';
     if (fs.existsSync(path)) {
         fs.readdirSync(path).forEach(function(file, index){
             var curPath = path + '/' + file;
             if (fs.lstatSync(curPath).isDirectory()) { // recurse
-                fileProcess.deleteFolderIfSpecificOneLeft(curPath,"sentence.txt");
-                fileProcess.deleteEmptyFolderRecursive(curPath);
+                fileProcess.clearUploads(curPath);
             }
         });
         if(fs.readdirSync(path).length==0){
             fs.rmdirSync(path);
         }
     }
+    fs.writeFile('./uploads/.tmp',"", (err)=>{console.log(err);})
 };
-
-module.exports.deleteFolderIfSpecificOneLeft = function(path, fName){
-    if (fs.existsSync(path)) {
-        if(fs.readdirSync(path).length==1){
-            if(fs.readdirSync(path)[0]+"" === fName){
-                fs.unlinkSync(path+'/'+fName);
-                fs.rmdirSync(path);
-            }
-        }
-    }
-}
 
 module.exports.uploadFile = function(req, res, next){
     if(req.session.login){
