@@ -351,7 +351,7 @@ function getKeyword(req, fP, cb){
             "select keyword from keyword_table where keyword_id in "
             +"(select keyword_id from research_keyword_table where "
             +"research_id="+req.research_id
-            +");", (e,r,f)={
+            +")", (e,r,f)={
             if(err) console.log(err);
             else cb(r);
         });
