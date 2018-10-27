@@ -328,18 +328,30 @@ module.exports.searchWithInput = function(req, callback){
     });
 }
 
-function getKeyword(cb){
-    var keywords = [];
-    PythonShell.run('Keyword.py', pyOptions, function (err, results) {
-        if (err || !results){ console.log(err); console.log(results); cb("Keyword Extract Error"); return; }
-        // results is an array consisting of messages collected during execution
-        results.forEach((keyset)=>{
-            // var keyset = retVal.substr(1,retVal.length-1);
-            keywords[keywords.length]={"keyword":keyset.split(":")[0],"keyword_weight":keyset.split(":")[1]};
+function getKeyword(req, fP, cb){
+    console.log(req.oldfP, fP);
+    if(req.oldfP!=fP){
+        var fPsplited=fP.split("/");
+        var txtP = "/app/uploads/"+fPsplited[fPsplited.length-2]+"/"+fPsplited[fPsplited.length-1].slice(0,-4)+".txt";
+        console.log(txtP);
+        pyOptions.args = [req.researcher_name, req.title, txtP]; // if fP => AWS then Pass
+        var keywords = [];
+        PythonShell.run('Keyword.py', pyOptions, function (err, results) {
+            if (err || !results){ console.log(err); console.log(results); cb("Keyword Extract Error"); return; }
+            // results is an array consisting of messages collected during execution
+            results.forEach((keyset)=>{
+                // var keyset = retVal.substr(1,retVal.length-1);
+                keywords[keywords.length]={"keyword":keyset.split(":")[0],"keyword_weight":keyset.split(":")[1]};
+            });
+            console.log(keywords);
+            cb(keywords);
         });
-        console.log(keywords);
-        cb(keywords);
-    });
+    }else{
+        connection.query(`select keyword from keyword_table where keyword_id in (select keyword_id from research_keyword_table where research_id = ${req.research_Id});`, (e,r,f)={
+            if(err) console.log(err);
+            else cb(r);
+        });
+    }
 }
 function queryId(pp, table, attL, cb){
     var qs= "select * from "+table+" where 1=1";
@@ -378,12 +390,7 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
 
 module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필드 값이 sql문이 아닌지 체크해볼 필요가 있을 것 같 + R&E와 졸업 연구 이외의 항목에 대해 학회명 기재가 필요해보임 Else(한국데이터처리학회) 등으로 적으면 되지 않을까 싶은데
     try{
-        console.log(fP);
-        var fPsplited=fP.split("/");
-        var txtP = "/app/uploads/"+fPsplited[fPsplited.length-2]+"/"+fPsplited[fPsplited.length-1].slice(0,-4)+".txt";
-        console.log(txtP);
-        pyOptions.args = [req.researcher_name, req.title, txtP]; // if fP => AWS then Pass
-        getKeyword((keywords)=>{
+        getKeyword(req, fP, (keywords)=>{
             getIdFromTable(keywords, 0, [], "keyword_table", ["keyword"], "keyword_id", (IdList)=>{
                 var keywordIdList = IdList;
                 getIdFromTable([req.advisor1, req.advisor2], 0, [], "advisor_table", ["name","institute","email"], "advisor_id", (IdList)=>{
@@ -594,8 +601,8 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
     else{var keepedExtraFiles = ""}
     connection.query("select filePath from research_table where research_id = "+ escapeRS(req.research_id)+";", (e, r, f)=>{
         if (e) throw e;
-        var oldfP = r[0].filePath;
-        db.addResearch(req, (fP == "" ? oldfP : fP), extraFilePaths+keepedExtraFiles, (res)=>{
+        req.oldfP = r[0].filePath;
+        db.addResearch(req, (fP == "" ? req.oldfP : fP), extraFilePaths+keepedExtraFiles, (res)=>{
             console.log("Trying to add...");
             if(res.Msg!="Success"){console.log("failed"); callback({"rId" : -1, "Msg" : "Failed"}); return;}
             change_id({"id":res.rId}, req.research_id,  fP=="" || fP==oldfP ? extraFilePaths+keepedExtraFiles+"|"+oldfP : extraFilePaths+keepedExtraFiles);
