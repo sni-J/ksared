@@ -602,7 +602,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         db.addResearch(req, (fP == "" ? req.oldfP : fP), extraFilePaths+keepedExtraFiles, (res)=>{
             console.log("Trying to add...");
             if(res.Msg!="Success"){console.log("failed"); callback({"rId" : -1, "Msg" : "Failed"}); return;}
-            change_id({"id":res.rId}, req.research_id,  fP=="" || fP==oldfP ? extraFilePaths+keepedExtraFiles+"|"+req.oldfP : extraFilePaths+keepedExtraFiles);
+            change_id({"id":res.rId}, req.research_id,  fP=="" || fP==req.oldfP ? extraFilePaths+keepedExtraFiles+"|"+req.oldfP : extraFilePaths+keepedExtraFiles);
         })
     })
 }
