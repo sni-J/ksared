@@ -39,16 +39,20 @@ function AWSUploader(req, cb){
         }
     }
     function extUploader(callback){
-        var extFilePaths= [];
+        function uploadEachFiles(files, extFilePaths){
+            if(files.length == 0){
+                return extFilePaths
+            }
+            var filePath = files.pop();
+            fileProcess.AWSUpload(filePath,(location)=>{
+                extFilePaths[extFilePaths.length] = location;
+                return uploadEachFiles(files, extFilePaths);
+            });
+        }
         if(req.files["extraFiles"]==undefined){
             console.log("No extraFiles"); callback([]);
         }else{
-            req.files["extraFiles"].map((a)=>{return "/app/uploads/"+a.path.split("/uploads/")[1]}).forEach(
-                (filePath)=>{fileProcess.AWSUpload(filePath,(location)=>{
-                    extFilePaths[extFilePaths.length] = location;
-                });}
-            );
-            callback(extFilePaths);
+            callback(uploadEachFiles(req.files["extraFiles"].map((a)=>{return "/app/uploads/"+a.path.split("/uploads/")[1]}), []));
         }
     }
     req.setTimeout(0);
