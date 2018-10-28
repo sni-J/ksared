@@ -352,7 +352,7 @@ function getKeyword(req, fP, cb){
             var KW = KW_ID_weight.pop();
             connection.query("select keyword from keyword_table where keyword_id="+KW.keyword_id,(e, keyword, f)=>{
                 formatted[formatted.length] = {"keyword":keyword[0], "keyword_weight":KW.keyword_weight};
-                keywordFormat(KW_ID_weight,formatted,cb);
+                keywordFormat(KW_ID_weight, formatted, callback);
             });
         }
         // find original research with researchId and return keyword in format
