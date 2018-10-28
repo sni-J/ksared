@@ -348,7 +348,7 @@ function getKeyword(req, fP, cb){
         });
     }else{
         function keywordFormat(KW_ID_weight,formatted,callback){
-            if(KW_ID_weight.length==0){ callback(formatted); }
+            if(KW_ID_weight.length==0){ callback(formatted); return; }
             var KW = KW_ID_weight.pop();
             connection.query("select keyword from keyword_table where keyword_id="+KW.keyword_id,(e, keyword, f)=>{
                 formatted[formatted.length] = {"keyword":keyword[0], "keyword_weight":KW.keyword_weight};

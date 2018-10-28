@@ -40,9 +40,9 @@ function AWSUploader(req, cb){
     }
     function extUploader(callback){
         function uploadEachFiles(files, extFilePaths, cb){
-            console.log("???"+files); 
             if(files.length == 0){
-                cb(extFilePaths)
+                cb(extFilePaths);
+                return;
             }
             var filePath = files.pop();
             console.log(filePath);
