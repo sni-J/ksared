@@ -53,9 +53,7 @@ module.exports.deleteFile = function(filePath){ //AWS needed
         var filePathSplited = filePath.split("/");
         var params = {
             Bucket: S3_BUCKET,
-            Key : filePathSplited[filePathSplited.length-2]+"/"+filePathSplited[filePathSplited.length-1],
-            acl: 'public-read',
-            serverSideEncryption: 'AES256'
+            Key : filePathSplited[filePathSplited.length-2]+"/"+filePathSplited[filePathSplited.length-1]
         };
 
         s3.deleteObject(params, function (err, data) {
