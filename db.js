@@ -358,6 +358,7 @@ function getKeyword(req, fP, cb){
         // find original research with researchId and return keyword in format
         connection.query("select keyword_id, keyword_weight from research_keyword_table where research_id="+req.research_id, (e, KW_ID_weight, f)=>{
             keywordFormat(KW_ID_weight, [], (formatted)=>{
+                console.log(formatted);
                 cb(formatted);
             })
         });
