@@ -347,7 +347,20 @@ function getKeyword(req, fP, cb){
             cb(keywords);
         });
     }else{
+        function keywordFormat(KW_ID_weight,formatted,callback){
+            if(KW_ID_weight.length==0){ callback(formatted); }
+            var KW = KW_ID_weight.pop();
+            connection.query("select keyword from keyword_table where keyword_id="+KW.keyword_id,(e, keyword, f)=>{
+                formatted[formatted.length] = {"keyword":keyword[0], "keyword_weight":KW.keyword_weight};
+                keywordFormat(KW_ID_weight,formatted,cb);
+            });
+        }
         // find original research with researchId and return keyword in format
+        connection.query("select keyword_id, keyword_weight from research_keyword_table where research_id="+req.research_id, (e, KW_ID_weight, f)=>{
+            keywordFormat(KW_ID_weight, [], (formatted)=>{
+                cb(formatted);
+            })
+        });
     }
 }
 function queryId(pp, table, attL, cb){
