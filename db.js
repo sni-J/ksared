@@ -465,6 +465,7 @@ module.exports.getInfo = function(req, id, cb){
                 research[researchAttr[i]] = researchVal[i];
             }
             if(r.hidden=="no"||db.checkPermission(req.session, r.researcher.match(/(\d{2}-\d{3})/g))){
+                console.log(research);
                 cb(research);
             }else {
                 cb("");
@@ -488,7 +489,6 @@ module.exports.getAll = function(req, cb){
                     }
                 );
             }
-            console.log(researches);
             callback(researches, 0);
         })
     }
