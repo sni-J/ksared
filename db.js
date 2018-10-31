@@ -488,6 +488,7 @@ module.exports.getAll = function(req, cb){
                     }
                 );
             }
+            console.log(researches);
             callback(researches, 0);
         })
     }
