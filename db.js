@@ -357,8 +357,7 @@ function getKeyword(req, fP, cb){
         }
         // find original research with researchId and return keyword in format
         connection.query("select keyword_id, keyword_weight from research_keyword_table where research_id="+req.research_id, (e, KW_ID_weight, f)=>{
-            console.log(req);
-            console.log(KW_ID_weight);
+            if(e){console.log(e), cb([]);}
             keywordFormat(KW_ID_weight, [], (formatted)=>{
                 console.log(formatted);
                 cb(formatted);
@@ -377,6 +376,7 @@ function queryId(pp, table, attL, cb){
     );
 }
 function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
+    if(len(ppL==0){cb([]); return;})
     var pp = ppL[idx];
     queryId(pp, table, attL, (result, pp)=>{
         if(result.length==0){
@@ -550,7 +550,7 @@ module.exports.deleteById = function(q, ignoreFile, callback){
             paths.forEach((res)=>{
                 if(!(""+ignoreFile).includes(res)){ fileProcess.deleteFile(res);}
             });
-            fileProcess.clearUploads();
+            fileProcess.clearFolder('./uploads');
             deleteInResearchTable(q, status+st,(status)=>{cb(status);});
         });
     }

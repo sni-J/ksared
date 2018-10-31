@@ -72,13 +72,12 @@ module.exports.deleteFile = function(filePath){ //AWS needed
     }
 }
 
-module.exports.clearUploads = function() {
-    var path='./uploads';
+module.exports.clearFolder = function(path) {
     if (fs.existsSync(path)) {
         fs.readdirSync(path).forEach(function(file, index){
             var curPath = path + '/' + file;
             if (fs.lstatSync(curPath).isDirectory()) { // recurse
-                fileProcess.clearUploads(curPath);
+                fileProcess.clearFolder(curPath);
             }
         });
         if(fs.readdirSync(path).length==0){
