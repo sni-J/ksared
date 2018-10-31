@@ -376,7 +376,7 @@ function queryId(pp, table, attL, cb){
     );
 }
 function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
-    if(len(ppL==0){cb([]); return;})
+    if(len(ppL==0)){cb([]); return;}
     var pp = ppL[idx];
     queryId(pp, table, attL, (result, pp)=>{
         if(result.length==0){
