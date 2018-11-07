@@ -22,7 +22,7 @@ function extractText(filepath, callback){
     pdfParser.on("pdfParser_dataReady", pdfData => {
         var txt=pdfParser.getRawTextContent();
         var fname = filepath.slice(0,-4)+".txt";
-        fs.writeFile(fname, txt);
+        fs.writeFile(fname, txt, (err)=>{console.log(err); callback(false)});
         console.log("Extracting complete");
         callback(true);
     });
