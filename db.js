@@ -104,7 +104,6 @@ function createAdvList(data, idx, adv, emailB, formed, cb){
     connection.query("select * from advisor_table where advisor_id = "+res+";"
                             ,(err, result, fields)=>{
         if(err) throw err;
-        console.log(data);
         if(result[0].name!=undefined){
             if(formed) {
                 if(result[0].name!=""){

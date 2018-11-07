@@ -21,7 +21,8 @@ function extractText(filepath, callback){
     });
     pdfParser.on("pdfParser_dataReady", pdfData => {
         var txt=pdfParser.getRawTextContent();
-        fs.writeFile(filepath.slice(0,-4)+".txt", txt);
+        var fname = filepath.slice(0,-4)+".txt";
+        fs.writeFile(fname, txt);
         console.log("Extracting complete");
         callback(true);
     });
