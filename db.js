@@ -103,23 +103,24 @@ function createAdvList(data, idx, adv, emailB, formed, cb){
     var res = data[idx];
     connection.query("select * from advisor_table where advisor_id = "+res+";"
                             ,(err, result, fields)=>{
-    if(err) throw err;
-    if(result[0].name!=undefined){
-        if(formed) {
-            if(result[0].name!=""){
-                adv[adv.length] =
-                    result[0].name
-                    + (result[0].institute == "" ? "" :
-                        "(" + result[0].institute
-                            + (emailB ? " ; " + result[0].email : "")
-                        + ")"
-                    );
+        if(err) throw err;
+        console.log(res, result[0]);
+        if(result[0].name!=undefined){
+            if(formed) {
+                if(result[0].name!=""){
+                    adv[adv.length] =
+                        result[0].name
+                        + (result[0].institute == "" ? "" :
+                            "(" + result[0].institute
+                                + (emailB ? " ; " + result[0].email : "")
+                            + ")"
+                        );
+                }
             }
-        }
-        else adv[adv.length] = result[0];
-    }else{ adv[adv.length]=""; }
-    if(data.length-1==idx){cb(adv);}
-    else{createAdvList(data, idx+1, adv, emailB, formed, (advv)=>{cb(advv);})}
+            else adv[adv.length] = result[0];
+        }else{ adv[adv.length]=""; }
+        if(data.length-1==idx){cb(adv);}
+        else{createAdvList(data, idx+1, adv, emailB, formed, (advv)=>{cb(advv);})}
     });
 }
 
