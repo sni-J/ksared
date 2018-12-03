@@ -26,7 +26,7 @@ module.exports.AWSUpload = function(filePath, cb){
         Bucket: S3_BUCKET,
         Body : fs.createReadStream(filePath),
         Key : filePathSplited[filePathSplited.length-2]+"/"+filePathSplited[filePathSplited.length-1],
-        acl: 'public-read',
+        ACL: 'public-read',
         serverSideEncryption: 'AES256'
     };
 
