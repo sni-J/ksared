@@ -82,8 +82,8 @@
                         <a id = "file" href="`+exFiles[i].split("uploads")[1]+`">`+exFiles[i].split("/").pop()+`</a>`
                         +(isImage ?
                         `   <a id='imgStChA`+imgIdx+`' onClick="imageStateChange(`+imgIdx+`);">[`+TDWords["View Image"]+`]</a>
-                            <a id='img`+imgIdx+`' href="`+exFiles[i].split("uploads")[1]+`" hidden>`
-                                +"<img class='exFileImage' src='"+exFiles[i].split("uploads")[1]+"'>"
+                            <a id='img`+imgIdx+`' href="`+exFiles[i]+`" hidden>`
+                                +"<img class='exFileImage' src='"+exFiles[i]+"'>"
                             +"</a>"
                             +"<br/>"
                         :"")
