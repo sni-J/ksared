@@ -352,9 +352,10 @@
                     {
                         sendUploadForm(uF);
                     }
+                });
             }
             return res;
-        })
+        });
     });
 
     var logined = false;
