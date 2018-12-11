@@ -401,7 +401,7 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
     });
 }
 
-module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // 필드 값이 sql문이 아닌지 체크해볼 필요가 있을 것 같 + R&E와 졸업 연구 이외의 항목에 대해 학회명 기재가 필요해보임 Else(한국데이터처리학회) 등으로 적으면 되지 않을까 싶은데
+module.exports.addResearch = function(req, fP, extraFilePaths, callback){ // TODO 필드 값이 sql문이 아닌지 체크해볼 필요가 있을 것 같 + R&E와 졸업 연구 이외의 항목에 대해 학회명 기재가 필요해보임 Else(한국데이터처리학회) 등으로 적으면 되지 않을까 싶은데
     try{
         getKeyword(req, fP, (keywords)=>{
             getIdFromTable(keywords, 0, [], "keyword_table", ["keyword"], "keyword_id", (IdList)=>{
@@ -616,6 +616,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
     connection.query("select filePath from research_table where research_id = "+ escapeRS(req.research_id)+";", (e, r, f)=>{
         if (e) throw e;
         req.oldfP = r[0].filePath;
+        req.hidden = r[0].hidden;
         db.addResearch(req, (fP == "" ? req.oldfP : fP), extraFilePaths+keepedExtraFiles, (res)=>{
             console.log("Trying to add...");
             if(res.Msg!="Success"){console.log("failed"); callback({"rId" : -1, "Msg" : "Failed"}); return;}

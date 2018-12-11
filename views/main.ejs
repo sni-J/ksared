@@ -39,14 +39,14 @@
             </a>
           </li>
           <li>
-            <a class="nav-item nav-link" id="nav_manage" data-toggle="pill" href="#manage" hidden>
+            <a class="nav-item nav-link" id="nav_manage" data-toggle="pill" href="javascript:controlForm('show', 'manage')" hidden>
               <%= i18n.__('Account'); %> <%= i18n.__('Manage'); %>
             </a>
           </li>
         </ul>
         <div>
             <div class="navbar-nav nav nav-pills nav-justified">
-                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlLoginForm('show')">
+                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlForm('show', 'login')">
                     <%= i18n.__('Log-In'); %>
                 </a>
             </div>
@@ -58,7 +58,7 @@
         <ul class="infoUl">
             <li class="popUpTitle">
                 <h4><%= i18n.__('Log-In'); %></h4>
-                <a href="javascript:controlLoginForm('hide')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+                <a href="javascript:controlForm('hide', 'login')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
             </li>
             <hr/>
             <li class="infoLi">
@@ -72,6 +72,28 @@
             <hr>
             <li>
                 <button class="btn btn-primary my-2 my-sm-0 horzLong vertShort float-right" type='submit'><%= i18n.__('Log-In'); %></button>
+            </li>
+        </ul>
+    </form>
+  </div>
+  <div id = "manageFormDiv" class = "popUpDiv" style="display:none;">
+    <form id="updateAccount" action="account/update" method="post" autocomplete="off">
+        <ul class="infoUl">
+            <li class="popUpTitle">
+                <h4><%= i18n.__('Password'); %> <%= i18n.__('Change'); %></h4>
+                <a href="javascript:controlForm('hide','manage')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+            </li>
+            <hr/>
+            <li class="infoLi">
+                <label class="label horzShort"><%= i18n.__('Old'); %> <%= i18n.__('Password'); %></label>
+                <input name="oldPW" id="oldPW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
+            </li>
+            <li class="infoLi">
+                <label class="label horzShort"><%= i18n.__('New'); %> <%= i18n.__('Password'); %></label>
+                <input name="newPW" id="newPW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
+            </li>
+            <li>
+                <button class="btn btn-primary my-2 my-sm-0 horzShort vertShort float-right" type='submit'><%= i18n.__('Save'); %></button>
             </li>
         </ul>
     </form>
@@ -215,31 +237,6 @@
       <div>
         <p id="fileUploadResult"></p>
       </div>
-    </div>
-    <div id = "manage" class="tab-pane fade show">
-        <form id="updateAccount" action="account/update" method="post" autocomplete="off">
-            <div class="container">
-                <h4><%= i18n.__('Account'); %> <%= i18n.__('Info'); %></h4>
-                <hr/>
-                <ul class="infoUl">
-                    <li class="infoLi">
-                        <label class="label horzShort"><%= i18n.__('ID'); %></label>
-                        <input name="ID" id="accUpdateID" class="form-control mr-sm-2 horzLong vertShort" type="text"/>
-                    </li>
-                    <li class="infoLi">
-                        <label class="label horzShort"><%= i18n.__('Old'); %> <%= i18n.__('Password'); %></label>
-                        <input name="oldPW" id="oldPW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
-                    </li>
-                    <li class="infoLi">
-                        <label class="label horzShort"><%= i18n.__('New'); %> <%= i18n.__('Password'); %></label>
-                        <input name="newPW" id="newPW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
-                    </li>
-                    <li>
-                        <button class="btn btn-primary my-2 my-sm-0 horzShort vertShort float-right" type='submit'><%= i18n.__('Save'); %></button>
-                    </li>
-                </ul>
-            </div>
-        </form>
     </div>
   </div>
   <div id="footer">

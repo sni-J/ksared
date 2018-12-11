@@ -345,15 +345,16 @@
     $(uF).submit(function(event) {
         event.stopPropagation();
         event.preventDefault();
-        $.get("/i18n/words?words=uploadAlert",(wordRes)=>{
-            if(confirm(wordRes["uploadAlert"]))
-            {
-                checkUploadForm(uF, (res)=>{
-                    if(res) return sendUploadForm(uF);
-                    else return res; // = false
-                });
+        checkUploadForm(uF, (res)=>{
+            if (res){
+                $.get("/i18n/words?words=uploadAlert",(wordRes)=>{
+                    if(confirm(wordRes["uploadAlert"]))
+                    {
+                        sendUploadForm(uF);
+                    }
             }
-        });
+            return res;
+        })
     });
 
     var logined = false;

@@ -65,7 +65,7 @@
         var fileDiv = document.getElementById("fileDiv");
         fileDiv.innerHTML+=
                 `   <span class="horzLong nomargin">
-                        <a id = "file" href=""></a>
+                        <a id = "file" href="" target='_blank'></a>
                     </span>`;
         document.getElementById("file").setAttribute("href", research.filePath);
         document.getElementById("file").innerHTML = research.filePath.split("/").pop();
@@ -79,11 +79,11 @@
                 checkImage(exFiles[i],(isImage)=>{
                     fileDiv.innerHTML+=
                     `<span class="horzLong nomargin">
-                        <a id = "file" href="`+exFiles[i]+`">`+exFiles[i].split("/").pop()+`</a>`
+                        <a id = "file" href="`+exFiles[i]+`"  target='_blank'>`+exFiles[i].split("/").pop()+`</a>`
                         +(isImage ?
                         `   <a id='imgStChA`+imgIdx+`' onClick="imageStateChange(`+imgIdx+`);">[`+TDWords["View Image"]+`]</a>
-                            <a id='img`+imgIdx+`' href="`+exFiles[i].split("uploads")[1]+`" hidden>`
-                                +"<img class='exFileImage horzExLong' src='"+exFiles[i]+"'>"
+                            <a id='img`+imgIdx+`' class='horzExLong' href="`+exFiles[i]+`" target='_blank' hidden>`
+                                +"<img class='exFileImage' src='"+exFiles[i]+"' target='_blank'>"
                             +"</a>"
                             +"<br/>"
                         :"")

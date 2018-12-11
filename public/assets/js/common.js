@@ -1,5 +1,5 @@
-function controlLoginForm(s){
-    var display = document.getElementById('loginFormDiv').style.display;
+function controlForm(s, name){
+    var display = document.getElementById(name+'FormDiv').style.display;
     if(s=="show"){
         document.getElementById('loginFormDiv').style.display = "block";
     }
