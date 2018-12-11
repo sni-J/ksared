@@ -365,12 +365,10 @@
             if(data['login']==true){
                 document.getElementById('nav_manage').removeAttribute("hidden");
                 document.getElementById('nav_upload').removeAttribute("hidden");
-                document.getElementById('accUpdateID').value = data['stu_id'];
                 logined = true;
             }else{
                 document.getElementById('nav_manage').setAttribute("hidden", "true");
                 document.getElementById('nav_upload').setAttribute("hidden", "true");
-                document.getElementById('accUpdateID').value = data['stu_id'];
                 logined = false;
             }
             if(location.hash == "#manage" || location.hash == "#upload"){
