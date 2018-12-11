@@ -57,7 +57,7 @@
             +   research.type;
         document.getElementById("else_info").parentNode.after(document.createElement("hr"));
         if(research.abstract!=""){
-            document.getElementById("abstract").innerHTML = research.abstract;
+            document.getElementById("abstract").innerHTML = research.abstract.split('\n').join('<br>');
             document.getElementById("abstract").parentNode.after(document.createElement("hr"));
         }else{
             document.getElementById("abstract").parentNode.getElementsByTagName("label")[0].setAttribute("hidden","true");
