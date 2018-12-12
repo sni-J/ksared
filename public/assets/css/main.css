@@ -59,7 +59,7 @@ form .vertLong{
 }
 
 .horzShort{
-    flex: 1 1 80px;
+    flex: 1 0 80px;
     margin: .25rem!important;
 }
 
