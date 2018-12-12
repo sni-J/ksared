@@ -423,7 +423,7 @@
         if(location.hash == "#landing" && cnt==0){
             location.hash = e.target.hash;
         }
-        else if(e.target.hash!= location.hash){
+        else if(e.target.hash!= location.hash && e.target!=""){
             location.replace(e.target.hash);
         }
     });
