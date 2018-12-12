@@ -1,10 +1,10 @@
 function controlForm(s, name){
     var display = document.getElementById(name+'FormDiv').style.display;
     if(s=="show"){
-        document.getElementById('loginFormDiv').style.display = "block";
+        display = "block";
     }
     else if(s=="hide"){
-        document.getElementById('loginFormDiv').style.display = "none";
+        display = "none";
     }
 }
 
