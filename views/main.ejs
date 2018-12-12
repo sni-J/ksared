@@ -38,14 +38,12 @@
               <%= i18n.__('Upload'); %>
             </a>
           </li>
-          <li>
-            <a class="nav-item nav-link" id="nav_help" data-toggle="pill" href="https://github.com/sni-J/ksared/wiki/KSAReD:-Korea-Science-Academy-Research-Database" target='_blank' hidden>
-              <%= i18n.__('Upload'); %>
-            </a>
-          </li>
         </ul>
         <div>
             <div class="navbar-nav nav nav-pills nav-justified">
+                <a class="btn btn-link float-right" id="nav_help" href="https://github.com/sni-J/ksared/wiki/KSAReD:-Korea-Science-Academy-Research-Database" target='_blank'>
+                  <%= i18n.__('Help'); %>
+                </a>
                 <a class="btn btn-link float-right" id="nav_manage" href="javascript:controlForm('show', 'manage')" hidden>
                     <%= i18n.__('Account'); %> <%= i18n.__('Manage'); %>
                 </a>
