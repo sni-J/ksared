@@ -67,5 +67,7 @@
 	"New": "New",
 	"Save": "Save",
 	"uploadAlert": "After you upload, research will be made public by admin approval. Permissions to edit belong to admin and researchers, permission to delete belongs to admin. In the private state, only administrators and research researchers are allowed to access, and upload history is recorded on the server.",
-	"Else": "Else"
+	"Else": "Else",
+	"Help": "Help",
+	"Change": "Change"
 }
