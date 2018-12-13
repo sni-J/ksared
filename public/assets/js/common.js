@@ -1,5 +1,4 @@
 function controlForm(s, name){
-    var display = document.getElementById(name+'FormDiv').style.display;
     if(s=="show"){
         document.getElementById(name+'FormDiv').style.display = "block";
     }

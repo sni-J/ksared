@@ -14,6 +14,14 @@ body{
     height: 1.5rem;
 }
 
+.btn-link-nav{
+    color: rgba(255,255,255,.5);
+}
+
+.btn-link-nav:hover{
+    color: rgba(255,255,255,.75);
+}
+
 .tab-pane{
     margin-top:5rem;
 }
