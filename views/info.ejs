@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <% include ../views/head %>
+    <%- include('../views/head', {gid:gtag_id}) %>
     <script>
       function imageStateChange(idx){
           var img = document.getElementById("img"+idx);
