@@ -41,10 +41,10 @@
         </ul>
         <div>
             <div class="navbar-nav nav nav-pills nav-justified">
-                <a class="btn btn-link float-right" id="nav_help" href="https://github.com/sni-J/ksared/wiki/KSAReD:-Korea-Science-Academy-Research-Database" target='_blank'>
+                <a class="btn btn-link-nav float-right" id="nav_help" href="https://github.com/sni-J/ksared/wiki/KSAReD:-Korea-Science-Academy-Research-Database" target='_blank'>
                   <%= i18n.__('Help'); %>
                 </a>
-                <a class="btn btn-link float-right" id="nav_manage" href="javascript:controlForm('show', 'manage')" hidden>
+                <a class="btn btn-link-nav float-right" id="nav_manage" href="javascript:controlForm('show', 'manage')" hidden>
                     <%= i18n.__('Account'); %> <%= i18n.__('Manage'); %>
                 </a>
                 <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlForm('show', 'login')">
@@ -87,7 +87,7 @@
             <hr/>
             <li class="infoLi" hidden>
                 <label class="label horzShort"><%= i18n.__('ID'); %></label>
-                <input name="ID" id="ID" class="form-control mr-sm-2 horzLong vertShort"/>
+                <input name="pcID" id="pcID" class="form-control mr-sm-2 horzLong vertShort"/>
             </li>
             <li class="infoLi">
                 <label class="label horzShort"><%= i18n.__('Old'); %> <%= i18n.__('Password'); %></label>

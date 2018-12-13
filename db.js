@@ -655,11 +655,11 @@ module.exports.login = function(req, cb){
 
 module.exports.updateAccount = function(req, cb){
     var body = req.body;
-    connection.query("select * from account_table where stu_id='"+escapeRS(body.ID)+"' and password='"+escapeRS(body.oldPW)+"'",(e,r,f)=>{
+    connection.query("select * from account_table where stu_id='"+escapeRS(body.pcID)+"' and password='"+escapeRS(body.oldPW)+"'",(e,r,f)=>{
         if(r.length==0){
             cb("Failed");
         }else{
-            connection.query("update account_table set password='"+escapeRS(body.newPW)+"' where stu_id='"+escapeRS(body.ID)+"'",(e,r,f)=>{
+            connection.query("update account_table set password='"+escapeRS(body.newPW)+"' where stu_id='"+escapeRS(body.pcID)+"'",(e,r,f)=>{
                 if(e){
                     cb(e);
                 }else{
