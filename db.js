@@ -50,7 +50,7 @@ function handleDisconnect() {
 handleDisconnect();
 
 function escapeRS(string, exception = []) {
-    var rm = `\;\'\"\&\^\!\@\#\%\+\-\.\*\+\?\^\$\{\}\(\)\|\[\]\\`;
+    var rm = "\;\'\"\&\^\!\@\#\%\+\-\.\*\+\?\^\$\{\}\(\)\|\[\]\\";
     for(var i=0;i<exception.length;i++){
         rm.split(exception[i]).join();
     }
