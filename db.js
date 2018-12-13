@@ -49,8 +49,12 @@ function handleDisconnect() {
 
 handleDisconnect();
 
-function escapeRS(string) {
-  return string.toString().replace(/[;'"&^!@#%+-.*+?^${}()|\[\]\\]/g, '\\$&'); // $& means the whole matched string
+function escapeRS(string, exception = []) {
+    var rm = `\;\'\"\&\^\!\@\#\%\+\-\.\*\+\?\^\$\{\}\(\)\|\[\]\\`;
+    for(var i=0;i<exception.length;i++){
+        rm.split(exception[i]).join();
+    }
+    return string.toString().replace(new Regexp(rm,'g'), '\\$&'); // $& means the whole matched string
 }
 
 function pstringify(data, type, callback){
@@ -135,7 +139,7 @@ module.exports.searchWithInput = function(req, callback){
             var keyword = "";
             var advisor = "";
             for(var i=0;i<wL.length;i++){
-                var ana = wL[i].split(" : ");
+                var ana = wL[i].trim().split(" : ");
                 if(ana.length==1){
                     if(ana[0].trim()!=""){
                         if(!keywordList.includes(ana[0].trim())){
@@ -176,14 +180,14 @@ module.exports.searchWithInput = function(req, callback){
                 (research_table.advisor1_id in
                     (select advisor_id from advisor_table
                         where (name,institute) in (`
-                            +escapeRS(advisor.substr(1))
+                            +escapeRS(advisor.substr(1),['(',')'])
                         +")"
                     +")"
                 +` or
                 research_table.advisor2_id in
                     (select advisor_id from advisor_table
                         where (name,institute) in (`
-                            +escapeRS(advisor.substr(1))
+                            +escapeRS(advisor.substr(1),['(',')'])
                         +")"
                     +")"
                 +")"
