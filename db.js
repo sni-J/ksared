@@ -49,12 +49,8 @@ function handleDisconnect() {
 
 handleDisconnect();
 
-function escapeRS(string, exception = []) {
-    var rm = "\;\'\"\&\^\!\@\#\%\+\-\.\*\+\?\^\$\{\}\(\)\|\[\]\\";
-    for(var i=0;i<exception.length;i++){
-        rm.split(exception[i]).join();
-    }
-    return string.toString().replace(new RegExp(RegExp.escape(rm),'g'), '\\$&'); // $& means the whole matched string
+function escapeRS(string) {
+    return string.toString().replace(/[;'"&^!@#%+-.*+?^${}()|\[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
 function pstringify(data, type, callback){
@@ -143,14 +139,14 @@ module.exports.searchWithInput = function(req, callback){
                 if(ana.length==1){
                     if(ana[0].trim()!=""){
                         if(!keywordList.includes(ana[0].trim())){
-                            keyword += "|"+ana[0].trim().split('').map((a)=>{return (a.toLowerCase()!=a.toUpperCase()?a:'\\'+a);}).join('');
+                            keyword += "|"+escapeRS(ana[0].trim().split('').map((a)=>{return (a.toLowerCase()!=a.toUpperCase()?a:'\\'+a);}).join(''));
                             keywordList[keywordList.length]=ana[0].trim();
                         }
                     }
                 }
                 else{
                   if(ana[0].trim() == "Advisor"){
-                    advisor += ",('"+ana[1].split("(")[0].trim()+"','"+ana[1].substr(0,ana[1].length-1).split('(')[1].trim()+"')";
+                    advisor += ",('"+escapeRS(ana[1].split("(")[0].trim())+"','"+escapeRS(ana[1].substr(0,ana[1].length-1).split('(')[1].trim())+"')";
                     advList[advList.length]=[ana[1].split("(")[0].trim(),ana[1].substr(0,ana[1].length-1).split('(')[1].trim()];
                   }
                 }
@@ -162,14 +158,14 @@ module.exports.searchWithInput = function(req, callback){
                         (select research_id from research_keyword_table where keyword_id in
                             (select keyword_id from keyword_table`
                                 + (keyword.substr(1)==""?
-                                "":" where keyword_table.keyword regexp '" + escapeRS(keyword.substr(1)) + "'") +
+                                "":" where keyword_table.keyword regexp '" + (keyword.substr(1)) + "'") +
                             `)
                         )`+
                     (keyword.substr(1)==""?
                     "":`
                         or
                         (
-                            (research_table.title like '%`+escapeRS(keyword.substr(1)).split("|").join("%') or (research_table.title like '%")+"%')"+
+                            (research_table.title like '%`+(keyword.substr(1)).split("|").join("%') or (research_table.title like '%")+"%')"+
                         ")"
                     )+
                     ")"
@@ -180,14 +176,14 @@ module.exports.searchWithInput = function(req, callback){
                 (research_table.advisor1_id in
                     (select advisor_id from advisor_table
                         where (name,institute) in (`
-                            +escapeRS(advisor.substr(1),['(',')'])
+                            +(advisor.substr(1))
                         +")"
                     +")"
                 +` or
                 research_table.advisor2_id in
                     (select advisor_id from advisor_table
                         where (name,institute) in (`
-                            +escapeRS(advisor.substr(1),['(',')'])
+                            +(advisor.substr(1))
                         +")"
                     +")"
                 +")"
