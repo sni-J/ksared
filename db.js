@@ -54,7 +54,7 @@ function escapeRS(string, exception = []) {
     for(var i=0;i<exception.length;i++){
         rm.split(exception[i]).join();
     }
-    return string.toString().replace(new RegExp(RegExp.quote(rm),'g'), '\\$&'); // $& means the whole matched string
+    return string.toString().replace(new RegExp(RegExp.escape(rm),'g'), '\\$&'); // $& means the whole matched string
 }
 
 function pstringify(data, type, callback){
