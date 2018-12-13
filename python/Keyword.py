@@ -26,7 +26,7 @@ def AnalyzeText(loc,title):
     main_keyword=[]
     for l in lines:
         # 자체 키워드 추출
-        if '주제어' in l:  #or '중요 개념' in l or 'Key Words' in l:
+        if '주제어' in l or '중요 개념' in l or 'Key Words' in l:
             keywords=Keyword_Keyword(l)
             for i in keywords:
                 if i not in main_keyword:
