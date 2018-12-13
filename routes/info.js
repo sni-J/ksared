@@ -8,7 +8,7 @@ const i18n = require('../i18n');
 router.use(i18n.translate);
 
 router.get('/', (req, res) => {
-    res.render('info',{i18n:res});
+    res.render('info',{i18n:res, gtag_id:process.env.gtag_id});
 })
 
 router.get('/getInfo', (req, res) => {
