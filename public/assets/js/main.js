@@ -365,12 +365,12 @@
             if(data['login']==true){
                 document.getElementById('nav_manage').removeAttribute("hidden");
                 document.getElementById('nav_upload').removeAttribute("hidden");
-                document.getElementById('ID').value = data['stu_id'];
+                document.getElementById('pcID').value = data['stu_id'];
                 logined = true;
             }else{
                 document.getElementById('nav_manage').setAttribute("hidden", "true");
                 document.getElementById('nav_upload').setAttribute("hidden", "true");
-                document.getElementById('ID').value = "";
+                document.getElementById('pcID').value = "";
                 logined = false;
             }
             if(location.hash == "#manage" || location.hash == "#upload"){
