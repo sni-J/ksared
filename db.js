@@ -613,7 +613,7 @@ module.exports.editResearch = function(req, fP, extraFilePaths, callback){
         }
     }
     else{var keepedExtraFiles = ""}
-    connection.query("select filePath from research_table where research_id = "+ escapeRS(req.research_id)+";", (e, r, f)=>{
+    connection.query("select filePath, hidden from research_table where research_id = "+ escapeRS(req.research_id)+";", (e, r, f)=>{
         if (e) throw e;
         req.oldfP = r[0].filePath;
         req.hidden = r[0].hidden;
