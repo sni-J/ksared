@@ -316,6 +316,13 @@ def RankKeyword(title_keyword,main_keyword,keyword):
             if i[0]==j[0]:
                 j[1]+=1/len(temp)
 
+    # prevent empty string becoming keyword
+    main_keyword_temp = []
+    for i in range(len(main_keyword)):
+        if main_keyword[i].strip()!="":
+            main_keyword_temp.append(main_keyword[i])
+
+    main_keyword = main_keyword_temp
     for i in main_keyword:
         counter = 0
         for j in keyword:
