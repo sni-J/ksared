@@ -50,6 +50,7 @@ function handleDisconnect() {
 handleDisconnect();
 
 function escapeRS(string) {
+    if(!string){return "";}
     return string.toString().replace(/[;'"&^!@#%+-.*+?^${}()|\[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
@@ -334,7 +335,7 @@ function getKeyword(req, fP, cb){
         var fPsplited=fP.split("/");
         var txtP = "/app/uploads/"+fPsplited[fPsplited.length-2]+"/"+fPsplited[fPsplited.length-1].slice(0,-4)+".txt";
         console.log(txtP);
-        pyOptions.args = [req.researcher_name, req.title, txtP]; // if fP => AWS then Pass
+        pyOptions.args = [req.researcher_name, req.title, txtP];
         var keywords = [];
         PythonShell.run('Keyword.py', pyOptions, function (err, results) {
             if (err || !results){ console.log(err); console.log(results); cb("Keyword Extract Error"); return; }

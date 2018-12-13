@@ -40,7 +40,7 @@ router.post('/changeState',(req, res)=>{
 
 router.get('/delete',(req, res)=>{
     var rsch;
-    db.getInfo(req, req.body.research_id, (research)=>{
+    db.getInfo(req, req.query.research_id, (research)=>{
         del(research||{researcher:""},"research_table");
     })
     function del(research,table){
