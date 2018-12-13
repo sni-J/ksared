@@ -31,7 +31,7 @@ function extractText(filepath, callback){
     pdfParser.loadPDF(filepath);
 }
 
-function AWSUploader(req, cb){
+function AWSUploader(req, res, cb){
     function uplUploader(callback){
         if(req.files["uploadFile"]==undefined){
             console.log("No uploadFile"); callback("");
@@ -86,7 +86,7 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
         return;
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
-        AWSUploader(req, (upl,ext)=>{
+        AWSUploader(req, res, (upl,ext)=>{
             db.addResearch(req.body, upl, ext.join("|"), (result)=>{
                 res.send(result);
                 return;
@@ -101,7 +101,7 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
         return;
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to edit`);
-        AWSUploader(req, (upl, ext)=>{
+        AWSUploader(req, res, (upl, ext)=>{
             db.editResearch(req.body, upl, ext.join("|"), (result)=>{
                 res.send(result);
                 return;
