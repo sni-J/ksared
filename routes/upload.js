@@ -16,10 +16,8 @@ function extractText(filepath, callback){
     let pdfParser = new PDFParser(this, 1);
 
     pdfParser.on("pdfParser_dataError", errData => {
-        if(!errData){
-            console.error(errData);
-            callback(false);
-        }
+        console.log(errData);
+        callback(false);
     });
     pdfParser.on("pdfParser_dataReady", pdfData => {
         var txt=pdfParser.getRawTextContent();
