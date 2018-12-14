@@ -63,6 +63,7 @@ function AWSUploader(req, cb){
     uplUploader((upl)=>{
         if(upl!=""){
             extractText('/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
+                console.log("Extracting Text Result of "+ '/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]+ result);
                 if (!result){
                     cbresult = "Extracting Text Failed";
                     fileProcess.deleteFile(req.files['uploadFile'][0].path);
