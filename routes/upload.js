@@ -16,13 +16,13 @@ function extractText(filepath, callback){
     let pdfParser = new PDFParser(this, 1);
 
     pdfParser.on("pdfParser_dataError", errData => {
-        console.log(errData);
+        console.log("pdfParser error "+errData);
         callback(false);
     });
     pdfParser.on("pdfParser_dataReady", pdfData => {
         var txt=pdfParser.getRawTextContent();
         var fname = filepath.slice(0,-4)+".txt";
-        fs.writeFile(fname, txt, (err)=>{console.log(err); callback(false)});
+        fs.writeFile(fname, txt, (err)=>{console.log("write file error " + err); callback(false)});
         console.log("Extracting complete");
         callback(true);
     });
@@ -63,7 +63,7 @@ function AWSUploader(req, cb){
     uplUploader((upl)=>{
         if(upl!=""){
             extractText('/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
-                console.log("Extracting Text Result of "+ '/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]+ result);
+                console.log("Extracting Text Result of "+ '/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]+ ' is '+ result);
                 if (!result){
                     cbresult = "Extracting Text Failed";
                     fileProcess.deleteFile(req.files['uploadFile'][0].path);
