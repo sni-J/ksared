@@ -31,7 +31,8 @@ function extractText(filepath, callback){
     pdfParser.loadPDF(filepath);
 }
 
-function AWSUploader(req, res, cb){
+function AWSUploader(req, cb){
+    var cbresult = "Done";
     function uplUploader(callback){
         if(req.files["uploadFile"]==undefined){
             console.log("No uploadFile"); callback("");
@@ -63,18 +64,19 @@ function AWSUploader(req, res, cb){
         if(upl!=""){
             extractText('/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1], (result)=>{
                 if (!result){
-                    res.send("Extracting Text Failed");
+                    cbresult = "Extracting Text Failed");
                     fileProcess.deleteFile(req.files['uploadFile'][0].path);
                     console.log("Failed, so removed file "+'/app/uploads/'+req.files['uploadFile'][0].path.split('/uploads/')[1]);
+                    cb("",[], cbresult);
                 }else{
                     extUploader((ext)=>{
-                        console.log([upl, ext]); cb(upl, ext);
+                        console.log([upl, ext]); cb(upl, ext, cbresult);
                     });
                 }
             });
         }else{
             extUploader((ext)=>{
-                console.log([upl, ext]); cb(upl, ext);
+                console.log([upl, ext]); cb(upl, ext, cbresult);
             });
         }
     });
@@ -86,7 +88,8 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
         return;
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
-        AWSUploader(req, res, (upl,ext)=>{
+        AWSUploader(req, (upl,ext, cbres)=>{
+            if(cbres!="Done"){res.send({Msg:cbres}); console.log("Upload Failed"); return;}
             db.addResearch(req.body, upl, ext.join("|"), (result)=>{
                 res.send(result);
                 return;
@@ -101,7 +104,8 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
         return;
     }else{
         console.log(`Permitted User ${req.session.stu_id} trying to edit`);
-        AWSUploader(req, res, (upl, ext)=>{
+        AWSUploader(req, (upl, ext,cbres)=>{
+            if(cbres!="Done"){res.send({Msg:cbres}); console.log("Edit failed");return;}
             db.editResearch(req.body, upl, ext.join("|"), (result)=>{
                 res.send(result);
                 return;
