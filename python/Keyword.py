@@ -148,9 +148,9 @@ def PMI(sentences):
             word=sentence[i]
             word, wordINfreq = FindIn(word, freq)
             if not wordINfreq:
-                freq[word]=1/sentence_num
+                freq[word]=1/float(sentence_num)
             else:
-                freq[word]+=1/sentence_num
+                freq[word]+=1/float(sentence_num)
             ########################
             j=i+1
             if j==len(sentence): continue
@@ -300,7 +300,7 @@ def RankKeyword(title_keyword,main_keyword,keyword):
         i[1]/=rank_sum
     max_weight = keyword[0][1]
     for i in range(len(keyword)):
-        if keyword[i][1] < 0.6 * max_weight:
+        if keyword[i][1] < 0.5 * max_weight:
             keyword = keyword[:max(5,i)]
             break
     temp=[]
