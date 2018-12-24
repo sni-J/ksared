@@ -285,7 +285,8 @@ def Keyword_Keyword(keyword_line):
         a=''
         return []
     b=a.split(',')
-    b[i]=''.join(b[i].split(' '))
+    for i in range(len(b)):
+        b[i]=''.join(b[i].split(' '))
     return b
 
 def RankKeyword(title_keyword,main_keyword,keyword):
