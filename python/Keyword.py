@@ -26,7 +26,7 @@ def AnalyzeText(loc,title):
     main_keyword=[]
     for l in lines:
         # 자체 키워드 추출
-        if '주제어' in l or '중요 개념' in l or 'Key Words' in l:
+        if '주제어' in l or '중요 개념' in l: # or 'Key Words' in l:
             keywords=Keyword_Keyword(l)
             for i in keywords:
                 if i not in main_keyword:
@@ -276,9 +276,14 @@ def RemoveName(name_list,keyword):
 
 def Keyword_Keyword(keyword_line):
     temp=keyword_line.split(':')
+    temp2=keyword_line.split('중요 개념')
     if len(temp)!=1:
         a=temp[1]
-    else: a=''
+    elif len(temp2)!=1:
+        a=temp2[1]
+    else:
+        a=''
+        return []
     b=a.split(',')
     for i in range(len(b)):
         if len(b[i])==0: continue
@@ -287,9 +292,7 @@ def Keyword_Keyword(keyword_line):
         if b[i][-1]==' ' or b[i][-1]=='\n':
             b[i]=b[i][:-1]
         c=b[i].split(' ')
-        b[i]=''
-        for j in c:
-            b[i]+=j
+        b[i]=''.join(c)
     return b
 
 def RankKeyword(title_keyword,main_keyword,keyword):
