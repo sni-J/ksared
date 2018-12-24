@@ -276,11 +276,7 @@ def RemoveName(name_list,keyword):
 
 def Keyword_Keyword(keyword_line):
     temp=keyword_line.split(':')
-<<<<<<< HEAD
     temp2=keyword_line.split('：')
-=======
-    temp2=keyword_line.split('중요 개념')
->>>>>>> 735a8789a15acf9453f182c79f299585d91c6ca6
     if len(temp)!=1:
         a=temp[1]
     elif len(temp2)!=1:
@@ -289,18 +285,7 @@ def Keyword_Keyword(keyword_line):
         a=''
         return []
     b=a.split(',')
-<<<<<<< HEAD
     b[i]=''.join(b[i].split(' '))
-=======
-    for i in range(len(b)):
-        if len(b[i])==0: continue
-        if b[i][0]==' ':
-            b[i]=b[i][1:]
-        if b[i][-1]==' ' or b[i][-1]=='\n':
-            b[i]=b[i][:-1]
-        c=b[i].split(' ')
-        b[i]=''.join(c)
->>>>>>> 735a8789a15acf9453f182c79f299585d91c6ca6
     return b
 
 def RankKeyword(title_keyword,main_keyword,keyword):
