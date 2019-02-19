@@ -210,7 +210,7 @@ module.exports.searchWithInput = function(req, callback){
             var htmlData ="<ul class='searchResultUl'>";
             // console.log(req);
             for(var i=0;i<data.length;i++){
-                if(data[i][0].hidden=="no"||db.checkPermission(sess, data[i][0].researcher.match(/\d{2}-\d{3}/g))){
+                if(true/*data[i][0].hidden=="no"||db.checkPermission(sess, data[i][0].researcher.match(/\d{2}-\d{3}/g))*/){
                     htmlData
                     += `<li class='searchResultLi' onclick='window.open("/info?id=`+data[i][0].research_id+`")'>
                             <h6>`

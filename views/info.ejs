@@ -73,6 +73,7 @@
     <div id = "info" class="jumbotron tab-pane fade active show">
       <div class="container">
         <h2 id = "research_title" class = "titleH2"></h2>
+        <span id="InvalidAccessNotice" hidden><%= i18n.__('InvalidAccessNotice'); %></span>
         <ul class = "infoUl">
             <li class = "infoLi">
                 <label class = "label"><%= i18n.__('Researcher'); %></label>
@@ -94,6 +95,13 @@
                 <label class = "label"> <%= i18n.__('Attachments'); %> </label>
                 <div class="flex horzExLong nomargin" id ="fileDiv">
                 </div>
+            </li>
+        </ul>
+        <hr>
+        <ul class = "infoUl">
+            <li class="infoLi">
+                <label class = "label"> <%= i18n.__('Status'); %> </label>
+                <span id = "status"></span>
             </li>
         </ul>
         <hr>

@@ -9,9 +9,23 @@
     })
 
     function fillInfo(research){
-        if(research=="") {document.getElementById("research_title").innerHTML = "Invalid Access";return;}
+        if(research=="") {
+            document.getElementById("research_title").innerHTML = "Invalid Access";
+            document.getElementById("InvalidAccessNotice").removeAttribute("hidden");
+            document.getElementById("status").innerHTML = "Error";
+            document.getElementById("status").setAttribute("style")="color:#FF0000";
+            return;
+        }
         document.getElementById("research_title").innerHTML = research.title||research;
         document.getElementById("research_title").after(document.createElement("hr"));
+        if(research.hidden){
+            document.getElementById("status").innerHTML = "HIDDEN";
+            document.getElementById("status").setAttribute("style")="color:#FFFF00";
+        }
+        else{
+            document.getElementById("status").innerHTML = "OPENED";
+            document.getElementById("status").setAttribute("style")="color:#00FF00";
+        }
         var researcherList = research.researcher.split(";");
         var infoDiv = document.getElementById("researcher_info");
         for(var i=0;i<researcherList.length;i++){
