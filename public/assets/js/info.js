@@ -13,18 +13,18 @@
             document.getElementById("research_title").innerHTML = "Invalid Access";
             document.getElementById("InvalidAccessNotice").removeAttribute("hidden");
             document.getElementById("status").innerHTML = "Error";
-            document.getElementById("status").setAttribute("style")="color:#FF0000";
+            document.getElementById("status").setAttribute("style","color:#FF0000; font-weight:bold");
             return;
         }
         document.getElementById("research_title").innerHTML = research.title||research;
         document.getElementById("research_title").after(document.createElement("hr"));
         if(research.hidden){
             document.getElementById("status").innerHTML = "HIDDEN";
-            document.getElementById("status").setAttribute("style")="color:#FFFF00";
+            document.getElementById("status").setAttribute("style","color:#FFFF00; font-weight:bold");
         }
         else{
             document.getElementById("status").innerHTML = "OPENED";
-            document.getElementById("status").setAttribute("style")="color:#00FF00";
+            document.getElementById("status").setAttribute("style","color:#00FF00; font-weight:bold");
         }
         var researcherList = research.researcher.split(";");
         var infoDiv = document.getElementById("researcher_info");
