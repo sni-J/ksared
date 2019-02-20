@@ -18,6 +18,7 @@
         }
         document.getElementById("research_title").innerHTML = research.title||research;
         document.getElementById("research_title").after(document.createElement("hr"));
+        document.getElementById("researchInfoUl").removeAttribute("hidden");
         if(research.hidden=="no"){
             document.getElementById("status").innerHTML = "OPENED";
             document.getElementById("status").setAttribute("style","color:#28A745; font-weight:bold");
