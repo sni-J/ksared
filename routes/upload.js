@@ -91,7 +91,7 @@ router.post('/', fileProcess.uploadFile, (req, res) => {
         console.log(`Permitted User ${req.session.stu_id} trying to upload`);
         AWSUploader(req, (upl,ext, cbres)=>{
             if(cbres!="Done"){res.send({Msg:cbres}); console.log("Upload Failed"); return;}
-            db.addResearch(req.body, upl, ext.join("|"), (result)=>{
+            db.addResearch(req.body, req.session.stu_id, upl, ext.join("|"), (result)=>{
                 res.send(result);
                 return;
             });
@@ -107,7 +107,7 @@ router.post('/edit', fileProcess.uploadFile, (req, res) => {
         console.log(`Permitted User ${req.session.stu_id} trying to edit`);
         AWSUploader(req, (upl, ext,cbres)=>{
             if(cbres!="Done"){res.send({Msg:cbres}); console.log("Edit failed");return;}
-            db.editResearch(req.body, upl, ext.join("|"), (result)=>{
+            db.editResearch(req.body, req.session.stu_id, upl, ext.join("|"), (result)=>{
                 res.send(result);
                 return;
             });
