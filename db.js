@@ -402,7 +402,7 @@ function getIdFromTable(ppL, idx, idL, table, attL, objId, cb){
     });
 }
 
-module.exports.addResearch = function(req, uploader, fP, extraFilePaths, callback){ // TODO 필드 값이 sql문이 아닌지 체크해볼 필요가 있을 것 같 + R&E와 졸업 연구 이외의 항목에 대해 학회명 기재가 필요해보임 Else(한국데이터처리학회) 등으로 적으면 되지 않을까 싶은데
+module.exports.addResearch = function(req, uploader, fP, extraFilePaths, callback){ // TODO 필드 값이 sql문이 아닌지 체크해볼 필요가 있을 것 같
     try{
         getKeyword(req, fP, (keywords)=>{
             getIdFromTable(keywords, 0, [], "keyword_table", ["keyword"], "keyword_id", (IdList)=>{
@@ -418,7 +418,7 @@ module.exports.addResearch = function(req, uploader, fP, extraFilePaths, callbac
                                         +(email==""? "":" ("+email+")"));
                     }
                     var researchAttr = ['title', 'subject', 'year', 'type', 'abstract', 'researcher', 'advisor1_id', 'advisor2_id', 'filePath', 'extraFiles', 'hidden'];
-                    var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths, uploader=='admin' ? 'no' : (req.hidden||'yes')];
+                    var researchVal = [req.title, req.subject, req.year, req.type, req.abstract, researcher.substr(2), advisorIdList[0], advisorIdList[1], fP, extraFilePaths, uploader=='admin' ? 'no' : 'yes' /*(req.hidden||'yes')*/]; // admin 이외의 사람이 수정한 경우에 대해 어떻게 처리할 지에 따라서 선택
                     console.log(
                         `insert into research_table(title, subject, year, type, abstract, researcher,
                             advisor1_id, advisor2_id, filePath, extraFiles, hidden) values(`+researchVal.map((a)=>{return connection.escape(a)}).join(",")+");"
