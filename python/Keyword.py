@@ -43,14 +43,13 @@ def AnalyzeText(loc,title):
         # print(j)
         if title in j:  #제목 제거
             same=False
-            temp_title=title[:min(10,len(title))]
             for text_index in range(len(j)):
                 counter=0
                 while True:
-                    if j[text_index+counter]==temp_title[counter]:
+                    if j[text_index+counter]==title[counter]:
                         counter+=1
                     else: break
-                    if counter==5:
+                    if counter==len(title):
                         same=True
                         break
                 if same==True:
