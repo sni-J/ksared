@@ -37,7 +37,7 @@ function AWSUploader(req, cb){
         if(req.files["uploadFile"]==undefined){
             console.log("No uploadFile"); callback("");
         }else{
-            fileProcess.AWSUpload("/app/uploads/"+req.files["uploadFile"][0].path.split("/uploads/")[1],req.files["uploadFile"][0].type,callback);
+            fileProcess.AWSUpload("/app/uploads/"+req.files["uploadFile"][0].path.split("/uploads/")[1],"",callback);
         }
     }
     function extUploader(callback){
@@ -50,7 +50,7 @@ function AWSUploader(req, cb){
             var filePath = "/app/uploads/"+file.path.split("/uploads/")[1];
             console.log(filePath);
             console.log(file);
-            fileProcess.AWSUpload(filePath, file.type, (location)=>{
+            fileProcess.AWSUpload(filePath, "", (location)=>{
                 extFilePaths[extFilePaths.length] = location;
                 uploadEachFiles(files, extFilePaths, cb);
             });
