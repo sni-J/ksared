@@ -20,14 +20,15 @@ function timestamp(callback){
 }
 
 // AWS
-module.exports.AWSUpload = function(filePath, cb){
+module.exports.AWSUpload = function(filePath, filetype, cb){
     var filePathSplited = filePath.split("/");
     var params = {
         Bucket: S3_BUCKET,
         Body : fs.createReadStream(filePath),
         Key : filePathSplited[filePathSplited.length-2]+"/"+filePathSplited[filePathSplited.length-1],
         ACL: 'public-read',
-        serverSideEncryption: 'AES256'
+        serverSideEncryption: 'AES256',
+        ContentType: filetype
     };
 
     s3.upload(params, function (err, data) {
