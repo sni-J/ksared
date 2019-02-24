@@ -1,6 +1,6 @@
 var loginBtn = document.getElementById("accountNav");
+var logined = false;
 function accStatusUpdate(){
-    var logined = false;
     $.get("/account/info",(data)=>{
         if(data['login']!=logined){
             $.get("/i18n/words?words=Log-Out|Log-In",(wordRes)=>{
