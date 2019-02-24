@@ -101,16 +101,14 @@
         <ul class = "infoUl">
             <li class="infoLi">
                 <label class = "label"> <%= i18n.__('Status'); %> </label>
-                <div class="tooltip">
-                  <span id = "status"></span>
-                  [?]
-                  <span class = "tooltiptext">
-                      <b>OPENED</b> Anyone can access <br>
-                      <b>HIDDEN</b> Only authorized can access <br>
-                      <b>ERROR</b> You are not authorized or this research has been removed <br>
-                      If you have any question about it, ask to administrator.
-                  </span>
-                </div>
+                <span id = "status"></span>
+                <a href="#" data-toggle="tooltip" data-placement="right" data-html="true"
+                title="
+                    <b>OPENED</b> Anyone can access <br>
+                    <b>HIDDEN</b> Only authorized can access <br>
+                    <b>ERROR</b> You are not authorized or this research has been removed <br>
+                    If you have any question about it, ask to administrator.
+                ">[?]</a>
             </li>
         </ul>
         <hr>
