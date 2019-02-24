@@ -1,7 +1,7 @@
 (function($){
     var researchAttr = ['research_id', 'title', 'subject', 'year', 'type', 'abstract', 'researcher',
                                     'advisor1', 'advisor2', 'filePath', 'extraFiles', 'hidden'];
-    var TNWords = ["Supervisor", "Co-Supervisor", "View Image"];
+    var TNWords = ["Supervisor", "Co-Supervisor", "View Image", "OPENED","HIDDEN","ERROR"];
     var TDWords = {};
     $.get("/i18n/words"+"?words="+TNWords.join("|"),(data)=>{
         TDWords = data;
@@ -12,7 +12,7 @@
         if(research=="") {
             document.getElementById("research_title").innerHTML = "Invalid Access";
             document.getElementById("InvalidAccessNotice").removeAttribute("hidden");
-            document.getElementById("status").innerHTML = "Error";
+            document.getElementById("status").innerHTML = TDWords["ERROR"];
             document.getElementById("status").setAttribute("style","color:#DC3545; font-weight:bold");
             return;
         }
@@ -20,11 +20,11 @@
         document.getElementById("research_title").after(document.createElement("hr"));
         document.getElementById("researchInfoUl").removeAttribute("hidden");
         if(research.hidden=="no"){
-            document.getElementById("status").innerHTML = "OPENED";
+            document.getElementById("status").innerHTML = TDWords["OPENED"];
             document.getElementById("status").setAttribute("style","color:#28A745; font-weight:bold");
         }
         else{
-            document.getElementById("status").innerHTML = "HIDDEN";
+            document.getElementById("status").innerHTML = TDWords["HIDDEN"];
             document.getElementById("status").setAttribute("style","color:#FFC107; font-weight:bold");
         }
         var researcherList = research.researcher.split(";");

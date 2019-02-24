@@ -71,5 +71,9 @@
 	"Help": "Help",
 	"Change": "Change",
 	"InvalidAccessNotice": "This research does not exist or is not opened to public.",
-	"Status": "Status"
+	"Status": "Status",
+	"OPENED": "OPENED",
+	"HIDDEN": "HIDDEN",
+	"ERROR": "ERROR"
+}
 }

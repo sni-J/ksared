@@ -74,5 +74,8 @@
 	"Help": "도움말",
 	"Change": "변경",
 	"InvalidAccessNotice": "이 연구는 존재하지 않거나 비공개 상태입니다.",
-	"Status": "상태"
+	"Status": "상태",
+	"OPENED": "공개",
+	"HIDDEN": "비공개",
+	"ERROR": "오류"
 }

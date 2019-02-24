@@ -73,15 +73,24 @@
     <form>
       <ul class="infoUl">
         <li class="popUpTitle">
-          <h4></h4>
+          <h4><%= i18n.__('Status'); %></h4>
           <a href="javascript:controlPopUp('hide','tooltip')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
         </li>
         <hr/>
         <li>
+          <label class="label horzShort" style="color:#28a745"><%= i18n.__('OPENED'); %></label>
+          <span> Anyone can access </span>
+        </li>
+        <li>
+          <label class="label horzShort" style="color:#ffc107"><%= i18n.__('HIDDEN'); %></label>
+          <span> Only authorized can access </span>
+        </li>
+        <li>
+          <label class="label horzShort" style="color:#dc3545"><%= i18n.__('ERROR'); %></label>
+          <span> Not authorized or this one has been removed </span>
+        </li>
+        <li>
           <span>
-            <b>OPENED</b> Anyone can access <br>
-            <b>HIDDEN</b> Only authorized can access <br>
-            <b>ERROR</b> You are not authorized or this research has been removed <br>
             If you have any question about it, ask to administrator.
           </span>
         </li>
