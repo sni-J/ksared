@@ -41,6 +41,7 @@ module.exports.AWSUpload = function(filePath, filetype, cb){
         //success
         if (data) {
             console.log("Uploaded in:", data.Location);
+            console.log("Uploaded with ContentType:", filetype);
             cb(decodeURI(data.Location));
         }
     });

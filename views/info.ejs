@@ -38,7 +38,7 @@
         </ul>
         <div>
             <div class="navbar-nav nav nav-pills nav-justified">
-                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlForm('show','login')">
+                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlPopUp('show','loginForm')">
                     <%= i18n.__('Log-In'); %>
                 </a>
             </div>
@@ -48,25 +48,44 @@
   </nav>
   <div id = "loginFormDiv" class = "popUpDiv" style="display:none;">
     <form id = 'loginForm' action='account/login' method = 'post'>
-        <ul class="infoUl">
-            <li class="popUpTitle">
-                <h4><%= i18n.__('Log-In'); %></h4>
-                <a href="javascript:controlLoginForm('hide')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
-            </li>
-            <hr/>
-            <li class="infoLi">
-                <label class="label horzShort"><%= i18n.__('ID'); %></label>
-                <input name="ID" id="ID" class="form-control mr-sm-2 horzLong vertShort" type="text"/>
-            </li>
-            <li class="infoLi">
-                <label class="label horzShort"><%= i18n.__('Password'); %></label>
-                <input name="PW" id="PW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
-            </li>
-            <hr>
-            <li>
-                <button class="btn btn-primary my-2 my-sm-0 horzLong vertShort float-right" type='submit'><%= i18n.__('Log-In'); %></button>
-            </li>
-        </ul>
+      <ul class="infoUl">
+        <li class="popUpTitle">
+          <h4><%= i18n.__('Log-In'); %></h4>
+          <a href="javascript:controlPopUp('hide','loginForm')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+        </li>
+        <hr/>
+        <li class="infoLi">
+          <label class="label horzShort"><%= i18n.__('ID'); %></label>
+          <input name="ID" id="ID" class="form-control mr-sm-2 horzLong vertShort" type="text"/>
+        </li>
+        <li class="infoLi">
+          <label class="label horzShort"><%= i18n.__('Password'); %></label>
+          <input name="PW" id="PW" class="form-control mr-sm-2 horzLong vertShort" type="password"/>
+        </li>
+        <hr>
+        <li>
+          <button class="btn btn-primary my-2 my-sm-0 horzLong vertShort float-right" type='submit'><%= i18n.__('Log-In'); %></button>
+        </li>
+      </ul>
+    </form>
+  </div>
+  <div id = "tooltipDiv" class = "popUpDiv" style="display:none;">
+    <form>
+      <ul class="infoUl">
+        <li class="popUpTitle">
+          <h4></h4>
+          <a href="javascript:controlPopUp('hide','tooltip')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+        </li>
+        <hr/>
+        <li>
+          <span>
+            <b>OPENED</b> Anyone can access <br>
+            <b>HIDDEN</b> Only authorized can access <br>
+            <b>ERROR</b> You are not authorized or this research has been removed <br>
+            If you have any question about it, ask to administrator.
+          </span>
+        </li>
+      </ul>
     </form>
   </div>
   <div class="container nav-item tab-content" id="pills-tabContent">
@@ -102,13 +121,7 @@
             <li class="infoLi">
                 <label class = "label"> <%= i18n.__('Status'); %> </label>
                 <span id = "status"></span>
-                <a href="#" data-toggle="tooltip" data-placement="right" data-html="true"
-                title="
-                    <b>OPENED</b> Anyone can access <br>
-                    <b>HIDDEN</b> Only authorized can access <br>
-                    <b>ERROR</b> You are not authorized or this research has been removed <br>
-                    If you have any question about it, ask to administrator.
-                ">[?]</a>
+                <a href="javascript:controlPopUp('show','tooltip')">[?]</a>
             </li>
         </ul>
         <hr>

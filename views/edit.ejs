@@ -23,7 +23,7 @@
         </ul>
         <div>
             <div class="navbar-nav nav nav-pills nav-justified">
-                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlForm('show','login')">
+                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlPopUp('show','loginForm')">
                     <%= i18n.__('Log-In'); %>
                 </a>
             </div>
@@ -36,7 +36,7 @@
         <ul class="infoUl">
             <li class="popUpTitle">
                 <h4><%= i18n.__('Log-In'); %></h4>
-                <a href="javascript:controlLoginForm('hide')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+                <a href="javascript:controlPopUp('hide','loginForm')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
             </li>
             <hr/>
             <li class="infoLi">

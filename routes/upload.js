@@ -49,6 +49,7 @@ function AWSUploader(req, cb){
             var file = files.pop();
             var filePath = "/app/uploads/"+file.path.split("/uploads/")[1];
             console.log(filePath);
+            console.log(file);
             fileProcess.AWSUpload(filePath, file.type, (location)=>{
                 extFilePaths[extFilePaths.length] = location;
                 uploadEachFiles(files, extFilePaths, cb);

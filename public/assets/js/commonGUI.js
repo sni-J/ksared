@@ -9,7 +9,7 @@ function accStatusUpdate(){
                     loginBtn.setAttribute("href","account/logout?redirect="+encodeURIComponent(location));
                 }else{
                     loginBtn.innerHTML = wordRes['Log-In'];
-                    loginBtn.setAttribute("href","javascript:controlForm('show','login')");
+                    loginBtn.setAttribute("href","javascript:controlPopUp('show','loginForm')");
                 }
             })
             logined = data['login'];

@@ -36,10 +36,10 @@
                 <a class="btn btn-link-nav float-right" id="nav_help" href="https://github.com/sni-J/ksared/wiki/" target='_blank'>
                   <%= i18n.__('Help'); %>
                 </a>
-                <a class="btn btn-link-nav float-right" id="nav_manage" href="javascript:controlForm('show', 'manage')" hidden>
+                <a class="btn btn-link-nav float-right" id="nav_manage" href="javascript:controlPopUp('show', 'manageForm')" hidden>
                     <%= i18n.__('Account'); %> <%= i18n.__('Management'); %>
                 </a>
-                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlForm('show', 'login')">
+                <a id='accountNav' class="btn btn-danger float-right" href="javascript:controlPopUp('show', 'loginForm')">
                     <%= i18n.__('Log-In'); %>
                 </a>
             </div>
@@ -51,7 +51,7 @@
         <ul class="infoUl">
             <li class="popUpTitle">
                 <h4><%= i18n.__('Log-In'); %></h4>
-                <a href="javascript:controlForm('hide', 'login')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+                <a href="javascript:controlPopUp('hide', 'loginForm')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
             </li>
             <hr/>
             <li class="infoLi">
@@ -74,7 +74,7 @@
         <ul class="infoUl">
             <li class="popUpTitle">
                 <h4><%= i18n.__('Password'); %> <%= i18n.__('Change'); %></h4>
-                <a href="javascript:controlForm('hide','manage')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
+                <a href="javascript:controlPopUp('hide','manageForm')"><i class="fa fa-times"> <%= i18n.__('Close'); %></i></a>
             </li>
             <hr/>
             <li class="infoLi" hidden>

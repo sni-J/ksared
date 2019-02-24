@@ -1,9 +1,9 @@
-function controlForm(s, name){
+function controlPopUp(s, name){
     if(s=="show"){
-        document.getElementById(name+'FormDiv').style.display = "block";
+        document.getElementById(name+'Div').style.display = "block";
     }
     else if(s=="hide"){
-        document.getElementById(name+'FormDiv').style.display = "none";
+        document.getElementById(name+'Div').style.display = "none";
     }
 }
 
