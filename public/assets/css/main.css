@@ -337,6 +337,43 @@ input:focus + .slider {
   box-shadow: 0 0 1px #dc3545;
 }
 
+.tooltip{
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #343a40;
+  color: #fff;
+  text-align: left;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext{
+  visibility: visible;
+  opacity: 1;
+}
+
 @media only screen and (max-width: 767.99px) {
     .horzExShort, .horzShort{
         flex: 0.7 0 60px;
