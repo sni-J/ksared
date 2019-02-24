@@ -29,15 +29,7 @@
         var start =
         `   <h4>${TDWords["Research"]+" "+TDWords["Info"]}</h4>
             <table class="adminTable horzExLong"><thead>
-                    <td><div>${TDWords["ID"]}</div></td>
                     <td><div>${TDWords["Title"]}</div></td>
-                    <td><div>${TDWords["Subject"]}</div></td>
-                    <td><div>${TDWords["Year"]}</div></td>
-                    <td><div>${TDWords["Type"]}</div></td>
-                    <td><div>${TDWords["Content"]}</div></td>
-                    <td><div>${TDWords["Researcher"]}</div></td>
-                    <td><div>${TDWords["Supervisor"]}(${TDWords["Institute"]})</div></td>
-                    <td><div>${TDWords["Co-Supervisor"]}(${TDWords["Institute"]})</div></td>
                     <td><div>${TDWords["Show / Hide"]}</div></td>
             </thead><tbody>`;
         var mid="";
@@ -56,15 +48,7 @@
             mid+=
             `
                 <tr>
-                    <td><div>${research.research_id}</div></td>
-                    <td><div>${research.title}</div></td>
-                    <td><div>${research.subject}</div></td>
-                    <td><div>${research.year}</div></td>
-                    <td><div>${research.type}</div></td>
-                    <td><div>${research.abstract}</div></td>
-                    <td><div>${research.researcher.split(/\([^)]*\)/).join("")}</div></td>
-                    <td><div>${research.advisor1.name}(${research.advisor1.institute})</div></td>
-                    <td><div>${research.advisor2.name}${(research.advisor2.name?"("+research.advisor2.institute+")":"")}</div></td>
+                    <td><div><a href="/info?id=${research.research_id}">${research.title}</a></div></td>
                     <td><div><label class="switch"><input id="sw_${research.research_id}" type="checkbox"><span class="slider"></span></label></div></td>
                 </tr>
             `

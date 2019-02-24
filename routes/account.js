@@ -76,7 +76,7 @@ router.get('/resetPassword', (req, res)=>{
 })
 
 router.get('/restoreAccounts', (req, res)=>{
-    if(req.session.admin && req.query.DevCode=="jolnon2018"){
+    if(req.session.admin && req.query.DevCode==process.env.DEVCODE){
         db.restoreAccounts((r)=>{
             res.send(`<script>alert("${r}");window.location.href="/admin"</script>`);
         });
