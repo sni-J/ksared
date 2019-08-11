@@ -1,5 +1,8 @@
 # KSAReD: Korea Science Academy Research Database
 
+## 0. Notice
+현재 KSAReD는 재정비에 들어간 상태입니다. 빠른 시일 내로 복구하도록 하겠습니다.
+
 ## 1. KSAReD란? What is KSAReD?
 KSAReD는 Korea Science Academy Research Database의 줄임말로, 한국과학영재학교 학생들의 R&E와 졸업연구를 보관하는 데이터베이스입니다. 한국과학영재학교 학생들은 KSAReD를 통해 R&E와 졸업연구 등의 연구자료를 업로드하고 공유하여 자신의 연구 기록으로 사용할 수 있을 뿐 아니라, 다른 사람들의 연구자료를 참고하여 연구 주제를 선정하거나 주제에 맞는 지도교원을 찾을 수도 있고, 비슷한 연구를 진행한 선배에게 조언을 구할 수도 있습니다.
 
