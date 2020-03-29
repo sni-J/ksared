@@ -1,3 +1,6 @@
+### 현재 KSAReD 2020이 제작 중에 있습니다. KSAReD 2020 is working on progress currently.
+
+-------------------------
 # KSAReD: Korea Science Academy Research Database
 
 ## 1. KSAReD란? What is KSAReD?
